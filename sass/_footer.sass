@@ -1,23 +1,27 @@
 footer
-  +container(92%, 40px 0, 20px 4%)
+  +container(92%, 40px 0 0, 20px 4%)
   text-align: center
 
-.footer_logo
-  margin-bottom: 20px
+.footer__logo
+  margin-bottom: 40px
 
-.footer-nav
+.footer__nav
   +ulClean
+  margin-bottom: 60px
 
-.footer-nav li
+.footer__nav li
   display: block
   text-transform: uppercase
   margin-bottom: 15px
 
-.footer-nav li a
-  color: $grey
+.footer__nav li a
+  color: $gray
 
-@media screen and (min-width: $break-large)
-  .footer-nav li
+@media only screen and (min-width: $break-tab)
+  .footer__nav li
     display: inline-block
     margin-right: 20px
     margin-bottom: 0
+
+  .footer__nav li:last-child
+    margin-right: 0
