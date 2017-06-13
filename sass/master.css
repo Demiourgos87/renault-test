@@ -1,0 +1,36 @@
+footer {
+  width: 92%;
+  margin: 40px 0;
+  padding: 20px 4%;
+  text-align: center; }
+
+.footer_logo {
+  margin-bottom: 20px; }
+
+.footer-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.footer-nav li {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 15px; }
+
+.footer-nav li a {
+  color: #8b8b8b; }
+
+@media screen and (min-width: 1024px) {
+  .footer-nav li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 0; } }
+
+section, article, aside, figure, figcaption, header, footer, nav {
+  display: block; }
+
+.text-clear {
+  text-decoration: none; }
+
+.text-underline {
+  text-decoration: underline; }

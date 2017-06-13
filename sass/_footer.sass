@@ -1,0 +1,23 @@
+footer
+  +container(92%, 40px 0, 20px 4%)
+  text-align: center
+
+.footer_logo
+  margin-bottom: 20px
+
+.footer-nav
+  +ulClean
+
+.footer-nav li
+  display: block
+  text-transform: uppercase
+  margin-bottom: 15px
+
+.footer-nav li a
+  color: $grey
+
+@media screen and (min-width: $break-large)
+  .footer-nav li
+    display: inline-block
+    margin-right: 20px
+    margin-bottom: 0
