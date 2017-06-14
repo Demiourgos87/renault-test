@@ -8,19 +8,17 @@
       $subMenuTrigger = $('.sub__menu__trigger'),
       $menuOpenedOverlay = $('.menu__opened__overlay'),
       $mainContent = $('.main__content'),
-      windowHeight = $(window).outerHeight(),
-      headerHeight = $('header').outerHeight();
-
-  console.log(windowHeight);
-  console.log(headerHeight);
-
-  $headerNavWrap.height(windowHeight - headerHeight);
+      $headerSearch = $('.header__search'),
+      $searchOverlay = $('.search__overlay'),
+      $searchClose = $('.search__close');
 
   $menuTrigger.on('click', function() {
 
     $headerNavWrap.toggleClass('inView');
-    $menuOpenedOverlay.fadeToggle(400);
+    $headerSearch.fadeToggle(200);
+    $menuOpenedOverlay.fadeToggle(200);
     $mainContent.toggleClass('menuOpened');
+
     if ($menuTrigger.hasClass('fa-bars')) {
       $menuTrigger.removeClass('fa-bars').addClass('fa-times');
     } else {
@@ -39,7 +37,7 @@
       var $arrow = $current.prev('i.fa');
 
       $headerNavWrap.css('overflow-y', 'scroll');
-      $sub.slideToggle(400);
+      $sub.slideToggle(200);
 
       if ($arrow.hasClass('fa-chevron-down')) {
         $arrow.removeClass('fa-chevron-down').addClass('fa-chevron-up');
@@ -48,6 +46,18 @@
       }
 
     });
+
+  });
+
+  $headerSearch.on('click', function() {
+
+    $searchOverlay.fadeIn(200);
+
+  });
+
+  $searchClose.on('click', function() {
+
+    $searchOverlay.fadeOut(200);
 
   });
 
