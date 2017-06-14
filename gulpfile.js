@@ -37,8 +37,11 @@ gulp.task('buildCSS', function() {
   runSequence('compileSASS', 'uglifyCSS');
 });
 
+gulp.task('buildJS', function() {
+  runSequence('concatJS', 'uglifyJS');
+});
+
 gulp.task('watch', function() {
-  gulp.watch('js/*.js', ['concatJS']);
-  gulp.watch('docs/js/master.js', ['uglifyJS']);
+  gulp.watch('js/*.js', ['buildJS']);
   gulp.watch('sass/*.sass', ['buildCSS']);
 });

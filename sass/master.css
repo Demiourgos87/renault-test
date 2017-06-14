@@ -1,6 +1,6 @@
 footer {
   width: 92%;
-  margin: 100px 0 0;
+  margin: 40px 0 0;
   padding: 20px 4%;
   text-align: center; }
 
@@ -30,9 +30,11 @@ header {
   width: 92%;
   margin: 0;
   padding: 15px 4%;
+  height: 32px;
   background: #000000;
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 100; }
 
 header i {
   cursor: pointer; }
@@ -48,10 +50,60 @@ header i {
   position: absolute;
   top: 15px;
   left: 50%;
-  margin-left: -85px; }
+  margin-left: -85px;
+  z-index: 100; }
 
 .header__logo img {
   width: 100%; }
+
+.header__nav--wrap {
+  width: 260px;
+  margin: 0;
+  padding: 0 10px;
+  background: #ffffff;
+  position: fixed;
+  top: 62px;
+  left: -280px;
+  z-index: 50;
+  overflow: hidden;
+  transition: all .4s linear; }
+
+.header__nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 40px; }
+
+.header__nav a {
+  text-decoration: none;
+  color: #000000; }
+
+.header__nav > li {
+  margin-bottom: 20px;
+  position: relative; }
+
+.header__nav > li > i {
+  color: #ffcc33;
+  margin-right: 15px;
+  position: relative;
+  top: -2px; }
+
+.header__nav > li > a {
+  text-transform: uppercase; }
+
+.sub__menu {
+  display: none;
+  list-style: none; }
+
+.sub__menu > li {
+  margin-top: 15px; }
+
+.inView {
+  left: 0; }
+
+.main__content.menuOpened {
+  margin-left: 280px; }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
@@ -60,6 +112,10 @@ body, figure {
   margin: 0;
   padding: 0; }
 
+body {
+  position: relative;
+  overflow-x: hidden; }
+
 body, .text--normal {
   font-size: 1em; }
 
@@ -67,6 +123,25 @@ body, .text--normal {
   display: table;
   content: "";
   clear: both; }
+
+.main__content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 800px;
+  margin-top: 62px;
+  position: relative;
+  margin-left: 0;
+  transition: margin .4s linear; }
+
+.menu__opened__overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); }
 
 .text--clear {
   text-decoration: none; }
@@ -89,5 +164,11 @@ body, .text--normal {
 .text--big {
   font-size: 1.8em; }
 
+.text--medium {
+  font-size: 1.2em; }
+
 .text--small {
   font-size: 0.8em; }
+
+.text--verySmall {
+  font-size: 0.6em; }

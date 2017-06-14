@@ -1,0 +1,44 @@
+.header__nav--wrap
+  +container(260px, 0, 0 10px)
+  background: $white
+  position: fixed
+  top: 62px
+  left: -280px
+  z-index: 50
+  overflow: hidden
+  transition: all .4s linear
+
+.header__nav
+  +ulClean
+  position: relative
+  top: 40px
+
+.header__nav a
+  text-decoration: none
+  color: $black
+
+.header__nav > li
+  margin-bottom: 20px
+  position: relative
+
+.header__nav > li > i
+  color: $yellow
+  margin-right: 15px
+  position: relative
+  top: -2px
+
+.header__nav > li > a
+  text-transform: uppercase
+
+.sub__menu
+  display: none
+  list-style: none
+
+.sub__menu > li
+  margin-top: 15px
+
+.inView
+  left: 0
+
+.main__content.menuOpened
+  margin-left: 280px

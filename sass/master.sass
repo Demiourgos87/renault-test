@@ -1,12 +1,15 @@
-// import general variables and mixins
+// import general variables and mixins \\
 
 @import variables
 @import mixins
 
-// import module files
+// import module files \\
 
 @import footer
 @import header
+@import mainNavigation
+
+// general classes \\
 
 section, article, aside, figure, figcaption, header, footer, nav
   display: block
@@ -15,6 +18,10 @@ body, figure
   margin: 0
   padding: 0
 
+body
+  position: relative
+  overflow-x: hidden
+
 body, .text--normal
   font-size: 1em
 
@@ -22,6 +29,25 @@ body, .text--normal
   display: table
   content: ""
   clear: both
+
+.main__content
+  +container(100%, 0, 0)
+  height: 800px
+  margin-top: 62px
+  position: relative
+  margin-left: 0
+  transition: margin .4s linear
+
+.menu__opened__overlay
+  display: none
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0, 0, 0, 0.6)
+
+// text modifiers \\
 
 .text--clear
   text-decoration: none
@@ -44,5 +70,11 @@ body, .text--normal
 .text--big
   font-size: 1.8em
 
+.text--medium
+  font-size: 1.2em
+
 .text--small
   font-size: 0.8em
+
+.text--verySmall
+  font-size: 0.6em
