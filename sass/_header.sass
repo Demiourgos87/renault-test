@@ -25,3 +25,59 @@ header i
 
 .header__logo img
   width: 100%
+
+.menu__opened__overlay, .search__overlay
+  display: none
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.menu__opened__overlay
+  position: absolute
+  background: rgba(0, 0, 0, 0.6)
+
+.search__overlay
+  position: fixed
+  z-index: 110
+  background: rgba(0, 0, 0, 0.8)
+
+.search__close
+  position: absolute
+  top: 15px
+  right: 15px
+  font-size: 1.8em
+  cursor: pointer
+
+.search__field
+  position: absolute
+  top: 45%
+  left: 50%
+  width: 80%
+  margin-left: -40%
+  text-align: center
+
+.search__field input
+  width: 85%
+  background: transparent
+  border: 0
+  color: $white
+  border-bottom: 1px solid $white
+
+.search__field input:focus
+  outline: none
+  border-bottom: 1px solid $white
+
+.search__field i
+  font-size: 1.8em
+
+.header__social
+  text-align: center
+  position: relative
+  margin: 80px auto 20px auto
+
+.header__social i
+  margin-right: 20px
+
+.header__social i:last-child
+  margin-right: 0
