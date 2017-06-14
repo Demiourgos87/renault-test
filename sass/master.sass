@@ -6,16 +6,43 @@
 // import module files
 
 @import footer
+@import header
 
 section, article, aside, figure, figcaption, header, footer, nav
   display: block
 
-body
+body, figure
   margin: 0
   padding: 0
 
-.text-clear
+body, .text--normal
+  font-size: 1em
+
+.clearfix::before, .clearfix::after
+  display: table
+  content: ""
+  clear: both
+
+.text--clear
   text-decoration: none
 
-.text-underline
+.text--underline
   text-decoration: underline
+
+.text--white
+  color: $white
+
+.text--gray
+  color: $gray
+
+.text--yellow
+  color: $yellow
+
+.text--black
+  color: $black
+
+.text--big
+  font-size: 1.8em
+
+.text--small
+  font-size: 0.8em
