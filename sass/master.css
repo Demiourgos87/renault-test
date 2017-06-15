@@ -112,7 +112,24 @@ header i {
     float: left; }
   .header__social {
     position: relative;
-    margin: 100px auto 20px auto; } }
+    margin: 100px auto 20px auto;
+    color: #000000; } }
+
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 96%;
+    padding: 15px 2%; }
+  .menu__trigger {
+    display: none; }
+  .header__social {
+    color: #ffffff;
+    float: left;
+    font-size: 1.8em; } }
+
+.header__nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
 @media only screen and (max-width: 320px) {
   .main__content.menuOpened {
@@ -130,9 +147,6 @@ header i {
     overflow: hidden;
     transition: all .2s linear; }
   .header__nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     margin-bottom: 40px;
     position: relative;
     top: 40px; }
@@ -156,6 +170,40 @@ header i {
     margin-top: 15px; }
   .inView {
     left: 0; } }
+
+@media only screen and (min-width: 1024px) {
+  .header__nav--wrap {
+    height: 62px;
+    position: absolute;
+    width: 90%; }
+  .header__nav {
+    width: 80%;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    margin-left: -40%;
+    text-transform: uppercase; }
+  .header__nav > li {
+    display: inline-block;
+    margin-right: 40px; }
+  .header__nav > li:first-child {
+    margin-left: 120px; }
+  .header__nav > li:nth-child(3) {
+    margin-right: 200px; }
+  .header__nav > li:last-child {
+    margin-right: 0; }
+  .header__nav > li > i {
+    display: none; }
+  .header__nav > li > a {
+    color: #ffcc33;
+    text-decoration: none;
+    font-size: 1em; }
+  .sub__menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
