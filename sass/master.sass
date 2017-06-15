@@ -5,9 +5,11 @@
 
 // import module files \\
 
+@import grid
 @import footer
 @import header
 @import mainNavigation
+@import article-media
 
 // general classes \\
 
@@ -34,12 +36,64 @@ body, .text--normal
   clear: both
 
 .main__content
-  +container(100%, 0, 0)
-  height: 800px
   margin-top: 62px
   position: relative
   left: 0
-  transition: all .2s linear
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-desk)
+
+  .main__content
+    width: 92%
+    padding: 40px 4%
+    transition: all .2s linear
+
+
+@media only screen and (min-width: $break-desk)
+
+  .main__content
+    width: 84%
+    padding: 40px 8%
+
+
+@media only screen and (min-width: $break-desk)
+
+  .row
+    width: 100%
+    margin-bottom: 15px
+
+  .heading--row
+    text-align: left
+    width: 100%
+    margin-bottom: 15px
+
+  .col--half
+    width: 46%
+    padding: 10px 2%
+
+  .top__article
+    width: 48%
+    margin-right: 2%
+    font-size: 0.8em
+    text-align: left
+    float: left
+
+  .top__article:last-child
+    margin-right: 0
+
+  .top__article img
+    float: left
+    width: 28%
+    margin-right: 2%
+
+  .top__article p
+    margin: 0
+    float: left
+    width: 70%
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-desk)
+
+  .row
+    width: 100%
 
 // text modifiers \\
 

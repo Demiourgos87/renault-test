@@ -1,0 +1,62 @@
+.article
+  display: block
+  float: left
+
+.article__img
+  position: relative
+  margin-bottom: 15px
+
+.article__img img
+  width: 100%
+
+.article__img__footnote
+  text-transform: uppercase
+  position: absolute
+  left: 0
+  bottom: 4px
+  padding: 5px
+  font-size: 0.8em
+  background: $yellow
+  color: $black
+
+.article__title
+  font-weight: bold
+  margin-bottom: 10px
+
+.article--portrait .article__img, .article--portrait .article__body
+  float: none
+  width: 100%
+
+.article--landscape .article__img, .article--landscape .article__body
+  float: left
+  width: 50%
+
+.article--s, .article--m, .article--l, .article--xl
+  margin-right: 2%
+
+.article--s
+  width: 32.33332%
+
+.article--s .article__img__footnote
+  font-size: 0.6em
+
+.article--m
+  width: 49%
+
+.article--l
+  width: 65.66665%
+
+.article--xl
+  width: 99%
+
+.article:last-child
+  margin-right: 0
+
+
+.heading--fix
+  margin-top: 35%
+
+@media only screen and (max-width: $break-tab)
+
+  .article__desc
+    display: none

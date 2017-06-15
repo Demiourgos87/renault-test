@@ -72,24 +72,27 @@
 
   });
 
-  // desktop main menu
+  // desktop main menu \\
 
-  if (windowWidth > 1024) {
+  if (windowWidth > 1023) {
 
     $.each($subMenuTrigger, function() {
 
       var $current = $(this);
-      var $sub = $current.next('.sub__menu');
+      var $li = $(this).closest('li');
+      var $sub = $li.find('.sub__menu');
 
-      $current.on('mouseenter', function() {
+      $li.on('mouseenter', function() {
 
+        $current.addClass('active');
         $sub.fadeIn(200);
 
       });
 
-      $current.on('mouseleave', function() {
+      $sub.on('mouseleave', function() {
 
         $sub.fadeOut(200);
+        $current.removeClass('active');
 
       });
 

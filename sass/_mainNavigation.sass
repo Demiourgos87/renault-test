@@ -1,6 +1,9 @@
 .header__nav
   +ulClean
 
+.header__nav > li > a
+  text-transform: uppercase
+
 @media only screen and (min-width: $break-mob) and (max-width: $break-desk)
 
   .main__content.menuOpened
@@ -36,18 +39,20 @@
     position: relative
     top: -2px
 
-  .header__nav > li > a
-    text-transform: uppercase
-
   .sub__menu
     display: none
+
+  .sub__menu > ul
     list-style: none
 
-  .sub__menu > li
+  .sub__menu > ul > li
     margin-top: 15px
 
   .inView
     left: 0
+
+  .top__articles
+    display: none
 
 @media only screen and (min-width: $break-desk)
 
@@ -55,22 +60,23 @@
     height: 62px
     position: absolute
     width: 90%
+    z-index: 110
 
   .header__nav
     width: 80%
     text-align: center
     position: fixed
-    top: 20px
+    top: 25px
     left: 50%
     margin-left: -40%
-    text-transform: uppercase
 
   .header__nav > li
     display: inline-block
     margin-right: 40px
+    z-index: 110
 
   .header__nav > li:first-child
-    margin-left: 120px
+    margin-left: 110px
 
   .header__nav > li:nth-child(3)
     margin-right: 200px
@@ -84,13 +90,42 @@
   .header__nav > li > a
     color: $yellow
     text-decoration: none
-    font-size: 1em
+    font-size: 0.8em
     transition: color .15s linear
 
-  .header__nav > li > a:hover
+  .header__nav > li > a.active, .header__nav > li > a:hover
     color: $white
     border-bottom: 2px solid $white
 
   .sub__menu
-    +ulClean
     display: none
+    position: fixed
+    top: 62px
+    left: 0
+    right: 0
+    background: $white
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2)
+
+  .sub__menu > ul
+    +ulClean
+    display: table-cell
+    width: 20%
+    float: left
+    padding: 60px 0 40px 5%
+    text-transform: uppercase
+    box-shadow: 1px 0 0 0 $gray
+
+  .sub__menu > ul:nth-child(2)
+    padding-bottom: 90px
+
+  .sub__menu > ul > li
+    text-align: left
+    margin-bottom: 30px
+
+  .sub__menu > ul > li > a
+    text-decoration: none
+
+  .sub__menu .top__articles
+    float: left
+    width: 30%
+    padding: 40px 10% 0 10%
