@@ -1,6 +1,20 @@
-@media only screen and (min-width: 319px) {
-  .row {
-    width: 100%; } }
+@media only screen and (min-width: 319px) and (max-width: 768px) {
+  .row--mob {
+    width: 100%;
+    position: relative; } }
+
+@media only screen and (min-width: 768px) {
+  .row--mob {
+    position: relative;
+    float: left;
+    width: 49.5%;
+    margin-right: 0.5%; }
+  .row--mob:last-child {
+    width: 49%;
+    margin-right: 0;
+    margin-left: 0.5%; }
+  .row--padded {
+    padding-top: 13%; } }
 
 footer {
   width: 92%;
@@ -241,7 +255,8 @@ header i {
     text-align: left;
     margin-bottom: 30px; }
   .sub__menu > ul > li > a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #000000; }
   .sub__menu .top__articles {
     float: left;
     width: 30%;
@@ -256,9 +271,6 @@ header i {
   position: relative;
   margin-bottom: 10px; }
 
-.article p {
-  margin: 0; }
-
 .article__img img {
   width: 100%; }
 
@@ -267,14 +279,18 @@ header i {
   position: absolute;
   left: 0;
   bottom: 4px;
-  padding: 5px;
-  font-size: 0.8em;
+  padding: 8px;
+  font-size: 0.6em;
   background: #ffcc33;
-  color: #000000; }
+  color: #000000;
+  font-weight: bold; }
 
 .article__title {
   font-weight: bold;
-  margin-bottom: 10px; }
+  margin: 15px 0; }
+
+.article__desc {
+  margin: 0 0 15px 0; }
 
 .article--portrait .article__img, .article--portrait .article__body {
   float: none;
@@ -290,14 +306,14 @@ header i {
 .article--landscape .article__body {
   width: 50%; }
 
+.article--landscape .article__title {
+  margin-top: 0; }
+
 .article--s, .article--m, .article--l {
   margin-right: 2%; }
 
 .article--s {
   width: 32.33332%; }
-
-.article--s .article__img__footnote {
-  font-size: 0.6em; }
 
 .article--m {
   width: 49%; }
@@ -312,9 +328,9 @@ header i {
   margin-right: 0; }
 
 .heading--fix {
-  margin-top: 35%; }
+  margin-top: 34.8%; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .article__desc {
     display: none; } }
 
@@ -353,8 +369,8 @@ body, .text--normal {
 
 @media only screen and (min-width: 1024px) {
   .main__content {
-    width: 84%;
-    padding: 40px 8%; } }
+    width: 80%;
+    padding: 40px 10%; } }
 
 @media only screen and (min-width: 1024px) {
   .row {
@@ -383,10 +399,6 @@ body, .text--normal {
     margin: 0;
     float: left;
     width: 70%; } }
-
-@media only screen and (min-width: 319px) and (max-width: 1024px) {
-  .row {
-    width: 100%; } }
 
 .text--clear {
   text-decoration: none; }

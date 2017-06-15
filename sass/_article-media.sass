@@ -7,9 +7,6 @@
   position: relative
   margin-bottom: 10px
 
-.article p
-  margin: 0
-
 .article__img img
   width: 100%
 
@@ -18,14 +15,18 @@
   position: absolute
   left: 0
   bottom: 4px
-  padding: 5px
-  font-size: 0.8em
+  padding: 8px
+  font-size: 0.6em
   background: $yellow
   color: $black
+  font-weight: bold
 
 .article__title
   font-weight: bold
-  margin-bottom: 10px
+  margin: 15px 0
+
+.article__desc
+  margin: 0 0 15px 0
 
 .article--portrait .article__img, .article--portrait .article__body
   float: none
@@ -41,14 +42,14 @@
 .article--landscape .article__body
   width: 50%
 
+.article--landscape .article__title
+  margin-top: 0
+
 .article--s, .article--m, .article--l
   margin-right: 2%
 
 .article--s
   width: 32.33332%
-
-.article--s .article__img__footnote
-  font-size: 0.6em
 
 .article--m
   width: 49%
@@ -63,9 +64,9 @@
   margin-right: 0
 
 .heading--fix
-  margin-top: 35%
+  margin-top: 34.8%
 
-@media only screen and (max-width: $break-tab)
+@media only screen and (max-width: $break-desk)
 
   .article__desc
     display: none
