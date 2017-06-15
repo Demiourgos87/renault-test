@@ -1,5 +1,4 @@
 (function($){
-  // mobile navigation \\
 
   // cache DOM \\
   var $headerNavWrap = $('.header__nav--wrap'),
@@ -10,44 +9,54 @@
       $mainContent = $('.main__content'),
       $headerSearch = $('.header__search'),
       $searchOverlay = $('.search__overlay'),
-      $searchClose = $('.search__close');
+      $searchClose = $('.search__close'),
+      windowWidth = $(window).width();
 
-  $menuTrigger.on('click', function() {
 
-    $headerNavWrap.toggleClass('inView');
-    $headerSearch.fadeToggle(200);
-    $menuOpenedOverlay.fadeToggle(200);
-    $mainContent.toggleClass('menuOpened');
+  // mobile navigation \\
 
-    if ($menuTrigger.hasClass('fa-bars')) {
-      $menuTrigger.removeClass('fa-bars').addClass('fa-times');
-    } else {
-      $menuTrigger.removeClass('fa-times').addClass('fa-bars');
-    }
+  if (windowWidth < 1024) {
 
-  });
+    $menuTrigger.on('click', function() {
 
-  $.each($subMenuTrigger, function() {
+      $headerNavWrap.toggleClass('inView');
+      $headerSearch.fadeToggle(200);
+      $menuOpenedOverlay.fadeToggle(200);
+      $mainContent.toggleClass('menuOpened');
 
-    var $current = $(this);
-
-    $current.on('click', function() {
-
-      var $sub = $current.next('.sub__menu');
-      var $arrow = $current.prev('i.fa');
-
-      $headerNavWrap.css('overflow-y', 'scroll');
-      $sub.slideToggle(200);
-
-      if ($arrow.hasClass('fa-chevron-down')) {
-        $arrow.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+      if ($menuTrigger.hasClass('fa-bars')) {
+        $menuTrigger.removeClass('fa-bars').addClass('fa-times');
       } else {
-        $arrow.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        $menuTrigger.removeClass('fa-times').addClass('fa-bars');
       }
 
     });
 
-  });
+    $.each($subMenuTrigger, function() {
+
+      var $current = $(this);
+
+      $current.on('click', function() {
+
+        var $sub = $current.next('.sub__menu');
+        var $arrow = $current.prev('i.fa');
+
+        $headerNavWrap.css('overflow-y', 'scroll');
+        $sub.slideToggle(200);
+
+        if ($arrow.hasClass('fa-chevron-down')) {
+          $arrow.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        } else {
+          $arrow.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        }
+
+      });
+
+    });
+
+  }
+
+  // search overlay \\
 
   $headerSearch.on('click', function() {
 

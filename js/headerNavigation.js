@@ -10,7 +10,7 @@
       $headerSearch = $('.header__search'),
       $searchOverlay = $('.search__overlay'),
       $searchClose = $('.search__close'),
-      windowWidth = $('window').width();
+      windowWidth = $(window).width();
 
 
   // mobile navigation \\
