@@ -249,11 +249,15 @@ header i {
 
 .article {
   display: block;
-  float: left; }
+  float: left;
+  margin-bottom: 20px; }
 
 .article__img {
   position: relative;
-  margin-bottom: 15px; }
+  margin-bottom: 10px; }
+
+.article p {
+  margin: 0; }
 
 .article__img img {
   width: 100%; }
@@ -277,10 +281,16 @@ header i {
   width: 100%; }
 
 .article--landscape .article__img, .article--landscape .article__body {
-  float: left;
+  float: left; }
+
+.article--landscape .article__img {
+  width: 48%;
+  margin-right: 2%; }
+
+.article--landscape .article__body {
   width: 50%; }
 
-.article--s, .article--m, .article--l, .article--xl {
+.article--s, .article--m, .article--l {
   margin-right: 2%; }
 
 .article--s {
@@ -296,7 +306,7 @@ header i {
   width: 65.66665%; }
 
 .article--xl {
-  width: 99%; }
+  width: 100%; }
 
 .article:last-child {
   margin-right: 0; }
@@ -349,7 +359,7 @@ body, .text--normal {
 @media only screen and (min-width: 1024px) {
   .row {
     width: 100%;
-    margin-bottom: 15px; }
+    margin-bottom: 20px; }
   .heading--row {
     text-align: left;
     width: 100%;
