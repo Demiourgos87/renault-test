@@ -1,46 +1,48 @@
-.header__nav--wrap
-  +container(260px, 0, 0 10px)
-  background: $white
-  position: fixed
-  top: 62px
-  bottom: 0
-  left: -280px
-  z-index: 50
-  overflow: hidden
-  transition: all .2s linear
+@media only screen and (max-width: $break-mob)
 
-.header__nav
-  +ulClean
-  margin-bottom: 40px
-  position: relative
-  top: 40px
+  .main__content.menuOpened
+    left: 280px
 
-.header__nav a
-  text-decoration: none
-  color: $black
+  .header__nav--wrap
+    +container(260px, 0, 0 10px)
+    background: $white
+    position: fixed
+    top: 62px
+    bottom: 0
+    left: -280px
+    z-index: 50
+    overflow: hidden
+    transition: all .2s linear
 
-.header__nav > li
-  margin-bottom: 20px
-  position: relative
+  .header__nav
+    +ulClean
+    margin-bottom: 40px
+    position: relative
+    top: 40px
 
-.header__nav > li > i
-  color: $yellow
-  margin-right: 15px
-  position: relative
-  top: -2px
+  .header__nav a
+    text-decoration: none
+    color: $black
 
-.header__nav > li > a
-  text-transform: uppercase
+  .header__nav > li
+    margin-bottom: 20px
+    position: relative
 
-.sub__menu
-  display: none
-  list-style: none
+  .header__nav > li > i
+    color: $yellow
+    margin-right: 15px
+    position: relative
+    top: -2px
 
-.sub__menu > li
-  margin-top: 15px
+  .header__nav > li > a
+    text-transform: uppercase
 
-.inView
-  left: 0
+  .sub__menu
+    display: none
+    list-style: none
 
-.main__content.menuOpened
-  left: 280px
+  .sub__menu > li
+    margin-top: 15px
+
+  .inView
+    left: 0

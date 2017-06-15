@@ -9,9 +9,6 @@ header
 header i
   cursor: pointer
 
-.menu__trigger
-  float: left
-
 .header__search
   float: right
 
@@ -73,11 +70,19 @@ header i
 
 .header__social
   text-align: center
-  position: relative
-  margin: 100px auto 20px auto
 
 .header__social i
   margin-right: 20px
 
 .header__social i:last-child
   margin-right: 0
+
+
+@media only screen and (max-width: $break-mob)
+
+  .menu__trigger
+    float: left
+
+  .header__social
+    position: relative
+    margin: 100px auto 20px auto

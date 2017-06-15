@@ -39,9 +39,6 @@ header {
 header i {
   cursor: pointer; }
 
-.menu__trigger {
-  float: left; }
-
 .header__search {
   float: right; }
 
@@ -102,9 +99,7 @@ header i {
   font-size: 1.8em; }
 
 .header__social {
-  text-align: center;
-  position: relative;
-  margin: 100px auto 20px auto; }
+  text-align: center; }
 
 .header__social i {
   margin-right: 20px; }
@@ -112,56 +107,55 @@ header i {
 .header__social i:last-child {
   margin-right: 0; }
 
-.header__nav--wrap {
-  width: 260px;
-  margin: 0;
-  padding: 0 10px;
-  background: #ffffff;
-  position: fixed;
-  top: 62px;
-  bottom: 0;
-  left: -280px;
-  z-index: 50;
-  overflow: hidden;
-  transition: all .2s linear; }
+@media only screen and (max-width: 320px) {
+  .menu__trigger {
+    float: left; }
+  .header__social {
+    position: relative;
+    margin: 100px auto 20px auto; } }
 
-.header__nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 40px;
-  position: relative;
-  top: 40px; }
-
-.header__nav a {
-  text-decoration: none;
-  color: #000000; }
-
-.header__nav > li {
-  margin-bottom: 20px;
-  position: relative; }
-
-.header__nav > li > i {
-  color: #ffcc33;
-  margin-right: 15px;
-  position: relative;
-  top: -2px; }
-
-.header__nav > li > a {
-  text-transform: uppercase; }
-
-.sub__menu {
-  display: none;
-  list-style: none; }
-
-.sub__menu > li {
-  margin-top: 15px; }
-
-.inView {
-  left: 0; }
-
-.main__content.menuOpened {
-  left: 280px; }
+@media only screen and (max-width: 320px) {
+  .main__content.menuOpened {
+    left: 280px; }
+  .header__nav--wrap {
+    width: 260px;
+    margin: 0;
+    padding: 0 10px;
+    background: #ffffff;
+    position: fixed;
+    top: 62px;
+    bottom: 0;
+    left: -280px;
+    z-index: 50;
+    overflow: hidden;
+    transition: all .2s linear; }
+  .header__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+    position: relative;
+    top: 40px; }
+  .header__nav a {
+    text-decoration: none;
+    color: #000000; }
+  .header__nav > li {
+    margin-bottom: 20px;
+    position: relative; }
+  .header__nav > li > i {
+    color: #ffcc33;
+    margin-right: 15px;
+    position: relative;
+    top: -2px; }
+  .header__nav > li > a {
+    text-transform: uppercase; }
+  .sub__menu {
+    display: none;
+    list-style: none; }
+  .sub__menu > li {
+    margin-top: 15px; }
+  .inView {
+    left: 0; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
