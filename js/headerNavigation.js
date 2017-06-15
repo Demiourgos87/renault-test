@@ -1,5 +1,7 @@
 (function($){
 
+  // navigation \\
+
   // cache DOM \\
   var $headerNavWrap = $('.header__nav--wrap'),
       $headerNav = $('.header__nav'),
@@ -13,7 +15,7 @@
       windowWidth = $(window).width();
 
 
-  // mobile navigation \\
+  // mobile main menu \\
 
   if (windowWidth < 1024) {
 
@@ -69,5 +71,30 @@
     $searchOverlay.fadeOut(200);
 
   });
+
+  // desktop main menu
+
+  if (windowWidth > 1024) {
+
+    $.each($subMenuTrigger, function() {
+
+      var $current = $(this);
+      var $sub = $current.next('.sub__menu');
+
+      $current.on('mouseenter', function() {
+
+        $sub.fadeIn(200);
+
+      });
+
+      $current.on('mouseleave', function() {
+
+        $sub.fadeOut(200);
+
+      });
+
+    });
+
+  }
 
 })(jQuery);

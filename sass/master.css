@@ -198,7 +198,11 @@ header i {
   .header__nav > li > a {
     color: #ffcc33;
     text-decoration: none;
-    font-size: 1em; }
+    font-size: 1em;
+    transition: color .15s linear; }
+  .header__nav > li > a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff; }
   .sub__menu {
     list-style-type: none;
     margin: 0;
