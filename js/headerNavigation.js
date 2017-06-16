@@ -25,6 +25,7 @@
       $headerSearch.fadeToggle(200);
       $menuOpenedOverlay.fadeToggle(200);
       $mainContent.toggleClass('menuOpened');
+      $('body, html').toggleClass('menuOpened');
 
       if ($menuTrigger.hasClass('fa-bars')) {
         $menuTrigger.removeClass('fa-bars').addClass('fa-times');
