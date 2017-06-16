@@ -5,12 +5,33 @@
 .news1 {
   margin-bottom: 40px; }
 
+.fanDeVu {
+  width: 100%;
+  background: #f6f6f6;
+  margin: 100px 0; }
+
+.fanDeVu__container {
+  width: 90%;
+  margin: 0 auto; }
+
+.fanDeVu .article__body {
+  padding: 20px 4%; }
+
 @media only screen and (min-width: 319px) and (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 0 auto; }
   .row--mob {
     width: 100%;
-    position: relative; } }
+    position: relative; }
+  .fanDeVu {
+    padding: 30px 0 60px 0; } }
 
 @media only screen and (min-width: 768px) {
+  .container {
+    width: 100%; }
+  .fanDeVu {
+    padding: 40px 0 60px 0; }
   .row--mob {
     position: relative;
     float: left;
@@ -20,7 +41,7 @@
     width: 49%;
     margin-right: 0;
     margin-left: 0.5%; }
-  .row--padded {
+  .row--padded--top {
     padding-top: 13%; }
   .row--mob.row--clipped--right {
     width: 45%; } }
@@ -215,7 +236,7 @@ header i {
   text-transform: uppercase; }
 
 @media only screen and (min-width: 319px) and (max-width: 1025px) {
-  .main__content.menuOpened {
+  .page.menuOpened {
     left: 280px; }
   .header__nav--wrap {
     width: 260px;
@@ -331,7 +352,8 @@ header i {
 .article {
   display: block;
   float: left;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  overflow: hidden; }
 
 .article__img {
   position: relative;
@@ -351,12 +373,17 @@ header i {
   color: #000000;
   font-weight: bold; }
 
+.article__body {
+  background: #ffffff; }
+
 .article__title {
+  color: #000000;
   font-weight: bold;
   margin: 15px 0; }
 
 .article__desc {
-  margin: 0 0 15px 0; }
+  margin: 0 0 15px 0;
+  color: #7e7e7e; }
 
 .article--portrait .article__img, .article--portrait .article__body {
   float: none;
@@ -396,9 +423,35 @@ header i {
 .heading--fix {
   margin-top: 34.8%; }
 
+.article--fan .article__img {
+  margin-bottom: -5px; }
+
 @media only screen and (max-width: 1025px) {
   .article__desc {
     display: none; } }
+
+@media only screen and (min-width: 319px) and (max-width: 768px) {
+  .article--fan .article__img, .article--fan .article__body {
+    float: none; }
+  .article--fan .article__body {
+    width: 80%;
+    padding: 20px 10%; }
+  .article--fan .article__img {
+    width: 100%; } }
+
+@media only screen and (min-width: 768px) {
+  .article--fan .article__img, .article--fan .article__body {
+    float: left; }
+  .article--fan .article__body {
+    width: 17.33332%;
+    padding: 10px 8% 20em 8%;
+    margin-bottom: -20em; }
+  .article--fan .article__img {
+    width: 66.66665%; } }
+
+@media only screen and (min-width: 1025px) {
+  .article--fan .article__body {
+    padding: 40px 8% 20em 8%; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
@@ -413,7 +466,8 @@ body, figure {
 
 body {
   position: relative;
-  max-width: 100%; }
+  max-width: 100%;
+  background: #ffffff; }
 
 body, .text--normal {
   font-size: 1rem; }
@@ -423,10 +477,12 @@ body, .text--normal {
   content: "";
   clear: both; }
 
-.main__content {
+.page {
+  width: 100%;
   margin-top: 62px;
   position: relative;
-  left: 0; }
+  left: 0;
+  transition: all .2s linear; }
 
 .section__title {
   position: absolute;
@@ -445,10 +501,9 @@ body, .text--normal {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); }
 
 @media only screen and (min-width: 319px) and (max-width: 1025px) {
-  .main__content {
-    width: 92%;
-    padding: 40px 4%;
-    transition: all .2s linear; }
+  .page__inner {
+    width: 100%;
+    padding: 40px 0; }
   .section__title {
     margin-top: 10px;
     width: 80px; } }
@@ -456,12 +511,17 @@ body, .text--normal {
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
   .section__title {
     margin-top: -20px;
-    width: 120px; } }
+    width: 120px; }
+  .page__inner {
+    width: 80%;
+    padding: 40px 0;
+    margin: 0 auto; } }
 
 @media only screen and (min-width: 1025px) {
-  .main__content {
+  .page__inner {
     width: 80%;
-    padding: 40px 10%; }
+    padding: 40px 0;
+    margin: 0 auto; }
   .heading--row {
     text-align: left;
     width: 100%;

@@ -28,6 +28,7 @@ body, figure
 body
   position: relative
   max-width: 100%
+  background: $white
 
 body, .text--normal
   font-size: 1rem
@@ -37,10 +38,12 @@ body, .text--normal
   content: ""
   clear: both
 
-.main__content
+.page
+  width: 100%
   margin-top: 62px
   position: relative
   left: 0
+  transition: all .2s linear
 
 .section__title
   position: absolute
@@ -61,10 +64,9 @@ body, .text--normal
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-desk)
 
-  .main__content
-    width: 92%
-    padding: 40px 4%
-    transition: all .2s linear
+  .page__inner
+    width: 100%
+    padding: 40px 0
 
   .section__title
     margin-top: 10px
@@ -77,12 +79,18 @@ body, .text--normal
     margin-top: -20px
     width: 120px
 
+  .page__inner
+    width: 80%
+    padding: 40px 0
+    margin: 0 auto
+
 
 @media only screen and (min-width: $break-desk)
 
-  .main__content
+  .page__inner
     width: 80%
-    padding: 40px 10%
+    padding: 40px 0
+    margin: 0 auto
 
   .heading--row
     text-align: left

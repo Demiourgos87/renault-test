@@ -8,7 +8,7 @@
       $menuTrigger = $('.menu__trigger i'),
       $subMenuTrigger = $('.sub__menu__trigger'),
       $menuOpenedOverlay = $('.menu__opened__overlay'),
-      $mainContent = $('.main__content'),
+      $mainContent = $('.page'),
       $headerSearch = $('.header__search'),
       $searchOverlay = $('.search__overlay'),
       $searchClose = $('.search__close'),

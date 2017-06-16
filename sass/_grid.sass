@@ -5,14 +5,39 @@
 .news1
   margin-bottom: 40px
 
+.fanDeVu
+  width: 100%
+  background: $lightBlue
+  margin: 100px 0
+
+.fanDeVu__container
+  width: 90%
+  margin: 0 auto
+
+.fanDeVu .article__body
+  padding: 20px 4%
+
+
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab)
+
+  .container
+    width: 90%
+    margin: 0 auto
 
   .row--mob
     width: 100%
     position: relative
 
+  .fanDeVu
+    padding: 30px 0 60px 0
 
 @media only screen and (min-width: $break-tab)
+
+  .container
+    width: 100%
+
+  .fanDeVu
+    padding: 40px 0 60px 0
 
   .row--mob
     position: relative
@@ -25,7 +50,7 @@
     margin-right: 0
     margin-left: 0.5%
 
-  .row--padded
+  .row--padded--top
     padding-top: 13%
 
   .row--mob.row--clipped--right

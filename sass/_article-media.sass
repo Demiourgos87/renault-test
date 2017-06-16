@@ -2,6 +2,7 @@
   display: block
   float: left
   margin-bottom: 20px
+  overflow: hidden
 
 .article__img
   position: relative
@@ -21,12 +22,17 @@
   color: $black
   font-weight: bold
 
+.article__body
+  background: $white
+
 .article__title
+  color: $black
   font-weight: bold
   margin: 15px 0
 
 .article__desc
   margin: 0 0 15px 0
+  color: #7e7e7e
 
 .article--portrait .article__img, .article--portrait .article__body
   float: none
@@ -66,7 +72,44 @@
 .heading--fix
   margin-top: 34.8%
 
+.article--fan .article__img
+  margin-bottom: -5px
+
+
 @media only screen and (max-width: $break-desk)
 
   .article__desc
     display: none
+
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab)
+
+  .article--fan .article__img, .article--fan .article__body
+    float: none
+
+  .article--fan .article__body
+    width: 80%
+    padding: 20px 10%
+
+  .article--fan .article__img
+    width: 100%
+
+
+@media only screen and (min-width: $break-tab)
+
+  .article--fan .article__img, .article--fan .article__body
+    float: left
+
+  .article--fan .article__body
+    width: 17.33332%
+    padding: 10px 8% 20em 8%
+    margin-bottom: -20em
+
+  .article--fan .article__img
+    width: 66.66665%
+
+
+@media only screen and (min-width: $break-desk)
+
+  .article--fan .article__body
+    padding: 40px 8% 20em 8%
