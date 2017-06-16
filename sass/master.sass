@@ -40,12 +40,30 @@ body, .text--normal
   position: relative
   left: 0
 
+.section__title
+  position: absolute
+  left: 0
+  font-size: 1.3em
+  color: $black
+
+
 @media only screen and (min-width: $break-mob) and (max-width: $break-desk)
 
   .main__content
     width: 92%
     padding: 40px 4%
     transition: all .2s linear
+
+  .section__title
+    margin-top: 10px
+    width: 80px
+
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk)
+
+  .section__title
+    margin-top: -20px
+    width: 120px
 
 
 @media only screen and (min-width: $break-desk)
@@ -54,10 +72,7 @@ body, .text--normal
     width: 80%
     padding: 40px 10%
 
-
-@media only screen and (min-width: $break-desk)
-
-  .row
+  .row--full
     width: 100%
     margin-bottom: 20px
 
@@ -90,7 +105,20 @@ body, .text--normal
     float: left
     width: 70%
 
+  .section__title
+    margin-top: 0
+    width: 120px
+
 // text modifiers \\
+
+.text--bold
+  font-weight: bold
+
+.text--italic
+  font-style: italic
+
+.text--thin
+  font-weight: normal
 
 .text--clear
   text-decoration: none
