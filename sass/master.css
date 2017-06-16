@@ -1,3 +1,10 @@
+.row--full {
+  width: 100%;
+  margin-bottom: 20px; }
+
+.news1 {
+  margin-bottom: 40px; }
+
 @media only screen and (min-width: 319px) and (max-width: 768px) {
   .row--mob {
     width: 100%;
@@ -17,6 +24,54 @@
     padding-top: 13%; }
   .row--mob.row--clipped--right {
     width: 45%; } }
+
+.text--bold {
+  font-weight: bold; }
+
+.text--italic {
+  font-style: italic; }
+
+.text--thin {
+  font-weight: normal; }
+
+.text--clear {
+  text-decoration: none; }
+
+.text--underline {
+  text-decoration: underline; }
+
+.text--white {
+  color: #ffffff; }
+
+.text--gray {
+  color: #8b8b8b; }
+
+.text--yellow {
+  color: #ffcc33; }
+
+.text--black {
+  color: #000000; }
+
+.text--big {
+  font-size: 1.8rem; }
+
+.text--medium {
+  font-size: 1.2rem; }
+
+.text--small {
+  font-size: 0.8rem; }
+
+.text--verySmall {
+  font-size: 0.6rem; }
+
+.text--center {
+  text-align: center; }
+
+.text--left {
+  text-align: left; }
+
+.text--right {
+  text-align: right; }
 
 footer {
   width: 92%;
@@ -93,7 +148,7 @@ header i {
   position: absolute;
   top: 15px;
   right: 15px;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   cursor: pointer; }
 
 .search__field {
@@ -116,7 +171,7 @@ header i {
   border-bottom: 1px solid #ffffff; }
 
 .search__field i {
-  font-size: 1.8em; }
+  font-size: 1.8rem; }
 
 .header__social {
   text-align: center; }
@@ -134,7 +189,7 @@ header i {
     float: none;
     position: relative;
     margin: 100px auto 20px auto;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     color: #000000; } }
 
 @media only screen and (min-width: 1025px) {
@@ -146,7 +201,7 @@ header i {
   .header__social {
     color: #ffffff;
     float: left;
-    font-size: 1.8em; }
+    font-size: 1.8rem; }
   .search__close {
     top: 25px;
     right: 25px; } }
@@ -228,7 +283,7 @@ header i {
   .header__nav > li > a {
     color: #ffcc33;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     transition: color .15s linear; }
   .header__nav > li > a.active, .header__nav > li > a:hover {
     color: #ffffff;
@@ -257,8 +312,8 @@ header i {
     position: absolute;
     right: 0;
     top: 0;
-    width: 0.1em;
-    height: 20em;
+    width: 0.1rem;
+    height: 20rem;
     background: #ececec; }
   .sub__menu > ul:nth-child(2) {
     padding-bottom: 90px; }
@@ -291,7 +346,7 @@ header i {
   left: 0;
   bottom: 4px;
   padding: 8px;
-  font-size: 0.6em;
+  font-size: 0.6rem;
   background: #ffcc33;
   color: #000000;
   font-weight: bold; }
@@ -349,7 +404,8 @@ section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
 
 html, body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 1rem; }
 
 body, figure {
   margin: 0;
@@ -360,7 +416,7 @@ body {
   max-width: 100%; }
 
 body, .text--normal {
-  font-size: 1em; }
+  font-size: 1rem; }
 
 .clearfix::before, .clearfix::after {
   display: table;
@@ -375,8 +431,18 @@ body, .text--normal {
 .section__title {
   position: absolute;
   left: 0;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   color: #000000; }
+
+.btn {
+  padding: 15px 25px;
+  text-transform: uppercase;
+  background: #ffffff;
+  border: 0;
+  cursor: pointer; }
+
+.btn--shadowed {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); }
 
 @media only screen and (min-width: 319px) and (max-width: 1025px) {
   .main__content {
@@ -396,9 +462,6 @@ body, .text--normal {
   .main__content {
     width: 80%;
     padding: 40px 10%; }
-  .row--full {
-    width: 100%;
-    margin-bottom: 20px; }
   .heading--row {
     text-align: left;
     width: 100%;
@@ -409,7 +472,7 @@ body, .text--normal {
   .top__article {
     width: 48%;
     margin-right: 2%;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     text-align: left;
     float: left; }
   .top__article:last-child {
@@ -425,42 +488,3 @@ body, .text--normal {
   .section__title {
     margin-top: 0;
     width: 120px; } }
-
-.text--bold {
-  font-weight: bold; }
-
-.text--italic {
-  font-style: italic; }
-
-.text--thin {
-  font-weight: normal; }
-
-.text--clear {
-  text-decoration: none; }
-
-.text--underline {
-  text-decoration: underline; }
-
-.text--white {
-  color: #ffffff; }
-
-.text--gray {
-  color: #8b8b8b; }
-
-.text--yellow {
-  color: #ffcc33; }
-
-.text--black {
-  color: #000000; }
-
-.text--big {
-  font-size: 1.8em; }
-
-.text--medium {
-  font-size: 1.2em; }
-
-.text--small {
-  font-size: 0.8em; }
-
-.text--verySmall {
-  font-size: 0.6em; }
