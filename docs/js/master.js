@@ -1,8 +1,3 @@
-// file1 changed
- var a = 1;
-
-// file2
-
 (function($){
 
   // navigation \\
