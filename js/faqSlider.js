@@ -2,11 +2,12 @@
   // FAQ Slider \\
 
   // cache DOM \\
-  var $slider = $('.faq__slider .slider'),
+  var $sliderWrap = $('.faq__slider'),
+      $slider = $sliderWrap.find('.slider'),
       $articles = $slider.find('.article'),
-      $navigation = $slider.find('.slider__navigation'),
-      $arrowNext = $navigation.find('i.fa-carret-right'),
-      $arrowPrev = $navigation.find('i.fa-carret-left'),
+      $navigation = $sliderWrap.find('.slider__navigation'),
+      $arrowNext = $navigation.find('.fa-caret-right'),
+      $arrowPrev = $navigation.find('.fa-caret-left'),
       $slidesTotal = $navigation.find('.slide__total'),
       $currentSlide = $navigation.find('.slide__current'),
       totalSlides = $articles.length,
@@ -14,9 +15,9 @@
 
   $slidesTotal.text('0' + totalSlides);
 
-  function updateNavigation(current) {
+  function updateNavigation(currentIndex) {
 
-    $currentSlide.text('0' + (current + 1));
+    $currentSlide.text('0' + (currentIndex + 1));
 
   }
 
@@ -27,6 +28,7 @@
     speed: 400,
     autoplay: true,
     autoplaySpeed: 4000,
+    pauseOnHover: true,
     dots: false,
     infinite: true,
     prevArrow: $arrowPrev,

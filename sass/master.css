@@ -559,6 +559,9 @@ body {
   width: 100%;
   margin: 20px 0; }
 
+.slider__navigation i {
+  cursor: pointer; }
+
 .slider__navigation i:first-child {
   margin-right: 10px; }
 
