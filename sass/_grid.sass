@@ -16,9 +16,20 @@
 
 .container--full
   width: 100%
+  position: relative
 
 .container--padded
   padding: 40px 0
+
+.faq__slider .container--full
+  top: 100px
+  height: 18rem
+
+.faq__slider .slider__container
+  width: 90%
+  margin: 0 auto
+  position: relative
+  top: -100px
 
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab)
@@ -70,3 +81,6 @@
 
   .astuces
     border-top: 2px solid $lightGray
+
+  .astuces
+    margin: 80px 0 50px 0
