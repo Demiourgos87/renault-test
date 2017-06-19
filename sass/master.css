@@ -32,7 +32,7 @@
   .container {
     width: 100%; }
   .container--raised {
-    top: -20px; }
+    margin-top: -3.5%; }
   .row--mob {
     position: relative;
     float: left;
@@ -449,7 +449,7 @@ header i {
   margin-bottom: -5px; }
 
 .article--fan {
-  box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 20px 30px 10px rgba(0, 0, 0, 0.3); }
 
 @media only screen and (max-width: 1025px) {
   .article__desc {
