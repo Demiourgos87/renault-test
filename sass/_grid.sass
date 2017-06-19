@@ -20,9 +20,6 @@
 .container--padded
   padding: 40px 0
 
-.container--raised
-  top: -20px
-
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab)
 
@@ -40,11 +37,18 @@
   .container
     width: 100%
 
+  .container--raised
+    top: -20px
+
   .row--mob
     position: relative
     float: left
     width: 49.5%
     margin-right: 0.5%
+
+  .row--mob:nth-child(2n+0)
+    margin-right: 0
+    margin-left: 0.5%
 
   .row--mob:last-child
     width: 49%
