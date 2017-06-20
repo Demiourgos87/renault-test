@@ -30,6 +30,39 @@
 .faq__slider .slider__container {
   position: relative; }
 
+.portrait__slider {
+  position: relative;
+  width: calc(100% - 20px);
+  border: 10px solid #ffcc33; }
+
+.portrait__slide__img {
+  width: 100%;
+  z-index: 10; }
+
+.portrait__slider .image__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 20; }
+
+.portrait__slide__body {
+  width: 50%;
+  position: absolute;
+  top: 8vw;
+  left: 8vw;
+  color: #ffffff;
+  z-index: 30; }
+
+.portrait__slide__title {
+  font-size: 1.8rem;
+  margin: 0 0 15px 0; }
+
+.portrait__slide__heading {
+  font-size: 1.5rem; }
+
 @media only screen and (min-width: 319px) and (max-width: 768px) {
   .container {
     width: 90%;
@@ -43,7 +76,9 @@
     top: -100px; }
   .faq__slider .container--full {
     height: 18rem;
-    top: 100px; } }
+    top: 100px; }
+  .portrait__slide__body .portrait__slide__desc {
+    display: none; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
   .faq__slider .container--full {
@@ -73,7 +108,7 @@
   .row--mob.row--centered {
     margin: 0 auto;
     float: none; }
-  .astuces, .faq__slider {
+  .astuces, .faq__slider, .cote__business {
     border-top: 2px solid #f6f6f6; }
   .astuces {
     margin: 80px 0 50px 0; }
@@ -559,9 +594,6 @@ body {
   max-width: 100%;
   background: #ffffff; }
 
-body {
-  font-size: 1rem; }
-
 .clearfix::before, .clearfix::after {
   display: table;
   content: "";
@@ -592,6 +624,9 @@ body {
 .btn--shadowed {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); }
 
+.portrait__slider .btn {
+  padding: 10px 20px; }
+
 .background--lightGray {
   background: #f6f6f6; }
 
@@ -600,17 +635,21 @@ body {
   width: 100%;
   margin: 20px 0; }
 
+.slider__navigation {
+  z-index: 30; }
+
 .slider__navigation i {
-  cursor: pointer; }
-
-.slider__navigation i:first-child {
-  margin-right: 10px; }
-
-.slider__navigation i:last-child {
-  margin-left: 10px; }
+  cursor: pointer;
+  padding: 10px; }
 
 .slider .slick-list {
   overflow: visible; }
+
+.portrait__slider .slider__navigation {
+  float: none;
+  position: absolute;
+  top: 8vw;
+  right: 8vw; }
 
 @media only screen and (min-width: 319px) and (max-width: 768px) {
   html {

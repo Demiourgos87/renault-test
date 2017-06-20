@@ -30,9 +30,6 @@ body
   max-width: 100%
   background: $white
 
-body
-  font-size: 1rem
-
 .clearfix::before, .clearfix::after
   display: table
   content: ""
@@ -63,6 +60,9 @@ body
 .btn--shadowed
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2)
 
+.portrait__slider .btn
+  padding: 10px 20px
+
 .background--lightGray
   background: $lightGray
 
@@ -71,17 +71,21 @@ body
   width: 100%
   margin: 20px 0
 
+.slider__navigation
+  z-index: 30
+
 .slider__navigation i
   cursor: pointer
-
-.slider__navigation i:first-child
-  margin-right: 10px
-
-.slider__navigation i:last-child
-  margin-left: 10px
+  padding: 10px
 
 .slider .slick-list
   overflow: visible
+
+.portrait__slider .slider__navigation
+  float: none
+  position: absolute
+  top: 8vw
+  right: 8vw
 
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab)
