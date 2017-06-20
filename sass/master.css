@@ -24,6 +24,9 @@
 .container--raised {
   margin-top: -3.5%; }
 
+.faq__slider {
+  margin-bottom: 100px; }
+
 .faq__slider .slider__container {
   position: relative; }
 
@@ -44,7 +47,7 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
   .faq__slider .container--full {
-    height: 15rem; } }
+    height: 14rem; } }
 
 @media only screen and (min-width: 768px) {
   .container {
@@ -76,8 +79,6 @@
     margin: 80px 0 50px 0; }
   .faq__slider .slider__container {
     top: -50px; }
-  .faq__slider .container--full {
-    height: 20rem; }
   .faq__slider .slider__container {
     width: 75%;
     float: right;
@@ -86,6 +87,14 @@
     top: 0; }
   .faq__slider .section__title.heading--row {
     margin-bottom: 10px; } }
+
+@media only screen and (min-width: 1025px) {
+  .faq__slider .container--full {
+    height: 20rem; }
+  .faq__slider .slider__container {
+    width: 80%; }
+  .slider__container .slider {
+    width: 90%; } }
 
 .text--bold {
   font-weight: bold; }
@@ -485,6 +494,12 @@ header i {
   position: relative;
   background: transparent; }
 
+.faq__slider .article__img img {
+  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.4); }
+
+.faq__slider .article {
+  overflow: visible; }
+
 @media only screen and (max-width: 1025px) {
   .article__desc {
     display: none; } }
@@ -520,7 +535,9 @@ header i {
 
 @media only screen and (min-width: 1025px) {
   .article--fan .article__body {
-    padding: 40px 8% 20em 8%; } }
+    padding: 40px 8% 20em 8%; }
+  .faq__slider .article__body {
+    margin-top: 12%; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
@@ -588,6 +605,9 @@ body {
 .slider__navigation i:last-child {
   margin-left: 10px; }
 
+.slider .slick-list {
+  overflow: visible; }
+
 @media only screen and (min-width: 319px) and (max-width: 768px) {
   html {
     font-size: 4.2vw; }
@@ -611,7 +631,9 @@ body {
   .page__inner {
     width: 80%;
     padding: 40px 0;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .slider__navigation {
+    float: right; } }
 
 @media only screen and (min-width: 1025px) {
   html {
@@ -641,4 +663,8 @@ body {
     width: 70%; }
   .heading--col {
     margin-top: 0;
-    width: 120px; } }
+    width: 120px; }
+  .slider__navigation {
+    position: absolute;
+    top: 7vw;
+    right: 0; } }

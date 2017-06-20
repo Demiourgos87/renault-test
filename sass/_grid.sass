@@ -24,6 +24,9 @@
 .container--raised
   margin-top: -3.5%
 
+.faq__slider
+  margin-bottom: 100px
+
 .faq__slider .slider__container
   position: relative
 
@@ -51,7 +54,7 @@
 @media only screen and (min-width: $break-tab) and (max-width: $break-desk)
 
   .faq__slider .container--full
-    height: 15rem
+    height: 14rem
 
 
 @media only screen and (min-width: $break-tab)
@@ -96,9 +99,6 @@
   .faq__slider .slider__container
     top: -50px
 
-  .faq__slider .container--full
-    height: 20rem
-
   .faq__slider .slider__container
     width: 75%
     float: right
@@ -109,3 +109,15 @@
 
   .faq__slider .section__title.heading--row
     margin-bottom: 10px
+
+
+@media only screen and (min-width: $break-desk)
+
+  .faq__slider .container--full
+    height: 20rem
+
+  .faq__slider .slider__container
+    width: 80%
+
+  .slider__container .slider
+    width: 90%

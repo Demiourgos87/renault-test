@@ -80,6 +80,9 @@ body
 .slider__navigation i:last-child
   margin-left: 10px
 
+.slider .slick-list
+  overflow: visible
+
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab)
 
@@ -114,6 +117,9 @@ body
     width: 80%
     padding: 40px 0
     margin: 0 auto
+
+  .slider__navigation
+    float: right
 
 
 @media only screen and (min-width: $break-desk)
@@ -153,3 +159,8 @@ body
   .heading--col
     margin-top: 0
     width: 120px
+
+  .slider__navigation
+    position: absolute
+    top: 7vw
+    right: 0
