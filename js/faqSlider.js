@@ -11,11 +11,21 @@
       $slidesTotal = $navigation.find('.slide__total'),
       $currentSlide = $navigation.find('.slide__current'),
       totalSlides = $articles.length,
-      currentSlide;
+      windowWidth = $(window).width();
 
   $slidesTotal.text('0' + totalSlides);
 
-  function updateNavigation(currentIndex) {
+  if (windowWidth > 767) {
+
+    $.each($articles, function() {
+
+      $(this).removeClass('article--portrait').addClass('article--landscape');
+
+    });
+
+  }
+
+  function updateNavigationCounter(currentIndex) {
 
     $currentSlide.text('0' + (currentIndex + 1));
 
@@ -37,7 +47,7 @@
 
   $slider.on('afterChange', function(event, slick, currentSlide) {
 
-    updateNavigation(currentSlide);
+    updateNavigationCounter(currentSlide);
 
   });
 

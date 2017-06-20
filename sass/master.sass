@@ -19,13 +19,13 @@ section, article, aside, figure, figcaption, header, footer, nav
 
 html, body
   overflow-x: hidden
-  font-size: 1rem
 
 body, figure
   margin: 0
   padding: 0
 
 body
+  font-size: 100%
   position: relative
   max-width: 100%
   background: $white
@@ -81,7 +81,10 @@ body
   margin-left: 10px
 
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-desk)
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab)
+
+  html
+    font-size: 4.2vw
 
   .page__inner
     width: 100%
@@ -100,6 +103,9 @@ body
 
 @media only screen and (min-width: $break-tab) and (max-width: $break-desk)
 
+  html
+    font-size: 1.8vw
+
   .heading--col
     margin-top: -20px
     width: 120px
@@ -111,6 +117,9 @@ body
 
 
 @media only screen and (min-width: $break-desk)
+
+  html
+    font-size: 1.2vw
 
   .page__inner
     width: 80%
