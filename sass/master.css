@@ -672,3 +672,13 @@ body {
     position: absolute;
     top: 7vw;
     right: 0; } }
+
+@media only screen and (min-width: 1900px) {
+  html {
+    font-size: 1vw; }
+  .article__img__footnote {
+    bottom: 5px; }
+  .section__title.heading--col {
+    width: 150px; }
+  .faq__slider .container--full {
+    height: 23rem; } }
