@@ -94,7 +94,9 @@
   .faq__slider .slider__container {
     width: 80%; }
   .slider__container .slider {
-    width: 90%; } }
+    width: 90%; }
+  .container--padded {
+    padding: 60px 0; } }
 
 .text--bold {
   font-weight: bold; }
