@@ -17,7 +17,7 @@
   z-index: 20
 
 .portrait__slide__body
-  width: 50%
+  width: 60%
   position: absolute
   color: $white
   z-index: 30
@@ -34,7 +34,12 @@
   position: absolute
 
 .portrait__slider .btn
+  position: absolute
   padding: 10px 20px
+
+.portrait__slide__heading
+    font-weight: bold
+    margin-top: 10px
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab)
 
@@ -42,20 +47,40 @@
     top: 8vw
     left: 8vw
 
+  .portrait__slider .btn
+    padding: 8px 20px
+    font-size: 0.7rem
+    bottom: 20px
+
+  .portrait__slide__body
+    height: 70vw
+
   .portrait__slider .slider__navigation
     top: 8vw
-    right: 8vw
+    right: 2vw
+
+  .portrait__slide__heading
+    font-size: 1.2rem
 
 
 @media only screen and (min-width: $break-tab) and (max-width: $break-desk)
 
+  .portrait__slide__heading
+    font-size: 1.2rem
+
   .portrait__slide__body
-    top: 4vw
-    left: 4vw
+    top: 3vw
+    left: 3vw
 
   .portrait__slider .slider__navigation
-    top: 4vw
+    top: 3vw
     right: 1vw
+
+  .portrait__slide__body
+    height: 29vw
+
+  .portrait__slider .btn
+    bottom: 40px
 
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-desk)
@@ -73,3 +98,9 @@
   .portrait__slider .slider__navigation
     top: 4vw
     right: 1vw
+
+  .portrait__slide__body
+    height: 30vw
+
+  .portrait__slider .btn
+    bottom: 40px
