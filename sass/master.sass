@@ -11,6 +11,7 @@
 @import header
 @import mainNavigation
 @import article-media
+@import portraitSlider
 
 // general classes \\
 
@@ -60,9 +61,6 @@ body
 .btn--shadowed
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2)
 
-.portrait__slider .btn
-  padding: 10px 20px
-
 .background--lightGray
   background: $lightGray
 
@@ -80,12 +78,6 @@ body
 
 .slider .slick-list
   overflow: visible
-
-.portrait__slider .slider__navigation
-  float: none
-  position: absolute
-  top: 8vw
-  right: 8vw
 
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab)

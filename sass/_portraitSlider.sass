@@ -1,0 +1,75 @@
+.portrait__slider
+  position: relative
+  width: calc(100% - 20px)
+  border: 10px solid $yellow
+
+.portrait__slide__img
+  width: 100%
+  z-index: 10
+
+.portrait__slider .image__overlay
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0, 0, 0, 0.6)
+  z-index: 20
+
+.portrait__slide__body
+  width: 50%
+  position: absolute
+  color: $white
+  z-index: 30
+
+.portrait__slide__title
+  font-size: 1.8rem
+  margin: 0 0 15px 0
+
+.portrait__slide__heading
+  font-size: 1.5rem
+
+.portrait__slider .slider__navigation
+  float: none
+  position: absolute
+
+.portrait__slider .btn
+  padding: 10px 20px
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab)
+
+  .portrait__slide__body
+    top: 8vw
+    left: 8vw
+
+  .portrait__slider .slider__navigation
+    top: 8vw
+    right: 8vw
+
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk)
+
+  .portrait__slide__body
+    top: 4vw
+    left: 4vw
+
+  .portrait__slider .slider__navigation
+    top: 4vw
+    right: 1vw
+
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-desk)
+
+  .portrait__slide__body .portrait__slide__desc
+    display: none
+
+
+@media only screen and (min-width: $break-desk)
+
+  .portrait__slide__body
+    top: 4vw
+    left: 4vw
+
+  .portrait__slider .slider__navigation
+    top: 4vw
+    right: 1vw
