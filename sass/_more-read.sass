@@ -15,8 +15,38 @@
   width: 80%
   margin: 0 auto
 
+.more-read .slider__wrap
+  position: relative
+
+.more-read .slider
+  overflow: hidden
+
+.more-read .slider__wrap i
+  position: absolute
+  top: 40%
+  font-size: 2rem
+  color: $darkGray
+
+.more-read .slider__wrap i.fa-arrow-circle-o-left
+  left: -5vw
+
+.more-read .slider__wrap i.fa-arrow-circle-o-right
+  right: -3vw
+
+.more-read .article .article__body
+  font-size: 0.8rem
+
+.more-read .slider .article--m:last-child
+  margin-left: 0
+
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab)
+
+  .more-read__wrap
+    width: 90%
+
+  .more-read .slider__wrap
+    width: 100%
 
   .more-read .article
     height: 67vw
@@ -29,40 +59,37 @@
     margin-left: 1%
 
 
-@media only screen and (min-width: $break-tab)
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk)
 
   .more-read__wrap
     height: 17vw
 
   .more-read .slider__wrap
-    width: 70%
-    position: relative
-    top: -15vw
     margin-left: 20vw
 
-  .more-read .slider
-    overflow: hidden
+  .more-read .slider__wrap
+    top: -15vw
 
   .more-read .slider .article--m
     width: 24%
 
-  .more-read .slider .article--m:last-child
-    margin-left: 0
+  .more-read .section__title.heading--row
+    width: 8vw
 
-  .more-read .slider__wrap i
-    position: absolute
-    top: 40%
-    font-size: 2rem
-    color: $darkGray
 
-  .more-read .slider__wrap i.fa-arrow-circle-o-left
-    left: -5vw
+@media only screen and (min-width: $break-desk)
 
-  .more-read .slider__wrap i.fa-arrow-circle-o-right
-    right: -5vw
+  .more-read__wrap
+    height: 12vw
 
-  .more-read .article .article__body
-    font-size: 0.8rem
+  .more-read .slider__wrap
+    margin-left: 20vw
+
+  .more-read .slider__wrap
+    top: -11vw
+
+  .more-read .slider .article--m
+    width: 24%
 
   .more-read .section__title.heading--row
     width: 8vw
