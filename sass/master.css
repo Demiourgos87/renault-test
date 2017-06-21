@@ -188,7 +188,7 @@ header {
   background: #000000;
   position: fixed;
   top: 0;
-  z-index: 100; }
+  z-index: 99999999; }
 
 header i {
   cursor: pointer; }
@@ -581,7 +581,8 @@ header i {
 
 .portrait__slider .slider__navigation {
   float: none;
-  position: absolute; }
+  position: absolute;
+  z-index: 99999998; }
 
 .portrait__slider .btn {
   position: absolute;
