@@ -746,6 +746,9 @@ header i {
 .more-read .slider .article--m:last-child {
   margin-left: 0; }
 
+.more-read i {
+  cursor: pointer; }
+
 @media only screen and (min-width: 319px) and (max-width: 767px) {
   .more-read__wrap {
     width: 90%; }

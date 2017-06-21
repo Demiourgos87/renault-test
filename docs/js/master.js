@@ -168,8 +168,6 @@
       $arrowPrev = $wrap.find('.fa-arrow-circle-o-left'),
       windowWidth = $(window).width();
 
-  console.log($arrowPrev);
-
   if (windowWidth > 767) {
 
     $slider.slick({
