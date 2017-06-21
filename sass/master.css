@@ -640,6 +640,7 @@ header i {
     bottom: 40px; } }
 
 .test-start {
+  width: 100%;
   margin: 50px 0; }
 
 .test-start .container--full {
@@ -649,6 +650,28 @@ header i {
 
 .test-start__body {
   margin: 0 auto; }
+
+.test-start__images {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: -4.5vw; }
+
+.test-start__images .heading {
+  font-weight: bold;
+  text-align: center;
+  margin: 0; }
+
+.test-start__item {
+  width: 32.9%;
+  display: inline-block; }
+
+.test-start__images {
+  display: block;
+  width: 90%; }
+
+.test-start__item img {
+  width: 100%; }
 
 @media only screen and (min-width: 319px) and (max-width: 767px) {
   .test-start__body {
@@ -662,12 +685,22 @@ header i {
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
   .test-start__body {
     width: 40%;
-    padding: 30px 0 50px 0; }
+    padding: 30px 0 80px 0; }
   .test-start__desc {
-    display: none; }
-  .test-start__images {
-    display: block;
-    width: 90%; } }
+    display: none; } }
+
+@media only screen and (min-width: 1025px) {
+  .test-start__body {
+    width: 20%;
+    padding: 60px 0 120px 0; }
+  .test-start__desc {
+    display: block; }
+  .test-start .container--full {
+    background-size: 100%; }
+  .test-start__item img {
+    width: 75%;
+    margin: 0 auto;
+    display: block; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
