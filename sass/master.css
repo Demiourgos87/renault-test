@@ -30,6 +30,9 @@
 .faq__slider .slider__container {
   position: relative; }
 
+.container {
+  position: relative; }
+
 @media only screen and (min-width: 319px) and (max-width: 767px) {
   .container {
     width: 90%;
@@ -701,6 +704,60 @@ header i {
     width: 75%;
     margin: 0 auto;
     display: block; } }
+
+.more-read {
+  width: 100%;
+  padding-top: 20px; }
+
+.more-read .article__body {
+  background: transparent; }
+
+.more-read .article__img img {
+  filter: grayscale(100%); }
+
+.more-read .article__img:hover img {
+  filter: grayscale(0); }
+
+.more-read__wrap {
+  width: 80%;
+  margin: 0 auto; }
+
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+  .more-read .article {
+    height: 67vw; }
+  .more-read i {
+    display: none; }
+  .more-read .slider .article:nth-child(2n+0) {
+    margin-right: 0;
+    margin-left: 1%; } }
+
+@media only screen and (min-width: 767px) {
+  .more-read__wrap {
+    height: 17vw; }
+  .more-read .slider__wrap {
+    width: 70%;
+    position: relative;
+    top: -15vw;
+    margin-left: 20vw; }
+  .more-read .slider {
+    overflow: hidden; }
+  .more-read .slider .article--m {
+    width: 24%; }
+  .more-read .slider .article--m:last-child {
+    margin-left: 0; }
+  .more-read .slider__wrap i {
+    position: absolute;
+    top: 40%;
+    font-size: 2rem;
+    color: #5a5a5a; }
+  .more-read .slider__wrap i.fa-arrow-circle-o-left {
+    left: -5vw; }
+  .more-read .slider__wrap i.fa-arrow-circle-o-right {
+    right: -5vw; }
+  .more-read .article .article__body {
+    font-size: 0.8rem; }
+  .more-read .section__title.heading--row {
+    width: 8vw; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
