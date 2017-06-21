@@ -786,6 +786,12 @@ header i {
   .more-read .section__title.heading--row {
     width: 8vw; } }
 
+@media only screen and (min-width: 1900px) {
+  .more-read .slider__wrap {
+    top: -8vw; }
+  .more-read .article--m {
+    margin-right: 1.1%; } }
+
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
 
