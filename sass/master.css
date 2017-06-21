@@ -644,7 +644,7 @@ header i {
 
 .test-start {
   width: 100%;
-  margin: 50px 0; }
+  margin: 100px 0; }
 
 .test-start .container--full {
   background: url("../docs/image/test_start/trucks_background_full.png") no-repeat center;
@@ -677,6 +677,8 @@ header i {
   width: 100%; }
 
 @media only screen and (min-width: 319px) and (max-width: 767px) {
+  .test-start {
+    margin: 50px 0; }
   .test-start__body {
     width: 65%;
     padding: 20px 0; }
@@ -784,7 +786,7 @@ header i {
   .more-read .slider .article--m {
     width: 24%; }
   .more-read .section__title.heading--row {
-    width: 8vw; } }
+    width: 6vw; } }
 
 @media only screen and (min-width: 1900px) {
   .more-read .slider__wrap {
