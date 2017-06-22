@@ -893,8 +893,12 @@ header i {
   margin-bottom: 20px;
   text-align: center; }
 
-.pagination__row {
-  height: 40px; }
+.pagination__nums, .pagination__controls {
+  display: inline-block; }
+
+.pagination__controls {
+  width: 100px;
+  margin-left: 15px; }
 
 .pagination a {
   display: inline-block;
