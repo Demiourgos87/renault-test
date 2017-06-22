@@ -97,7 +97,7 @@
     margin-top: -5%;
     margin-bottom: 5%; }
   .latest-news {
-    margin-top: 80px; }
+    margin-top: 6vw; }
   .latest-news .row--raised {
     margin-top: -17%;
     margin-bottom: 2.3vw; } }
@@ -114,7 +114,7 @@
   .row--raised {
     margin-top: -8vw; }
   .latest-news {
-    margin-top: 16vw; } }
+    margin-top: 10vw; } }
 
 .text--bold {
   font-weight: bold; }
@@ -871,7 +871,7 @@ header i {
 
 @media only screen and (min-width: 1025px) {
   .comm-header {
-    margin-bottom: 8vw; }
+    margin-bottom: 2vw; }
   .comm-header__image {
     width: 80%; }
   .page__title {
@@ -887,6 +887,10 @@ header i {
   .comm-header__title {
     top: 40%;
     left: 15%; } }
+
+@media only screen and (min-width: 1900px) {
+  .comm-header {
+    margin-bottom: 3vw; } }
 
 .pagination, .pagination__row {
   width: 100%;
@@ -930,6 +934,27 @@ header i {
 @media only screen and (min-width: 767px) {
   .pagination a {
     font-size: 1.2rem; } }
+
+@media only screen and (max-width: 1025px) {
+  .breadcrumbs {
+    display: none; } }
+
+@media only screen and (min-width: 1025px) {
+  .breadcrumbs {
+    display: block;
+    width: 80%;
+    margin: 50px 0 0 10%;
+    font-size: 0.8rem;
+    color: #000000; }
+  .breadcrumbs a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px; }
+  .breadcrumbs a:first-child {
+    margin-left: 0; }
+  .breadcrumbs span {
+    margin-left: 0 10px;
+    cursor: default; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
