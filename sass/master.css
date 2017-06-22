@@ -902,7 +902,6 @@ header i {
 
 .pagination a {
   display: inline-block;
-  font-size: 1.6rem;
   text-decoration: none;
   width: 30px;
   height: 30px;
@@ -921,8 +920,16 @@ header i {
 .pagination a.active, .pagination a:hover, .pagination__forward, .pagination__last {
   background: #f6f6f6; }
 
-a.pagination__forward, a.pagination__last {
-  font-size: 0.8rem; }
+.pagination a.pagination__forward, .pagination a.pagination__last {
+  font-size: 0.6rem; }
+
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+  .pagination a {
+    font-size: 1.6rem; } }
+
+@media only screen and (min-width: 767px) {
+  .pagination a {
+    font-size: 1.2rem; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }

@@ -12,7 +12,6 @@
 
 .pagination a
   display: inline-block
-  font-size: $fontBig
   text-decoration: none
   width: 30px
   height: 30px
@@ -31,5 +30,17 @@
 .pagination a.active, .pagination a:hover, .pagination__forward, .pagination__last
   background: $lightGray
 
-a.pagination__forward, a.pagination__last
-  font-size: $fontSmall
+.pagination a.pagination__forward, .pagination a.pagination__last
+  font-size: $fontVerySmall
+
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab)
+
+  .pagination a
+    font-size: $fontBig
+
+
+@media only screen and (min-width: $break-tab)
+
+  .pagination a
+    font-size: $fontMedium
