@@ -79,7 +79,7 @@
   .row--mob.row--centered {
     margin: 0 auto;
     float: none; }
-  .astuces, .faq__slider, .cote__business {
+  .astuces, .faq__slider, .cote__business, .latest-news {
     border-top: 2px solid #f6f6f6; }
   .astuces {
     margin: 80px 0 50px 0; }
@@ -95,7 +95,12 @@
     margin-bottom: 10px; }
   .container--raised--tab {
     margin-top: -5%;
-    margin-bottom: 5%; } }
+    margin-bottom: 5%; }
+  .latest-news {
+    margin-top: 6vw; }
+  .latest-news .row--raised {
+    margin-top: -17%;
+    margin-bottom: 2.3vw; } }
 
 @media only screen and (min-width: 1025px) {
   .faq__slider .container--full {
@@ -107,7 +112,9 @@
   .container--padded {
     padding: 60px 0; }
   .row--raised {
-    margin-top: -8vw; } }
+    margin-top: -8vw; }
+  .latest-news {
+    margin-top: 10vw; } }
 
 .text--bold {
   font-weight: bold; }
@@ -864,7 +871,7 @@ header i {
 
 @media only screen and (min-width: 1025px) {
   .comm-header {
-    margin-bottom: 8vw; }
+    margin-bottom: 2vw; }
   .comm-header__image {
     width: 80%; }
   .page__title {
@@ -880,6 +887,74 @@ header i {
   .comm-header__title {
     top: 40%;
     left: 15%; } }
+
+@media only screen and (min-width: 1900px) {
+  .comm-header {
+    margin-bottom: 3vw; } }
+
+.pagination, .pagination__row {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center; }
+
+.pagination__nums, .pagination__controls {
+  display: inline-block; }
+
+.pagination__controls {
+  width: 100px;
+  margin-left: 15px; }
+
+.pagination a {
+  display: inline-block;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 5px;
+  color: #000000;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 15px;
+  transition: background .15s linear; }
+
+.pagination a:last-child {
+  margin-right: 0; }
+
+.pagination a.active, .pagination a:hover, .pagination__forward, .pagination__last {
+  background: #f6f6f6; }
+
+.pagination a.pagination__forward, .pagination a.pagination__last {
+  font-size: 0.6rem; }
+
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+  .pagination a {
+    font-size: 1.6rem; } }
+
+@media only screen and (min-width: 767px) {
+  .pagination a {
+    font-size: 1.2rem; } }
+
+@media only screen and (max-width: 1025px) {
+  .breadcrumbs {
+    display: none; } }
+
+@media only screen and (min-width: 1025px) {
+  .breadcrumbs {
+    display: block;
+    width: 80%;
+    margin: 50px 0 0 10%;
+    font-size: 0.8rem;
+    color: #000000; }
+  .breadcrumbs a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px; }
+  .breadcrumbs a:first-child {
+    margin-left: 0; }
+  .breadcrumbs span {
+    margin-left: 0 10px;
+    cursor: default; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }

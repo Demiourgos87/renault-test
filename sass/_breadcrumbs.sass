@@ -1,0 +1,26 @@
+@media only screen and (max-width: $break-desk)
+
+  .breadcrumbs
+    display: none
+
+
+@media only screen and (min-width: $break-desk)
+
+  .breadcrumbs
+    display: block
+    width: 80%
+    margin: 50px 0 0 10%
+    font-size: $fontSmall
+    color: $black
+
+  .breadcrumbs a
+    text-decoration: none
+    color: inherit
+    margin: 0 10px
+
+  .breadcrumbs a:first-child
+    margin-left: 0
+
+  .breadcrumbs span
+    margin-left: 0 10px
+    cursor: default
