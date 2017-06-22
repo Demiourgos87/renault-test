@@ -24,12 +24,6 @@
 .container--raised {
   margin-top: -3.5%; }
 
-.faq__slider {
-  margin-bottom: 150px; }
-
-.faq__slider .slider__container {
-  position: relative; }
-
 .container, .row--mob {
   position: relative; }
 
@@ -38,18 +32,9 @@
     width: 90%;
     margin: 0 auto; }
   .row--mob {
-    width: 100%; }
-  .faq__slider .slider__container {
-    width: 90%;
-    margin: 0 auto;
-    top: -100px; }
-  .faq__slider .container--full {
-    height: 18.5rem;
-    top: 100px; } }
+    width: 100%; } }
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
-  .faq__slider .container--full {
-    height: 14rem; }
   .row--raised {
     margin-top: -10vw; } }
 
@@ -83,30 +68,17 @@
     border-top: 2px solid #f6f6f6; }
   .astuces {
     margin: 80px 0 50px 0; }
-  .faq__slider .slider__container {
-    top: -50px; }
-  .faq__slider .slider__container {
-    width: 75%;
-    float: right;
-    margin-right: 2%; }
-  .faq__slider .container--full {
-    top: 0; }
-  .faq__slider .section__title.heading--row {
-    margin-bottom: 10px; }
   .container--raised--tab {
     margin-top: -5%;
     margin-bottom: 5%; }
   .latest-news {
-    margin-top: 6vw; }
+    margin-top: 6vw;
+    margin-bottom: 50px; }
   .latest-news .row--raised {
     margin-top: -17%;
     margin-bottom: 2.3vw; } }
 
 @media only screen and (min-width: 1025px) {
-  .faq__slider .container--full {
-    height: 20rem; }
-  .faq__slider .slider__container {
-    width: 80%; }
   .slider__container .slider {
     width: 90%; }
   .container--padded {
@@ -511,16 +483,6 @@ header i {
 .article--fan {
   box-shadow: 0 20px 30px 10px rgba(0, 0, 0, 0.3); }
 
-.faq__slider .article__body {
-  position: relative;
-  background: transparent; }
-
-.faq__slider .article__img img {
-  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.4); }
-
-.faq__slider .article {
-  overflow: visible; }
-
 .article__img--right .article__img {
   margin-right: 0;
   margin-left: 1%; }
@@ -560,16 +522,12 @@ header i {
     float: right;
     margin-left: 2%;
     margin-right: 0; }
-  .faq__slider .article__body {
-    margin-top: 20%; }
   .article--raised--tab {
     margin-top: -8vw; } }
 
 @media only screen and (min-width: 1025px) {
   .article--fan .article__body {
-    padding: 40px 8% 20em 8%; }
-  .faq__slider .article__body {
-    margin-top: 12%; } }
+    padding: 40px 8% 20em 8%; } }
 
 .portrait__slider {
   position: relative;
@@ -661,6 +619,63 @@ header i {
     height: 28vw; }
   .portrait__slider .btn {
     bottom: 40px; } }
+
+.faq__slider {
+  margin-bottom: 150px; }
+
+.faq__slider .slider__container {
+  position: relative; }
+
+.faq__slider .article__body {
+  position: relative;
+  background: transparent; }
+
+.faq__slider .article__img img {
+  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.4); }
+
+.faq__slider .article {
+  overflow: visible; }
+
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+  .faq__slider .article {
+    margin-bottom: 0; }
+  .faq__slider .slider__container {
+    width: 90%;
+    margin: 0 auto;
+    top: -100px; }
+  .faq__slider .container--full {
+    height: 18.5rem;
+    top: 100px; } }
+
+@media only screen and (min-width: 767px) {
+  .faq__slider .article__body {
+    margin-top: 20%; }
+  .faq__slider .slider__container {
+    top: -50px; }
+  .faq__slider .slider__container {
+    width: 75%;
+    float: right;
+    margin-right: 2%; }
+  .faq__slider .container--full {
+    top: 0; }
+  .faq__slider .section__title.heading--row {
+    margin-bottom: 10px; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1025px) {
+  .faq__slider .container--full {
+    height: 14rem; } }
+
+@media only screen and (min-width: 1025px) {
+  .faq__slider .article__body {
+    margin-top: 12%; }
+  .faq__slider .container--full {
+    height: 20rem; }
+  .faq__slider .slider__container {
+    width: 80%; } }
+
+@media only screen and (min-width: 1900px) {
+  .faq__slider .container--full {
+    height: 23rem; } }
 
 .test-start {
   width: 100%;
@@ -1047,8 +1062,6 @@ body {
   .heading--col {
     margin-top: 10px;
     width: 80px; }
-  .faq__slider .article {
-    margin-bottom: 0; }
   .slider__navigation {
     float: right; } }
 
@@ -1105,6 +1118,4 @@ body {
   .article__img__footnote {
     bottom: 5px; }
   .section__title.heading--col {
-    width: 150px; }
-  .faq__slider .container--full {
-    height: 23rem; } }
+    width: 150px; } }
