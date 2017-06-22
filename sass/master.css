@@ -30,7 +30,7 @@
 .faq__slider .slider__container {
   position: relative; }
 
-.container {
+.container, .row--mob {
   position: relative; }
 
 @media only screen and (min-width: 319px) and (max-width: 767px) {
@@ -38,8 +38,7 @@
     width: 90%;
     margin: 0 auto; }
   .row--mob {
-    width: 100%;
-    position: relative; }
+    width: 100%; }
   .faq__slider .slider__container {
     width: 90%;
     margin: 0 auto;
@@ -50,13 +49,14 @@
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
   .faq__slider .container--full {
-    height: 14rem; } }
+    height: 14rem; }
+  .row--raised {
+    margin-top: -10vw; } }
 
 @media only screen and (min-width: 767px) {
   .container {
     width: 100%; }
   .row--mob {
-    position: relative;
     float: left;
     width: 49.5%;
     margin-right: 0.5%; }
@@ -67,6 +67,9 @@
     width: 49%;
     margin-right: 0;
     margin-left: 0.5%; }
+  .editors-picks .section__title.heading--row {
+    width: 50%;
+    margin-left: 50.5%; }
   .row--padded--top {
     padding-top: 13%; }
   .row--mob.row--clipped--right, .row--mob.row--clipped--left {
@@ -102,7 +105,9 @@
   .slider__container .slider {
     width: 90%; }
   .container--padded {
-    padding: 60px 0; } }
+    padding: 60px 0; }
+  .row--raised {
+    margin-top: -8vw; } }
 
 .text--bold {
   font-weight: bold; }
@@ -219,7 +224,8 @@ header i {
 
 .menu__opened__overlay {
   position: absolute;
-  background: rgba(0, 0, 0, 0.6); }
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000; }
 
 .search__overlay {
   position: fixed;
@@ -508,6 +514,13 @@ header i {
 .faq__slider .article {
   overflow: visible; }
 
+.article__img--right .article__img {
+  margin-right: 0;
+  margin-left: 1%; }
+
+.article__img--right .article__body {
+  margin-right: 1%; }
+
 @media only screen and (max-width: 1025px) {
   .article__desc {
     display: none; } }
@@ -794,6 +807,80 @@ header i {
   .more-read .article--m {
     margin-right: 1.1%; } }
 
+.comm-header {
+  position: relative; }
+
+.comm-header__image {
+  position: relative; }
+
+.comm-header__image img {
+  width: 100%;
+  margin-bottom: -4px; }
+
+.comm-header__text p {
+  margin: 0; }
+
+.comm-header__title {
+  position: absolute; }
+
+.page__title {
+  margin-top: 10px; }
+
+.comm-header__text {
+  line-height: 1.5rem; }
+
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+  .comm-header {
+    margin-bottom: 20px; }
+  .comm-header__image {
+    width: 100%; }
+  .page__title {
+    font-size: 1.4rem; }
+  .comm-header__text {
+    width: calc(100% - 60px);
+    padding: 30px;
+    font-size: 1rem; }
+  .comm-header__title {
+    top: 35%;
+    left: 17%; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1025px) {
+  .comm-header {
+    margin-bottom: 8vw; }
+  .comm-header__image {
+    width: 90%; }
+  .page__title {
+    font-size: 1.6rem; }
+  .comm-header__text {
+    width: 30%;
+    padding: 40px;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    line-height: 1.2rem; }
+  .comm-header__title {
+    top: 40%;
+    left: 12%; } }
+
+@media only screen and (min-width: 1025px) {
+  .comm-header {
+    margin-bottom: 8vw; }
+  .comm-header__image {
+    width: 80%; }
+  .page__title {
+    font-size: 3rem; }
+  .comm-header__text {
+    width: 22%;
+    padding: 70px;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    line-height: 1.3rem;
+    height: 27vw; }
+  .comm-header__title {
+    top: 40%;
+    left: 15%; } }
+
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
 
@@ -835,7 +922,12 @@ body {
   text-transform: uppercase;
   background: #ffffff;
   border: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .15s linear; }
+
+.btn:hover {
+  background: #000000;
+  color: #ffffff; }
 
 .btn--shadowed {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); }
@@ -844,8 +936,17 @@ body {
   display: block;
   margin: 0 auto; }
 
+.btn--small {
+  padding: 5px 15px; }
+
+.btn--yellow {
+  background: #ffcc33; }
+
 .background--lightGray {
   background: #f6f6f6; }
+
+.background--yellow {
+  background: #ffcc33; }
 
 .section__title.heading--row {
   text-align: left;

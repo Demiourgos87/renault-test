@@ -30,7 +30,7 @@
 .faq__slider .slider__container
   position: relative
 
-.container
+.container, .row--mob
   position: relative
 
 
@@ -42,7 +42,6 @@
 
   .row--mob
     width: 100%
-    position: relative
 
   .faq__slider .slider__container
     width: 90%
@@ -59,6 +58,10 @@
   .faq__slider .container--full
     height: 14rem
 
+  .row--raised
+    margin-top: -10vw
+
+
 
 @media only screen and (min-width: $break-tab)
 
@@ -66,7 +69,6 @@
     width: 100%
 
   .row--mob
-    position: relative
     float: left
     width: 49.5%
     margin-right: 0.5%
@@ -79,6 +81,10 @@
     width: 49%
     margin-right: 0
     margin-left: 0.5%
+
+  .editors-picks .section__title.heading--row
+    width: 50%
+    margin-left: 50.5%
 
   .row--padded--top
     padding-top: 13%
@@ -131,3 +137,6 @@
 
   .container--padded
     padding: 60px 0
+
+  .row--raised
+    margin-top: -8vw

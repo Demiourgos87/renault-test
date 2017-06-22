@@ -14,6 +14,7 @@
 @import portraitSlider
 @import test_start
 @import more-read
+@import commHeader
 
 // general classes \\
 
@@ -59,6 +60,11 @@ body
   background: $white
   border: 0
   cursor: pointer
+  transition: all .15s linear
+
+.btn:hover
+  background: $black
+  color: $white
 
 .btn--shadowed
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2)
@@ -67,8 +73,17 @@ body
   display: block
   margin: 0 auto
 
+.btn--small
+  padding: 5px 15px
+
+.btn--yellow
+  background: $yellow
+
 .background--lightGray
   background: $lightGray
+
+.background--yellow
+  background: $yellow
 
 .section__title.heading--row
   text-align: left
