@@ -818,6 +818,8 @@ header i {
   line-height: 1.5rem; }
 
 @media only screen and (min-width: 319px) and (max-width: 767px) {
+  .comm-header {
+    margin-bottom: 20px; }
   .comm-header__image {
     width: 100%; }
   .page__title {
