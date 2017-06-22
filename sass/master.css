@@ -509,6 +509,13 @@ header i {
 .faq__slider .article {
   overflow: visible; }
 
+.article__img--right .article__img {
+  margin-right: 0;
+  margin-left: 1%; }
+
+.article__img--right .article__body {
+  margin-right: 1%; }
+
 @media only screen and (max-width: 1025px) {
   .article__desc {
     display: none; } }
@@ -910,7 +917,12 @@ body {
   text-transform: uppercase;
   background: #ffffff;
   border: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .15s linear; }
+
+.btn:hover {
+  background: #000000;
+  color: #ffffff; }
 
 .btn--shadowed {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); }
