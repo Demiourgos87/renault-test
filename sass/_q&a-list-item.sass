@@ -1,0 +1,70 @@
+.QA-list .article
+  overflow: visible
+  background: $lightGray
+
+.QA-list .article.article--landscape
+  float: none
+
+.QA-list .body__wrap
+  position: relative
+
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab)
+
+  .QA-list .body__wrap
+    width: 100%
+    top: -5vw
+
+  .QA-list .article
+    margin-bottom: 40px
+
+  .QA__first-item
+    width: 90%
+    margin: 0 auto
+
+  .QA-list .article--landscape .article__img
+    box-shadow: 0 10px 30px -8px rgba(0,0,0,0.6)
+
+  .QA-list .article--landscape .article__img
+    margin-right: 4%
+
+  .QA-list .article--landscape .article__img img
+    margin-bottom: -4px
+
+  .QA-list .article--landscape .article__body
+    width: 40%
+    margin-top: 12vw
+
+  .QA-list .article--portrait .article__body
+    width: 90%
+    margin: 0 auto
+
+  .QA-list .article--m
+    height: 15rem
+
+  .QA-list .article--m:nth-child(2n+0)
+    margin-right: 0
+    margin-left: 1%
+
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk)
+
+  .QA__first-item
+    width: 60%
+    float: right
+
+  .QA-list .article--m
+    width: 32%
+    margin-right: 1%
+
+  .QA-list .article--landscape .body__wrap
+    width: 80%
+    margin: 0 auto
+    top: -2vw
+
+  .QA-list .article--landscape .article__body
+    margin-top: 12%
+    width: 40%
+
+  .QA-list .article--landscape .article__img
+    margin-right: 6%

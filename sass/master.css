@@ -422,7 +422,7 @@ header i {
   font-weight: bold; }
 
 .article__body {
-  background: #ffffff; }
+  background: transparent; }
 
 .article__title {
   color: #000000;
@@ -1074,6 +1074,60 @@ header i {
   .more-topics {
     padding-bottom: 7vw; } }
 
+.QA-list .article {
+  overflow: visible;
+  background: #f6f6f6; }
+
+.QA-list .article.article--landscape {
+  float: none; }
+
+.QA-list .body__wrap {
+  position: relative; }
+
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+  .QA-list .body__wrap {
+    width: 100%;
+    top: -5vw; }
+  .QA-list .article {
+    margin-bottom: 40px; }
+  .QA__first-item {
+    width: 90%;
+    margin: 0 auto; }
+  .QA-list .article--landscape .article__img {
+    box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6); }
+  .QA-list .article--landscape .article__img {
+    margin-right: 4%; }
+  .QA-list .article--landscape .article__img img {
+    margin-bottom: -4px; }
+  .QA-list .article--landscape .article__body {
+    width: 40%;
+    margin-top: 12vw; }
+  .QA-list .article--portrait .article__body {
+    width: 90%;
+    margin: 0 auto; }
+  .QA-list .article--m {
+    height: 15rem; }
+  .QA-list .article--m:nth-child(2n+0) {
+    margin-right: 0;
+    margin-left: 1%; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1025px) {
+  .QA__first-item {
+    width: 60%;
+    float: right; }
+  .QA-list .article--m {
+    width: 32%;
+    margin-right: 1%; }
+  .QA-list .article--landscape .body__wrap {
+    width: 80%;
+    margin: 0 auto;
+    top: -2vw; }
+  .QA-list .article--landscape .article__body {
+    margin-top: 12%;
+    width: 40%; }
+  .QA-list .article--landscape .article__img {
+    margin-right: 6%; } }
+
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
 
@@ -1111,14 +1165,16 @@ body {
   color: #000000; }
 
 .btn {
-  display: block;
   padding: 15px 25px;
   font-size: 0.8rem;
   text-transform: uppercase;
+  text-decoration: none;
   background: #ffffff;
+  color: #000000;
   border: 0;
   cursor: pointer;
-  transition: all .15s linear; }
+  transition: all .15s linear;
+  margin-bottom: 15px; }
 
 .btn:hover {
   background: #000000;
@@ -1128,6 +1184,7 @@ body {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); }
 
 .btn--centered {
+  display: block;
   margin: 0 auto; }
 
 .btn--small {
