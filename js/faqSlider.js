@@ -15,13 +15,17 @@
 
   $slidesTotal.text('0' + totalSlides);
 
-  if (windowWidth > 767) {
+  if (!$sliderWrap.hasClass('vu--slider')) {
 
-    $.each($articles, function() {
+    if (windowWidth > 767) {
 
-      $(this).removeClass('article--portrait').addClass('article--landscape');
+      $.each($articles, function() {
 
-    });
+        $(this).removeClass('article--portrait').addClass('article--landscape');
+
+      });
+
+    }
 
   }
 

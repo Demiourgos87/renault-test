@@ -1,0 +1,45 @@
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk)
+
+  .more-topics
+    width: 30%
+    float: left
+
+  .more-topics .btn
+    padding: 10px 20px
+    font-size: $fontVerySmall
+    font-weight: bold
+
+
+@media only screen and (min-width: $break-desk)
+
+  .more-topics
+    position: relative
+    top: 4vw
+    width: calc(30% - 82px)
+    padding: 40px 40px 5vw 40px
+    float: left
+    border-left: 2px solid $lightGray
+
+  .more-topics::before, .more-topics::after
+    content: ""
+    position: absolute
+    right: 0
+    width: 79.2vw
+    height: 2px
+    background: $lightGray
+    z-index: -1
+
+  .more-topics::before
+    top: 0
+
+  .more-topics::after
+    bottom: 0
+
+
+@media only screen and (min-width: $break-desk-large)
+
+  .more-topics::before, .more-topics::after
+    width: 79.4vw
+
+  .more-topics
+    padding-bottom: 7vw

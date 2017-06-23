@@ -12,11 +12,14 @@
 @import mainNavigation
 @import article-media
 @import portraitSlider
+@import faqSlider
+@import q&aSlider
 @import test-start
 @import more-read
 @import commHeader
 @import pagination
 @import breadcrumbs
+@import more-topics
 
 // general classes \\
 
@@ -57,7 +60,9 @@ body
   color: $black
 
 .btn
+  display: block
   padding: 15px 25px
+  font-size: $fontSmall
   text-transform: uppercase
   background: $white
   border: 0
@@ -72,7 +77,6 @@ body
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2)
 
 .btn--centered
-  display: block
   margin: 0 auto
 
 .btn--small
@@ -80,6 +84,9 @@ body
 
 .btn--yellow
   background: $yellow
+
+.btn--lightGray
+  background: $lightGray
 
 .background--lightGray
   background: $lightGray
@@ -115,9 +122,6 @@ body
   .heading--col
     margin-top: 10px
     width: 80px
-
-  .faq__slider .article
-    margin-bottom: 0
 
   .slider__navigation
     float: right
@@ -195,6 +199,3 @@ body
 
   .section__title.heading--col
     width: 150px
-
-  .faq__slider .container--full
-    height: 23rem
