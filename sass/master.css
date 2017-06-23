@@ -1008,6 +1008,7 @@ body {
   color: #000000; }
 
 .btn {
+  display: block;
   padding: 15px 25px;
   text-transform: uppercase;
   background: #ffffff;
@@ -1023,7 +1024,6 @@ body {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); }
 
 .btn--centered {
-  display: block;
   margin: 0 auto; }
 
 .btn--small {
@@ -1031,6 +1031,9 @@ body {
 
 .btn--yellow {
   background: #ffcc33; }
+
+.btn--lightGray {
+  background: #f6f6f6; }
 
 .background--lightGray {
   background: #f6f6f6; }
