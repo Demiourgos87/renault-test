@@ -73,7 +73,7 @@
     margin-bottom: 5%; }
   .latest-news {
     margin-top: 6vw;
-    margin-bottom: 50px; }
+    margin-bottom: 100px; }
   .latest-news .row--raised {
     margin-top: -17%;
     margin-bottom: 2.3vw; } }
@@ -708,6 +708,42 @@ header i {
     top: -6vw;
     left: 5vw; } }
 
+@media only screen and (min-width: 1025px) {
+  .vu-QA .faq__slider {
+    width: calc(70% - 40px);
+    padding: 40px 40px 40px 0;
+    float: left;
+    margin-right: 0;
+    margin-bottom: 20px; }
+  .vu-QA .faq__slider .container--full {
+    height: 26rem; }
+  .vu-QA .faq__slider .article__body {
+    margin-top: 20px;
+    width: 70%; }
+  .vu-QA .faq__slider .slider__container {
+    width: 60%;
+    float: none;
+    margin: 0 auto; }
+  .vu-QA .faq__slider .slider__container {
+    top: -10vw; }
+  .vu-QA .slider__container .slider {
+    width: 100%; }
+  .vu-QA .faq__slider .slider__navigation {
+    float: none;
+    position: absolute;
+    top: 27.2vw;
+    right: 0; }
+  .vu-QA .faq__slider .section__title {
+    position: relative;
+    top: -11vw;
+    left: 10vw; } }
+
+@media only screen and (min-width: 1900px) {
+  .vu-QA .faq__slider .container--full {
+    height: 28rem; }
+  .vu-QA .faq__slider .slider__navigation {
+    top: 27.5vw; } }
+
 .test-start {
   width: 100%;
   margin: 100px 0; }
@@ -1010,6 +1046,33 @@ header i {
     padding: 10px 20px;
     font-size: 0.6rem;
     font-weight: bold; } }
+
+@media only screen and (min-width: 1025px) {
+  .more-topics {
+    position: relative;
+    top: 4vw;
+    width: calc(30% - 82px);
+    padding: 40px 40px 5vw 40px;
+    float: left;
+    border-left: 2px solid #f6f6f6; }
+  .more-topics::before, .more-topics::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 79.2vw;
+    height: 2px;
+    background: #f6f6f6;
+    z-index: -1; }
+  .more-topics::before {
+    top: 0; }
+  .more-topics::after {
+    bottom: 0; } }
+
+@media only screen and (min-width: 1900px) {
+  .more-topics::before, .more-topics::after {
+    width: 79.4vw; }
+  .more-topics {
+    padding-bottom: 7vw; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
