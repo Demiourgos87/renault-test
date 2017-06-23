@@ -663,7 +663,7 @@ header i {
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
   .faq__slider .container--full {
-    height: 14rem; } }
+    height: 15rem; } }
 
 @media only screen and (min-width: 1025px) {
   .faq__slider .article__body {
@@ -676,6 +676,37 @@ header i {
 @media only screen and (min-width: 1900px) {
   .faq__slider .container--full {
     height: 23rem; } }
+
+.vu-QA {
+  padding-top: 5vw; }
+
+.vu-QA .faq__slider {
+  border-top: none;
+  position: relative; }
+
+@media only screen and (min-width: 767px) and (max-width: 1025px) {
+  .vu-QA .faq__slider {
+    width: 68%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 20px; }
+  .vu-QA .faq__slider .container--full {
+    height: 18rem; }
+  .vu-QA .faq__slider .article__body {
+    margin-top: 20px; }
+  .vu-QA .faq__slider .slider__container {
+    width: 60%;
+    float: none;
+    margin: 0 0 0 5vw; }
+  .vu-QA .faq__slider .slider__navigation {
+    float: none;
+    position: absolute;
+    bottom: 3.3vw;
+    right: -11vw; }
+  .vu-QA .faq__slider .section__title {
+    position: relative;
+    top: -6vw;
+    left: 5vw; } }
 
 .test-start {
   width: 100%;
@@ -971,6 +1002,15 @@ header i {
     margin-left: 0 10px;
     cursor: default; } }
 
+@media only screen and (min-width: 767px) and (max-width: 1025px) {
+  .more-topics {
+    width: 30%;
+    float: left; }
+  .more-topics .btn {
+    padding: 10px 20px;
+    font-size: 0.6rem;
+    font-weight: bold; } }
+
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
 
@@ -1010,6 +1050,7 @@ body {
 .btn {
   display: block;
   padding: 15px 25px;
+  font-size: 0.8rem;
   text-transform: uppercase;
   background: #ffffff;
   border: 0;
