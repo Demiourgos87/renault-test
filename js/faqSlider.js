@@ -13,6 +13,7 @@
       totalSlides = $articles.length,
       windowWidth = $(window).width();
 
+
   $slidesTotal.text('0' + totalSlides);
 
   if (!$sliderWrap.hasClass('vu--slider')) {
