@@ -1,7 +1,7 @@
-.header__nav
+.master-header__nav
   +ulClean
 
-.header__nav > li > a
+.master-header__nav > li > a
   text-transform: uppercase
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-desk)
@@ -12,7 +12,7 @@
   body.menuOpened, html.menuOpened
     overflow: hidden
 
-  .header__nav--wrap
+  .master-header__nav--wrap
     +container(260px, 0, 0 10px)
     background: $white
     position: fixed
@@ -23,20 +23,20 @@
     overflow: hidden
     transition: all .2s linear
 
-  .header__nav
+  .master-header__nav
     margin-bottom: 40px
     position: relative
     top: 40px
 
-  .header__nav a
+  .master-header__nav a
     text-decoration: none
     color: $black
 
-  .header__nav > li
+  .master-header__nav > li
     margin-bottom: 20px
     position: relative
 
-  .header__nav > li > i
+  .master-header__nav > li > i
     color: $yellow
     margin-right: 15px
     position: relative
@@ -59,13 +59,13 @@
 
 @media only screen and (min-width: $break-desk)
 
-  .header__nav--wrap
+  .master-header__nav--wrap
     height: 62px
     position: absolute
     width: 90%
     z-index: 110
 
-  .header__nav
+  .master-header__nav
     width: 80%
     text-align: center
     position: fixed
@@ -73,30 +73,30 @@
     left: 50%
     margin-left: -40%
 
-  .header__nav > li
+  .master-header__nav > li
     display: inline-block
     margin-right: 40px
     z-index: 110
 
-  .header__nav > li:first-child
+  .master-header__nav > li:first-child
     margin-left: 110px
 
-  .header__nav > li:nth-child(3)
+  .master-header__nav > li:nth-child(3)
     margin-right: 200px
 
-  .header__nav > li:last-child
+  .master-header__nav > li:last-child
     margin-right: 0
 
-  .header__nav > li > i
+  .master-header__nav > li > i
     display: none
 
-  .header__nav > li > a
+  .master-header__nav > li > a
     color: $yellow
     text-decoration: none
     font-size: 0.8rem
     transition: color .15s linear
 
-  .header__nav > li > a.active, .header__nav > li > a:hover
+  .master-header__nav > li > a.active, .header__nav > li > a:hover
     color: $white
     border-bottom: 2px solid $white
 

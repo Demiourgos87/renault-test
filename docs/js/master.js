@@ -62,9 +62,9 @@
   // navigation \\
 
   // cache DOM \\
-  var $headerNavWrap = $('.header__nav--wrap'),
-      $headerNav = $('.header__nav'),
-      $menuTrigger = $('.menu__trigger i'),
+  var $headerNavWrap = $('.master-header__nav--wrap'),
+      $headerNav = $('.master-header__nav'),
+      $menuTrigger = $('.master-header__menu-trigger i'),
       $subMenuTrigger = $('.sub__menu__trigger'),
       $menuOpenedOverlay = $('.menu__opened__overlay'),
       $mainContent = $('.page'),

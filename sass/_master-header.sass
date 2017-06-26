@@ -1,4 +1,4 @@
-header
+.master-header
   +container(92%, 0, 15px 4%)
   height: 32px
   background: $black
@@ -6,13 +6,13 @@ header
   top: 0
   z-index: 99999999
 
-header i
+.master-header i
   cursor: pointer
 
-.header__search
+.master-header__search
   float: right
 
-.header__logo
+.master-header__logo
   width: 170px
   position: absolute
   top: 15px
@@ -20,7 +20,7 @@ header i
   margin-left: -85px
   z-index: 120
 
-.header__logo img
+.master-header__logo img
   width: 100%
 
 .menu__opened__overlay, .search__overlay
@@ -69,22 +69,22 @@ header i
 .search__field i
   font-size: 1.8rem
 
-.header__social
+.master-header__social
   text-align: center
 
-.header__social i
+.master-header__social i
   margin-right: 20px
 
-.header__social i:last-child
+.master-header__social i:last-child
   margin-right: 0
 
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-desk)
 
-  .menu__trigger
+  .master-header__menu-trigger
     float: left
 
-  .header__social
+  .master-header__social
     float: none
     position: relative
     margin: 100px auto 20px auto
@@ -93,14 +93,14 @@ header i
 
 @media only screen and (min-width: $break-desk)
 
-  header
+  .master-header
     width: 96%
     padding: 15px 2%
 
-  .menu__trigger
+  .master-header__menu-trigger
     display: none
 
-  .header__social
+  .master-header__social
     color: $white
     float: left
     font-size: 1.8rem
