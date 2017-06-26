@@ -20,6 +20,7 @@
 @import pagination
 @import breadcrumbs
 @import more-topics
+@import q&a-list-item
 
 // general classes \\
 
@@ -38,6 +39,10 @@ body
   position: relative
   max-width: 100%
   background: $white
+
+a img
+  border: none
+  outline: none
 
 .clearfix::before, .clearfix::after
   display: table
@@ -60,14 +65,16 @@ body
   color: $black
 
 .btn
-  display: block
   padding: 15px 25px
   font-size: $fontSmall
   text-transform: uppercase
+  text-decoration: none
   background: $white
+  color: $black
   border: 0
   cursor: pointer
   transition: all .15s linear
+  margin-bottom: 15px
 
 .btn:hover
   background: $black
@@ -77,6 +84,7 @@ body
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2)
 
 .btn--centered
+  display: block
   margin: 0 auto
 
 .btn--small
