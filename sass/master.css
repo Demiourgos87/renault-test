@@ -1243,7 +1243,18 @@ header i {
   .articles__list .heading--fix {
     margin-top: 24.5%; }
   .articles__list .heading--col {
-    margin-top: 5%; } }
+    margin-top: 5%; }
+  .articlePage__main-title {
+    font-size: 2.3rem; }
+  .articlePage__social-share {
+    padding: 0 25px; }
+  .share__icon {
+    top: -3vw;
+    width: 9vw;
+    height: 9vw;
+    line-height: 9vw; }
+  .share__icon i {
+    font-size: 1.6rem; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
