@@ -2,7 +2,7 @@
   overflow: visible
   background: $lightGray
 
-.QA-list .article.article--landscape
+.QA-list .article.article--xl
   float: none
 
 .QA-list .body__wrap
@@ -47,15 +47,26 @@
     margin-left: 1%
 
 
-@media only screen and (min-width: $break-tab) and (max-width: $break-desk)
+@media only screen and (min-width: $break-tab)
+
+  .QA-list .section__title.heading--row
+    position: relative
+    top: 15vw
+    left: 3.5vw
+    width: 20vw
+
+  .QA-list .article
+    margin-bottom: 10vw
 
   .QA__first-item
     width: 60%
     float: right
+    margin-bottom: 8vw
 
   .QA-list .article--m
-    width: 32%
-    margin-right: 1%
+    width: 30%
+    height: 11rem
+    margin-right: 2%
 
   .QA-list .article--landscape .body__wrap
     width: 80%
@@ -68,3 +79,28 @@
 
   .QA-list .article--landscape .article__img
     margin-right: 6%
+
+  .QA-list .article--portrait .body__wrap
+    width: 70%
+    margin: 0 auto
+    top: -7vw
+
+  .QA-list .article--l
+    width: 67%
+    margin-top: -5vw
+    margin-left: 3.4vw
+    margin-right: 5%
+
+  .QA-list .article.float--right
+    float: right
+    margin-left: 5%
+    margin-right: 0
+
+  .QA-list .article:last-child
+    margin-bottom: 20px
+
+
+@media only screen and (min-width: $break-desk)
+
+  .QA-list .article.article--m
+    height: 17rem

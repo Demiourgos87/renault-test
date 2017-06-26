@@ -11,7 +11,7 @@
       $slidesTotal = $navigation.find('.slide__total'),
       $currentSlide = $navigation.find('.slide__current'),
       totalSlides = $articles.length,
-      windowWidth = $(window).width();
+      windowWidth = $(window).outerWidth();
 
   $slidesTotal.text('0' + totalSlides);
 

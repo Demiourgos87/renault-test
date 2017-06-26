@@ -6,7 +6,7 @@
       $wrap = $slider.closest('.slider__wrap'),
       $arrowNext = $wrap.find('.fa-arrow-circle-o-right'),
       $arrowPrev = $wrap.find('.fa-arrow-circle-o-left'),
-      windowWidth = $(window).width();
+      windowWidth = $(window).outerWidth();
 
   if (windowWidth > 767) {
 

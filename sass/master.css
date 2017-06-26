@@ -768,7 +768,7 @@ header i {
   margin: 0; }
 
 .test-start__item {
-  width: 32.9%;
+  width: 32.7%;
   display: inline-block; }
 
 .test-start__images {
@@ -1078,7 +1078,7 @@ header i {
   overflow: visible;
   background: #f6f6f6; }
 
-.QA-list .article.article--landscape {
+.QA-list .article.article--xl {
   float: none; }
 
 .QA-list .body__wrap {
@@ -1111,13 +1111,22 @@ header i {
     margin-right: 0;
     margin-left: 1%; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1025px) {
+@media only screen and (min-width: 767px) {
+  .QA-list .section__title.heading--row {
+    position: relative;
+    top: 15vw;
+    left: 3.5vw;
+    width: 20vw; }
+  .QA-list .article {
+    margin-bottom: 10vw; }
   .QA__first-item {
     width: 60%;
-    float: right; }
+    float: right;
+    margin-bottom: 8vw; }
   .QA-list .article--m {
-    width: 32%;
-    margin-right: 1%; }
+    width: 30%;
+    height: 11rem;
+    margin-right: 2%; }
   .QA-list .article--landscape .body__wrap {
     width: 80%;
     margin: 0 auto;
@@ -1126,7 +1135,26 @@ header i {
     margin-top: 12%;
     width: 40%; }
   .QA-list .article--landscape .article__img {
-    margin-right: 6%; } }
+    margin-right: 6%; }
+  .QA-list .article--portrait .body__wrap {
+    width: 70%;
+    margin: 0 auto;
+    top: -7vw; }
+  .QA-list .article--l {
+    width: 67%;
+    margin-top: -5vw;
+    margin-left: 3.4vw;
+    margin-right: 5%; }
+  .QA-list .article.float--right {
+    float: right;
+    margin-left: 5%;
+    margin-right: 0; }
+  .QA-list .article:last-child {
+    margin-bottom: 20px; } }
+
+@media only screen and (min-width: 1025px) {
+  .QA-list .article.article--m {
+    height: 17rem; } }
 
 section, article, aside, figure, figcaption, header, footer, nav {
   display: block; }
@@ -1143,6 +1171,10 @@ body {
   position: relative;
   max-width: 100%;
   background: #ffffff; }
+
+a img {
+  border: none;
+  outline: none; }
 
 .clearfix::before, .clearfix::after {
   display: table;
