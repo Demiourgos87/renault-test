@@ -53,6 +53,7 @@
 
 .share__icon i
   font-size: $fontLarge
+  margin-top: 10px
 
 .articlePage__date
   color: $darkGray
@@ -87,6 +88,9 @@
 
 @media only screen and (min-width: $break-tab)
 
+  .header__footnote
+    padding: 10px
+
   .articles__list .article--s, .articles__list .article--l
     width: 49%
     margin-bottom: 15px
@@ -111,3 +115,65 @@
 
   .share__icon i
     font-size: $fontBig
+
+
+@media only screen and (min-width: $break-desk)
+
+  .articlePage
+    margin-bottom: 10vw
+
+  .articlePage__main-title
+    font-size: 3rem
+    width: 85%
+
+  .articlePage__social-share, .articlePage__main-content, .articlePage__body .test-start
+    float: left
+
+  .articlePage__social-share
+    width: 6%
+    margin: 0 4% 0 0
+    padding: 20px 0
+
+  .share__icon
+    top: 0
+    left: -2vw
+    width: 4vw
+    height: 4vw
+    line-height: 4vw
+    margin-bottom: 20px
+    margin-right: 0
+    font-size: $fontLarge
+
+  .share__icon:last-child
+    margin-bottom: 0
+
+  .articlePage__main-content
+    width: 56%
+    margin-right: 4%
+
+  .articlePage__body .test-start
+    width: 30%
+
+  .articlePage .test-start .container--full
+    background-size: auto 100%
+    background-position: 20% 0%
+
+  .articlePage .test-start
+    margin-top: 3vw
+
+  .articlePage .test-start__body
+    width: 70%
+    padding: 80px 0
+
+  .articlePage .test-start__item img
+    width: 100%
+
+  .articlePage .test-start__images
+    width: 100%
+    top: -1.8vw
+
+  .articlePage .test-start__images .test-start__item
+    width: 32.2%
+
+  .articlePage .test-start__images .test-start__item p
+    font-size: $fontVerySmall
