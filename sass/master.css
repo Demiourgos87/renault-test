@@ -1204,7 +1204,8 @@ header i {
   text-align: center;
   background: #ffffff;
   color: #ffcc33;
-  border: 1px solid #ffcc33; }
+  border: 1px solid #ffcc33;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2); }
 
 .share__icon:last-child {
   margin-right: 0; }
