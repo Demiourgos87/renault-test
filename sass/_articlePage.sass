@@ -1,0 +1,91 @@
+.articlePage
+  width: 100%
+
+.articlePage__header
+  width: 100%
+  position: relative
+
+.articlePage__header img
+  width: 100%
+
+.header__footnote
+  position: absolute
+  right: 0
+  bottom: 0
+  padding: 5px
+  background: $white
+  font-size: $fontNormal
+
+.articlePage__category
+  display: inline-block
+  padding: 10px 15px
+  font-size: $fontSmall
+  font-weight: bold
+  text-transform: uppercase
+  background: $yellow
+
+.articlePage__main-title
+  text-transform: uppercase
+  font-size: $fontBig
+  margin-top: 20px
+
+.articlePage__social-share
+  display: inline-block
+  background: $lightGray
+  padding: 0 15px
+  margin: 10px 0 30px 0
+
+.share__icon
+  display: inline-block
+  margin-right: 3vw
+  position: relative
+  top: -6vw
+  width: 18vw
+  height: 18vw
+  line-height: 18vw
+  text-align: center
+  background: $white
+  color: $yellow
+  border: 1px solid $yellow
+
+.share__icon:last-child
+  margin-right: 0
+
+.share__icon i
+  font-size: $fontLarge
+
+.articlePage__date
+  color: $darkGray
+
+.articlePage__text-intro
+  font-weight: bold
+
+.articlePage__article-text p
+  font-size: $fontNormal
+  line-height: 1.4rem
+  letter-spacing: 1px
+
+.articlePage__article-text a
+  color: $yellow
+
+.articlePage__tags
+  color: $yellow
+  margin: 20px 0
+
+.articles__list .heading--fix
+  margin-top: 12.9rem
+
+.articles__list .heading--col
+  margin-top: 25%
+
+
+@media only screen and (min-width: $break-tab)
+
+  .articles__list .article--s, .articles__list .article--l
+    width: 49%
+
+  .articles__list .heading--fix
+    margin-top: 24.5%
+
+  .articles__list .heading--col
+    margin-top: 5%
