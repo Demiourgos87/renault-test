@@ -76,7 +76,7 @@
 
   // mobile main menu \\
 
-  if (windowWidth < 1024) {
+  if (windowWidth < 1025) {
 
     $menuTrigger.on('click', function() {
 
@@ -134,7 +134,7 @@
 
   // desktop main menu \\
 
-  if (windowWidth > 1023) {
+  if (windowWidth > 1024) {
 
     $.each($subMenuTrigger, function() {
 
@@ -193,7 +193,7 @@
 })(jQuery);
 
 (function($){
-  // Portrait Slider \\
+  // FAQ Slider \\
 
   // cache DOM \\
   var $sliderWrap = $('.portrait__slider'),
@@ -238,8 +238,6 @@
 
 (function($){
 
-  // Q&A list layout \\
-
   var $wrap = $('.QA-list'),
       $mainContainer = $wrap.find('.container.main-QA'),
       $articlesToChange = $mainContainer.find('.article:nth-of-type(4n+0)'),
@@ -264,3 +262,4 @@
   }
 
 })(jQuery);
+

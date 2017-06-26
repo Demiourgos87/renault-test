@@ -17,7 +17,7 @@
 
   // mobile main menu \\
 
-  if (windowWidth < 1024) {
+  if (windowWidth < 1025) {
 
     $menuTrigger.on('click', function() {
 
@@ -75,7 +75,7 @@
 
   // desktop main menu \\
 
-  if (windowWidth > 1023) {
+  if (windowWidth > 1024) {
 
     $.each($subMenuTrigger, function() {
 
