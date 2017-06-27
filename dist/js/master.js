@@ -39,7 +39,7 @@
       $subMenuTrigger = $('.sub__menu__trigger'),
       $menuOpenedOverlay = $('.menu__opened__overlay'),
       $mainContent = $('.page'),
-      $headerSearch = $('.header__search'),
+      $headerSearch = $('.master-header__search'),
       $searchOverlay = $('.search__overlay'),
       $searchClose = $('.search__close'),
       windowWidth = $(window).outerWidth();
