@@ -263,7 +263,7 @@ body {
 .text--bold {
   font-weight: 700; }
 
-.text--black {
+.text--bolder {
   font-weight: 900; }
 
 .text--italic {
@@ -286,21 +286,6 @@ body {
 
 .text--black {
   color: #000000; }
-
-.text--big {
-  font-size: 1.8rem; }
-
-.text--medium {
-  font-size: 1.2rem; }
-
-.text--normal {
-  font-size: 1rem; }
-
-.text--small {
-  font-size: 0.8rem; }
-
-.text--verySmall {
-  font-size: 0.6rem; }
 
 .text--center {
   text-align: center; }
@@ -437,10 +422,13 @@ body {
     padding: 15px 2%; }
   .master-header__menu-trigger {
     display: none; }
+  .master-header__social, .master-header__search {
+    position: relative;
+    font-size: 1.2rem;
+    top: 8px; }
   .master-header__social {
     color: #ffffff;
-    float: left;
-    font-size: 1.8rem; }
+    float: left; }
   .search__close {
     top: 25px;
     right: 25px; } }
@@ -484,7 +472,8 @@ body {
     color: #ffcc33;
     margin-right: 15px;
     position: relative;
-    top: -2px; }
+    top: -2px;
+    font-size: 1rem; }
   .sub__menu {
     display: none; }
   .sub__menu > ul {
@@ -498,9 +487,12 @@ body {
 
 @media only screen and (min-width: 319px) and (max-width: 767px) {
   .master-header__nav > li > a {
-    font-weight: 700; }
+    font-weight: 700;
+    font-size: 1.2rem; }
   .sub__menu > ul > li > a {
-    font-weight: 400; } }
+    font-weight: 400; }
+  .master-header__menu-trigger, .master-header__search {
+    font-size: 1.6rem; } }
 
 @media only screen and (min-width: 1025px) {
   .master-header__nav--wrap {
@@ -675,40 +667,12 @@ body {
     display: none; } }
 
 @media only screen and (min-width: 319px) and (max-width: 767px) {
-  .teaser--fan .teaser__img, .teaser--fan .teaser__body {
-    float: none; }
-  .teaser--fan .teaser__body {
-    width: 80%;
-    padding: 20px 10%;
-    background: #ffffff; }
-  .teaser--fan .teaser__img {
-    width: 100%; }
-  .fanDeVu__container .teaser:nth-child(2n+0) {
-    margin-right: 0;
-    margin-left: 1%; }
   .teaser--raised--mob {
     margin-top: -24.5%; } }
 
 @media only screen and (min-width: 767px) {
-  .teaser--fan .teaser__img, .teaser--fan .teaser__body {
-    float: left; }
-  .teaser--fan .teaser__body {
-    width: 17.33332%;
-    padding: 10px 8% 20em 8%;
-    margin-bottom: -20em; }
-  .teaser--fan .teaser__img {
-    width: 66.66665%; }
-  .fanDeVu .teaser--m {
-    width: 23%;
-    float: right;
-    margin-left: 2%;
-    margin-right: 0; }
   .teaser--raised--tab {
     margin-top: -8vw; } }
-
-@media only screen and (min-width: 1025px) {
-  .teaser--fan .teaser__body {
-    padding: 40px 8% 20em 8%; } }
 
 .test-start {
   width: 100%;
@@ -1514,9 +1478,7 @@ body {
     width: 100%; }
   .fanDeVu__container .teaser:nth-child(2n+0) {
     margin-right: 0;
-    margin-left: 1%; }
-  .teaser--raised--mob {
-    margin-top: -24.5%; } }
+    margin-left: 1%; } }
 
 @media only screen and (min-width: 767px) {
   .teaser--fan .teaser__img, .teaser--fan .teaser__body {
@@ -1531,9 +1493,7 @@ body {
     width: 23%;
     float: right;
     margin-left: 2%;
-    margin-right: 0; }
-  .teaser--raised--tab {
-    margin-top: -8vw; } }
+    margin-right: 0; } }
 
 @media only screen and (min-width: 1025px) {
   .teaser--fan .teaser__body {

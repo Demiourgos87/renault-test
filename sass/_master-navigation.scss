@@ -49,6 +49,7 @@
     margin-right: 15px;
     position: relative;
     top: -2px;
+    font-size: $fontNormal;
   }
 
   .sub__menu {
@@ -76,10 +77,15 @@
 
   .master-header__nav > li > a {
     font-weight: 700;
+    font-size: $fontMedium;
   }
 
   .sub__menu > ul > li > a {
     font-weight: 400;
+  }
+
+  .master-header__menu-trigger, .master-header__search {
+    font-size: $fontBig;
   }
 
 }

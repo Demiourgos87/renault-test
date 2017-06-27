@@ -96,6 +96,7 @@
 }
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-desk) {
+  
   .master-header__menu-trigger {
     float: left;
   }
@@ -110,6 +111,7 @@
 }
 
 @media only screen and (min-width: $break-desk) {
+
   .master-header {
     width: 96%;
     padding: 15px 2%;
@@ -119,10 +121,15 @@
     display: none;
   }
 
+  .master-header__social, .master-header__search {
+    position: relative;
+    font-size: $fontMedium;
+    top: 8px;
+  }
+
   .master-header__social {
     color: $white;
     float: left;
-    font-size: 1.8rem;
   }
 
   .search__close {
