@@ -16,7 +16,7 @@ gulp.task('concatJS', function() {
 });
 
 gulp.task('compileSASS', function() {
-  return gulp.src('sass/master.sass')
+  return gulp.src('sass/master.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('sass/'))
   .pipe(browserSync.stream());
@@ -54,7 +54,7 @@ gulp.task('watch', function() {
   });
 
   gulp.watch('js/*.js', ['buildJS']);
-  gulp.watch('sass/*.sass', ['buildCSS']);
+  gulp.watch('sass/*.scss', ['buildCSS']);
   gulp.watch("*.html").on('change', reloadBrowser);
 
 });

@@ -28,7 +28,7 @@ a img {
   margin-top: 62px;
   position: relative;
   left: 0;
-  transition: all .2s linear; }
+  transition: all 0.2s linear; }
 
 .section__title {
   font-size: 1.3rem; }
@@ -47,7 +47,7 @@ a img {
   color: #000000;
   border: 0;
   cursor: pointer;
-  transition: all .15s linear;
+  transition: all 0.15s linear;
   margin-bottom: 15px; }
 
 .btn:hover {
@@ -457,7 +457,7 @@ a img {
     left: -280px;
     z-index: 50;
     overflow: hidden;
-    transition: all .2s linear; }
+    transition: all 0.2s linear; }
   .master-header__nav {
     margin-bottom: 40px;
     position: relative;
@@ -513,8 +513,8 @@ a img {
     color: #ffcc33;
     text-decoration: none;
     font-size: 0.8rem;
-    transition: color .15s linear; }
-  .master-header__nav > li > a.active, .header__nav > li > a:hover {
+    transition: color 0.15s linear; }
+  .master-header__nav > li > a.active, .master-header__nav > li > a:hover {
     color: #ffffff;
     border-bottom: 2px solid #ffffff; }
   .sub__menu {
@@ -865,7 +865,7 @@ a img {
   text-align: center;
   vertical-align: middle;
   margin-right: 15px;
-  transition: background .15s linear; }
+  transition: background 0.15s linear; }
 
 .pagination a:last-child {
   margin-right: 0; }
