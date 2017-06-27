@@ -1,59 +1,30 @@
 (function($){
-  // FAQ Slider \\
 
-  // cache DOM \\
-  var $sliderWrap = $('.faq__slider'),
-      $slider = $sliderWrap.find('.slider'),
-      $articles = $slider.find('.article'),
-      $navigation = $sliderWrap.find('.slider__navigation'),
-      $arrowNext = $navigation.find('.fa-caret-right'),
-      $arrowPrev = $navigation.find('.fa-caret-left'),
-      $slidesTotal = $navigation.find('.slide__total'),
-      $currentSlide = $navigation.find('.slide__current'),
-      totalSlides = $articles.length,
+  // Q&A Layout change on tab/desk \\
+
+  // Cache DOM \\
+  var $wrap = $('.QA-list'),
+      $mainContainer = $wrap.find('.container.main-QA'),
+      $articlesToChange = $mainContainer.find('.article:nth-of-type(4n+0)'),
       windowWidth = $(window).outerWidth();
 
-  $slidesTotal.text('0' + totalSlides);
+  if (windowWidth > 767) {
 
-  if (!$sliderWrap.hasClass('vu--slider')) {
+    for (var i = 0; i < $articlesToChange.length; i++) {
 
-    if (windowWidth > 767) {
+      if (i % 2 === 0) {
 
-      $.each($articles, function() {
+        $($articlesToChange[i]).removeClass('article--portrait article--m').addClass('article--landscape article--l');
 
-        $(this).removeClass('article--portrait').addClass('article--landscape');
+      } else {
 
-      });
+        $($articlesToChange[i]).removeClass('article--portrait article--m').addClass('article--landscape article--l float--right');
+
+      }
 
     }
 
   }
-
-  function updateNavigationCounter(currentIndex) {
-
-    $currentSlide.text('0' + (currentIndex + 1));
-
-  }
-
-  $slider.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    speed: 400,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: true,
-    dots: false,
-    infinite: true,
-    prevArrow: $arrowPrev,
-    nextArrow: $arrowNext
-  });
-
-  $slider.on('afterChange', function(event, slick, currentSlide) {
-
-    updateNavigationCounter(currentSlide);
-
-  });
 
 })(jQuery);
 
@@ -163,6 +134,66 @@
 })(jQuery);
 
 (function($){
+  // FAQ Slider \\
+  // Also used for the slider on Q&A page \\
+
+  // cache DOM \\
+  var $sliderWrap = $('.faq__slider'),
+      $slider = $sliderWrap.find('.slider'),
+      $articles = $slider.find('.article'),
+      $navigation = $sliderWrap.find('.slider__navigation'),
+      $arrowNext = $navigation.find('.fa-caret-right'),
+      $arrowPrev = $navigation.find('.fa-caret-left'),
+      $slidesTotal = $navigation.find('.slide__total'),
+      $currentSlide = $navigation.find('.slide__current'),
+      totalSlides = $articles.length,
+      windowWidth = $(window).outerWidth();
+
+  $slidesTotal.text('0' + totalSlides);
+
+  if (!$sliderWrap.hasClass('vu--slider')) {
+
+    if (windowWidth > 767) {
+
+      $.each($articles, function() {
+
+        $(this).removeClass('article--portrait').addClass('article--landscape');
+
+      });
+
+    }
+
+  }
+
+  function updateNavigationCounter(currentIndex) {
+
+    $currentSlide.text('0' + (currentIndex + 1));
+
+  }
+
+  $slider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    speed: 400,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    dots: false,
+    infinite: true,
+    prevArrow: $arrowPrev,
+    nextArrow: $arrowNext
+  });
+
+  $slider.on('afterChange', function(event, slick, currentSlide) {
+
+    updateNavigationCounter(currentSlide);
+
+  });
+
+})(jQuery);
+
+(function($){
   // More Read Slider \\
 
   // cache DOM \\
@@ -193,7 +224,7 @@
 })(jQuery);
 
 (function($){
-  // FAQ Slider \\
+  // Portrait Slider \\
 
   // cache DOM \\
   var $sliderWrap = $('.portrait__slider'),
@@ -235,31 +266,3 @@
   });
 
 })(jQuery);
-
-(function($){
-
-  var $wrap = $('.QA-list'),
-      $mainContainer = $wrap.find('.container.main-QA'),
-      $articlesToChange = $mainContainer.find('.article:nth-of-type(4n+0)'),
-      windowWidth = $(window).outerWidth();
-
-  if (windowWidth > 767) {
-
-    for (var i = 0; i < $articlesToChange.length; i++) {
-
-      if (i % 2 === 0) {
-
-        $($articlesToChange[i]).removeClass('article--portrait article--m').addClass('article--landscape article--l');
-
-      } else {
-
-        $($articlesToChange[i]).removeClass('article--portrait article--m').addClass('article--landscape article--l float--right');
-
-      }
-
-    }
-
-  }
-
-})(jQuery);
-

@@ -1,5 +1,5 @@
 (function($){
-  // FAQ Slider \\
+  // Portrait Slider \\
 
   // cache DOM \\
   var $sliderWrap = $('.portrait__slider'),

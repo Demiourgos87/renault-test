@@ -1,5 +1,6 @@
 (function($){
   // FAQ Slider \\
+  // Also used for the slider on Q&A page \\
 
   // cache DOM \\
   var $sliderWrap = $('.faq__slider'),

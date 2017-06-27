@@ -1,5 +1,8 @@
 (function($){
 
+  // Q&A Layout change on tab/desk \\
+
+  // Cache DOM \\
   var $wrap = $('.QA-list'),
       $mainContainer = $wrap.find('.container.main-QA'),
       $articlesToChange = $mainContainer.find('.article:nth-of-type(4n+0)'),
