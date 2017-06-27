@@ -1,0 +1,11 @@
+@mixin container($width, $margin, $padding) {
+  width: $width;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin ulClean {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,87 @@
+.faq__slider {
+  margin-bottom: 150px;
+}
+
+.faq__slider .slider__container {
+  position: relative;
+}
+
+.faq__slider .article__body {
+  position: relative;
+  background: transparent;
+}
+
+.faq__slider .article__img img {
+  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.4);
+}
+
+.faq__slider .article {
+  overflow: visible;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+  .faq__slider .article {
+    margin-bottom: 0;
+  }
+
+  .faq__slider .slider__container {
+    width: 90%;
+    margin: 0 auto;
+    top: -100px;
+  }
+
+  .faq__slider .container--full {
+    height: 18.5rem;
+    top: 100px;
+  }
+}
+
+@media only screen and (min-width: $break-tab) {
+  .faq__slider .article__body {
+    margin-top: 20%;
+  }
+
+  .faq__slider .slider__container {
+    top: -50px;
+  }
+
+  .faq__slider .slider__container {
+    width: 75%;
+    float: right;
+    margin-right: 2%;
+  }
+
+  .faq__slider .container--full {
+    top: 0;
+  }
+
+  .faq__slider .section__title.heading--row {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+  .faq__slider .container--full {
+    height: 15rem;
+  }
+}
+
+@media only screen and (min-width: $break-desk) {
+  .faq__slider .article__body {
+    margin-top: 12%;
+  }
+
+  .faq__slider .container--full {
+    height: 20rem;
+  }
+
+  .faq__slider .slider__container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: $break-desk-large) {
+  .faq__slider .container--full {
+    height: 23rem;
+  }
+}
