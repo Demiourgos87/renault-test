@@ -41,6 +41,7 @@ a img {
 .btn {
   padding: 15px 25px;
   font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   background: #ffffff;
@@ -82,7 +83,8 @@ a img {
   margin: 20px 0; }
 
 .slider__navigation {
-  z-index: 30; }
+  z-index: 30;
+  font-weight: 700; }
 
 .slider__navigation i {
   cursor: pointer;
@@ -248,14 +250,24 @@ a img {
   .latest-news {
     margin-top: 10vw; } }
 
+body {
+  font-family: 'Lato', sans-serif; }
+
+@font-face {
+  font-family: 'Airways';
+  src: url("../dist/fonts/Airways.woff"); }
+
+.text--regular {
+  font-weight: 400; }
+
 .text--bold {
-  font-weight: bold; }
+  font-weight: 700; }
+
+.text--black {
+  font-weight: 900; }
 
 .text--italic {
-  font-style: italic; }
-
-.text--thin {
-  font-weight: normal; }
+  font-family: 'Airways'; }
 
 .text--clear {
   text-decoration: none; }
@@ -484,6 +496,12 @@ a img {
   .top__articles {
     display: none; } }
 
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+  .master-header__nav > li > a {
+    font-weight: 700; }
+  .sub__menu > ul > li > a {
+    font-weight: 400; } }
+
 @media only screen and (min-width: 1025px) {
   .master-header__nav--wrap {
     height: 62px;
@@ -510,6 +528,7 @@ a img {
   .master-header__nav > li > i {
     display: none; }
   .master-header__nav > li > a {
+    font-weight: 700;
     color: #ffcc33;
     text-decoration: none;
     font-size: 0.8rem;
@@ -585,11 +604,12 @@ a img {
   background: transparent; }
 
 .teaser__title {
+  font-weight: 900;
   color: #000000;
-  font-weight: bold;
   margin: 15px 0; }
 
 .teaser__desc {
+  font-weight: 400;
   margin: 0 0 15px 0;
   color: #7e7e7e; }
 
@@ -761,6 +781,9 @@ a img {
 
 .more-read .teaser__body {
   background: transparent; }
+
+.more-read .teaser__title {
+  font-weight: 700; }
 
 .more-read .teaser__img img {
   filter: grayscale(100%); }

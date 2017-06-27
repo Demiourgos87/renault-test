@@ -50,6 +50,7 @@ a img {
 .btn {
   padding: 15px 25px;
   font-size: $fontSmall;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   background: $white;
@@ -102,6 +103,7 @@ a img {
 
 .slider__navigation {
   z-index: 30;
+  font-weight: 700;
 }
 
 .slider__navigation i {
