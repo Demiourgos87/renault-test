@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 gulp.task('concatJS', function() {
   return gulp.src('js/*.js')
   .pipe(concat('master.js'))
-  .pipe(gulp.dest('docs/js/'));
+  .pipe(gulp.dest('dist/js/'));
 });
 
 gulp.task('compileSASS', function() {
@@ -23,10 +23,10 @@ gulp.task('compileSASS', function() {
 });
 
 gulp.task('uglifyJS', function() {
-  return gulp.src('docs/js/master.js')
+  return gulp.src('dist/js/master.js')
   .pipe(rename('master.min.js'))
   .pipe(uglify())
-  .pipe(gulp.dest('docs/js/'))
+  .pipe(gulp.dest('dist/js/'))
   .pipe(browserSync.stream());
 });
 
@@ -34,7 +34,7 @@ gulp.task('uglifyCSS', function() {
   return gulp.src('sass/master.css')
   .pipe(rename('master.min.css'))
   .pipe(cleanCSS())
-  .pipe(gulp.dest('docs/css/'));
+  .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('buildCSS', function() {
