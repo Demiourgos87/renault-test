@@ -5,7 +5,9 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    browserSync = require('browser-sync').create(),
+    reloadBrowser = browserSync.reload;
 
 gulp.task('concatJS', function() {
   return gulp.src('js/*.js')
@@ -16,14 +18,16 @@ gulp.task('concatJS', function() {
 gulp.task('compileSASS', function() {
   return gulp.src('sass/master.sass')
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('sass/'));
+  .pipe(gulp.dest('sass/'))
+  .pipe(browserSync.stream());
 });
 
 gulp.task('uglifyJS', function() {
   return gulp.src('docs/js/master.js')
   .pipe(rename('master.min.js'))
   .pipe(uglify())
-  .pipe(gulp.dest('docs/js/'));
+  .pipe(gulp.dest('docs/js/'))
+  .pipe(browserSync.stream());
 });
 
 gulp.task('uglifyCSS', function() {
@@ -42,6 +46,17 @@ gulp.task('buildJS', function() {
 });
 
 gulp.task('watch', function() {
+
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+
   gulp.watch('js/*.js', ['buildJS']);
   gulp.watch('sass/*.sass', ['buildCSS']);
+  gulp.watch("*.html").on('change', reloadBrowser);
+
 });
+
+gulp.task('default', ['watch']);
