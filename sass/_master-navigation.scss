@@ -49,6 +49,7 @@
     margin-right: 15px;
     position: relative;
     top: -2px;
+    font-size: $fontNormal;
   }
 
   .sub__menu {
@@ -72,7 +73,25 @@
   }
 }
 
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+
+  .master-header__nav > li > a {
+    font-weight: 700;
+    font-size: $fontMedium;
+  }
+
+  .sub__menu > ul > li > a {
+    font-weight: 400;
+  }
+
+  .master-header__menu-trigger, .master-header__search {
+    font-size: $fontBig;
+  }
+
+}
+
 @media only screen and (min-width: $break-desk) {
+
   .master-header__nav--wrap {
     height: 62px;
     position: absolute;
@@ -112,6 +131,7 @@
   }
 
   .master-header__nav > li > a {
+    font-weight: 700;
     color: $yellow;
     text-decoration: none;
     font-size: 0.8rem;

@@ -1,15 +1,30 @@
+// Fonts \\
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+  font-family: 'Airways';
+  src: url('../dist/fonts/Airways.woff');
+}
+
 // text modifiers \\
 
+.text--regular {
+  font-weight: 400;
+}
+
 .text--bold {
-  font-weight: bold;
+  font-weight: 700;
+}
+
+.text--bolder {
+  font-weight: 900;
 }
 
 .text--italic {
-  font-style: italic;
-}
-
-.text--thin {
-  font-weight: normal;
+  font-family: 'Airways';
 }
 
 .text--clear {
@@ -34,26 +49,6 @@
 
 .text--black {
   color: $black;
-}
-
-.text--big {
-  font-size: 1.8rem;
-}
-
-.text--medium {
-  font-size: 1.2rem;
-}
-
-.text--normal {
-  font-size: 1rem;
-}
-
-.text--small {
-  font-size: 0.8rem;
-}
-
-.text--verySmall {
-  font-size: 0.6rem;
 }
 
 .text--center {

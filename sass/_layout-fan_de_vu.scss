@@ -1,0 +1,60 @@
+.teaser--fan .teaser__img {
+  margin-bottom: -5px;
+}
+
+.teaser--fan {
+  box-shadow: 0 20px 30px 10px rgba(0, 0, 0, 0.3);
+}
+
+.teaser--fan .teaser__body {
+  background: $white;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+  .teaser--fan .teaser__img, .teaser--fan .teaser__body {
+    float: none;
+  }
+
+  .teaser--fan .teaser__body {
+    width: 80%;
+    padding: 20px 10%;
+  }
+
+  .teaser--fan .teaser__img {
+    width: 100%;
+  }
+
+  .fanDeVu__container .teaser:nth-child(2n+0) {
+    margin-right: 0;
+    margin-left: 1%;
+  }
+}
+
+@media only screen and (min-width: $break-tab) {
+  .teaser--fan .teaser__img, .teaser--fan .teaser__body {
+    float: left;
+  }
+
+  .teaser--fan .teaser__body {
+    width: 17.33332%;
+    padding: 10px 8% 20em 8%;
+    margin-bottom: -20em;
+  }
+
+  .teaser--fan .teaser__img {
+    width: 66.66665%;
+  }
+
+  .fanDeVu .teaser--m {
+    width: 23%;
+    float: right;
+    margin-left: 2%;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: $break-desk) {
+  .teaser--fan .teaser__body {
+    padding: 40px 8% 20em 8%;
+  }
+}

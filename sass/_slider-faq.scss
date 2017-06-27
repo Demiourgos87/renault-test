@@ -6,21 +6,21 @@
   position: relative;
 }
 
-.faq__slider .article__body {
+.faq__slider .teaser__body {
   position: relative;
   background: transparent;
 }
 
-.faq__slider .article__img img {
+.faq__slider .teaser__img img {
   box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.4);
 }
 
-.faq__slider .article {
+.faq__slider .teaser {
   overflow: visible;
 }
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
-  .faq__slider .article {
+  .faq__slider .teaser {
     margin-bottom: 0;
   }
 
@@ -37,7 +37,7 @@
 }
 
 @media only screen and (min-width: $break-tab) {
-  .faq__slider .article__body {
+  .faq__slider .teaser__body {
     margin-top: 20%;
   }
 
@@ -67,7 +67,7 @@
 }
 
 @media only screen and (min-width: $break-desk) {
-  .faq__slider .article__body {
+  .faq__slider .teaser__body {
     margin-top: 12%;
   }
 
