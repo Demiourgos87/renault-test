@@ -5,7 +5,7 @@
   // Cache DOM \\
   var $wrap = $('.QA-list'),
       $mainContainer = $wrap.find('.container.main-QA'),
-      $articlesToChange = $mainContainer.find('.article:nth-of-type(4n+0)'),
+      $articlesToChange = $mainContainer.find('.teaser:nth-of-type(4n+0)'),
       windowWidth = $(window).outerWidth();
 
   if (windowWidth > 767) {
@@ -14,11 +14,11 @@
 
       if (i % 2 === 0) {
 
-        $($articlesToChange[i]).removeClass('article--portrait article--m').addClass('article--landscape article--l');
+        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l');
 
       } else {
 
-        $($articlesToChange[i]).removeClass('article--portrait article--m').addClass('article--landscape article--l float--right');
+        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l float--right');
 
       }
 
@@ -39,7 +39,7 @@
       $subMenuTrigger = $('.sub__menu__trigger'),
       $menuOpenedOverlay = $('.menu__opened__overlay'),
       $mainContent = $('.page'),
-      $headerSearch = $('.header__search'),
+      $headerSearch = $('.master-header__search'),
       $searchOverlay = $('.search__overlay'),
       $searchClose = $('.search__close'),
       windowWidth = $(window).outerWidth();
@@ -140,7 +140,7 @@
   // cache DOM \\
   var $sliderWrap = $('.faq__slider'),
       $slider = $sliderWrap.find('.slider'),
-      $articles = $slider.find('.article'),
+      $articles = $slider.find('.teaser'),
       $navigation = $sliderWrap.find('.slider__navigation'),
       $arrowNext = $navigation.find('.fa-caret-right'),
       $arrowPrev = $navigation.find('.fa-caret-left'),
@@ -157,7 +157,7 @@
 
       $.each($articles, function() {
 
-        $(this).removeClass('article--portrait').addClass('article--landscape');
+        $(this).removeClass('teaser--portrait').addClass('teaser--landscape');
 
       });
 

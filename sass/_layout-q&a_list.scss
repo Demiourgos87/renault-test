@@ -1,9 +1,9 @@
-.QA-list .article {
+.QA-list .teaser {
   overflow: visible;
   background: $lightGray;
 }
 
-.QA-list .article.article--xl {
+.QA-list .teaser.teaser--xl {
   float: none;
 }
 
@@ -17,7 +17,7 @@
     top: -5vw;
   }
 
-  .QA-list .article {
+  .QA-list .teaser {
     margin-bottom: 40px;
   }
 
@@ -26,33 +26,33 @@
     margin: 0 auto;
   }
 
-  .QA-list .article--landscape .article__img {
+  .QA-list .teaser--landscape .teaser__img {
     box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6);
   }
 
-  .QA-list .article--landscape .article__img {
+  .QA-list .teaser--landscape .teaser__img {
     margin-right: 4%;
   }
 
-  .QA-list .article--landscape .article__img img {
+  .QA-list .teaser--landscape .teaser__img img {
     margin-bottom: -4px;
   }
 
-  .QA-list .article--landscape .article__body {
+  .QA-list .teaser--landscape .teaser__body {
     width: 40%;
     margin-top: 12vw;
   }
 
-  .QA-list .article--portrait .article__body {
+  .QA-list .teaser--portrait .teaser__body {
     width: 90%;
     margin: 0 auto;
   }
 
-  .QA-list .article--m {
+  .QA-list .teaser--m {
     height: 15rem;
   }
 
-  .QA-list .article--m:nth-child(2n+0) {
+  .QA-list .teaser--m:nth-child(2n+0) {
     margin-right: 0;
     margin-left: 1%;
   }
@@ -66,7 +66,7 @@
     width: 20vw;
   }
 
-  .QA-list .article {
+  .QA-list .teaser {
     margin-bottom: 10vw;
   }
 
@@ -76,53 +76,53 @@
     margin-bottom: 8vw;
   }
 
-  .QA-list .article--m {
+  .QA-list .teaser--m {
     width: 30%;
     height: 11rem;
     margin-right: 2%;
   }
 
-  .QA-list .article--landscape .body__wrap {
+  .QA-list .teaser--landscape .body__wrap {
     width: 80%;
     margin: 0 auto;
     top: -2vw;
   }
 
-  .QA-list .article--landscape .article__body {
+  .QA-list .teaser--landscape .teaser__body {
     margin-top: 12%;
     width: 40%;
   }
 
-  .QA-list .article--landscape .article__img {
+  .QA-list .teaser--landscape .teaser__img {
     margin-right: 6%;
   }
 
-  .QA-list .article--portrait .body__wrap {
+  .QA-list .teaser--portrait .body__wrap {
     width: 70%;
     margin: 0 auto;
     top: -7vw;
   }
 
-  .QA-list .article--l {
+  .QA-list .teaser--l {
     width: 67%;
     margin-top: -5vw;
     margin-left: 3.4vw;
     margin-right: 5%;
   }
 
-  .QA-list .article.float--right {
+  .QA-list .teaser.float--right {
     float: right;
     margin-left: 5%;
     margin-right: 0;
   }
 
-  .QA-list .article:last-child {
+  .QA-list .teaser:last-child {
     margin-bottom: 20px;
   }
 }
 
 @media only screen and (min-width: $break-desk) {
-  .QA-list .article.article--m {
+  .QA-list .teaser.teaser--m {
     height: 17rem;
   }
 }

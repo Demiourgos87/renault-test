@@ -5,7 +5,7 @@
   // cache DOM \\
   var $sliderWrap = $('.faq__slider'),
       $slider = $sliderWrap.find('.slider'),
-      $articles = $slider.find('.article'),
+      $articles = $slider.find('.teaser'),
       $navigation = $sliderWrap.find('.slider__navigation'),
       $arrowNext = $navigation.find('.fa-caret-right'),
       $arrowPrev = $navigation.find('.fa-caret-left'),
@@ -22,7 +22,7 @@
 
       $.each($articles, function() {
 
-        $(this).removeClass('article--portrait').addClass('article--landscape');
+        $(this).removeClass('teaser--portrait').addClass('teaser--landscape');
 
       });
 
