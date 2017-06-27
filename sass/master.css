@@ -101,7 +101,7 @@ a img {
     padding: 40px 0; }
   .heading--col {
     margin-top: 10px;
-    width: 80px; }
+    width: 70px; }
   .slider__navigation {
     float: right; } }
 
@@ -1125,7 +1125,8 @@ body {
   position: absolute; }
 
 .page__title {
-  margin-top: 10px; }
+  margin-top: 10px;
+  font-weight: 900; }
 
 .comm-header__text {
   line-height: 1.5rem; }
@@ -1309,7 +1310,9 @@ body {
 
 .articlePage__header {
   width: 100%;
-  position: relative; }
+  position: relative;
+  height: 48vw;
+  overflow: hidden; }
 
 .articlePage__header img {
   width: 100%; }
