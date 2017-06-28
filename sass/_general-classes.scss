@@ -47,46 +47,6 @@ a img {
   color: $black;
 }
 
-.btn {
-  padding: 15px 25px;
-  font-size: $fontSmall;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: $white;
-  color: $black;
-  border: 0;
-  cursor: pointer;
-  transition: all 0.15s linear;
-  margin-bottom: 15px;
-}
-
-.btn:hover {
-  background: $black;
-  color: $white;
-}
-
-.btn--shadowed {
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-}
-
-.btn--centered {
-  display: block;
-  margin: 0 auto;
-}
-
-.btn--small {
-  padding: 5px 15px;
-}
-
-.btn--yellow {
-  background: $yellow;
-}
-
-.btn--lightGray {
-  background: $lightGray;
-}
-
 .background--lightGray {
   background: $lightGray;
 }
@@ -116,6 +76,7 @@ a img {
 }
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+
   html {
     font-size: 4.2vw;
   }
@@ -127,15 +88,17 @@ a img {
 
   .heading--col {
     margin-top: 10px;
-    width: 80px;
+    width: 70px;
   }
 
   .slider__navigation {
     float: right;
   }
+
 }
 
 @media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+
   html {
     font-size: 1.8vw;
   }
@@ -154,9 +117,11 @@ a img {
   .slider__navigation {
     float: right;
   }
+
 }
 
 @media only screen and (min-width: $break-desk) {
+
   html {
     font-size: 1.2vw;
   }
@@ -206,18 +171,17 @@ a img {
     top: 7vw;
     right: 0;
   }
+
 }
 
 @media only screen and (min-width: $break-desk-large) {
+
   html {
     font-size: 1vw;
-  }
-
-  .teaser__img__footnote {
-    bottom: 5px;
   }
 
   .section__title.heading--col {
     width: 150px;
   }
+
 }

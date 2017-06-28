@@ -1,0 +1,39 @@
+.btn {
+  padding: 15px 25px;
+  font-size: $fontSmall;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: $white;
+  color: $black;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  margin-bottom: 15px;
+}
+
+.btn:hover {
+  background: $black;
+  color: $white;
+}
+
+.btn--shadowed {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn--centered {
+  display: block;
+  margin: 0 auto;
+}
+
+.btn--small {
+  padding: 5px 15px;
+}
+
+.btn--yellow {
+  background: $yellow;
+}
+
+.btn--lightGray {
+  background: $lightGray;
+}

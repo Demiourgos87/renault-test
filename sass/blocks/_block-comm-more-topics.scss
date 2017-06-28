@@ -1,18 +1,21 @@
 @media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
-  .more-topics {
+
+  .block-more-topics {
     width: 30%;
     float: left;
   }
 
-  .more-topics .btn {
+  .block-more-topics .btn {
     padding: 10px 20px;
     font-size: $fontVerySmall;
     font-weight: bold;
   }
+
 }
 
 @media only screen and (min-width: $break-desk) {
-  .more-topics {
+
+  .block-more-topics {
     position: relative;
     top: 4vw;
     width: calc(30% - 82px);
@@ -21,7 +24,7 @@
     border-left: 2px solid $lightGray;
   }
 
-  .more-topics::before, .more-topics::after {
+  .block-more-topics::before, .block-more-topics::after {
     content: "";
     position: absolute;
     right: 0;
@@ -31,21 +34,24 @@
     z-index: -1;
   }
 
-  .more-topics::before {
+  .block-more-topics::before {
     top: 0;
   }
 
-  .more-topics::after {
+  .block-more-topics::after {
     bottom: 0;
   }
+
 }
 
 @media only screen and (min-width: $break-desk-large) {
-  .more-topics::before, .more-topics::after {
+
+  .block-more-topics::before, .block-more-topics::after {
     width: 79.4vw;
   }
 
-  .more-topics {
+  .block-more-topics {
     padding-bottom: 7vw;
   }
+
 }

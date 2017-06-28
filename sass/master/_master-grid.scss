@@ -3,21 +3,6 @@
   margin-bottom: 20px;
 }
 
-.news-semaine {
-  margin-bottom: 40px;
-}
-
-.fanDeVu, .news-semaine, .astuces, .cote__business {
-  width: 100%;
-  margin: 50px 0;
-}
-
-.fanDeVu__container {
-  width: 90%;
-  margin: 0 auto;
-  position: relative;
-}
-
 .container--full {
   width: 100%;
   position: relative;
@@ -47,12 +32,15 @@
 }
 
 @media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+
   .row--raised {
     margin-top: -10vw;
   }
+
 }
 
 @media only screen and (min-width: $break-tab) {
+
   .container {
     width: 100%;
   }
@@ -74,15 +62,6 @@
     margin-left: 0.5%;
   }
 
-  .editors-picks .section__title.heading--row {
-    width: 50%;
-    margin-left: 50.5%;
-  }
-
-  .row--padded--top {
-    padding-top: 13%;
-  }
-
   .row--mob.row--clipped--right, .row--mob.row--clipped--left {
     width: 45%;
   }
@@ -96,12 +75,8 @@
     float: none;
   }
 
-  .astuces, .faq__slider, .cote__business, .latest-news {
+  .faq__slider {
     border-top: 2px solid $lightGray;
-  }
-
-  .astuces {
-    margin: 80px 0 50px 0;
   }
 
   .container--raised--tab {
@@ -109,18 +84,10 @@
     margin-bottom: 5%;
   }
 
-  .latest-news {
-    margin-top: 6vw;
-    margin-bottom: 100px;
-  }
-
-  .latest-news .row--raised {
-    margin-top: -17%;
-    margin-bottom: 2.3vw;
-  }
 }
 
 @media only screen and (min-width: $break-desk) {
+
   .slider__container .slider {
     width: 90%;
   }
@@ -133,7 +100,4 @@
     margin-top: -8vw;
   }
 
-  .latest-news {
-    margin-top: 10vw;
-  }
 }

@@ -1,38 +1,39 @@
-.comm-header {
+.block-comm-hero {
   position: relative;
 }
 
-.comm-header__image {
+.block-comm-hero__image {
   position: relative;
 }
 
-.comm-header__image img {
+.block-comm-hero__image img {
   width: 100%;
   margin-bottom: -4px;
 }
 
-.comm-header__text p {
+.block-comm-hero__text p {
   margin: 0;
 }
 
-.comm-header__title {
+.block-comm-hero__title {
   position: absolute;
 }
 
 .page__title {
   margin-top: 10px;
+  font-weight: 900;
 }
 
-.comm-header__text {
+.block-comm-hero__text {
   line-height: 1.5rem;
 }
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
-  .comm-header {
+  .block-comm-hero {
     margin-bottom: 20px;
   }
 
-  .comm-header__image {
+  .block-comm-hero__image {
     width: 100%;
   }
 
@@ -40,24 +41,24 @@
     font-size: $fontLarge;
   }
 
-  .comm-header__text {
+  .block-comm-hero__text {
     width: calc(100% - 60px);
     padding: 30px;
     font-size: 1rem;
   }
 
-  .comm-header__title {
+  .block-comm-hero__title {
     top: 35%;
     left: 17%;
   }
 }
 
 @media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
-  .comm-header {
+  .block-comm-hero {
     margin-bottom: 8vw;
   }
 
-  .comm-header__image {
+  .block-comm-hero__image {
     width: 90%;
   }
 
@@ -65,7 +66,7 @@
     font-size: $fontBig;
   }
 
-  .comm-header__text {
+  .block-comm-hero__text {
     width: 30%;
     padding: 40px;
     position: absolute;
@@ -74,18 +75,18 @@
     line-height: 1.2rem;
   }
 
-  .comm-header__title {
+  .block-comm-hero__title {
     top: 40%;
     left: 12%;
   }
 }
 
 @media only screen and (min-width: $break-desk) {
-  .comm-header {
+  .block-comm-hero {
     margin-bottom: 2vw;
   }
 
-  .comm-header__image {
+  .block-comm-hero__image {
     width: 80%;
   }
 
@@ -93,7 +94,7 @@
     font-size: 3rem;
   }
 
-  .comm-header__text {
+  .block-comm-hero__text {
     width: 22%;
     padding: 70px;
     position: absolute;
@@ -103,14 +104,15 @@
     height: 27vw;
   }
 
-  .comm-header__title {
+  .block-comm-hero__title {
     top: 40%;
     left: 15%;
   }
 }
 
 @media only screen and (min-width: $break-desk-large) {
-  .comm-header {
+
+  .block-comm-hero {
     margin-bottom: 3vw;
   }
 }
