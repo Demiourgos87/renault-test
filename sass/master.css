@@ -227,7 +227,7 @@ a img {
 
 .block-hp-news {
   width: 100%;
-  margin: 50px 0; }
+  margin: 50px 0 100px 0; }
 
 @media only screen and (min-width: 767px) {
   .row--padded--top {
@@ -1005,7 +1005,7 @@ body {
     margin-right: 40px;
     z-index: 110; }
   .master-header__nav > li:first-child {
-    margin-left: 110px; }
+    margin-left: 75px; }
   .master-header__nav > li:nth-child(3) {
     margin-right: 200px; }
   .master-header__nav > li:last-child {
@@ -1016,7 +1016,7 @@ body {
     font-weight: 700;
     color: #ffcc33;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     transition: color 0.15s linear; }
   .master-header__nav > li > a.active, .master-header__nav > li > a:hover {
     color: #ffffff;
