@@ -21,6 +21,7 @@
 }
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+
   .container {
     width: 90%;
     margin: 0 auto;
@@ -29,6 +30,7 @@
   .row--mob {
     width: 100%;
   }
+
 }
 
 @media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
