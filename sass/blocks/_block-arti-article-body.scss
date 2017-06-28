@@ -1,28 +1,8 @@
-.articlePage {
+.block-article-body {
   width: 100%;
 }
 
-.articlePage__header {
-  width: 100%;
-  position: relative;
-  height: 48vw;
-  overflow: hidden;
-}
-
-.articlePage__header img {
-  width: 100%;
-}
-
-.header__footnote {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 5px;
-  background: $white;
-  font-size: $fontNormal;
-}
-
-.articlePage__category {
+.block-article-body__category {
   display: inline-block;
   padding: 10px 15px;
   font-size: $fontSmall;
@@ -31,13 +11,13 @@
   background: $yellow;
 }
 
-.articlePage__main-title {
+.block-article-body__main-title {
   text-transform: uppercase;
   font-size: $fontBig;
   margin-top: 20px;
 }
 
-.articlePage__social-share {
+.block-article-body__social-share {
   display: inline-block;
   background: $lightGray;
   padding: 0 15px;
@@ -68,67 +48,45 @@
   margin-top: 10px;
 }
 
-.articlePage__date {
+.block-article-body__date {
   color: $darkGray;
 }
 
-.articlePage__text-intro {
+.block-article-body__text-intro {
   font-weight: bold;
 }
 
-.articlePage__article-text p {
+.block-article-body__article-text p {
   font-size: $fontNormal;
   line-height: 1.4rem;
   letter-spacing: 1px;
 }
 
-.articlePage__article-text a {
+.block-article-body__article-text a {
   color: $yellow;
 }
 
-.articlePage__tags {
+.block-article-body__tags {
   color: $yellow;
   margin: 20px 0;
 }
 
-.articles__list .heading--fix {
-  margin-top: 59.9%;
-}
-
-.articles__list .heading--col {
-  margin-top: 25%;
-}
-
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
-  .articlePage .test-start .container--full {
+
+  .block-article-body .module-test-start .container--full {
     width: 112%;
     left: -6%;
   }
+
 }
 
 @media only screen and (min-width: $break-tab) {
-  .header__footnote {
-    padding: 10px;
-  }
 
-  .articles__list .teaser--s, .articles__list .teaser--l {
-    width: 49%;
-    margin-bottom: 10px;
-  }
-
-  .articles__list .heading--fix {
-    margin-top: 24.5%;
-  }
-
-  .articles__list .heading--col {
-    margin-top: 5%;
-  }
-
-  .articlePage__main-title {
+  .block-article-body__main-title {
     font-size: 2.3rem;
   }
 
-  .articlePage__social-share {
+  .block-article-body__social-share {
     padding: 0 25px;
   }
 
@@ -142,23 +100,25 @@
   .share__icon i {
     font-size: $fontBig;
   }
+
 }
 
 @media only screen and (min-width: $break-desk) {
-  .articlePage {
+
+  .block-article-body {
     margin-bottom: 10vw;
   }
 
-  .articlePage__main-title {
+  .block-article-body__main-title {
     font-size: 3rem;
     width: 85%;
   }
 
-  .articlePage__social-share, .articlePage__main-content, .articlePage__body .test-start {
+  .block-article-body__social-share, .block-article-body__main-content, .block-article-body__body .module-test-start {
     float: left;
   }
 
-  .articlePage__social-share {
+  .block-article-body__social-share {
     width: 6%;
     margin: 0 4% 0 0;
     padding: 20px 0;
@@ -179,43 +139,44 @@
     margin-bottom: 0;
   }
 
-  .articlePage__main-content {
+  .block-article-body__main-content {
     width: 56%;
     margin-right: 4%;
   }
 
-  .articlePage__body .test-start {
+  .block-article-body__body .module-test-start {
     width: 30%;
   }
 
-  .articlePage .test-start .container--full {
+  .block-article-body .module-test-start .container--full {
     background-size: auto 100%;
     background-position: 20% 0%;
   }
 
-  .articlePage .test-start {
+  .block-article-body .module-test-start {
     margin-top: 3vw;
   }
 
-  .articlePage .test-start__body {
+  .block-article-body .module-test-start__body {
     width: 70%;
     padding: 80px 0;
   }
 
-  .articlePage .test-start__item img {
+  .block-article-body .module-test-start__item img {
     width: 100%;
   }
 
-  .articlePage .test-start__images {
+  .block-article-body .module-test-start__images {
     width: 100%;
     top: -1.8vw;
   }
 
-  .articlePage .test-start__images .test-start__item {
+  .block-article-body .module-test-start__images .module-test-start__item {
     width: 32.2%;
   }
 
-  .articlePage .test-start__images .test-start__item p {
+  .block-article-body .module-test-start__images .module-test-start__item p {
     font-size: $fontVerySmall;
   }
+
 }

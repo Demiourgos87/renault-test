@@ -100,14 +100,6 @@
   margin-top: 34.8%;
 }
 
-.teaser--fan .teaser__img {
-  margin-bottom: -5px;
-}
-
-.teaser--fan {
-  box-shadow: 0 20px 30px 10px rgba(0, 0, 0, 0.3);
-}
-
 .teaser__img--right .teaser__img {
   margin-right: 0;
   margin-left: 1%;
@@ -128,6 +120,7 @@
   .teaser--raised--mob {
     margin-top: -24.5%;
   }
+
 }
 
 @media only screen and (min-width: $break-tab) {
@@ -135,4 +128,5 @@
   .teaser--raised--tab {
     margin-top: -8vw;
   }
+
 }

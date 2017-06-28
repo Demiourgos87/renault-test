@@ -3,7 +3,7 @@
   // Q&A Layout change on tab/desk \\
 
   // Cache DOM \\
-  var $wrap = $('.QA-list'),
+  var $wrap = $('.block-QA-list'),
       $mainContainer = $wrap.find('.container.main-QA'),
       $articlesToChange = $mainContainer.find('.teaser:nth-of-type(4n+0)'),
       windowWidth = $(window).outerWidth();
@@ -197,7 +197,7 @@
   // More Read Slider \\
 
   // cache DOM \\
-  var $slider = $('.more-read .slider'),
+  var $slider = $('.module-more-read .slider'),
       $wrap = $slider.closest('.slider__wrap'),
       $arrowNext = $wrap.find('.fa-arrow-circle-o-right'),
       $arrowPrev = $wrap.find('.fa-arrow-circle-o-left'),

@@ -1,11 +1,14 @@
 @media only screen and (max-width: $break-desk) {
-  .breadcrumbs {
+
+  .module-breadcrumbs {
     display: none;
   }
+
 }
 
 @media only screen and (min-width: $break-desk) {
-  .breadcrumbs {
+
+  .module-breadcrumbs {
     display: block;
     width: 80%;
     margin: 50px 0 0 10%;
@@ -13,18 +16,19 @@
     color: $black;
   }
 
-  .breadcrumbs a {
+  .module-breadcrumbs a {
     text-decoration: none;
     color: inherit;
     margin: 0 10px;
   }
 
-  .breadcrumbs a:first-child {
+  .module-breadcrumbs a:first-child {
     margin-left: 0;
   }
 
-  .breadcrumbs span {
+  .module-breadcrumbs span {
     margin-left: 0 10px;
     cursor: default;
   }
+
 }

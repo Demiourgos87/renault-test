@@ -1,0 +1,27 @@
+.block-article-hero {
+  width: 100%;
+  position: relative;
+  height: 48vw;
+  overflow: hidden;
+}
+
+.block-article-hero img {
+  width: 100%;
+}
+
+.article-hero__footnote {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  background: $white;
+  font-size: $fontNormal;
+}
+
+@media only screen and (min-width: $break-tab) {
+
+  .article-hero__footnote {
+    padding: 10px;
+  }
+
+}
