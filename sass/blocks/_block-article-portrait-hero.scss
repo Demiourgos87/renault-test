@@ -1,13 +1,33 @@
-@import "block-arti-article-hero";
-
-.block-article-portrait-hero {
-
-  @extend .block-article-hero;
-  height: 28rem;
-
-}
+@import "mixins";
 
 .block-article-portrait-hero img {
   width: auto;
   height: 100%;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+
+  .block-article-portrait-hero {
+    @include article-hero(100%, 28rem);
+  }
+
+}
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+
+  .block-article-portrait-hero {
+    @include article-hero(75%, 50rem)
+    margin: 0 auto;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .block-article-portrait-hero {
+    @include article-hero(40%, 50rem);
+    margin: 0 5% 0 0;
+    float: left;
+  }
+
 }
