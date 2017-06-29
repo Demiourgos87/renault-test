@@ -1,8 +1,7 @@
+@import "mixins";
+
 .block-article-hero {
-  width: 100%;
-  position: relative;
-  height: 48vw;
-  overflow: hidden;
+  @include article-hero(100%, 48vw);
 }
 
 .block-article-hero img {
@@ -16,6 +15,14 @@
   padding: 5px;
   background: $white;
   font-size: $fontNormal;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+
+  .block-article-hero {
+    height: auto;
+  }
+
 }
 
 @media only screen and (min-width: $break-tab) {

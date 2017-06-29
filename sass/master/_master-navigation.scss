@@ -72,6 +72,7 @@
   .top__articles {
     display: none;
   }
+
 }
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
@@ -84,6 +85,14 @@
   .sub__menu > ul > li > a {
     font-weight: 400;
   }
+
+  .master-header__menu-trigger, .master-header__search {
+    font-size: $fontBig;
+  }
+
+}
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
 
   .master-header__menu-trigger, .master-header__search {
     font-size: $fontBig;

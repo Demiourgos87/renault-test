@@ -71,6 +71,10 @@
   margin: 20px 0;
 }
 
+.block-article-body__body {
+  margin-top: 40px;
+}
+
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
 
   .block-article-body .module-test-start .container--full {

@@ -45,23 +45,40 @@ p.article-paragraph__heading {
 }
 
 .article-portrait__table {
-  width: calc(100% - 4px);
+  // width: calc(100% - 4px);
+  width: 100%;
   border-collapse: collapse;
-  border: 2px dashed $yellow;
+  // border: 2px dashed $yellow;
   text-align: left;
 }
 
 .article-portrait__table td {
   padding: 10px;
+  border: 2px dashed $yellow;
+  border-bottom: none;
+  width: calc(100% - 24px);
+}
+
+.article-portrait__table tr:last-child td:last-child {
+  border-bottom: 2px dashed $yellow;
 }
 
 .article-portrait__table .table__heading {
   font-weight: 700;
-  border-bottom: 2px dashed $yellow;
 }
 
-.article-portrait__table td:nth-child(2n+0) {
-  border-bottom: 2px dashed $yellow;
+.article-portrait__image {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.article-portrait__image img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.module-test-start.article-portrait {
+  margin: 0 0 40px 0;
 }
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
@@ -73,7 +90,27 @@ p.article-paragraph__heading {
 
   .article-portrait__table td {
     display: inline-block;
-    width: calc(100% - 24px);
+  }
+
+}
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+
+  .block-article-portrait__wrap {
+    width: 75%;
+    margin: 40px auto;
+  }
+
+  .block-article-portrait__wrap .block-article-body__text-intro {
+    font-size: $fontLarge;
+  }
+
+  .block-article-portrait__wrap .article-paragraph__heading {
+    font-size: $fontLarge;
+  }
+
+  .article-portrait__list li {
+    margin-bottom: 4px;
   }
 
 }
@@ -82,13 +119,70 @@ p.article-paragraph__heading {
 
   .article-portrait__table tr {
     display: inline-block;
-    width: 50%;
+    width: 49%;
+  }
+
+  .article-portrait__table tr:first-child td {
+    border-right: none;
+  }
+
+  .article-portrait__table tr:first-child td:last-child {
+    border-bottom: 2px dashed $yellow;
   }
 
   .article-portrait__table td {
     display: inline-block;
     width: calc(100% - 24px);
-    border-right: 2px dashed $yellow;
+  }
+
+  .article-portrait__table td:not(.table__heading) {
+    padding: 20px 10px;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .block-article-portrait__wrap {
+    width: 41.5%;
+    margin: 0;
+    float: left;
+  }
+
+  .block-article-portrait__wrap .block-article-body__social-share {
+    float: none;
+    width: auto;
+  }
+
+  .block-article-portrait__wrap .block-article-body__main-content {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .block-article-portrait__wrap .module-breadcrumbs {
+    margin: 40px 0;
+  }
+
+  .block-article-portrait__wrap .block-article-body__main-title {
+    width: 100%;
+    font-size: 2.5rem;
+  }
+
+  .block-article-portrait__wrap .block-article-body__social-share {
+    padding: 0 15px;
+    margin: 10px 0 30px 0;
+  }
+
+  .block-article-portrait__wrap .share__icon {
+    margin-right: 1.5vw;
+    margin-bottom: 0;
+    top: -1.5vw;
+    left: 0;
+  }
+
+  .block-article-portrait__wrap .share__icon:last-child {
+    margin-right: 0;
   }
 
 }
