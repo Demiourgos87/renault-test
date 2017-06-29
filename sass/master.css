@@ -1019,7 +1019,7 @@ body {
   .master-header__social, .master-header__search {
     position: relative;
     font-size: 1.2rem;
-    top: 8px; }
+    top: 6px; }
   .master-header__social {
     color: #ffffff;
     float: left; }
@@ -1098,7 +1098,7 @@ body {
     width: 80%;
     text-align: center;
     position: fixed;
-    top: 25px;
+    top: 22px;
     left: 50%;
     margin-left: -40%; }
   .master-header__nav > li {
