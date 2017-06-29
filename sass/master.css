@@ -993,9 +993,6 @@ body {
 .master-header i {
   cursor: pointer; }
 
-.master-header__search {
-  float: right; }
-
 .master-header__logo {
   width: 170px;
   position: absolute;
@@ -1007,7 +1004,7 @@ body {
 .master-header__logo img {
   width: 100%; }
 
-.menu__opened__overlay, .search__overlay {
+.menu__opened__overlay {
   display: none;
   top: 0;
   right: 0;
@@ -1018,40 +1015,6 @@ body {
   position: absolute;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1000; }
-
-.search__overlay {
-  position: fixed;
-  z-index: 999999999;
-  background: rgba(0, 0, 0, 0.8); }
-
-.search__close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 1.8rem;
-  cursor: pointer; }
-
-.search__field {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  width: 80%;
-  margin-left: -40%;
-  text-align: center; }
-
-.search__field input {
-  width: 85%;
-  background: transparent;
-  border: 0;
-  color: #ffffff;
-  border-bottom: 1px solid #ffffff; }
-
-.search__field input:focus {
-  outline: none;
-  border-bottom: 1px solid #ffffff; }
-
-.search__field i {
-  font-size: 1.8rem; }
 
 .master-header__social {
   text-align: center; }
@@ -1078,16 +1041,13 @@ body {
     padding: 15px 2%; }
   .master-header__menu-trigger {
     display: none; }
-  .master-header__social, .master-header__search {
+  .master-header__social {
     position: relative;
     font-size: 1.2rem;
     top: 6px; }
   .master-header__social {
     color: #ffffff;
-    float: left; }
-  .search__close {
-    top: 25px;
-    right: 25px; } }
+    float: left; } }
 
 .master-header__nav {
   list-style-type: none;
@@ -1482,6 +1442,60 @@ body {
 
 .btn--lightGray {
   background: #f6f6f6; }
+
+.master-header__search {
+  float: right; }
+
+.search__overlay {
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.search__overlay {
+  position: fixed;
+  z-index: 999999999;
+  background: rgba(0, 0, 0, 0.8); }
+
+.search__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+  cursor: pointer; }
+
+.search__field {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 80%;
+  margin-left: -40%;
+  text-align: center; }
+
+.search__field input {
+  width: 85%;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  font-size: 1.6rem; }
+
+.search__field input:focus {
+  outline: none;
+  border-bottom: 1px solid #ffffff; }
+
+.search__field i {
+  font-size: 1.8rem; }
+
+@media only screen and (min-width: 1025px) {
+  .master-header__search {
+    position: relative;
+    font-size: 1.2rem;
+    top: 6px; }
+  .search__close {
+    top: 25px;
+    right: 25px; } }
 
 .portrait__slider {
   position: relative;
