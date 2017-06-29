@@ -1,0 +1,13 @@
+@import "block-arti-article-hero";
+
+.block-article-portrait-hero {
+
+  @extend .block-article-hero;
+  height: 28rem;
+
+}
+
+.block-article-portrait-hero img {
+  width: auto;
+  height: 100%;
+}

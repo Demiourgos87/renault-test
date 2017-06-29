@@ -39,7 +39,9 @@
 
       var $current = $(this);
 
-      $current.on('click', function() {
+      $current.on('click', function(e) {
+
+        e.preventDefault();
 
         var $sub = $current.next('.sub__menu');
         var $arrow = $current.prev('i.fa');
