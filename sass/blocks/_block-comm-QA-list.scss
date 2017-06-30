@@ -1,23 +1,23 @@
-.block-QA-list .teaser {
+.block-comm-QA-list .teaser {
   overflow: visible;
   background: $lightGray;
 }
 
-.block-QA-list .teaser.teaser--xl {
+.block-comm-QA-list .teaser.teaser--xl {
   float: none;
 }
 
-.block-QA-list .body__wrap {
+.block-comm-QA-list .body__wrap {
   position: relative;
 }
 
 @media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
-  .block-QA-list .body__wrap {
+  .block-comm-QA-list .body__wrap {
     width: 100%;
     top: -5vw;
   }
 
-  .block-QA-list .teaser {
+  .block-comm-QA-list .teaser {
     margin-bottom: 40px;
   }
 
@@ -26,33 +26,33 @@
     margin: 0 auto;
   }
 
-  .block-QA-list .teaser--landscape .teaser__img {
+  .block-comm-QA-list .teaser--landscape .teaser__img {
     box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6);
   }
 
-  .block-QA-list .teaser--landscape .teaser__img {
+  .block-comm-QA-list .teaser--landscape .teaser__img {
     margin-right: 4%;
   }
 
-  .block-QA-list .teaser--landscape .teaser__img img {
+  .block-comm-QA-list .teaser--landscape .teaser__img img {
     margin-bottom: -4px;
   }
 
-  .block-QA-list .teaser--landscape .teaser__body {
+  .block-comm-QA-list .teaser--landscape .teaser__body {
     width: 40%;
     margin-top: 12vw;
   }
 
-  .block-QA-list .teaser--portrait .teaser__body {
+  .block-comm-QA-list .teaser--portrait .teaser__body {
     width: 90%;
     margin: 0 auto;
   }
 
-  .block-QA-list .teaser--m {
+  .block-comm-QA-list .teaser--m {
     height: 15rem;
   }
 
-  .block-QA-list .teaser--m:nth-child(2n+0) {
+  .block-comm-QA-list .teaser--m:nth-child(2n+0) {
     margin-right: 0;
     margin-left: 1%;
   }
@@ -60,14 +60,14 @@
 
 @media only screen and (min-width: $break-tab) {
 
-  .block-QA-list .section__title.heading--row {
+  .block-comm-QA-list .section__title.heading--row {
     position: relative;
     top: 15vw;
     left: 3.5vw;
     width: 20vw;
   }
 
-  .block-QA-list .teaser {
+  .block-comm-QA-list .teaser {
     margin-bottom: 10vw;
   }
 
@@ -77,53 +77,55 @@
     margin-bottom: 8vw;
   }
 
-  .block-QA-list .teaser--m {
+  .block-comm-QA-list .teaser--m {
     width: 30%;
     height: 11rem;
     margin-right: 2%;
   }
 
-  .block-QA-list .teaser--landscape .body__wrap {
+  .block-comm-QA-list .teaser--landscape .body__wrap {
     width: 80%;
     margin: 0 auto;
     top: -2vw;
   }
 
-  .block-QA-list .teaser--landscape .teaser__body {
+  .block-comm-QA-list .teaser--landscape .teaser__body {
     margin-top: 12%;
     width: 40%;
   }
 
-  .block-QA-list .teaser--landscape .teaser__img {
+  .block-comm-QA-list .teaser--landscape .teaser__img {
     margin-right: 6%;
   }
 
-  .block-QA-list .teaser--portrait .body__wrap {
+  .block-comm-QA-list .teaser--portrait .body__wrap {
     width: 70%;
     margin: 0 auto;
     top: -7vw;
   }
 
-  .block-QA-list .teaser--l {
+  .block-comm-QA-list .teaser--l {
     width: 67%;
     margin-top: -5vw;
     margin-left: 3.4vw;
     margin-right: 5%;
   }
 
-  .block-QA-list .teaser.float--right {
+  .block-comm-QA-list .teaser.float--right {
     float: right;
     margin-left: 5%;
     margin-right: 0;
   }
 
-  .block-QA-list .teaser:last-child {
+  .block-comm-QA-list .teaser:last-child {
     margin-bottom: 20px;
   }
 }
 
 @media only screen and (min-width: $break-desk) {
-  .block-QA-list .teaser.teaser--m {
+
+  .block-comm-QA-list .teaser.teaser--m {
     height: 17rem;
   }
+  
 }

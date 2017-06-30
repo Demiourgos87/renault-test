@@ -396,86 +396,86 @@ a img {
   .latest-news {
     margin-top: 10vw; } }
 
-.block-QA-list .teaser {
+.block-comm-QA-list .teaser {
   overflow: visible;
   background: #f6f6f6; }
 
-.block-QA-list .teaser.teaser--xl {
+.block-comm-QA-list .teaser.teaser--xl {
   float: none; }
 
-.block-QA-list .body__wrap {
+.block-comm-QA-list .body__wrap {
   position: relative; }
 
 @media only screen and (min-width: 319px) and (max-width: 767px) {
-  .block-QA-list .body__wrap {
+  .block-comm-QA-list .body__wrap {
     width: 100%;
     top: -5vw; }
-  .block-QA-list .teaser {
+  .block-comm-QA-list .teaser {
     margin-bottom: 40px; }
   .QA__first-item {
     width: 90%;
     margin: 0 auto; }
-  .block-QA-list .teaser--landscape .teaser__img {
+  .block-comm-QA-list .teaser--landscape .teaser__img {
     box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6); }
-  .block-QA-list .teaser--landscape .teaser__img {
+  .block-comm-QA-list .teaser--landscape .teaser__img {
     margin-right: 4%; }
-  .block-QA-list .teaser--landscape .teaser__img img {
+  .block-comm-QA-list .teaser--landscape .teaser__img img {
     margin-bottom: -4px; }
-  .block-QA-list .teaser--landscape .teaser__body {
+  .block-comm-QA-list .teaser--landscape .teaser__body {
     width: 40%;
     margin-top: 12vw; }
-  .block-QA-list .teaser--portrait .teaser__body {
+  .block-comm-QA-list .teaser--portrait .teaser__body {
     width: 90%;
     margin: 0 auto; }
-  .block-QA-list .teaser--m {
+  .block-comm-QA-list .teaser--m {
     height: 15rem; }
-  .block-QA-list .teaser--m:nth-child(2n+0) {
+  .block-comm-QA-list .teaser--m:nth-child(2n+0) {
     margin-right: 0;
     margin-left: 1%; } }
 
 @media only screen and (min-width: 767px) {
-  .block-QA-list .section__title.heading--row {
+  .block-comm-QA-list .section__title.heading--row {
     position: relative;
     top: 15vw;
     left: 3.5vw;
     width: 20vw; }
-  .block-QA-list .teaser {
+  .block-comm-QA-list .teaser {
     margin-bottom: 10vw; }
   .QA__first-item {
     width: 60%;
     float: right;
     margin-bottom: 8vw; }
-  .block-QA-list .teaser--m {
+  .block-comm-QA-list .teaser--m {
     width: 30%;
     height: 11rem;
     margin-right: 2%; }
-  .block-QA-list .teaser--landscape .body__wrap {
+  .block-comm-QA-list .teaser--landscape .body__wrap {
     width: 80%;
     margin: 0 auto;
     top: -2vw; }
-  .block-QA-list .teaser--landscape .teaser__body {
+  .block-comm-QA-list .teaser--landscape .teaser__body {
     margin-top: 12%;
     width: 40%; }
-  .block-QA-list .teaser--landscape .teaser__img {
+  .block-comm-QA-list .teaser--landscape .teaser__img {
     margin-right: 6%; }
-  .block-QA-list .teaser--portrait .body__wrap {
+  .block-comm-QA-list .teaser--portrait .body__wrap {
     width: 70%;
     margin: 0 auto;
     top: -7vw; }
-  .block-QA-list .teaser--l {
+  .block-comm-QA-list .teaser--l {
     width: 67%;
     margin-top: -5vw;
     margin-left: 3.4vw;
     margin-right: 5%; }
-  .block-QA-list .teaser.float--right {
+  .block-comm-QA-list .teaser.float--right {
     float: right;
     margin-left: 5%;
     margin-right: 0; }
-  .block-QA-list .teaser:last-child {
+  .block-comm-QA-list .teaser:last-child {
     margin-bottom: 20px; } }
 
 @media only screen and (min-width: 1025px) {
-  .block-QA-list .teaser.teaser--m {
+  .block-comm-QA-list .teaser.teaser--m {
     height: 17rem; } }
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
@@ -845,6 +845,99 @@ p.article-paragraph__heading {
     left: 0; }
   .block-article-portrait__wrap .share__icon:last-child {
     margin-right: 0; } }
+
+.block-article-more-QA {
+  width: 100%; }
+
+.block-article-more-QA .section__heading {
+  margin-bottom: 40px; }
+
+.block-article-more-QA .teaser {
+  overflow: visible;
+  background: #f6f6f6; }
+
+.block-article-more-QA .teaser.teaser--xl {
+  float: none; }
+
+.block-article-more-QA .body__wrap {
+  position: relative; }
+
+.block-article-more-QA .teaser__title {
+  margin-bottom: 0; }
+
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+  .block-article-more-QA .teaser {
+    margin-bottom: 40px; }
+  .block-article-more-QA .body__wrap {
+    width: 90%;
+    margin-left: 3vw;
+    top: -5vw; }
+  .block-article-more-QA .teaser--xl .teaser__body {
+    width: 40%;
+    margin-top: 14vw; }
+  .block-article-more-QA .teaser--xl .teaser__img {
+    margin-right: 4%; }
+  .block-article-more-QA .teaser--s {
+    width: 100%;
+    float: none;
+    margin: 0 0 40px 0; }
+  .block-article-more-QA .teaser--s .teaser__img {
+    width: 34%;
+    margin-right: 6%; }
+  .block-article-more-QA .teaser--s .teaser__body {
+    width: 60%;
+    margin-top: 7.5vw; }
+  .block-article-more-QA .teaser--s .teaser__title {
+    font-weight: 700; }
+  .block-article-more-QA .teaser__img {
+    box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6); }
+  .block-article-more-QA .teaser__img img {
+    margin-bottom: -4px; } }
+
+@media only screen and (min-width: 767px) {
+  .block-article-more-QA .section__title.heading--row {
+    position: relative;
+    top: 15vw;
+    left: 3.5vw;
+    width: 20vw; }
+  .block-article-more-QA .teaser {
+    margin-bottom: 10vw; }
+  .QA__first-item {
+    width: 60%;
+    float: right;
+    margin-bottom: 8vw; }
+  .block-article-more-QA .teaser--m {
+    width: 30%;
+    height: 11rem;
+    margin-right: 2%; }
+  .block-article-more-QA .teaser--landscape .body__wrap {
+    width: 80%;
+    margin: 0 auto;
+    top: -2vw; }
+  .block-article-more-QA .teaser--landscape .teaser__body {
+    margin-top: 12%;
+    width: 40%; }
+  .block-article-more-QA .teaser--landscape .teaser__img {
+    margin-right: 6%; }
+  .block-article-more-QA .teaser--portrait .body__wrap {
+    width: 70%;
+    margin: 0 auto;
+    top: -7vw; }
+  .block-article-more-QA .teaser--l {
+    width: 67%;
+    margin-top: -5vw;
+    margin-left: 3.4vw;
+    margin-right: 5%; }
+  .block-article-more-QA .teaser.float--right {
+    float: right;
+    margin-left: 5%;
+    margin-right: 0; }
+  .block-article-more-QA .teaser:last-child {
+    margin-bottom: 20px; } }
+
+@media only screen and (min-width: 1025px) {
+  .block-article-more-QA .teaser.teaser--m {
+    height: 17rem; } }
 
 .row--full {
   width: 100%;
