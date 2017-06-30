@@ -1703,6 +1703,33 @@ body {
   .accordion-heading__text {
     font-weight: 700; } }
 
+.module-diaporama {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 999999999; }
+
+.diaporama--wrap, .diaporama__slide, .diaporama__image, .diaporama__body {
+  width: 100%;
+  overflow: hidden; }
+
+.diaporama__close {
+  color: #000000;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.6rem; }
+
+.diaporama__image {
+  height: 17rem; }
+
+.diaporama__image img {
+  width: auto;
+  height: 100%; }
+
 .portrait__slider {
   position: relative;
   width: calc(100% - 20px);
