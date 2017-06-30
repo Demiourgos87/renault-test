@@ -16,6 +16,7 @@
   width: 100%;
   padding: 30px 0;
   font-size: $fontNormal;
+  cursor: pointer;
 }
 
 .accordion-heading__text, .accordion__element__text {
@@ -55,6 +56,29 @@
   .accordion-wrap {
     width: 112%;
     margin-left: -6%;
+  }
+
+}
+
+@media only screen and (min-width: $break-tab) {
+
+  .accordion-wrap {
+    margin: 50px 0;
+  }
+
+  .accordion__element__heading .accordion-heading__text {
+    font-size: $fontMedium;
+  }
+
+  .accordion-heading__arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -20px;
+  }
+
+  .accordion-heading__text {
+    font-weight: 700;
   }
 
 }
