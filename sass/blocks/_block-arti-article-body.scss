@@ -115,7 +115,12 @@
 
   .block-article-body__main-title {
     font-size: 3rem;
-    width: 85%;
+    width: 80%;
+    margin-left: 4vw;
+  }
+
+  .block-article-body__category {
+    margin-left: 4vw;
   }
 
   .block-article-body__social-share, .block-article-body__main-content, .block-article-body__body .module-test-start {
