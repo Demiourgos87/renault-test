@@ -1,4 +1,7 @@
+@import "../mixins";
+
 .module-diaporama {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -100,8 +103,6 @@
 
 .diaporama__prev, .diaporama__next {
   @include circled-icon(30px);
-  // position: absolute;
-  // top: 0;
   color: $yellow;
   background: $black;
   font-size: $fontSmall;

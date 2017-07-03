@@ -1500,15 +1500,16 @@ body {
   margin-left: 15px; }
 
 .pagination a {
-  display: inline-block;
-  text-decoration: none;
   width: 30px;
   height: 30px;
   line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 100%;
+  display: inline-block;
+  text-decoration: none;
   padding: 5px;
   color: #000000;
-  border-radius: 100%;
-  text-align: center;
   vertical-align: middle;
   margin-right: 15px;
   transition: background 0.15s linear; }
@@ -1704,6 +1705,7 @@ body {
     font-weight: 700; } }
 
 .module-diaporama {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -1889,6 +1891,34 @@ body {
     font-size: 0.8rem; }
   .diaporama__social i {
     margin-right: 5px; } }
+
+.module-diaporama-trigger {
+  width: 100%;
+  height: 48vw;
+  position: relative;
+  overflow: hidden; }
+
+.module-diaporama-trigger .diaporama-trigger__image img {
+  width: 100%; }
+
+.diaporama-trigger__navigation {
+  position: relative;
+  width: 90%;
+  margin: 0 auto; }
+
+.diaporama-trigger__prev, .diaporama-trigger__next, .diaporama-trigger__navigation .btn {
+  position: absolute; }
+
+.diaporama-trigger__prev {
+  left: 0; }
+
+.diaporama-trigger__next {
+  right: 0; }
+
+.diaporama-trigger__navigation .btn {
+  left: 50%;
+  width: 33vw;
+  margin-left: -16.5vw; }
 
 .portrait__slider {
   position: relative;
