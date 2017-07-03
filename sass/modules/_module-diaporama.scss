@@ -6,26 +6,80 @@
   left: 0;
   background: $white;
   z-index: 999999999;
+  overflow-y: scroll;
 }
 
-.diaporama--wrap, .diaporama__slide, .diaporama__image, .diaporama__body {
+.diaporama--wrap, .diaporama__slide, .diaporama__image {
   width: 100%;
   overflow: hidden;
 }
 
 .diaporama__close {
   color: $black;
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 15px;
   font-size: $fontBig;
+  cursor: pointer;
+  z-index: 999999999;
 }
 
 .diaporama__image {
   height: 17rem;
+  position: relative;
 }
 
 .diaporama__image img {
   width: auto;
   height: 100%;
+}
+
+.diaporama__body {
+  width: calc(100% - 40px);
+  padding: 40px 20px;
+  position: relative;
+  margin: 0;
+  background: $yellow;
+  color: $black;
+  letter-spacing: 2px;
+}
+
+.diaporama__heading {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.diaporama__prev, .diaporama__next {
+  @include circled-icon(30px);
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  color: $yellow;
+  background: $black;
+  font-size: $fontSmall;
+}
+
+.diaporama__prev {
+  left: 20px;
+}
+
+.diaporama__next {
+  right: 20px;
+}
+
+.diaporama__social i {
+  @include circled-icon(40px);
+  background: $black;
+  color: $yellow;
+  margin: 20px 25px 0 0;
+}
+
+.diaporama__counter {
+  font-size: $fontNormal;
+  font-weight: 700;
+  color: $white;
+}
+
+.diaporama__counter .diaporama__current {
+  color: $black;
 }

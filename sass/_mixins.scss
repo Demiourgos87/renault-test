@@ -16,3 +16,12 @@
   position: relative;
   overflow: hidden;
 }
+
+@mixin circled-icon($dimensions) {
+  width: $dimensions;
+  height: $dimensions;
+  line-height: $dimensions;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 100%;
+}
