@@ -174,7 +174,6 @@
       dots: false,
       prevArrow: $diaporamaPrev,
       nextArrow: $diaporamaNext,
-      infinite: true
     });
 
   }

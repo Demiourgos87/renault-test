@@ -1709,7 +1709,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
   z-index: 999999999;
   overflow-y: scroll; }
 
@@ -1785,6 +1785,23 @@ body {
 
 .diaporama__counter .diaporama__current {
   color: #000000; }
+
+@media only screen and (min-width: 767px) and (max-width: 1025px) {
+  .diaporama__close {
+    font-size: 2rem; }
+  .diaporama__image {
+    height: auto; }
+  .diaporama__image img {
+    width: 100%; }
+  .diaporama__body {
+    width: calc(100% - 80px);
+    padding: 40px;
+    letter-spacing: 1px; }
+  .diaporama__heading {
+    font-size: 2rem;
+    font-weight: 900; }
+  .diaporama__social i {
+    margin-right: 5px; } }
 
 .portrait__slider {
   position: relative;
