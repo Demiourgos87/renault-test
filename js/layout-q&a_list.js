@@ -3,7 +3,7 @@
   // Q&A Layout change on tab/desk \\
 
   // Cache DOM \\
-  var $wrap = $('.block-QA-list'),
+  var $wrap = $('.block-comm-QA-list'),
       $mainContainer = $wrap.find('.container.main-QA'),
       $articlesToChange = $mainContainer.find('.teaser:nth-of-type(4n+0)'),
       windowWidth = $(window).outerWidth();

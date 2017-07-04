@@ -26,8 +26,21 @@
     $(this).text(currentIndex + 1);
   });
 
-  $diaporamaClose.on('click', function() {
+  $diaporamaClose.on('click', function(e) {
+    e.stopPropagation();
     $diaporama.slideUp(200);
+  });
+
+  $diaporamaPrev.on('click', function(e) {
+    e.stopPropagation();
+    $diaporamaWrap.slick('slickPrev');
+    $diaporamaWrap.slick('slickPause');
+  });
+
+  $diaporamaNext.on('click', function(e) {
+    e.stopPropagation();
+    $diaporamaWrap.slick('slickNext');
+    $diaporamaWrap.slick('slickPause');
   });
 
   // Mobile + Tablet version \\
@@ -40,8 +53,8 @@
       speed: 400,
       autoplay: false,
       dots: false,
-      prevArrow: $diaporamaPrev,
-      nextArrow: $diaporamaNext,
+      pauseOnHover: true,
+      arrows: false
     });
 
   }
@@ -75,12 +88,12 @@
       autoplay: false,
       draggable: false,
       dots: true,
+      pauseOnHover: true,
       customPaging: function(slider, i) {
         var thumb = $(slider.$slides[i]).data('thumb');
         return '<img src="' + thumb + '"><div class="shadow"></div>';
       },
-      prevArrow: $diaporamaPrev,
-      nextArrow: $diaporamaNext
+      arrows: false
     });
 
   }

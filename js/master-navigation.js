@@ -19,7 +19,9 @@
 
   if (windowWidth < 1025) {
 
-    $menuTrigger.on('click', function() {
+    $menuTrigger.on('click', function(e) {
+
+      e.stopPropagation();
 
       $headerNavWrap.toggleClass('inView');
       $headerSearch.fadeToggle(200);
@@ -42,6 +44,7 @@
       $current.on('click', function(e) {
 
         e.preventDefault();
+        e.stopPropagation();
 
         var $sub = $current.next('.sub__menu');
         var $arrow = $current.prev('i.fa');

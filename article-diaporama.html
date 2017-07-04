@@ -153,7 +153,7 @@
 
       <div class="menu__opened__overlay"></div>
 
-      <section class="module-diaporama-trigger"> <!-- ARTICLE PAGE HEADER -->
+      <section class="module-diaporama-trigger"> <!-- DIAPORAMA TRIGGER -->
 
         <div class="diaporama-trigger__navigation clearfix">
 
@@ -163,7 +163,7 @@
 
             </div>
 
-            <button class="btn btn--centered" type="button" name="button">slideshow</button>
+            <button class="btn diaporama__open" type="button" name="button">slideshow</button>
 
             <div class="diaporama-trigger__next">
 
@@ -173,17 +173,195 @@
 
         </div>
 
-        <article class="diaporama-trigger__image">
+        <div class="diaporama-trigger__slider"> <!-- DIAPORAMA TRIGGER WRAP -->
 
-          <img src="dist/image/article_page/article_header_1.png" alt="">
+          <article class="diaporama-trigger__slide">
 
-          <div class="article-hero__footnote">
-            Lorem ipsum dolor sit amet, consectetur
+            <img src="dist/image/article_page/article_header_1.png" alt="">
+
+            <div class="article-hero__footnote">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+
+          </article>
+
+          <article class="diaporama-trigger__slide">
+
+            <img src="dist/image/article_page/article_header_1.png" alt="">
+
+            <div class="article-hero__footnote">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+
+          </article>
+
+          <article class="diaporama-trigger__slide">
+
+            <img src="dist/image/article_page/article_header_1.png" alt="">
+
+            <div class="article-hero__footnote">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+
+          </article>
+
+        </div> <!-- / DIAPORAMA TRIGGER WRAP -->
+
+      </section> <!-- / DIAPORAMA TRIGGER -->
+
+      <section class="module-diaporama"> <!-- DIAPORAMA -->
+
+        <div class="diaporama__close">
+
+          <i class="fa fa-times" aria-hidden="true"></i>
+
+        </div>
+
+        <div class="diaporama__arrows clearfix"> <!-- DIAPORAMA ARROWS -->
+
+          <div class="diaporama__prev">
+
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+
           </div>
 
-        </article>
+          <div class="diaporama__next">
 
-      </section> <!-- / ARTICLE PAGE HEADER -->
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+          </div>
+
+        </div> <!-- / DIAPORAMA ARROWS -->
+
+        <!-- <div class="diaporama__thumbs">
+
+        </div> -->
+
+        <div class="diaporama--wrap"> <!-- DIAPORAMA WRAP -->
+
+          <article data-thumb="dist/image/article_page/article_header_1.png" class="diaporama__slide"> <!-- DIAPORAMA SLIDE -->
+
+            <div class="diaporama__image">
+
+              <img src="dist/image/article_page/article_header_1.png" alt="">
+
+            </div>
+
+            <div class="diaporama__body"> <!-- DIAPORAMA BODY -->
+
+              <div class="diaporama__counter">
+
+                <span class="diaporama__current">3</span>
+                <span class="diaporama__separator">/</span>
+                <span class="diaporama__total">8</span>
+
+              </div>
+
+              <h2 class="diaporama__heading">
+                à quel moment puis-je prétendre aux offres «formule flotte» chez mon assureur
+              </h2>
+
+              <p class="diaporama__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet maximus ante. Aliquam ut felis
+                sodales, vulputate nulla in, varius arcu. Integer dictum magna eu velit fermentum, sed fringilla diam
+                tristique. Pellentesque tempor tempus justo quis volutpat. Nunc tincidunt scelerisque cursus. Praesent
+                urna ipsum, porttitor ac leo id, porta lobortis lectus. Cras congue pretium tortor et malesuada.
+              </p>
+
+              <div class="diaporama__social">
+
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+
+              </div>
+
+            </div> <!-- / DIAPORAMA BODY -->
+
+          </article> <!-- / DIAPORAMA SLIDE -->
+
+          <article data-thumb="dist/image/article_page/article_header_1.png" class="diaporama__slide"> <!-- DIAPORAMA SLIDE -->
+
+            <div class="diaporama__image">
+
+              <img src="dist/image/article_page/article_header_1.png" alt="">
+
+            </div>
+
+            <div class="diaporama__body"> <!-- DIAPORAMA BODY -->
+
+              <div class="diaporama__counter">
+
+                <span class="diaporama__current">3</span>
+                <span class="diaporama__separator">/</span>
+                <span class="diaporama__total">8</span>
+
+              </div>
+
+              <h2 class="diaporama__heading">
+                à quel moment puis-je prétendre aux offres «formule flotte» chez mon assureur
+              </h2>
+
+              <p class="diaporama__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet maximus ante. Aliquam ut felis
+                sodales, vulputate nulla in, varius arcu. Integer dictum magna eu velit fermentum, sed fringilla diam
+                tristique. Pellentesque tempor tempus justo quis volutpat. Nunc tincidunt scelerisque cursus. Praesent
+                urna ipsum, porttitor ac leo id, porta lobortis lectus. Cras congue pretium tortor et malesuada.
+              </p>
+
+              <div class="diaporama__social">
+
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+
+              </div>
+
+            </div> <!-- / DIAPORAMA BODY -->
+
+          </article> <!-- / DIAPORAMA SLIDE -->
+
+          <article data-thumb="dist/image/article_page/article_header_1.png" class="diaporama__slide"> <!-- DIAPORAMA SLIDE -->
+
+            <div class="diaporama__image">
+
+              <img src="dist/image/article_page/article_header_1.png" alt="">
+
+            </div>
+
+            <div class="diaporama__body"> <!-- DIAPORAMA BODY -->
+
+              <div class="diaporama__counter">
+
+                <span class="diaporama__current">3</span>
+                <span class="diaporama__separator">/</span>
+                <span class="diaporama__total">8</span>
+
+              </div>
+
+              <h2 class="diaporama__heading">
+                à quel moment puis-je prétendre aux offres «formule flotte» chez mon assureur
+              </h2>
+
+              <p class="diaporama__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet maximus ante. Aliquam ut felis
+                sodales, vulputate nulla in, varius arcu. Integer dictum magna eu velit fermentum, sed fringilla diam
+                tristique. Pellentesque tempor tempus justo quis volutpat. Nunc tincidunt scelerisque cursus. Praesent
+                urna ipsum, porttitor ac leo id, porta lobortis lectus. Cras congue pretium tortor et malesuada.
+              </p>
+
+              <div class="diaporama__social">
+
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+
+              </div>
+
+            </div> <!-- / DIAPORAMA BODY -->
+
+          </article> <!-- / DIAPORAMA SLIDE -->
+
+        </div> <!-- / DIAPORAMA WRAP -->
+
+      </section> <!-- / DIAPORAMA -->
 
       <figure class="module-breadcrumbs breadcrumbs--article">
 
