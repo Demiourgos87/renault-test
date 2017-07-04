@@ -18,6 +18,7 @@
     e.stopPropagation();
     $diaporama.slideDown(200);
     $diaporamaSlider.slick('setPosition');
+    $('body, html').css('overflow', 'hidden');
   });
 
   $arrowPrev.on('click', function(e) {
