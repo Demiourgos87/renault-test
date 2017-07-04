@@ -1,0 +1,40 @@
+// import general variables and mixins \\
+
+@import "variables";
+@import "mixins";
+
+// import module files \\
+
+@import "general-classes";
+@import "media/media-teaser";
+@import "blocks/block-hp-news";
+@import "blocks/block-hp-fan";
+@import "blocks/block-hp-astuces";
+@import "blocks/block-comm-hero";
+@import "blocks/block-comm-editors-picks";
+@import "blocks/block-comm-latest-news";
+@import "blocks/block-comm-QA-list";
+@import "blocks/block-comm-more-topics";
+@import "blocks/block-arti-article-hero";
+@import "blocks/block-arti-article-body";
+@import "blocks/block-arti-articles-list";
+@import "blocks/block-article-portrait-hero";
+@import "blocks/block-article-portrait-body";
+@import "blocks/block-article-more-QA";
+@import "master/master-grid";
+@import "master/master-typography";
+@import "master/master-footer";
+@import "master/master-header";
+@import "master/master-navigation";
+@import "modules/module-test_start";
+@import "modules/module-more_read";
+@import "modules/module-pagination";
+@import "modules/module-breadcrumbs";
+@import "modules/module-button";
+@import "modules/module-search";
+@import "modules/module-faq-accordion";
+@import "modules/module-diaporama";
+@import "modules/module-diaporama-trigger";
+@import "slider/slider-portrait";
+@import "slider/slider-faq";
+@import "slider/slider-q&a";
