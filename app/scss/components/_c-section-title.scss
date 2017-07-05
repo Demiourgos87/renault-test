@@ -1,0 +1,50 @@
+.c-section-title {
+  font-size: 1.3rem;
+}
+
+.heading--col {
+  position: absolute;
+  left: 0;
+  color: $black;
+}
+
+.c-section-title.heading--row {
+  text-align: left;
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+
+  .heading--col {
+    margin-top: 10px;
+    width: 70px;
+  }
+
+}
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+
+  .heading--col {
+    margin-top: -20px;
+    width: 120px;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .heading--col {
+    margin-top: 0;
+    width: 120px;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk-large) {
+
+  .c-section-title.heading--col {
+    width: 150px;
+  }
+
+}

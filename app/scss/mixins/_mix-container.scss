@@ -1,0 +1,5 @@
+@mixin container($width, $margin, $padding) {
+  width: $width;
+  margin: $margin;
+  padding: $padding;
+}

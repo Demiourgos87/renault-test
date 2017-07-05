@@ -1,0 +1,92 @@
+.c-faq-slider {
+  margin-bottom: 150px;
+}
+
+.c-faq-slider .slider__container {
+  position: relative;
+}
+
+.c-faq-slider .teaser__body {
+  position: relative;
+  background: transparent;
+}
+
+.c-faq-slider .teaser__img img {
+  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.4);
+}
+
+.c-faq-slider .teaser {
+  overflow: visible;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+  .c-faq-slider .teaser {
+    margin-bottom: 0;
+  }
+
+  .c-faq-slider .slider__container {
+    width: 90%;
+    margin: 0 auto;
+    top: -100px;
+  }
+
+  .c-faq-slider .container--full {
+    height: 18.5rem;
+    top: 100px;
+  }
+}
+
+@media only screen and (min-width: $break-tab) {
+
+  .c-faq-slider {
+    border-top: 2px solid $lightGray;
+  }
+
+  .c-faq-slider .teaser__body {
+    margin-top: 20%;
+  }
+
+  .c-faq-slider .slider__container {
+    top: -50px;
+  }
+
+  .c-faq-slider .slider__container {
+    width: 75%;
+    float: right;
+    margin-right: 2%;
+  }
+
+  .c-faq-slider .container--full {
+    top: 0;
+  }
+
+  .c-faq-slider .c-section-title.heading--row {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+  .c-faq-slider .container--full {
+    height: 15rem;
+  }
+}
+
+@media only screen and (min-width: $break-desk) {
+  .c-faq-slider .teaser__body {
+    margin-top: 12%;
+  }
+
+  .c-faq-slider .container--full {
+    height: 20rem;
+  }
+
+  .c-faq-slider .slider__container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: $break-desk-large) {
+  .c-faq-slider .container--full {
+    height: 23rem;
+  }
+}

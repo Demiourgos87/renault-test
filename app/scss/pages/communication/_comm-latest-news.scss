@@ -1,0 +1,25 @@
+@media only screen and (min-width: $break-tab) {
+
+  .comm-latest-news {
+    border-top: 2px solid $lightGray;
+  }
+
+  .comm-latest-news {
+    margin-top: 6vw;
+    margin-bottom: 100px;
+  }
+
+  .comm-latest-news .row--raised {
+    margin-top: -17%;
+    margin-bottom: 2.3vw;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .comm-latest-news {
+    margin-top: 10vw;
+  }
+
+}

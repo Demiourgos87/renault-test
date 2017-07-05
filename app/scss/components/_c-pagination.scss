@@ -1,0 +1,49 @@
+.c-pagination, .c-pagination__row {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.c-pagination__nums, .c-pagination__controls {
+  display: inline-block;
+}
+
+.c-pagination__controls {
+  width: 100px;
+  margin-left: 15px;
+}
+
+.c-pagination a {
+  @include circled-icon(30px);
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px;
+  color: $black;
+  vertical-align: middle;
+  margin-right: 15px;
+  transition: background 0.15s linear;
+}
+
+.c-pagination a:last-child {
+  margin-right: 0;
+}
+
+.c-pagination a.active, .c-pagination a:hover, .c-pagination__forward, .c-pagination__last {
+  background: $lightGray;
+}
+
+.c-pagination a.c-pagination__forward, .c-pagination a.c-pagination__last {
+  font-size: $fontVerySmall;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+  .c-pagination a {
+    font-size: $fontBig;
+  }
+}
+
+@media only screen and (min-width: $break-tab) {
+  .c-pagination a {
+    font-size: $fontMedium;
+  }
+}

@@ -1,0 +1,32 @@
+.article-articles-list {
+  margin-bottom: 10vw;
+}
+
+.article-articles-list .heading--fix {
+  margin-top: 59.9%;
+}
+
+.article-articles-list .heading--col {
+  margin-top: 25%;
+}
+
+@media only screen and (min-width: $break-tab) {
+
+  .article-articles-list .teaser--s, .article-articles-list .teaser--l {
+    width: 49%;
+    margin-bottom: 10px;
+  }
+
+  .article-articles-list .heading--fix {
+    margin-top: 24.5%;
+  }
+
+  .article-articles-list .heading--col {
+    margin-top: 5%;
+  }
+
+  .article-articles-list .row--clipped--right {
+    margin-bottom: 2vw;
+  }
+
+}

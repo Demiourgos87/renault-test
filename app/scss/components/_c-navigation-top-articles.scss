@@ -1,0 +1,41 @@
+@media only screen and (max-width: $break-desk) {
+
+  .c-navigation-top-articles {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .sub__menu .c-navigation-top-articles {
+    float: left;
+    width: 30%;
+    padding: 40px 10% 0 10%;
+  }
+
+  .top__article {
+    width: 48%;
+    margin-right: 2%;
+    font-size: 0.8rem;
+    text-align: left;
+    float: left;
+  }
+
+  .top__article:last-child {
+    margin-right: 0;
+  }
+
+  .top__article img {
+    float: left;
+    width: 28%;
+    margin-right: 2%;
+  }
+
+  .top__article p {
+    margin: 0;
+    float: left;
+    width: 70%;
+  }
+
+}
