@@ -1,0 +1,145 @@
+section, article, aside, figure, figcaption, header, footer, nav {
+  display: block;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body, figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 100%;
+  position: relative;
+  max-width: 100%;
+  background: $white;
+}
+
+a img {
+  border: none;
+  outline: none;
+}
+
+.clearfix::before, .clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.row--full {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.container--full {
+  width: 100%;
+  position: relative;
+}
+
+.container--padded {
+  padding: 40px 0;
+}
+
+.container--raised {
+  margin-top: -3.5%;
+}
+
+.container, .row--mob {
+  position: relative;
+}
+
+.background--lightGray {
+  background: $lightGray;
+}
+
+.background--yellow {
+  background: $yellow;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .row--mob {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+
+  .row--raised {
+    margin-top: -10vw;
+  }
+
+}
+
+@media only screen and (min-width: $break-tab) {
+
+  .container {
+    width: 100%;
+  }
+
+  .row--mob {
+    float: left;
+    width: 49.5%;
+    margin-right: 0.5%;
+  }
+
+  .row--mob:nth-child(2n+0) {
+    margin-right: 0;
+    margin-left: 0.5%;
+  }
+
+  .row--mob:last-child {
+    width: 49%;
+    margin-right: 0;
+    margin-left: 0.5%;
+  }
+
+  .row--mob.row--clipped--right, .row--mob.row--clipped--left {
+    width: 45%;
+  }
+
+  .row--clipped--left {
+    margin-left: 4.5%;
+  }
+
+  .row--mob.row--centered {
+    margin: 0 auto;
+    float: none;
+  }
+
+  .container--raised--tab {
+    margin-top: -5%;
+    margin-bottom: 5%;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .slider__container .slider {
+    width: 90%;
+  }
+
+  .container--padded {
+    padding: 60px 0;
+  }
+
+  .row--raised {
+    margin-top: -8vw;
+  }
+
+  .col--half {
+    width: 46%;
+    padding: 10px 2%;
+  }
+
+}

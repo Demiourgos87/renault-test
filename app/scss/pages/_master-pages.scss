@@ -1,0 +1,32 @@
+// Homepage
+
+@import "homepage/hp-news";
+@import "homepage/hp-fan";
+@import "homepage/hp-astuces";
+@import "homepage/hp-business";
+
+// Communication page
+
+@import "communication/comm-editors-picks";
+@import "communication/comm-hero";
+@import "communication/comm-latest-news";
+@import "communication/comm-more-topics";
+
+// Communication FAQ page
+
+@import "communication-QA/comm-QA-list";
+
+// Article page
+
+@import "article/article-body";
+@import "article/article-hero";
+@import "article/article-articles-list";
+
+// Article FAQ page
+
+@import "article-faq/article-more-QA";
+
+// Article Portrait page
+
+@import "article-portrait/article-portrait-body";
+@import "article-portrait/article-portrait-hero";

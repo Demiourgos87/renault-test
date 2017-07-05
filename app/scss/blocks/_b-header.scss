@@ -1,0 +1,91 @@
+.b-header {
+  @include container(92%, 0, 15px 4%);
+
+  height: 32px;
+  background: $black;
+  position: fixed;
+  top: 0;
+  z-index: 99999999;
+}
+
+.b-header i {
+  cursor: pointer;
+}
+
+.b-header__logo {
+  width: 170px;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  margin-left: -85px;
+  z-index: 120;
+}
+
+.b-header__logo img {
+  width: 100%;
+}
+
+.menu__opened__overlay {
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.menu__opened__overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.b-header__social {
+  text-align: center;
+}
+
+.b-header__social i {
+  margin-right: 20px;
+}
+
+.b-header__social i:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-desk) {
+
+  .b-header__menu-trigger {
+    float: left;
+  }
+
+  .b-header__social {
+    float: none;
+    position: relative;
+    margin: 100px auto 20px auto;
+    font-size: 1.8rem;
+    color: $black;
+  }
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .b-header {
+    width: 96%;
+    padding: 15px 2%;
+  }
+
+  .b-header__menu-trigger {
+    display: none;
+  }
+
+  .b-header__social {
+    position: relative;
+    font-size: $fontMedium;
+    top: 6px;
+  }
+
+  .b-header__social {
+    color: $white;
+    float: left;
+  }
+
+}

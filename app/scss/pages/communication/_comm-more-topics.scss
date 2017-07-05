@@ -1,0 +1,57 @@
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+
+  .comm-more-topics {
+    width: 30%;
+    float: left;
+  }
+
+  .comm-more-topics .btn {
+    padding: 10px 20px;
+    font-size: $fontVerySmall;
+    font-weight: bold;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .comm-more-topics {
+    position: relative;
+    top: 4vw;
+    width: calc(30% - 82px);
+    padding: 40px 40px 5vw 40px;
+    float: left;
+    border-left: 2px solid $lightGray;
+  }
+
+  .comm-more-topics::before, .comm-more-topics::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 79.2vw;
+    height: 2px;
+    background: $lightGray;
+    z-index: -1;
+  }
+
+  .comm-more-topics::before {
+    top: 0;
+  }
+
+  .comm-more-topics::after {
+    bottom: 0;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk-large) {
+
+  .comm-more-topics::before, .comm-more-topics::after {
+    width: 79.4vw;
+  }
+
+  .comm-more-topics {
+    padding-bottom: 7vw;
+  }
+
+}

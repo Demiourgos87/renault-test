@@ -1,0 +1,197 @@
+.c-main-navigation {
+  @include ulClean;
+}
+
+.c-main-navigation > li > a {
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-desk) {
+
+  .page.menuOpened {
+    left: 280px;
+  }
+
+  body.menuOpened, html.menuOpened {
+    overflow: hidden;
+  }
+
+  .c-main-navigation--wrap {
+    @include container(260px, 0, 0 10px);
+    background: $white;
+    position: fixed;
+    top: 62px;
+    bottom: 0;
+    left: -280px;
+    z-index: 50;
+    overflow: hidden;
+    transition: all 0.2s linear;
+  }
+
+  .c-main-navigation {
+    margin-bottom: 40px;
+    position: relative;
+    top: 40px;
+  }
+
+  .c-main-navigation a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  .c-main-navigation > li {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .c-main-navigation > li > i {
+    color: $yellow;
+    margin-right: 15px;
+    position: relative;
+    top: -2px;
+    font-size: $fontNormal;
+  }
+
+  .sub__menu {
+    display: none;
+  }
+
+  .sub__menu > ul {
+    list-style: none;
+  }
+
+  .sub__menu > ul > li {
+    margin-top: 15px;
+  }
+
+  .inView {
+    left: 0;
+  }
+
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+
+  .c-main-navigation > li > a {
+    font-weight: 700;
+    font-size: $fontMedium;
+  }
+
+  .sub__menu > ul > li > a {
+    font-weight: 400;
+  }
+
+  .b-header__menu-trigger, .b-header__search {
+    font-size: $fontBig;
+  }
+
+}
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+
+  .b-header__menu-trigger, .b-header__search {
+    font-size: $fontBig;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .c-main-navigation--wrap {
+    height: 62px;
+    position: absolute;
+    width: 90%;
+    z-index: 110;
+  }
+
+  .c-main-navigation {
+    width: 80%;
+    text-align: center;
+    position: fixed;
+    top: 22px;
+    left: 50%;
+    margin-left: -40%;
+  }
+
+  .c-main-navigation > li {
+    display: inline-block;
+    margin-right: 40px;
+    z-index: 110;
+  }
+
+  .c-main-navigation > li:first-child {
+    margin-left: 75px;
+  }
+
+  .c-main-navigation > li:nth-child(3) {
+    margin-right: 200px;
+  }
+
+  .c-main-navigation > li:last-child {
+    margin-right: 0;
+  }
+
+  .c-main-navigation > li > i {
+    display: none;
+  }
+
+  .c-main-navigation > li > a {
+    font-weight: 700;
+    color: $yellow;
+    text-decoration: none;
+    font-size: $fontVerySmall;
+    transition: color 0.15s linear;
+  }
+
+  .c-main-navigation > li > a.active, .c-main-navigation > li > a:hover {
+    color: $white;
+    border-bottom: 2px solid $white;
+  }
+
+  .sub__menu {
+    display: none;
+    position: fixed;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: $white;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .sub__menu > ul {
+    @include ulClean;
+
+    display: block;
+    position: relative;
+    width: 20%;
+    float: left;
+    padding: 60px 0 40px 5%;
+    text-transform: uppercase;
+  }
+
+  .sub__menu > ul::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0.1rem;
+    height: 20rem;
+    background: #ececec;
+  }
+
+  .sub__menu > ul:nth-child(2) {
+    padding-bottom: 90px;
+  }
+
+  .sub__menu > ul > li {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .sub__menu > ul > li > a {
+    text-decoration: none;
+    color: $black;
+  }
+
+}

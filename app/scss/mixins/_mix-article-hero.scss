@@ -1,0 +1,6 @@
+@mixin article-hero($width, $height) {
+  width: $width;
+  height: $height;
+  position: relative;
+  overflow: hidden;
+}

@@ -1,149 +1,9 @@
 (function($){
-
-  // Q&A Layout change on tab/desk \\
-
-  // Cache DOM \\
-  var $wrap = $('.block-comm-QA-list'),
-      $mainContainer = $wrap.find('.container.main-QA'),
-      $articlesToChange = $mainContainer.find('.teaser:nth-of-type(4n+0)'),
-      windowWidth = $(window).outerWidth();
-
-  if (windowWidth > 767) {
-
-    for (var i = 0; i < $articlesToChange.length; i++) {
-
-      if (i % 2 === 0) {
-
-        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l');
-
-      } else {
-
-        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l float--right');
-
-      }
-
-    }
-
-  }
-
-})(jQuery);
-
-(function($){
-
-  // navigation \\
-
-  // cache DOM \\
-  var $headerNavWrap = $('.master-header__nav--wrap'),
-      $headerNav = $('.master-header__nav'),
-      $menuTrigger = $('.master-header__menu-trigger i'),
-      $subMenuTrigger = $('.sub__menu__trigger'),
-      $menuOpenedOverlay = $('.menu__opened__overlay'),
-      $mainContent = $('.page'),
-      $headerSearch = $('.master-header__search'),
-      $searchOverlay = $('.search__overlay'),
-      $searchClose = $('.search__close'),
-      windowWidth = $(window).outerWidth();
-
-
-  // mobile main menu \\
-
-  if (windowWidth < 1025) {
-
-    $menuTrigger.on('click', function(e) {
-
-      e.stopPropagation();
-
-      $headerNavWrap.toggleClass('inView');
-      $headerSearch.fadeToggle(200);
-      $menuOpenedOverlay.fadeToggle(200);
-      $mainContent.toggleClass('menuOpened');
-      $('body, html').toggleClass('menuOpened');
-
-      if ($menuTrigger.hasClass('fa-bars')) {
-        $menuTrigger.removeClass('fa-bars').addClass('fa-times');
-      } else {
-        $menuTrigger.removeClass('fa-times').addClass('fa-bars');
-      }
-
-    });
-
-    $.each($subMenuTrigger, function() {
-
-      var $current = $(this);
-
-      $current.on('click', function(e) {
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        var $sub = $current.next('.sub__menu');
-        var $arrow = $current.prev('i.fa');
-
-        $headerNavWrap.css('overflow-y', 'scroll');
-        $sub.slideToggle(200);
-
-        if ($arrow.hasClass('fa-chevron-down')) {
-          $arrow.removeClass('fa-chevron-down').addClass('fa-chevron-up');
-        } else {
-          $arrow.removeClass('fa-chevron-up').addClass('fa-chevron-down');
-        }
-
-      });
-
-    });
-
-  }
-
-  // search overlay \\
-
-  $headerSearch.on('click', function() {
-
-    $searchOverlay.fadeIn(200);
-
-  });
-
-  $searchClose.on('click', function() {
-
-    $searchOverlay.fadeOut(200);
-
-  });
-
-  // desktop main menu \\
-
-  if (windowWidth > 1024) {
-
-    $.each($subMenuTrigger, function() {
-
-      var $current = $(this);
-      var $li = $(this).closest('li');
-      var $sub = $li.find('.sub__menu');
-
-      $li.on('mouseenter', function() {
-
-        $current.addClass('active');
-        $sub.fadeIn(200);
-
-      });
-
-      $sub.on('mouseleave', function() {
-
-        $sub.fadeOut(200);
-        $current.removeClass('active');
-
-      });
-
-    });
-
-  }
-
-})(jQuery);
-
-(function($){
   // Diaporama trigger \\
 
   // Cache DOM \\
 
-  var $diaporamaTrigger = $('.module-diaporama-trigger'),
+  var $diaporamaTrigger = $('.c-diaporama-trigger'),
       $slider = $diaporamaTrigger.find('.diaporama-trigger__slider'),
       $slides = $slider.find('.diaporama-trigger__slide'),
       $navigation = $diaporamaTrigger.find('.diaporama-trigger__navigation'),
@@ -151,7 +11,7 @@
       $arrowNext = $navigation.find('.diaporama-trigger__next i'),
       $openDiaporama = $navigation.find('.diaporama__open'),
       windowWidth = $(window).outerWidth(),
-      $diaporama = $('body').find('.module-diaporama'),
+      $diaporama = $('body').find('.c-diaporama'),
       $diaporamaSlider = $diaporama.find('.diaporama--wrap');
 
   $openDiaporama.on('click', function(e) {
@@ -194,7 +54,7 @@
 
   // Cache DOM \\
 
-  var $diaporama = $('.module-diaporama'),
+  var $diaporama = $('.c-diaporama'),
       $diaporamaWrap = $diaporama.find('.diaporama--wrap'),
       $diaporamaClose = $diaporama.find('.diaporama__close'),
       $diaporamaSlides = $diaporamaWrap.find('.diaporama__slide'),
@@ -298,7 +158,7 @@
   // Cache DOM \\
 
   var $accordionWrap = $('.accordion-wrap'),
-      $accordion = $accordionWrap.find('.module-faq-accordion'),
+      $accordion = $accordionWrap.find('.c-faq-accordion'),
       $accordionElements = $accordion.find('.accordion__element');
 
   function closeOpenedElement() {
@@ -346,10 +206,10 @@
 
 (function($){
   // FAQ Slider \\
-  // Also used for the slider on Q&A page \\
+  // Also used for the Renault Vu Q&A slider on communication page \\
 
   // cache DOM \\
-  var $sliderWrap = $('.faq__slider'),
+  var $sliderWrap = $('.c-faq-slider'),
       $slider = $sliderWrap.find('.slider'),
       $articles = $slider.find('.teaser'),
       $navigation = $sliderWrap.find('.slider__navigation'),
@@ -401,6 +261,116 @@
     updateNavigationCounter(currentSlide);
 
   });
+
+})(jQuery);
+
+(function($){
+
+  // navigation \\
+
+  // cache DOM \\
+  var $headerNavWrap = $('.c-main-navigation--wrap'),
+      $headerNav = $('.c-main-navigation'),
+      $menuTrigger = $('.b-header__menu-trigger i'),
+      $subMenuTrigger = $('.sub__menu__trigger'),
+      $menuOpenedOverlay = $('.menu__opened__overlay'),
+      $mainContent = $('.page'),
+      $headerSearch = $('.c-search'),
+      $searchOverlay = $('.search__overlay'),
+      $searchClose = $('.search__close'),
+      windowWidth = $(window).outerWidth();
+
+
+  // mobile main menu \\
+
+  if (windowWidth < 1025) {
+
+    $menuTrigger.on('click', function(e) {
+
+      e.stopPropagation();
+
+      $headerNavWrap.toggleClass('inView');
+      $headerSearch.fadeToggle(200);
+      $menuOpenedOverlay.fadeToggle(200);
+      $mainContent.toggleClass('menuOpened');
+      $('body, html').toggleClass('menuOpened');
+
+      if ($menuTrigger.hasClass('fa-bars')) {
+        $menuTrigger.removeClass('fa-bars').addClass('fa-times');
+      } else {
+        $menuTrigger.removeClass('fa-times').addClass('fa-bars');
+      }
+
+    });
+
+    $.each($subMenuTrigger, function() {
+
+      var $current = $(this);
+
+      $current.on('click', function(e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        var $sub = $current.next('.sub__menu');
+        var $arrow = $current.prev('i.fa');
+
+        $headerNavWrap.css('overflow-y', 'scroll');
+        $sub.slideToggle(200);
+
+        if ($arrow.hasClass('fa-chevron-down')) {
+          $arrow.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        } else {
+          $arrow.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        }
+
+      });
+
+    });
+
+  }
+
+  // search overlay \\
+
+  $headerSearch.on('click', function() {
+
+    $searchOverlay.fadeIn(200);
+
+  });
+
+  $searchClose.on('click', function() {
+
+    $searchOverlay.fadeOut(200);
+
+  });
+
+  // desktop main menu \\
+
+  if (windowWidth > 1024) {
+
+    $.each($subMenuTrigger, function() {
+
+      var $current = $(this);
+      var $li = $(this).closest('li');
+      var $sub = $li.find('.sub__menu');
+
+      $li.on('mouseenter', function() {
+
+        $current.addClass('active');
+        $sub.fadeIn(200);
+
+      });
+
+      $sub.on('mouseleave', function() {
+
+        $sub.fadeOut(200);
+        $current.removeClass('active');
+
+      });
+
+    });
+
+  }
 
 })(jQuery);
 
@@ -475,5 +445,35 @@
     updateNavigationCounter(currentSlide);
 
   });
+
+})(jQuery);
+
+(function($){
+
+  // Q&A Layout change on tab/desk \\
+
+  // Cache DOM \\
+  var $wrap = $('.block-comm-QA-list'),
+      $mainContainer = $wrap.find('.container.main-QA'),
+      $articlesToChange = $mainContainer.find('.teaser:nth-of-type(4n+0)'),
+      windowWidth = $(window).outerWidth();
+
+  if (windowWidth > 767) {
+
+    for (var i = 0; i < $articlesToChange.length; i++) {
+
+      if (i % 2 === 0) {
+
+        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l');
+
+      } else {
+
+        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l float--right');
+
+      }
+
+    }
+
+  }
 
 })(jQuery);

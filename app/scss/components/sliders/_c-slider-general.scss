@@ -1,0 +1,39 @@
+.slider__navigation {
+  z-index: 30;
+  font-weight: 700;
+}
+
+.slider__navigation i {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.slider .slick-list {
+  overflow: visible;
+}
+
+@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+
+  .slider__navigation {
+    float: right;
+  }
+
+}
+
+@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+
+  .slider__navigation {
+    float: right;
+  }
+
+}
+
+@media only screen and (min-width: $break-desk) {
+
+  .slider__navigation {
+    position: absolute;
+    top: 7vw;
+    right: 0;
+  }
+
+}
