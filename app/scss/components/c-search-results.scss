@@ -1,57 +1,71 @@
-.c-search-results, .c-search-results__input {
+.c-search-results {
   width: 100%;
   position: relative;
-}
 
-.c-search-results__heading {
-  font-size: $fontVeryBig;
-  color: $black;
-  font-weight: 900;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 8vw 0;
+  &__heading {
 
-  @include breakpoint(tabletOnly) {
-    margin: 5vw 0;
-  };
+    font-size: $fontVeryBig;
+    color: $black;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 8vw 0;
 
-  @include breakpoint(desktopOnly) {
-    margin: 5vw 0 3vw 0;
-  };
-}
+    @include breakpoint(tabletOnly) {
+      margin: 5vw 0;
+    };
 
-.c-search-results__input input {
-  width: calc(100% - 6vw - 4px);
-  padding: 5vw 3vw;
-  color: $darkGray;
-  font-size: $fontLarge;
-  outline: none;
-  border: 2px solid $yellow;
+    @include breakpoint(desktopOnly) {
+      margin: 5vw 0 3vw 0;
+    };
 
-  @include breakpoint(tabletOnly) {
-    padding: 3vw 4vw;
-  };
+  }
 
-  @include breakpoint(desktopOnly) {
-    padding: 3vw;
-  };
+  &__input {
 
-}
+    width: 100%;
+    position: relative;
 
-.c-search-results__input a {
-  color: $darkGray;
-  font-size: $fontBig;
-  position: absolute;
-  top: 4.5vw;
-  right: 3vw;
+    & input {
 
-  @include breakpoint(tabletOnly) {
-    top: 3vw;
-    right: 2vw;
-  };
+      width: calc(100% - 6vw - 4px);
+      padding: 5vw 3vw;
+      color: $darkGray;
+      font-size: $fontLarge;
+      outline: none;
+      border: 2px solid $yellow;
 
-  @include breakpoint(desktopOnly) {
-    top: 3vw;
-    right: 3vw;
-  };
+      @include breakpoint(tabletOnly) {
+        width: calc(100% - 8vw - 4px);
+        padding: 3vw 4vw;
+      };
+
+      @include breakpoint(desktopOnly) {
+        padding: 2vw 3vw;
+      };
+
+    }
+
+    & a {
+      
+      color: $darkGray;
+      font-size: $fontBig;
+      position: absolute;
+      top: 4.5vw;
+      right: 3vw;
+
+      @include breakpoint(tabletOnly) {
+        top: 3vw;
+        right: 2vw;
+      };
+
+      @include breakpoint(desktopOnly) {
+        top: 2vw;
+        right: 3vw;
+      };
+
+    }
+
+  }
+
 }
