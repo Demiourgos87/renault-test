@@ -28,6 +28,7 @@
 
   $diaporamaClose.on('click', function(e) {
     e.stopPropagation();
+    $('body, html').removeClass('diaporamaOpened');
     $diaporama.slideUp(200);
   });
 

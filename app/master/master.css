@@ -815,6 +815,9 @@ a img {
   z-index: 999999999;
   overflow-y: scroll; }
 
+html.diaporamaOpened, body.diaporamaOpened {
+  overflow: hidden; }
+
 .diaporama--wrap, .diaporama__slide, .diaporama__image {
   width: 100%;
   overflow: hidden; }

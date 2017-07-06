@@ -18,7 +18,7 @@
     e.stopPropagation();
     $diaporama.slideDown(200);
     $diaporamaSlider.slick('setPosition');
-    $('body, html').css('overflow', 'hidden');
+    $('body, html').addClass('diaporamaOpened');
   });
 
   $arrowPrev.on('click', function(e) {
@@ -79,6 +79,7 @@
 
   $diaporamaClose.on('click', function(e) {
     e.stopPropagation();
+    $('body, html').removeClass('diaporamaOpened');
     $diaporama.slideUp(200);
   });
 
