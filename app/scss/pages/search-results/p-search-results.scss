@@ -8,8 +8,38 @@
 
 .p-search-results .c-test-start {
 
+  position: relative;
+
   @include breakpoint(tabletOnly) {
     margin: 7vw 0 0 0;
   };
+
+  @include breakpoint(desktopOnly) {
+    margin-bottom: 5vw;
+  };
+
+  &::before, &::after {
+
+    @include breakpoint(desktopOnly) {
+
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $lightGray;
+
+    };
+
+  }
+
+  &::before {
+    top: -4vw;
+  }
+
+  &::after {
+    bottom: 0;
+  }
 
 }

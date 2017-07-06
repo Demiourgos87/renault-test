@@ -1,6 +1,15 @@
-.c-search-results {
+.c-search-results-hero {
   width: 100%;
   position: relative;
+  margin-bottom: 8vw;
+
+  @include breakpoint(tabletonly) {
+    margin-bottom: 5vw;
+  };
+
+  @include breakpoint(desktopOnly) {
+    margin-bottom: 4vw;
+  };
 
   &__heading {
 
@@ -47,7 +56,7 @@
     }
 
     & a {
-      
+
       color: $darkGray;
       font-size: $fontBig;
       position: absolute;
