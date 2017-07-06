@@ -1,0 +1,19 @@
+.c-page-title {
+  width: 100%;
+  font-size: $fontHuge;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include breakpoint(phoneOnly) {
+    margin-top: 5vw;
+  };
+
+  @include breakpoint(tabletAndDesktop) {
+    width: 50%;
+  };
+
+  @include breakpoint(desktopOnly) {
+    margin-bottom: 5vw;
+  };
+}
