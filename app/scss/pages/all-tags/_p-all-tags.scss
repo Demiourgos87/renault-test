@@ -1,0 +1,82 @@
+.p-all-tags {
+  width: 100%;
+
+  & .c-breadcrumbs {
+    margin: 2vw;
+  }
+
+  & .c-page-title {
+
+    @include breakpoint(tabletAndDesktop) {
+      width: 100%;
+    };
+
+  }
+
+  & .single-tag {
+
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+
+    @include breakpoint(phoneOnly) {
+
+      width: 52%;
+      padding: 3vw;
+
+      &:nth-child(2n+2) {
+        width: 45%;
+      }
+
+    };
+
+    @include breakpoint(tabletOnly) {
+
+      width: 40%;
+      padding: 3vw;
+
+      &:nth-child(3n+3) {
+        width: 18%;
+      }
+
+    };
+
+    @include breakpoint(desktopOnly) {
+
+      width: 28%;
+      padding: 2vw;
+
+      &:nth-child(4n+4) {
+        width: 14%;
+      }
+
+    };
+
+    &__heading {
+      font-family: 'Airways';
+      font-size: $fontHuge;
+      color: $yellow;
+      margin: 0;
+    }
+
+    &__link {
+
+      display: block;
+      text-align: left;
+      padding: 2vw 0;
+      color: $black;
+      text-decoration: none;
+
+      @include breakpoint(tabletOnly) {
+        padding: 1vw 0;
+      };
+
+      @include breakpoint(desktopOnly) {
+        padding: 0.2vw 0;
+      };
+
+    }
+
+  }
+
+}
