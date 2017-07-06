@@ -54,6 +54,7 @@
       speed: 400,
       autoplay: false,
       dots: false,
+      fade: true,
       pauseOnHover: true,
       arrows: false
     });

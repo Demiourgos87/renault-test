@@ -12,29 +12,29 @@ var gulp = require('gulp'),
 gulp.task('concatJS', function() {
   return gulp.src('app/js/**/*.js')
   .pipe(concat('master.js'))
-  .pipe(gulp.dest('app/master/'));
+  .pipe(gulp.dest('app/assets/master/'));
 });
 
 gulp.task('compileSASS', function() {
   return gulp.src('app/scss/master.scss')
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('app/master/'))
+  .pipe(gulp.dest('app/assets/master/'))
   .pipe(browserSync.stream());
 });
 
 gulp.task('uglifyJS', function() {
-  return gulp.src('app/master/master.js')
+  return gulp.src('app/assets/master/master.js')
   .pipe(rename('master.min.js'))
   .pipe(uglify())
-  .pipe(gulp.dest('app/dist/js/'))
+  .pipe(gulp.dest('app/assets/dist/js/'))
   .pipe(browserSync.stream());
 });
 
 gulp.task('uglifyCSS', function() {
-  return gulp.src('app/master/master.css')
+  return gulp.src('app/assets/master/master.css')
   .pipe(rename('master.min.css'))
   .pipe(cleanCSS())
-  .pipe(gulp.dest('app/dist/css/'));
+  .pipe(gulp.dest('app/assets/dist/css/'));
 });
 
 gulp.task('buildCSS', function() {

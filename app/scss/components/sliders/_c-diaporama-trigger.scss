@@ -46,8 +46,28 @@
 }
 
 .diaporama-trigger__navigation .btn {
+
   left: 50%;
   width: 33vw;
   margin-left: -16.5vw;
   padding: 10px 25px;
+
+  @include breakpoint(tabletOnly) {
+
+    width: 15vw;
+    margin-left: -7.5vw;
+    padding: 15px 25px;
+
+  };
+
+  @include breakpoint(desktopOnly) {
+
+    width: 10vw;
+    margin-left: -5vw;
+    padding: 15px 25px;
+    background: $yellow;
+    color: $black;
+
+  };
+
 }
