@@ -912,6 +912,20 @@ a img {
 .diaporama-trigger__slide {
   position: relative; }
 
+@media (max-width: 1024px) {
+  .diaporama-trigger__slide__overlay {
+    display: none; } }
+
+@media (min-width: 1025px) {
+  .diaporama-trigger__slide__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10; } }
+
 .c-diaporama-trigger .slick-slider, .c-diaporama-trigger .slick-list, .c-diaporama-trigger .slick-track {
   height: 100%; }
 
@@ -924,7 +938,7 @@ a img {
   width: 90%;
   margin: 0 auto;
   top: 20vw;
-  z-index: 30; }
+  z-index: 1000; }
 
 .diaporama-trigger__prev, .diaporama-trigger__next, .diaporama-trigger__navigation .btn {
   position: absolute; }
@@ -937,13 +951,14 @@ a img {
   cursor: pointer;
   border-radius: 100%;
   background: #ffcc33;
-  color: #000000; }
+  color: #000000;
+  bottom: -24vw; }
 
 .diaporama-trigger__prev {
-  left: 0; }
+  left: 30%; }
 
 .diaporama-trigger__next {
-  right: 0; }
+  right: 26%; }
 
 .diaporama-trigger__navigation .btn {
   left: 50%;
@@ -962,6 +977,43 @@ a img {
       padding: 15px 25px;
       background: #ffcc33;
       color: #000000; } }
+
+.diaporama-trigger__thumbs {
+  width: 30%;
+  height: 4vw;
+  position: absolute;
+  bottom: 3vw;
+  left: 52%;
+  margin-left: -15%;
+  overflow: hidden;
+  z-index: 1000; }
+  .diaporama-trigger__thumbs.slick-slider {
+    height: 4vw; }
+  .diaporama-trigger__thumbs .diaporama-trigger__thumb {
+    position: relative;
+    display: inline-block;
+    width: 18%;
+    height: 100%;
+    margin-right: 2%;
+    cursor: pointer;
+    outline: none; }
+    .diaporama-trigger__thumbs .diaporama-trigger__thumb img {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .diaporama-trigger__thumbs .diaporama-trigger__thumb .overlay {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: inset 0 0 0 5px #ffcc33;
+      transition: opacity .1s linear; }
+  .diaporama-trigger__thumbs .diaporama-trigger__thumb:hover img, .diaporama-trigger__thumbs .diaporama-trigger__thumb.slick-current img {
+    filter: grayscale(0); }
+  .diaporama-trigger__thumbs .diaporama-trigger__thumb:hover .overlay, .diaporama-trigger__thumbs .diaporama-trigger__thumb.slick-current .overlay {
+    opacity: 1; }
 
 .c-diaporama {
   display: none;
@@ -1053,7 +1105,7 @@ html.diaporamaOpened, body.diaporamaOpened {
   top: 35vw;
   width: calc(100% - 40px);
   padding: 0 20px;
-  z-index: 20; }
+  z-index: 1000; }
 
 .diaporama__prev, .diaporama__next {
   width: 30px;
@@ -1125,7 +1177,7 @@ html.diaporamaOpened, body.diaporamaOpened {
     right: 30px; }
   .diaporama__arrows {
     width: 7vw;
-    top: 39.5vw;
+    top: 40.5vw;
     left: 52vw; }
   .c-diaporama .slick-list, .c-diaporama .slick-list .slick-track {
     height: 100%; }
@@ -1153,6 +1205,44 @@ html.diaporamaOpened, body.diaporamaOpened {
     font-size: 0.8rem; }
   .diaporama__social i {
     margin-right: 5px; } }
+
+@media only screen and (min-width: 1900px) {
+  .diaporama__arrows {
+    left: 53vw; } }
+
+.diaporama__thumbs {
+  width: 46vw;
+  position: absolute;
+  top: 39vw;
+  left: 6vw;
+  overflow: hidden;
+  z-index: 30; }
+  .diaporama__thumbs.slick-slider {
+    height: 5vw; }
+  .diaporama__thumbs .diaporama__thumb {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    margin-right: 1%;
+    cursor: pointer;
+    outline: none; }
+    .diaporama__thumbs .diaporama__thumb img {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .diaporama__thumbs .diaporama__thumb .overlay {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: inset 0 0 0 5px #ffcc33;
+      transition: opacity .1s linear; }
+  .diaporama__thumbs .diaporama__thumb:hover img, .diaporama__thumbs .diaporama__thumb.slick-current img {
+    filter: grayscale(0); }
+  .diaporama__thumbs .diaporama__thumb:hover .overlay, .diaporama__thumbs .diaporama__thumb.slick-current .overlay {
+    opacity: 1; }
 
 .c-faq-slider {
   margin-bottom: 150px; }
