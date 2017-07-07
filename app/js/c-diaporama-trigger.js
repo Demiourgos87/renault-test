@@ -19,6 +19,7 @@
     e.stopPropagation();
     $diaporama.slideDown(200);
     $diaporamaSlider.slick('setPosition');
+    $('.c-diaporama .diaporama__thumbs').slick('setPosition');
     $('body, html').addClass('diaporamaOpened');
   });
 
