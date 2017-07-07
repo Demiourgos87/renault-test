@@ -198,6 +198,11 @@ a img {
   display: block;
   text-transform: uppercase;
   margin-bottom: 15px; }
+  .b-footer__nav li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #8b8b8b; }
 
 @media only screen and (min-width: 767px) {
   .b-footer__nav li {
@@ -2511,3 +2516,68 @@ p.article-paragraph__heading {
   .TC-paragraph__body {
     font-size: 1rem;
     color: #5a5a5a; }
+
+.p-404 {
+  width: 100%; }
+  .p-404 .btn {
+    width: 40vw;
+    text-align: center; }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .p-404 .btn {
+        width: 16vw; } }
+    @media (min-width: 1025px) {
+      .p-404 .btn {
+        width: 10vw; } }
+  .p-404 .c-breadcrumbs {
+    margin: 0; }
+
+.p-404-notice {
+  width: 100%;
+  margin-bottom: 20vw; }
+  @media (min-width: 767px) and (max-width: 1024px) {
+    .p-404-notice {
+      margin-bottom: 10vw; } }
+  @media (min-width: 1025px) {
+    .p-404-notice {
+      margin-bottom: 7vw; } }
+  .p-404-notice__message {
+    position: relative;
+    top: 5vw;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #ffcc33;
+    margin: 0;
+    padding-left: 3vw;
+    z-index: -1;
+    text-transform: uppercase; }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .p-404-notice__message {
+        top: 4vw;
+        font-size: 3rem; } }
+    @media (min-width: 1025px) {
+      .p-404-notice__message {
+        font-size: 4.4rem;
+        top: 4.5vw; } }
+    @media (min-width: 1900px) {
+      .p-404-notice__message {
+        font-size: 5.3rem; } }
+    .p-404-notice__message .accented-word {
+      position: relative;
+      top: 4.5vw;
+      font-size: 3rem;
+      font-weight: 900; }
+      @media (min-width: 767px) and (max-width: 1024px) {
+        .p-404-notice__message .accented-word {
+          top: 3.2vw;
+          font-size: 5.5rem; } }
+      @media (min-width: 1025px) {
+        .p-404-notice__message .accented-word {
+          top: 3.2vw;
+          font-size: 8rem; } }
+      @media (min-width: 1900px) {
+        .p-404-notice__message .accented-word {
+          top: 3.4vw;
+          font-size: 10rem; } }
+  .p-404-notice__image {
+    width: 100%;
+    z-index: 10; }
