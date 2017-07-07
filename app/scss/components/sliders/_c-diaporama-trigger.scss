@@ -42,7 +42,7 @@
   width: 90%;
   margin: 0 auto;
   top: 20vw;
-  z-index: 30;
+  z-index: 1000;
 }
 
 .diaporama-trigger__prev, .diaporama-trigger__next, .diaporama-trigger__navigation .btn {
@@ -99,7 +99,7 @@
   left: 52%;
   margin-left: -15%;
   overflow: hidden;
-  z-index: 30;
+  z-index: 1000;
 
   &.slick-slider {
     height: 4vw;

@@ -100,7 +100,7 @@ html.diaporamaOpened, body.diaporamaOpened {
   top: 35vw;
   width: calc(100% - 40px);
   padding: 0 20px;
-  z-index: 20;
+  z-index: 1000;
 }
 
 .diaporama__prev, .diaporama__next {

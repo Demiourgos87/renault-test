@@ -938,7 +938,7 @@ a img {
   width: 90%;
   margin: 0 auto;
   top: 20vw;
-  z-index: 30; }
+  z-index: 1000; }
 
 .diaporama-trigger__prev, .diaporama-trigger__next, .diaporama-trigger__navigation .btn {
   position: absolute; }
@@ -986,7 +986,7 @@ a img {
   left: 52%;
   margin-left: -15%;
   overflow: hidden;
-  z-index: 30; }
+  z-index: 1000; }
   .diaporama-trigger__thumbs.slick-slider {
     height: 4vw; }
   .diaporama-trigger__thumbs .diaporama-trigger__thumb {
@@ -1105,7 +1105,7 @@ html.diaporamaOpened, body.diaporamaOpened {
   top: 35vw;
   width: calc(100% - 40px);
   padding: 0 20px;
-  z-index: 20; }
+  z-index: 1000; }
 
 .diaporama__prev, .diaporama__next {
   width: 30px;
