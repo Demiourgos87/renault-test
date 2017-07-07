@@ -1,0 +1,88 @@
+.p-404 {
+  width: 100%;
+
+  & .btn {
+    width: 40vw;
+    text-align: center;
+
+    @include breakpoint(tabletOnly) {
+      width: 16vw;
+    };
+
+    @include breakpoint(desktopOnly) {
+      width: 10vw;
+    };
+  }
+
+  & .c-breadcrumbs {
+    margin: 0;
+  }
+}
+
+.p-404-notice {
+
+  width: 100%;
+  margin-bottom: 20vw;
+
+  @include breakpoint(tabletOnly) {
+    margin-bottom: 10vw;
+  };
+
+  @include breakpoint(desktopOnly) {
+    margin-bottom: 7vw;
+  };
+
+  &__message {
+    position: relative;
+    top: 5vw;
+    font-size: $fontLarge;
+    font-weight: 900;
+    color: $yellow;
+    margin: 0;
+    padding-left: 3vw;
+    z-index: -1;
+    text-transform: uppercase;
+
+    @include breakpoint(tabletOnly) {
+      top: 4vw;
+      font-size: $fontHuge;
+    };
+
+    @include breakpoint(desktopOnly) {
+      font-size: 4.4rem;
+      top: 4.5vw;
+    };
+
+    @include breakpoint(desktopLarge) {
+      font-size: 5.3rem;
+    };
+
+    & .accented-word {
+      position: relative;
+      top: 4.5vw;
+      font-size: $fontHuge;
+      font-weight: 900;
+
+      @include breakpoint(tabletOnly) {
+        top: 3.2vw;
+        font-size: 5.5rem;
+      };
+
+      @include breakpoint(desktopOnly) {
+        top: 3.2vw;
+        font-size: 8rem;
+      };
+
+      @include breakpoint(desktopLarge) {
+        top: 3.4vw;
+        font-size: 10rem;
+      };
+    }
+  }
+
+  &__image {
+    width: 100%;
+    z-index: 10;
+  }
+
+}

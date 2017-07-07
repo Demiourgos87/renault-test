@@ -18,6 +18,13 @@
   display: block;
   text-transform: uppercase;
   margin-bottom: 15px;
+
+  & a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $fontNormal;
+    color: $gray;
+  }
 }
 
 @media only screen and (min-width: $break-tab) {
