@@ -1,0 +1,51 @@
+.p-live-news {
+  width: 100%;
+
+  & .row--raised {
+
+    @include breakpoint(tabletOnly) {
+      margin-top: -13.5vw;
+      margin-bottom: 3vw;
+    };
+
+    @include breakpoint(desktopOnly) {
+      margin-top: -13.4vw;
+      margin-bottom: 5vw;
+    };
+
+  }
+
+  & .c-breadcrumbs {
+    margin: 0 0 6vw 5vw;
+  }
+
+  & .c-test-start {
+
+    position: relative;
+
+    &::before, &::after {
+
+      @include breakpoint(desktopOnly) {
+
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $lightGray;
+
+      };
+
+    }
+
+    &::before {
+      top: -4vw;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+  }
+}

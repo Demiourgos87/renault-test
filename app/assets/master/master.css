@@ -757,6 +757,22 @@ a img {
     margin: 0 auto;
     display: block; } }
 
+.c-page-title {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center; }
+  @media (max-width: 767px) {
+    .c-page-title {
+      margin-top: 5vw; } }
+  @media (min-width: 768px) {
+    .c-page-title {
+      width: 50%; } }
+  @media (min-width: 1025px) {
+    .c-page-title {
+      margin-bottom: 5vw; } }
+
 .c-search-results-hero {
   width: 100%;
   position: relative;
@@ -2370,3 +2386,78 @@ p.article-paragraph__heading {
     top: -4vw; }
   .p-search-results .c-test-start::after {
     bottom: 0; }
+
+.p-live-news {
+  width: 100%; }
+  @media (min-width: 767px) and (max-width: 1024px) {
+    .p-live-news .row--raised {
+      margin-top: -13.5vw;
+      margin-bottom: 3vw; } }
+  @media (min-width: 1025px) {
+    .p-live-news .row--raised {
+      margin-top: -13.4vw;
+      margin-bottom: 5vw; } }
+  .p-live-news .c-breadcrumbs {
+    margin: 0 0 6vw 5vw; }
+  .p-live-news .c-test-start {
+    position: relative; }
+    @media (min-width: 1025px) {
+      .p-live-news .c-test-start::before, .p-live-news .c-test-start::after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #f6f6f6; } }
+    .p-live-news .c-test-start::before {
+      top: -4vw; }
+    .p-live-news .c-test-start::after {
+      bottom: 0; }
+
+.p-all-tags {
+  width: 100%; }
+  .p-all-tags .c-breadcrumbs {
+    margin: 2vw; }
+  @media (min-width: 768px) {
+    .p-all-tags .c-page-title {
+      width: 100%; } }
+  .p-all-tags .single-tag {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top; }
+    @media (max-width: 767px) {
+      .p-all-tags .single-tag {
+        width: 52%;
+        padding: 3vw; }
+        .p-all-tags .single-tag:nth-child(2n+2) {
+          width: 45%; } }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .p-all-tags .single-tag {
+        width: 40%;
+        padding: 3vw; }
+        .p-all-tags .single-tag:nth-child(3n+3) {
+          width: 18%; } }
+    @media (min-width: 1025px) {
+      .p-all-tags .single-tag {
+        width: 28%;
+        padding: 2vw; }
+        .p-all-tags .single-tag:nth-child(4n+4) {
+          width: 14%; } }
+    .p-all-tags .single-tag__heading {
+      font-family: 'Airways';
+      font-size: 3rem;
+      color: #ffcc33;
+      margin: 0; }
+    .p-all-tags .single-tag__link {
+      display: block;
+      text-align: left;
+      padding: 2vw 0;
+      color: #000000;
+      text-decoration: none; }
+      @media (min-width: 767px) and (max-width: 1024px) {
+        .p-all-tags .single-tag__link {
+          padding: 1vw 0; } }
+      @media (min-width: 1025px) {
+        .p-all-tags .single-tag__link {
+          padding: 0.2vw 0; } }
