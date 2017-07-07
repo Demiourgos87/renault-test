@@ -1,6 +1,12 @@
 .p-live-news {
   width: 100%;
 
+  & .c-page-title {
+    @include breakpoint(tabletAndDesktop) {
+      width: 50%;
+    };
+  }
+
   & .row--raised {
 
     @include breakpoint(tabletOnly) {
