@@ -1,0 +1,104 @@
+.p-psychotest {
+  width: 100%;
+  background: $white;
+
+  @include breakpoint(desktopOnly) {
+    overflow-y: hidden;
+  };
+}
+
+.psychotest-intro {
+  width: 100%;
+
+  @include breakpoint(desktopOnly) {
+    height: 100%;
+  };
+
+  &__image {
+    display: table;
+    width: 100%;
+    height: 80vw;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background: url('../../../assets/image/psychotest/psychotest_intro2.png') no-repeat center;
+    background-size: 100%;
+
+    @include breakpoint(tabletOnly) {
+      height: 50vw;
+    };
+
+    @include breakpoint(desktopOnly) {
+      display: inline-block;
+      width: 45%;
+      height: 100%;
+      background-size: 100% 100%;
+    };
+
+    // & img {
+    //   width: 100%;
+    //   position: absolute;
+    //   top: -25vw;
+    //   z-index: 10;
+    // }
+
+    & h2 {
+      color: $black;
+      display: table-cell;
+      vertical-align: middle;
+      font-size: $fontBig;
+
+      @include breakpoint(tabletOnly) {
+        font-size: 3rem;
+      };
+
+      @include breakpoint(desktopOnly) {
+        display: block;
+        position: relative;
+        top: 36%;
+      };
+    }
+  }
+
+  &__body {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5vw 0;
+    letter-spacing: 1px;
+
+    @include breakpoint(tabletOnly) {
+      width: 70%;
+    };
+
+    @include breakpoint(desktopOnly) {
+      display: inline-block;
+      position: absolute;
+      top: 10vw;
+      width: 34%;
+      padding: 0 10%;
+    };
+
+    &__title {
+      font-size: $fontMedium;
+      font-weight: 900;
+
+      @include breakpoint(tabletOnly) {
+        font-size: $fontBig;
+      };
+    }
+
+    & button {
+      background: $yellow;
+      color: $black;
+      margin: 10vw auto;
+
+      @include breakpoint(tabletOnly) {
+        margin: 5vw auto;
+      };
+
+      @include breakpoint(desktopOnly) {
+        margin: 3vw 0 0 0;
+      };
+    }
+  }
+}
