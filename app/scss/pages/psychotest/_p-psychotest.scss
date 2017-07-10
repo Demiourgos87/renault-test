@@ -9,12 +9,15 @@
 
 .psychotest-intro {
   width: 100%;
+  position: relative;
+  margin: 0;
 
   @include breakpoint(desktopOnly) {
     height: 100%;
   };
 
   &__image {
+
     display: table;
     width: 100%;
     height: 80vw;
@@ -35,14 +38,8 @@
       background-size: 100% 100%;
     };
 
-    // & img {
-    //   width: 100%;
-    //   position: absolute;
-    //   top: -25vw;
-    //   z-index: 10;
-    // }
-
     & h2 {
+
       color: $black;
       display: table-cell;
       vertical-align: middle;
@@ -57,10 +54,13 @@
         position: relative;
         top: 36%;
       };
+
     }
+
   }
 
   &__body {
+
     width: 90%;
     margin: 0 auto;
     padding: 5vw 0;
@@ -79,15 +79,18 @@
     };
 
     &__title {
+
       font-size: $fontMedium;
       font-weight: 900;
 
       @include breakpoint(tabletOnly) {
         font-size: $fontBig;
       };
+
     }
 
     & button {
+
       background: $yellow;
       color: $black;
       margin: 10vw auto;
@@ -99,6 +102,156 @@
       @include breakpoint(desktopOnly) {
         margin: 3vw 0 0 0;
       };
+
     }
+
+  }
+
+}
+
+.psychotest-question {
+  position: relative;
+  width: 100%;
+  letter-spacing: 1px;
+  padding: 10vw 0;
+
+  &--wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $black;
+    font-size: $fontLarge;
+    font-weight: 900;
+    margin: 5vw 0;
+  }
+
+  & .question-option {
+    width: 100%;
+    background: $lightGray;
+    border-bottom: 1px solid #e1dede;
+    overflow: visible;
+    position: relative;
+    z-index: 5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    // &.inactive {
+    //
+    // }
+
+    &__overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 10;
+
+      & .btn, & .option-cancel {
+        z-index: 20;
+      }
+
+      & .btn {
+        margin-top: 25vw;
+        padding: 15px 14.5vw;
+        background: $yellow;
+        color: $black;
+      }
+
+      & .option-cancel {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        @include circled-icon(30px);
+        background: $yellow;
+        color: $white;
+        font-size: $fontLarge;
+      }
+    }
+
+    &__image {
+      float: left;
+      width: 25%;
+      position: relative;
+      text-align: center;
+      padding-bottom: 12vw;
+
+      & img {
+        width: 100%;
+        margin-bottom: -3px;
+      }
+
+      & .question-option-circle {
+        @include circled-icon(30px);
+        background: $white;
+        border: 1px solid #e1dede;
+        margin: 12vw auto 0 auto;
+        position: relative;
+
+        &.text-only {
+          margin-top: 27vw;
+        }
+
+        &.active {
+          background: $lightGray;
+          border-color: $white;
+        }
+
+        & .tick {
+          display: none;
+          position: relative;
+          top: -1vw;
+          left: 1vw;
+        }
+      }
+
+    }
+
+    &__text {
+      float: left;
+      width: 55%;
+      padding: 5vw 10%;
+      line-height: 5vw;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        display: block;
+        content: "";
+        width: 1px;
+        background: #e1dede;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 70vw;
+      }
+
+      &__title {
+        font-weight: 900;
+        color: #6e6d6d;
+      }
+
+      &__body {
+        color: #7e7e7e;
+      }
+    }
+
+  }
+
+}
+
+.psychotest-counter {
+  font-size: $fontMedium;
+  font-weight: 700;
+  color: $black;
+
+  &__separator {
+    color: $yellow;
   }
 }
