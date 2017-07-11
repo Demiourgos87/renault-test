@@ -3477,62 +3477,53 @@
       var $currentQuestion = $($questions[currentSlide - 1]),
           $options = $currentQuestion.find('.question-option');
 
-      $.each($options, function() {
+      function activateOption(element) {
 
-        $(this).on('click', function(e) {
+        var $current = $(element).closest('.question-option'),
+            $overlay = $current.find('.question-option__overlay'),
+            $confirm = $overlay.find('.btn'),
+            $cancel = $overlay.find('.option-cancel'),
+            $tick = $current.find('.question-option-circle .tick');
 
-          var $current = $(this);
+        $current.addClass('active');
 
-          $current.addClass('active');
-
-          $.each($options, function(e) {
-
-            var $option = $(this);
-
-            if (!$option.hasClass('active')) {
-              $option.addClass('inactive');
-
-              // $.each($options, function() {
-              //   if ($(this).hasClass('inactive')) {
-              //     $(this).on('click', function() {
-              //       return false;
-              //     });
-              //   }
-              // });
-
-            }
-
-          });
-
-          var $overlay = $(this).find('.question-option__overlay'),
-              $confirm = $overlay.find('.btn'),
-              $cancel = $overlay.find('.option-cancel');
-
-          $overlay.fadeIn(200);
-
-          $cancel.on('click', function(e){
-            e.stopPropagation();
-            $overlay.fadeOut(200);
-            $current.removeClass('active');
-
-            $.each($options, function() {
-              if ($(this).hasClass('inactive')) {
-                $(this).removeClass('inactive');
-              }
-            });
-          });
-
-          $confirm.on('click', function() {
-            $pageWrap.slick('slickNext');
-          });
-
+        $.each($options, function() {
+          if (!$(this).hasClass('active')) {
+            $(this).addClass('inactive').off();
+          }
         });
 
+        $overlay.fadeIn(200);
+        $tick.fadeIn(200);
+
+        $cancel.on('click', function(e){
+          e.stopPropagation();
+          $overlay.fadeOut(200);
+          $tick.fadeOut(200);
+          $current.removeClass('active');
+
+          $.each($options, function() {
+            if ($(this).hasClass('inactive')) {
+              $(this).removeClass('inactive');
+            }
+            $options.on('click', function(e) {
+              activateOption(e.target);
+            });
+          });
+        });
+
+        $confirm.on('click', function() {
+          $pageWrap.slick('slickNext');
+        });
+
+      };
+
+      $options.on('click', function(e) {
+        activateOption(e.target);
       });
 
     });
 
   }
-
 
 })(jQuery);
