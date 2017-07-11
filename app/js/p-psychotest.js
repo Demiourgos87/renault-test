@@ -22,24 +22,80 @@
     current.text(currentQuestion);
   });
 
-  if (windowWidth < 1025) {
+  $pageWrap.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 400,
+    autoplay: false,
+    dots: false,
+    arrows: false,
+    draggable: false,
+    swipe: false
+  });
 
-    $pageWrap.slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      speed: 400,
-      autoplay: false,
-      dots: false,
-      arrows: false,
-      draggable: false,
-      swipe: false
+  // Set slick height to intro height
+  var $slickList = $pageWrap.find('.slick-list');
+  $slickList.height($intro.outerHeight());
+
+  $startButton.on('click', function(){ $pageWrap.slick('slickNext'); });
+
+  if (windowWidth > 1024) {
+
+    $intro.height(windowHeight - 62);
+    $slickList.height(windowHeight - 62);
+
+    $pageWrap.on('afterChange', function(event, slick, currentSlide) {
+
+      var $currentQuestion = $($questions[currentSlide - 1]),
+          $options = $currentQuestion.find('.question-option'),
+          $confirm = $currentQuestion.find('.btn-confirm');
+
+      function activateOption(element) {
+
+        var $current = $(element).closest('.question-option'),
+            $circle = $current.find('.question-option-circle'),
+            $tick = $circle.find('.tick');
+
+        $.each($options, function() {
+
+          var elem = $(this);
+
+          if (elem.hasClass('active')) {
+            elem.removeClass('active');
+            elem.find('.question-option-circle').removeClass('active');
+            elem.find('.tick').fadeOut(200);
+          }
+          if (elem.hasClass('inactive')) elem.removeClass('inactive');
+        });
+
+        $current.addClass('active');
+        $confirm.addClass('btn--yellow');
+
+        $.each($options, function() {
+          if (!$(this).hasClass('active')) {
+            $(this).addClass('inactive');
+          }
+        });
+
+        $circle.addClass('active');
+        $tick.fadeIn(200);
+
+        $confirm.on('click', function() {
+          $pageWrap.slick('slickNext');
+        });
+
+      }
+
+
+      $options.on('click', function(e) {
+        activateOption($(this));
+      });
+
     });
 
-    // Set slick height to intro height
-    var $slickList = $pageWrap.find('.slick-list');
-    $slickList.height($intro.outerHeight());
+  }
 
-    $startButton.on('click', function(){ $pageWrap.slick('slickNext'); });
+  if (windowWidth < 1025) {
 
     $pageWrap.on('afterChange', function(event, slick, currentSlide) {
 
