@@ -4,14 +4,15 @@
   // Cache DOM
   var $pageWrap = $('.p-psychotest'),
       $intro = $pageWrap.find('.psychotest-intro'),
+      $results = $pageWrap.find('.psychotest-results'),
       $startButton = $intro.find('.psychotest-start'),
+      $allSlides = $pageWrap.find('.psychotest-slide'),
       $questions = $pageWrap.find('.psychotest-question'),
       $counters = $pageWrap.find('.psychotest-counter'),
       windowWidth = $(window).outerWidth(),
       windowHeight = $(window).outerHeight();
 
-  $pageWrap.height(windowHeight - 62);
-
+  // Update counter
   $.each($counters, function() {
     var counter = $(this),
         currentQuestion = counter.closest('.psychotest-question').index(),
@@ -35,6 +36,10 @@
       swipe: false
     });
 
+    // Set slick height to intro height
+    var $slickList = $pageWrap.find('.slick-list');
+    $slickList.height($intro.outerHeight());
+
     $startButton.on('click', function(){ $pageWrap.slick('slickNext'); });
 
     $pageWrap.on('afterChange', function(event, slick, currentSlide) {
@@ -43,6 +48,14 @@
 
       var $currentQuestion = $($questions[currentSlide - 1]),
           $options = $currentQuestion.find('.question-option');
+
+      // Adjust slick height to results slide height
+      if ($($allSlides[currentSlide]).hasClass('psychotest-results')) {
+        $slickList.height($results.outerHeight());
+      }
+
+      // Adjust slick height to current question height
+      $slickList.height($currentQuestion.outerHeight());
 
       function activateOption(element) {
 
