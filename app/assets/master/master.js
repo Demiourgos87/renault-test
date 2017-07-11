@@ -3331,7 +3331,7 @@
   // More Read Slider \\
 
   // cache DOM \\
-  var $slider = $('.module-more-read .slider'),
+  var $slider = $('.c-more-read .slider'),
       $wrap = $slider.closest('.slider__wrap'),
       $arrowNext = $wrap.find('.fa-arrow-circle-o-right'),
       $arrowPrev = $wrap.find('.fa-arrow-circle-o-left'),
@@ -3483,7 +3483,8 @@
             $overlay = $current.find('.question-option__overlay'),
             $confirm = $overlay.find('.btn'),
             $cancel = $overlay.find('.option-cancel'),
-            $tick = $current.find('.question-option-circle .tick');
+            $circle = $current.find('.question-option-circle'),
+            $tick = $circle.find('.tick');
 
         $current.addClass('active');
 
@@ -3494,11 +3495,13 @@
         });
 
         $overlay.fadeIn(200);
+        $circle.addClass('active');
         $tick.fadeIn(200);
 
         $cancel.on('click', function(e){
           e.stopPropagation();
           $overlay.fadeOut(200);
+          $circle.removeClass('active');
           $tick.fadeOut(200);
           $current.removeClass('active');
 
@@ -3516,7 +3519,7 @@
           $pageWrap.slick('slickNext');
         });
 
-      };
+      }
 
       $options.on('click', function(e) {
         activateOption(e.target);

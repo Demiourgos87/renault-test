@@ -2,7 +2,7 @@
   // More Read Slider \\
 
   // cache DOM \\
-  var $slider = $('.module-more-read .slider'),
+  var $slider = $('.c-more-read .slider'),
       $wrap = $slider.closest('.slider__wrap'),
       $arrowNext = $wrap.find('.fa-arrow-circle-o-right'),
       $arrowPrev = $wrap.find('.fa-arrow-circle-o-left'),

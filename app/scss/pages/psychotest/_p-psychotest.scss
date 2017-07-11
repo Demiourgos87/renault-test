@@ -134,14 +134,17 @@
     overflow: visible;
     position: relative;
     z-index: 5;
+    opacity: 1;
+    transition: opacity .2s linear;
 
     &:last-child {
       border-bottom: none;
     }
 
-    // &.inactive {
-    //
-    // }
+    &.inactive {
+      filter: grayscale(100%);
+      opacity: 0.6;
+    }
 
     &__overlay {
       display: none;
@@ -193,6 +196,7 @@
         border: 1px solid #e1dede;
         margin: 12vw auto 0 auto;
         position: relative;
+        transition: all .2s linear;
 
         &.text-only {
           margin-top: 27vw;
@@ -253,5 +257,68 @@
 
   &__separator {
     color: $yellow;
+  }
+}
+
+.psychotest-results {
+  width: 100%;
+  margin: 10vw 0;
+  letter-spacing: 1px;
+  overflow: hidden;
+
+  &--wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-size: $fontVeryBig;
+    color: $yellow;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  &__image {
+    width: 140%;
+    margin-left: -16%;
+  }
+
+  & .c-social-share {
+    display: block;
+    width: 70%;
+    margin: 10vw auto 7vw auto;
+    text-align: center;
+
+    & .share__icon {
+      width: 16vw;
+      height: 16vw;
+      line-height: 16vw;
+    }
+  }
+
+  &__text {
+    line-height: 7vw;
+    color: #7e7e7e;
+    margin-bottom: 10vw;
+  }
+
+  & .btn {
+    width: 50%;
+    margin-bottom: 5vw;
+    text-align: center;
+  }
+
+  & .b-footer__logo {
+    margin: 40px auto;
+  }
+
+  & .c-more-read {
+    padding-top: 1vw;
+    margin-top: 15vw;
+  }
+
+  & .c-more-read .teaser__img img {
+    filter: grayscale(0);
   }
 }
