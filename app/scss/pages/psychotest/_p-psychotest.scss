@@ -115,6 +115,10 @@
   letter-spacing: 1px;
   padding: 10vw 0;
 
+  @include breakpoint(tabletOnly) {
+    padding: 5vw 0;
+  };
+
   &--wrap {
     width: 90%;
     margin: 0 auto;
@@ -125,6 +129,13 @@
     font-size: $fontLarge;
     font-weight: 900;
     margin: 5vw 0;
+
+    @include breakpoint(tabletOnly) {
+      display: inline-block;
+      width: 75%;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    };
   }
 
   & .question-option {
@@ -165,6 +176,20 @@
         padding: 15px 14.5vw;
         background: $yellow;
         color: $black;
+
+        @include breakpoint(tabletOnly) {
+          margin-top: 12vw;
+          padding: 15px 7.5vw;
+        };
+      }
+
+      & a.btn {
+        text-align: center;
+        width: 15vw;
+
+        @include breakpoint(tabletOnly) {
+          width: 9vw;
+        };
       }
 
       & .option-cancel {
@@ -185,9 +210,18 @@
       text-align: center;
       padding-bottom: 12vw;
 
+      @include breakpoint(tabletOnly) {
+        padding-bottom: 0;
+        position: static;
+      };
+
       & img {
         width: 100%;
         margin-bottom: -3px;
+
+        @include breakpoint(tabletAndDesktop) {
+          margin-bottom: 0;
+        };
       }
 
       & .question-option-circle {
@@ -198,8 +232,19 @@
         position: relative;
         transition: all .2s linear;
 
+        @include breakpoint(tabletOnly) {
+          position: absolute;
+          top: 45%;
+          right: 5%;
+          margin: 0;
+        };
+
         &.text-only {
           margin-top: 27vw;
+
+          @include breakpoint(tabletAndDesktop) {
+            margin-top: 0;
+          };
         }
 
         &.active {
@@ -212,6 +257,11 @@
           position: relative;
           top: -1vw;
           left: 1vw;
+
+          @include breakpoint(tabletAndDesktop) {
+            top: -0.6vw;
+            left: 0.6vw;
+          };
         }
       }
 
@@ -225,6 +275,11 @@
       position: relative;
       overflow: hidden;
 
+      @include breakpoint(tabletOnly) {
+        padding: 6vw 6%;
+        line-height: 2.5vw;
+      };
+
       &::before {
         display: block;
         content: "";
@@ -234,6 +289,10 @@
         top: 0;
         left: 0;
         height: 70vw;
+
+        @include breakpoint(tabletAndDesktop) {
+          display: none;
+        };
       }
 
       &__title {
@@ -255,70 +314,16 @@
   font-weight: 700;
   color: $black;
 
+  @include breakpoint(tabletOnly) {
+    font-size: $fontVeryBig;
+    display: inline-block;
+    width: 18%;
+    position: relative;
+    top: -2.5vw;
+  };
+
   &__separator {
     color: $yellow;
   }
-}
 
-.psychotest-results {
-  width: 100%;
-  margin: 10vw 0;
-  letter-spacing: 1px;
-  overflow: hidden;
-
-  &--wrap {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  &__heading {
-    font-size: $fontVeryBig;
-    color: $yellow;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 0;
-  }
-
-  &__image {
-    width: 140%;
-    margin-left: -16%;
-  }
-
-  & .c-social-share {
-    display: block;
-    width: 70%;
-    margin: 10vw auto 7vw auto;
-    text-align: center;
-
-    & .share__icon {
-      width: 16vw;
-      height: 16vw;
-      line-height: 16vw;
-    }
-  }
-
-  &__text {
-    line-height: 7vw;
-    color: #7e7e7e;
-    margin-bottom: 10vw;
-  }
-
-  & .btn {
-    width: 50%;
-    margin-bottom: 5vw;
-    text-align: center;
-  }
-
-  & .b-footer__logo {
-    margin: 40px auto;
-  }
-
-  & .c-more-read {
-    padding-top: 1vw;
-    margin-top: 15vw;
-  }
-
-  & .c-more-read .teaser__img img {
-    filter: grayscale(0);
-  }
 }

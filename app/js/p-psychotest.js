@@ -4,7 +4,6 @@
   // Cache DOM
   var $pageWrap = $('.p-psychotest'),
       $intro = $pageWrap.find('.psychotest-intro'),
-      $results = $pageWrap.find('.psychotest-results'),
       $startButton = $intro.find('.psychotest-start'),
       $allSlides = $pageWrap.find('.psychotest-slide'),
       $questions = $pageWrap.find('.psychotest-question'),
@@ -48,11 +47,6 @@
 
       var $currentQuestion = $($questions[currentSlide - 1]),
           $options = $currentQuestion.find('.question-option');
-
-      // Adjust slick height to results slide height
-      if ($($allSlides[currentSlide]).hasClass('psychotest-results')) {
-        $slickList.height($results.outerHeight());
-      }
 
       // Adjust slick height to current question height
       $slickList.height($currentQuestion.outerHeight());
