@@ -1,0 +1,83 @@
+.hp-main-slider {
+
+  width: 100%;
+  position: relative;
+
+  &--wrap {
+    width: 100%;
+    position: relative;
+  }
+
+  &__navigation {
+
+
+
+    @include breakpoint(phoneOnly) {
+      display: none;
+    };
+  }
+
+  &__counter {
+    color: $white;
+    font-size: $fontMedium;
+    font-weight: 700;
+    position: absolute;
+    bottom: 8vw;
+    right: 5vw;
+    z-index: 1000;
+
+    & .current {
+      color: $yellow;
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    position: relative;
+
+    & img, & iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.image {
+
+      & .slide-text {
+        position: absolute;
+        top: 8vw;
+        left: 4vw;
+        width: 73%;
+
+        & .btn {
+          padding: 2vw;
+          font-size: $fontVerySmall;
+        }
+
+        & p {
+          margin: 0;
+        }
+
+        &__heading {
+          color: $yellow;
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+
+        &__title {
+          color: $white;
+          font-size: 1.4rem;
+          font-weight: 900;
+        }
+      }
+
+    }
+
+    &.video {
+      & iframe {
+        height: 100%;
+      }
+    }
+
+  }
+
+}
