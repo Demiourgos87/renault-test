@@ -1,0 +1,68 @@
+.c-social-share {
+  display: inline-block;
+  background: $lightGray;
+  padding: 0 15px;
+  margin: 10px 0 30px 0;
+
+  @include breakpoint(tabletAndDesktop) {
+    padding: 0 25px;
+  };
+
+  @include breakpoint(desktopOnly) {
+    float: left;
+    width: 6%;
+    margin: 0 4% 0 0;
+    padding: 20px 0;
+  };
+
+  & .share__icon {
+    display: inline-block;
+    margin-right: 3vw;
+    position: relative;
+    top: -6vw;
+    width: 18vw;
+    height: 18vw;
+    line-height: 18vw;
+    text-align: center;
+    background: $white;
+    color: $yellow;
+    border: 1px solid $yellow;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+
+    @include breakpoint(tabletAndDesktop) {
+      top: -3vw;
+      width: 9vw;
+      height: 9vw;
+      line-height: 9vw;
+    };
+
+    @include breakpoint(desktopOnly) {
+      top: 0;
+      left: -2vw;
+      width: 4vw;
+      height: 4vw;
+      line-height: 4vw;
+      margin-bottom: 20px;
+      margin-right: 0;
+      font-size: $fontLarge;
+    };
+
+    &:last-child {
+      margin-right: 0;
+
+      @include breakpoint(desktopOnly) {
+        margin-bottom: 0;
+      };
+    }
+
+    & i {
+      font-size: $fontLarge;
+      margin-top: 10px;
+
+      @include breakpoint(tabletAndDesktop) {
+        font-size: $fontBig;
+      };
+    }
+  }
+
+}

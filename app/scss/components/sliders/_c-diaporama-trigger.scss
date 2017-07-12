@@ -54,14 +54,26 @@
   background: $yellow;
   color: $black;
   bottom: -24vw;
+
+  @include breakpoint(phoneAndTablet) {
+    top: 0;
+  };
 }
 
 .diaporama-trigger__prev {
   left: 30%;
+
+  @include breakpoint(phoneAndTablet) {
+    left: 0;
+  };
 }
 
 .diaporama-trigger__next {
   right: 26%;
+
+  @include breakpoint(phoneAndTablet) {
+    right: 0;
+  };
 }
 
 .diaporama-trigger__navigation .btn {

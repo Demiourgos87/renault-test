@@ -315,7 +315,8 @@ a img {
   border: 0;
   cursor: pointer;
   transition: all 0.15s linear;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  outline: none; }
 
 .btn:hover {
   background: #000000;
@@ -762,6 +763,61 @@ a img {
     margin: 0 auto;
     display: block; } }
 
+.c-social-share {
+  display: inline-block;
+  background: #f6f6f6;
+  padding: 0 15px;
+  margin: 10px 0 30px 0; }
+  @media (min-width: 768px) {
+    .c-social-share {
+      padding: 0 25px; } }
+  @media (min-width: 1025px) {
+    .c-social-share {
+      float: left;
+      width: 6%;
+      margin: 0 4% 0 0;
+      padding: 20px 0; } }
+  .c-social-share .share__icon {
+    display: inline-block;
+    margin-right: 3vw;
+    position: relative;
+    top: -6vw;
+    width: 18vw;
+    height: 18vw;
+    line-height: 18vw;
+    text-align: center;
+    background: #ffffff;
+    color: #ffcc33;
+    border: 1px solid #ffcc33;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2); }
+    @media (min-width: 768px) {
+      .c-social-share .share__icon {
+        top: -3vw;
+        width: 9vw;
+        height: 9vw;
+        line-height: 9vw; } }
+    @media (min-width: 1025px) {
+      .c-social-share .share__icon {
+        top: 0;
+        left: -2vw;
+        width: 4vw;
+        height: 4vw;
+        line-height: 4vw;
+        margin-bottom: 20px;
+        margin-right: 0;
+        font-size: 1.4rem; } }
+    .c-social-share .share__icon:last-child {
+      margin-right: 0; }
+      @media (min-width: 1025px) {
+        .c-social-share .share__icon:last-child {
+          margin-bottom: 0; } }
+    .c-social-share .share__icon i {
+      font-size: 1.4rem;
+      margin-top: 10px; }
+      @media (min-width: 768px) {
+        .c-social-share .share__icon i {
+          font-size: 1.6rem; } }
+
 .c-page-title {
   width: 100%;
   font-size: 3rem;
@@ -879,6 +935,7 @@ a img {
   float: left;
   height: 100%;
   min-height: 1px;
+  outline: none;
   display: none; }
   [dir="rtl"] .slick-slide {
     float: right; }
@@ -953,12 +1010,21 @@ a img {
   background: #ffcc33;
   color: #000000;
   bottom: -24vw; }
+  @media (max-width: 1024px) {
+    .diaporama-trigger__prev, .diaporama-trigger__next {
+      top: 0; } }
 
 .diaporama-trigger__prev {
   left: 30%; }
+  @media (max-width: 1024px) {
+    .diaporama-trigger__prev {
+      left: 0; } }
 
 .diaporama-trigger__next {
   right: 26%; }
+  @media (max-width: 1024px) {
+    .diaporama-trigger__next {
+      right: 0; } }
 
 .diaporama-trigger__navigation .btn {
   left: 50%;
@@ -1303,94 +1369,94 @@ html.diaporamaOpened, body.diaporamaOpened {
   .c-faq-slider .container--full {
     height: 23rem; } }
 
-.module-more-read {
+.c-more-read {
   width: 100%;
   padding-top: 20px; }
 
-.module-more-read .teaser__body {
+.c-more-read .teaser__body {
   background: transparent; }
 
-.module-more-read .teaser__title {
+.c-more-read .teaser__title {
   font-weight: 700; }
 
-.module-more-read .teaser__img img {
+.c-more-read .teaser__img img {
   filter: grayscale(100%); }
 
-.module-more-read .teaser__img:hover img {
+.c-more-read .teaser__img:hover img {
   filter: grayscale(0); }
 
-.module-more-read__wrap {
+.c-more-read__wrap {
   width: 80%;
   margin: 0 auto; }
 
-.module-more-read .slider__wrap {
+.c-more-read .slider__wrap {
   position: relative; }
 
-.module-more-read .slider {
+.c-more-read .slider {
   overflow: hidden; }
 
-.module-more-read .slider__wrap i {
+.c-more-read .slider__wrap i {
   position: absolute;
   top: 40%;
   font-size: 2rem;
   color: #5a5a5a; }
 
-.module-more-read .slider__wrap i.fa-arrow-circle-o-left {
+.c-more-read .slider__wrap i.fa-arrow-circle-o-left {
   left: -5vw; }
 
-.module-more-read .slider__wrap i.fa-arrow-circle-o-right {
+.c-more-read .slider__wrap i.fa-arrow-circle-o-right {
   right: -3vw; }
 
-.module-more-read .teaser .teaser__body {
+.c-more-read .teaser .teaser__body {
   font-size: 0.8rem; }
 
-.module-more-read .slider .teaser--m:last-child {
+.c-more-read .slider .teaser--m:last-child {
   margin-left: 0; }
 
-.module-more-read i {
+.c-more-read i {
   cursor: pointer; }
 
 @media only screen and (min-width: 319px) and (max-width: 767px) {
-  .module-more-read__wrap {
+  .c-more-read__wrap {
     width: 90%; }
-  .module-more-read .slider__wrap {
+  .c-more-read .slider__wrap {
     width: 100%; }
-  .module-more-read .teaser {
+  .c-more-read .teaser {
     height: 67vw; }
-  .module-more-read i {
+  .c-more-read i {
     display: none; }
-  .module-more-read .slider .teaser:nth-child(2n+0) {
+  .c-more-read .slider .teaser:nth-child(2n+0) {
     margin-right: 0;
     margin-left: 1%; } }
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
-  .module-more-read__wrap {
+  .c-more-read__wrap {
     height: 17vw; }
-  .module-more-read .slider__wrap {
+  .c-more-read .slider__wrap {
     margin-left: 20vw; }
-  .module-more-read .slider__wrap {
+  .c-more-read .slider__wrap {
     top: -15vw; }
-  .module-more-read .slider .teaser--m {
+  .c-more-read .slider .teaser--m {
     width: 24%; }
-  .module-more-read .c-section-title.heading--row {
+  .c-more-read .c-section-title.heading--row {
     width: 8vw; } }
 
 @media only screen and (min-width: 1025px) {
-  .module-more-read__wrap {
+  .c-more-read__wrap {
     height: 12vw; }
-  .module-more-read .slider__wrap {
+  .c-more-read .slider__wrap {
     margin-left: 20vw; }
-  .module-more-read .slider__wrap {
+  .c-more-read .slider__wrap {
     top: -11vw; }
-  .module-more-read .slider .teaser--m {
+  .c-more-read .slider .teaser--m {
     width: 24%; }
-  .module-more-read .c-section-title.heading--row {
+  .c-more-read .c-section-title.heading--row {
     width: 6vw; } }
 
 @media only screen and (min-width: 1900px) {
-  .module-more-read .slider__wrap {
+  .c-more-read .slider__wrap {
     top: -8vw; }
-  .module-more-read .teaser--m {
+  .c-more-read .teaser--m {
     margin-right: 1.1%; } }
 
 .portrait__slider {
@@ -1993,33 +2059,6 @@ html.diaporamaOpened, body.diaporamaOpened {
   font-size: 1.6rem;
   margin-top: 20px; }
 
-.article-body__social-share {
-  display: inline-block;
-  background: #f6f6f6;
-  padding: 0 15px;
-  margin: 10px 0 30px 0; }
-
-.share__icon {
-  display: inline-block;
-  margin-right: 3vw;
-  position: relative;
-  top: -6vw;
-  width: 18vw;
-  height: 18vw;
-  line-height: 18vw;
-  text-align: center;
-  background: #ffffff;
-  color: #ffcc33;
-  border: 1px solid #ffcc33;
-  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2); }
-
-.share__icon:last-child {
-  margin-right: 0; }
-
-.share__icon i {
-  font-size: 1.4rem;
-  margin-top: 10px; }
-
 .article-body__date {
   color: #5a5a5a; }
 
@@ -2048,16 +2087,7 @@ html.diaporamaOpened, body.diaporamaOpened {
 
 @media only screen and (min-width: 767px) {
   .article-body__main-title {
-    font-size: 2.3rem; }
-  .article-body__social-share {
-    padding: 0 25px; }
-  .share__icon {
-    top: -3vw;
-    width: 9vw;
-    height: 9vw;
-    line-height: 9vw; }
-  .share__icon i {
-    font-size: 1.6rem; } }
+    font-size: 2.3rem; } }
 
 @media only screen and (min-width: 1025px) {
   .article-body {
@@ -2068,23 +2098,8 @@ html.diaporamaOpened, body.diaporamaOpened {
     margin-left: 4vw; }
   .article-body__category {
     margin-left: 4vw; }
-  .article-body__social-share, .article-body__main-content, .article-body__body .c-test-start {
+  .article-body__main-content, .article-body__body .c-test-start {
     float: left; }
-  .article-body__social-share {
-    width: 6%;
-    margin: 0 4% 0 0;
-    padding: 20px 0; }
-  .share__icon {
-    top: 0;
-    left: -2vw;
-    width: 4vw;
-    height: 4vw;
-    line-height: 4vw;
-    margin-bottom: 20px;
-    margin-right: 0;
-    font-size: 1.4rem; }
-  .share__icon:last-child {
-    margin-bottom: 0; }
   .article-body__main-content {
     width: 56%;
     margin-right: 4%; }
@@ -2396,7 +2411,7 @@ p.article-paragraph__heading {
     width: 41.5%;
     margin: 0;
     float: left; }
-  .article-portrait-body__wrap .article-body__social-share {
+  .article-portrait-body__wrap .c-social-share {
     float: none;
     width: auto; }
   .article-portrait-body__wrap .article-body__main-content {
@@ -2410,7 +2425,7 @@ p.article-paragraph__heading {
     width: 100%;
     font-size: 2.5rem;
     margin-left: 0; }
-  .article-portrait-body__wrap .article-body__social-share {
+  .article-portrait-body__wrap .c-social-share {
     padding: 0 15px;
     margin: 10px 0 30px 0; }
   .article-portrait-body__wrap .article-body__category {
@@ -2671,3 +2686,464 @@ p.article-paragraph__heading {
   .p-404-notice__image {
     width: 100%;
     z-index: 10; }
+
+.p-psychotest {
+  width: 100%;
+  background: #ffffff; }
+  @media (min-width: 1025px) {
+    .p-psychotest {
+      overflow-y: hidden; } }
+
+.psychotest-intro {
+  width: 100%;
+  position: relative;
+  margin: 0; }
+  @media (min-width: 1025px) {
+    .psychotest-intro {
+      height: 100%; } }
+  .psychotest-intro__image {
+    display: table;
+    width: 100%;
+    height: 80vw;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background: url("../../assets/image/psychotest/psychotest_intro2.png") no-repeat center;
+    background-size: 100%; }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .psychotest-intro__image {
+        height: 50vw; } }
+    @media (min-width: 1025px) {
+      .psychotest-intro__image {
+        display: inline-block;
+        width: 45%;
+        height: 100%;
+        background-size: 100% 100%; } }
+    .psychotest-intro__image h2 {
+      color: #000000;
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 1.6rem; }
+      @media (min-width: 767px) and (max-width: 1024px) {
+        .psychotest-intro__image h2 {
+          font-size: 3rem; } }
+      @media (min-width: 1025px) {
+        .psychotest-intro__image h2 {
+          display: block;
+          position: relative;
+          top: 36%; } }
+  .psychotest-intro__body {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5vw 0;
+    letter-spacing: 1px; }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .psychotest-intro__body {
+        width: 70%; } }
+    @media (min-width: 1025px) {
+      .psychotest-intro__body {
+        display: inline-block;
+        position: absolute;
+        top: 10vw;
+        width: 34%;
+        padding: 0 10%; } }
+    .psychotest-intro__body__title {
+      font-size: 1.2rem;
+      font-weight: 900; }
+      @media (min-width: 767px) and (max-width: 1024px) {
+        .psychotest-intro__body__title {
+          font-size: 1.6rem; } }
+    .psychotest-intro__body button {
+      background: #ffcc33;
+      color: #000000;
+      margin: 10vw auto; }
+      @media (min-width: 767px) and (max-width: 1024px) {
+        .psychotest-intro__body button {
+          margin: 5vw auto; } }
+      @media (min-width: 1025px) {
+        .psychotest-intro__body button {
+          margin: 3vw 0 0 0; } }
+
+.psychotest-counter {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000; }
+  @media (min-width: 768px) {
+    .psychotest-counter {
+      font-size: 2rem;
+      display: inline-block;
+      width: 18%;
+      position: relative;
+      top: -2.5vw; } }
+  @media (min-width: 1025px) {
+    .psychotest-counter {
+      font-size: 1.4rem;
+      width: 10%;
+      top: -1.5vw;
+      margin-left: 20%; } }
+  .psychotest-counter__separator {
+    color: #ffcc33; }
+
+.psychotest-question {
+  position: relative;
+  width: 100%;
+  letter-spacing: 1px;
+  padding: 10vw 0; }
+  @media (min-width: 767px) and (max-width: 1024px) {
+    .psychotest-question {
+      padding: 5vw 0; } }
+  @media (min-width: 1025px) {
+    .psychotest-question {
+      padding: 2vw 0; } }
+  .psychotest-question--wrap {
+    width: 90%;
+    margin: 0 auto; }
+    @media (min-width: 1025px) {
+      .psychotest-question--wrap {
+        width: 80%; } }
+  .psychotest-question__title {
+    color: #000000;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin: 5vw 0; }
+    @media (min-width: 768px) {
+      .psychotest-question__title {
+        display: inline-block;
+        width: 75%;
+        font-size: 2.2rem;
+        letter-spacing: 1px; } }
+    @media (min-width: 1025px) {
+      .psychotest-question__title {
+        width: 50%;
+        font-size: 1.6rem;
+        margin: 0 0 2vw 0; } }
+  .psychotest-question .question-option {
+    width: 100%;
+    background: #f6f6f6;
+    border-bottom: 1px solid #e1dede;
+    overflow: visible;
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity .2s linear; }
+    @media (min-width: 1025px) {
+      .psychotest-question .question-option {
+        width: 50%;
+        float: left; }
+        .psychotest-question .question-option:nth-last-child(-n+2) {
+          border-bottom: none;
+          margin-bottom: 1px; } }
+    @media (min-width: 1025px) {
+      .psychotest-question .question-option.no-image .question-option__text {
+        padding: 1vw 6%;
+        margin-top: 0; } }
+    .psychotest-question .question-option:last-child {
+      border-bottom: none; }
+    .psychotest-question .question-option.inactive {
+      filter: grayscale(100%);
+      opacity: 0.6; }
+    .psychotest-question .question-option__overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 10; }
+      .psychotest-question .question-option__overlay .btn, .psychotest-question .question-option__overlay .option-cancel {
+        z-index: 20; }
+      .psychotest-question .question-option__overlay .btn {
+        margin-top: 25vw;
+        padding: 15px 14.5vw;
+        background: #ffcc33;
+        color: #000000; }
+        @media (min-width: 767px) and (max-width: 1024px) {
+          .psychotest-question .question-option__overlay .btn {
+            margin-top: 12vw;
+            padding: 15px 7.5vw; } }
+      .psychotest-question .question-option__overlay a.btn {
+        text-align: center;
+        width: 15vw; }
+        @media (min-width: 767px) and (max-width: 1024px) {
+          .psychotest-question .question-option__overlay a.btn {
+            width: 9vw; } }
+      .psychotest-question .question-option__overlay .option-cancel {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 100%;
+        background: #ffcc33;
+        color: #ffffff;
+        font-size: 1.4rem; }
+    .psychotest-question .question-option__image {
+      float: left;
+      width: 25%;
+      position: relative;
+      text-align: center;
+      padding-bottom: 12vw; }
+      @media (min-width: 768px) {
+        .psychotest-question .question-option__image {
+          padding-bottom: 0;
+          position: static; } }
+      @media (min-width: 1025px) {
+        .psychotest-question .question-option__image {
+          width: 20%; } }
+      .psychotest-question .question-option__image img {
+        width: 100%;
+        margin-bottom: -3px; }
+        @media (min-width: 768px) {
+          .psychotest-question .question-option__image img {
+            margin-bottom: 0; } }
+      .psychotest-question .question-option__image .question-option-circle {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 100%;
+        background: #ffffff;
+        border: 1px solid #e1dede;
+        margin: 12vw auto 0 auto;
+        position: relative;
+        transition: all .2s linear; }
+        @media (min-width: 768px) {
+          .psychotest-question .question-option__image .question-option-circle {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            margin: -16px 0 0 0; } }
+        .psychotest-question .question-option__image .question-option-circle.text-only {
+          margin-top: 27vw; }
+          @media (min-width: 768px) {
+            .psychotest-question .question-option__image .question-option-circle.text-only {
+              position: absolute;
+              top: 50%;
+              right: 5%;
+              margin: -16px 0 0 0; } }
+        .psychotest-question .question-option__image .question-option-circle.active {
+          background: #f6f6f6;
+          border-color: #ffffff; }
+        .psychotest-question .question-option__image .question-option-circle .tick {
+          display: none;
+          position: relative;
+          top: -1vw;
+          left: 1vw; }
+          @media (min-width: 768px) {
+            .psychotest-question .question-option__image .question-option-circle .tick {
+              top: -0.6vw;
+              left: 0.6vw; } }
+          @media (min-width: 1025px) {
+            .psychotest-question .question-option__image .question-option-circle .tick {
+              top: -0.4vw;
+              left: 0.4vw; } }
+    .psychotest-question .question-option__text {
+      float: left;
+      width: 55%;
+      padding: 5vw 10%;
+      line-height: 5vw;
+      position: relative;
+      overflow: hidden; }
+      @media (min-width: 767px) and (max-width: 1024px) {
+        .psychotest-question .question-option__text {
+          padding: 6vw 6%;
+          line-height: 2.5vw; } }
+      @media (min-width: 1025px) {
+        .psychotest-question .question-option__text {
+          padding: 0vw 6%;
+          line-height: 1.3vw;
+          font-size: 0.8rem;
+          margin-top: 0.8vw; } }
+      @media (min-width: 1900px) {
+        .psychotest-question .question-option__text {
+          line-height: 1.2vw;
+          margin-top: 1.8vw; } }
+      .psychotest-question .question-option__text::before {
+        display: block;
+        content: "";
+        width: 1px;
+        background: #e1dede;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 70vw; }
+        @media (min-width: 768px) {
+          .psychotest-question .question-option__text::before {
+            display: none; } }
+      .psychotest-question .question-option__text__title {
+        font-weight: 900;
+        color: #6e6d6d; }
+      .psychotest-question .question-option__text__body {
+        color: #7e7e7e; }
+  .psychotest-question .btn-confirm {
+    position: relative;
+    top: 3vw; }
+    @media (max-width: 1024px) {
+      .psychotest-question .btn-confirm {
+        display: none; } }
+    @media (min-width: 1900px) {
+      .psychotest-question .btn-confirm {
+        top: 2vw; } }
+    .psychotest-question .btn-confirm span {
+      display: inline-block; }
+    .psychotest-question .btn-confirm i {
+      display: none;
+      font-size: 1.5rem;
+      color: #ffffff;
+      position: absolute;
+      right: 1.5vw;
+      top: 0.8vw; }
+      @media (min-width: 1900px) {
+        .psychotest-question .btn-confirm i {
+          top: 0.5vw; } }
+  .psychotest-question .btn-confirm:hover i {
+    display: inline-block; }
+  .psychotest-question .btn-confirm:hover span {
+    padding-right: 2vw; }
+  .psychotest-question a.btn-confirm {
+    width: 7vw; }
+
+.p-psychotest-results {
+  width: 100%;
+  letter-spacing: 1px; }
+  .p-psychotest-results--wrap {
+    width: 90%;
+    margin: 0 auto; }
+    @media (min-width: 1025px) {
+      .p-psychotest-results--wrap {
+        width: 100%;
+        position: relative;
+        min-height: 30vw;
+        margin-top: 2vw; } }
+  .p-psychotest-results__heading {
+    font-size: 2rem;
+    color: #ffcc33;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0; }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .p-psychotest-results__heading {
+        font-size: 2.5rem; } }
+    @media (min-width: 1025px) {
+      .p-psychotest-results__heading {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        width: 40%;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0; } }
+  .p-psychotest-results__image {
+    width: 140%;
+    margin-left: -16%; }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .p-psychotest-results__image {
+        width: 120%;
+        margin-left: -6%; } }
+    @media (min-width: 1025px) {
+      .p-psychotest-results__image {
+        width: 55%;
+        position: absolute;
+        left: 21%; } }
+  .p-psychotest-results .c-social-share {
+    display: block;
+    width: 70%;
+    margin: 10vw auto 7vw auto;
+    text-align: center; }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .p-psychotest-results .c-social-share {
+        width: 34%;
+        padding-bottom: 1vw; } }
+    @media (min-width: 1025px) {
+      .p-psychotest-results .c-social-share {
+        display: block;
+        width: 3vw;
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        top: 6vw; } }
+    .p-psychotest-results .c-social-share .share__icon {
+      width: 16vw;
+      height: 16vw;
+      line-height: 16vw; }
+      @media (min-width: 767px) and (max-width: 1024px) {
+        .p-psychotest-results .c-social-share .share__icon {
+          width: 6vw;
+          height: 6vw;
+          line-height: 6vw;
+          top: -3vw;
+          margin-right: 2vw; }
+          .p-psychotest-results .c-social-share .share__icon:last-child {
+            margin-right: 0; } }
+      @media (min-width: 1025px) {
+        .p-psychotest-results .c-social-share .share__icon {
+          width: 3vw;
+          height: 3vw;
+          line-height: 3vw;
+          left: -1.5vw; } }
+      .p-psychotest-results .c-social-share .share__icon i {
+        font-size: 1rem; }
+  .p-psychotest-results__text {
+    line-height: 7vw;
+    color: #7e7e7e;
+    margin-bottom: 10vw; }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .p-psychotest-results__text {
+        line-height: 3vw;
+        color: #7e7e7e;
+        margin-bottom: 5vw; } }
+    @media (min-width: 1025px) {
+      .p-psychotest-results__text {
+        line-height: 1.5vw;
+        width: 40%;
+        position: absolute;
+        color: #7e7e7e;
+        margin-bottom: 10vw;
+        right: 0;
+        top: 3vw;
+        font-size: 0.8rem; } }
+  .p-psychotest-results .buttons-wrap {
+    text-align: center; }
+  .p-psychotest-results .btn {
+    width: 50%;
+    margin-top: 7vw;
+    text-align: center; }
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .p-psychotest-results .btn {
+        width: 21vw;
+        margin-top: 5vw;
+        display: inline-block;
+        margin-left: 6vw; } }
+    @media (min-width: 1025px) {
+      .p-psychotest-results .btn {
+        padding: 1vw;
+        width: 40%;
+        margin-top: 2vw;
+        display: inline-block;
+        text-align: center;
+        font-size: 0.6rem; }
+        .p-psychotest-results .btn:first-child {
+          margin-right: 1vw; } }
+
+.c-more-read.psychotest-results {
+  padding-top: 1vw;
+  margin-top: 15vw; }
+  @media (min-width: 767px) and (max-width: 1024px) {
+    .c-more-read.psychotest-results {
+      margin-top: 4vw; } }
+  @media (min-width: 1025px) {
+    .c-more-read.psychotest-results {
+      margin-top: 2vw; } }
+  @media (min-width: 1900px) {
+    .c-more-read.psychotest-results {
+      margin-top: 0; } }
+  .c-more-read.psychotest-results .teaser__img img {
+    filter: grayscale(0); }

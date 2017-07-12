@@ -1,0 +1,449 @@
+.p-psychotest {
+  width: 100%;
+  background: $white;
+
+  @include breakpoint(desktopOnly) {
+    overflow-y: hidden;
+  };
+}
+
+.psychotest-intro {
+  width: 100%;
+  position: relative;
+  margin: 0;
+
+  @include breakpoint(desktopOnly) {
+    height: 100%;
+  };
+
+  &__image {
+
+    display: table;
+    width: 100%;
+    height: 80vw;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background: url('../../assets/image/psychotest/psychotest_intro2.png') no-repeat center;
+    background-size: 100%;
+
+    @include breakpoint(tabletOnly) {
+      height: 50vw;
+    };
+
+    @include breakpoint(desktopOnly) {
+      display: inline-block;
+      width: 45%;
+      height: 100%;
+      background-size: 100% 100%;
+    };
+
+    & h2 {
+
+      color: $black;
+      display: table-cell;
+      vertical-align: middle;
+      font-size: $fontBig;
+
+      @include breakpoint(tabletOnly) {
+        font-size: 3rem;
+      };
+
+      @include breakpoint(desktopOnly) {
+        display: block;
+        position: relative;
+        top: 36%;
+      };
+
+    }
+
+  }
+
+  &__body {
+
+    width: 90%;
+    margin: 0 auto;
+    padding: 5vw 0;
+    letter-spacing: 1px;
+
+    @include breakpoint(tabletOnly) {
+      width: 70%;
+    };
+
+    @include breakpoint(desktopOnly) {
+      display: inline-block;
+      position: absolute;
+      top: 10vw;
+      width: 34%;
+      padding: 0 10%;
+    };
+
+    &__title {
+
+      font-size: $fontMedium;
+      font-weight: 900;
+
+      @include breakpoint(tabletOnly) {
+        font-size: $fontBig;
+      };
+
+    }
+
+    & button {
+
+      background: $yellow;
+      color: $black;
+      margin: 10vw auto;
+
+      @include breakpoint(tabletOnly) {
+        margin: 5vw auto;
+      };
+
+      @include breakpoint(desktopOnly) {
+        margin: 3vw 0 0 0;
+      };
+
+    }
+
+  }
+
+}
+
+.psychotest-counter {
+  font-size: $fontMedium;
+  font-weight: 700;
+  color: $black;
+
+  @include breakpoint(tabletAndDesktop) {
+    font-size: $fontVeryBig;
+    display: inline-block;
+    width: 18%;
+    position: relative;
+    top: -2.5vw;
+  };
+
+  @include breakpoint(desktopOnly) {
+    font-size: $fontLarge;
+    width: 10%;
+    top: -1.5vw;
+    margin-left: 20%;
+  };
+
+  &__separator {
+    color: $yellow;
+  }
+
+}
+
+.psychotest-question {
+  position: relative;
+  width: 100%;
+  letter-spacing: 1px;
+  padding: 10vw 0;
+
+  @include breakpoint(tabletOnly) {
+    padding: 5vw 0;
+  };
+
+  @include breakpoint(desktopOnly) {
+    padding: 2vw 0;
+  };
+
+  &--wrap {
+    width: 90%;
+    margin: 0 auto;
+
+    @include breakpoint(desktopOnly) {
+      width: 80%;
+    };
+  }
+
+  &__title {
+    color: $black;
+    font-size: $fontLarge;
+    font-weight: 900;
+    margin: 5vw 0;
+
+    @include breakpoint(tabletAndDesktop) {
+      display: inline-block;
+      width: 75%;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    };
+
+    @include breakpoint(desktopOnly) {
+      width: 50%;
+      font-size: $fontBig;
+      margin: 0 0 2vw 0;
+    };
+  }
+
+  & .question-option {
+    width: 100%;
+    background: $lightGray;
+    border-bottom: 1px solid #e1dede;
+    overflow: visible;
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity .2s linear;
+
+    @include breakpoint(desktopOnly) {
+      width: 50%;
+      float: left;
+
+      &:nth-last-child(-n+2) {
+        border-bottom: none;
+        margin-bottom: 1px;
+      }
+    };
+
+    &.no-image {
+
+      & .question-option__text {
+        @include breakpoint(desktopOnly) {
+          padding: 1vw 6%;
+          margin-top: 0;
+        };
+      }
+    }
+
+    // &.no-image:nth-of-type(3n+0) {
+    //   &::after {
+    //     display: block;
+    //     width: 1px;
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
+    //     background: $darkGray;
+    //   }
+    // }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.inactive {
+      filter: grayscale(100%);
+      opacity: 0.6;
+    }
+
+    &__overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 10;
+
+      & .btn, & .option-cancel {
+        z-index: 20;
+      }
+
+      & .btn {
+        margin-top: 25vw;
+        padding: 15px 14.5vw;
+        background: $yellow;
+        color: $black;
+
+        @include breakpoint(tabletOnly) {
+          margin-top: 12vw;
+          padding: 15px 7.5vw;
+        };
+      }
+
+      & a.btn {
+        text-align: center;
+        width: 15vw;
+
+        @include breakpoint(tabletOnly) {
+          width: 9vw;
+        };
+      }
+
+      & .option-cancel {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        @include circled-icon(30px);
+        background: $yellow;
+        color: $white;
+        font-size: $fontLarge;
+      }
+    }
+
+    &__image {
+      float: left;
+      width: 25%;
+      position: relative;
+      text-align: center;
+      padding-bottom: 12vw;
+
+      @include breakpoint(tabletAndDesktop) {
+        padding-bottom: 0;
+        position: static;
+      };
+
+      @include breakpoint(desktopOnly) {
+        width: 20%;
+      };
+
+      & img {
+        width: 100%;
+        margin-bottom: -3px;
+
+        @include breakpoint(tabletAndDesktop) {
+          margin-bottom: 0;
+        };
+      }
+
+      & .question-option-circle {
+        @include circled-icon(30px);
+        background: $white;
+        border: 1px solid #e1dede;
+        margin: 12vw auto 0 auto;
+        position: relative;
+        transition: all .2s linear;
+
+        @include breakpoint(tabletAndDesktop) {
+          position: absolute;
+          top: 50%;
+          right: 5%;
+          margin: -16px 0 0 0;
+        };
+
+        &.text-only {
+          margin-top: 27vw;
+
+          @include breakpoint(tabletAndDesktop) {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            margin: -16px 0 0 0;
+          };
+
+        }
+
+        &.active {
+          background: $lightGray;
+          border-color: $white;
+        }
+
+        & .tick {
+          display: none;
+          position: relative;
+          top: -1vw;
+          left: 1vw;
+
+          @include breakpoint(tabletAndDesktop) {
+            top: -0.6vw;
+            left: 0.6vw;
+          };
+
+          @include breakpoint(desktopOnly) {
+            top: -0.4vw;
+            left: 0.4vw;
+          };
+        }
+      }
+
+    }
+
+    &__text {
+      float: left;
+      width: 55%;
+      padding: 5vw 10%;
+      line-height: 5vw;
+      position: relative;
+      overflow: hidden;
+
+      @include breakpoint(tabletOnly) {
+        padding: 6vw 6%;
+        line-height: 2.5vw;
+      };
+
+      @include breakpoint(desktopOnly) {
+        padding: 0vw 6%;
+        line-height: 1.3vw;
+        font-size: 0.8rem;
+        margin-top: 0.8vw;
+      };
+
+      @include breakpoint(desktopLarge) {
+        line-height: 1.2vw;
+        margin-top: 1.8vw;
+      };
+
+      &::before {
+        display: block;
+        content: "";
+        width: 1px;
+        background: #e1dede;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 70vw;
+
+        @include breakpoint(tabletAndDesktop) {
+          display: none;
+        };
+      }
+
+      &__title {
+        font-weight: 900;
+        color: #6e6d6d;
+      }
+
+      &__body {
+        color: #7e7e7e;
+      }
+    }
+
+  }
+
+  & .btn-confirm {
+    position: relative;
+    top: 3vw;
+
+    @include breakpoint(phoneAndTablet) {
+      display: none;
+    };
+
+    @include breakpoint(desktopLarge) {
+      top: 2vw;
+    };
+
+    & span {
+      display: inline-block;
+    }
+
+    & i {
+      display: none;
+      font-size: 1.5rem;
+      color: $white;
+      position: absolute;
+      right: 1.5vw;
+      top: 0.8vw;
+
+      @include breakpoint(desktopLarge) {
+        top: 0.5vw;
+      };
+    }
+  }
+
+  & .btn-confirm:hover i {
+    display: inline-block;
+  }
+
+  & .btn-confirm:hover span {
+    padding-right: 2vw;
+  }
+
+  & a.btn-confirm {
+    width: 7vw;
+  }
+
+}
