@@ -3463,7 +3463,8 @@
     dots: false,
     arrows: false,
     draggable: false,
-    swipe: false
+    swipe: false,
+    pauseOnHover: false
   });
 
   // Set slick height to intro height
@@ -3481,7 +3482,8 @@
 
       var $currentQuestion = $($questions[currentSlide - 1]),
           $options = $currentQuestion.find('.question-option'),
-          $confirm = $currentQuestion.find('.btn-confirm');
+          $confirm = $currentQuestion.find('.btn-confirm'),
+          $endTest = $currentQuestion.find('.btn-confirm.end-test');
 
       function activateOption(element) {
 
@@ -3513,15 +3515,21 @@
         $circle.addClass('active');
         $tick.fadeIn(200);
 
-        $confirm.on('click', function() {
-          $pageWrap.slick('slickNext');
-        });
-
       }
 
 
       $options.on('click', function(e) {
+        e.stopPropagation();
         activateOption($(this));
+      });
+
+      $confirm.on('click', function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('btn--yellow') && !$(this).hasClass('end-test')) $pageWrap.slick('slickNext');
+      });
+
+      $endTest.on('click', function(e) {
+        if (!$(this).hasClass('btn--yellow')) e.preventDefault();
       });
 
     });

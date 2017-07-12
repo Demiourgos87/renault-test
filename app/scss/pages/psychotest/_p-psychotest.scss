@@ -152,6 +152,10 @@
   &--wrap {
     width: 90%;
     margin: 0 auto;
+
+    @include breakpoint(desktopOnly) {
+      width: 80%;
+    };
   }
 
   &__title {
@@ -194,6 +198,16 @@
         margin-bottom: 1px;
       }
     };
+
+    &.no-image {
+
+      & .question-option__text {
+        @include breakpoint(desktopOnly) {
+          padding: 1vw 6%;
+          margin-top: 0;
+        };
+      }
+    }
 
     // &.no-image:nth-of-type(3n+0) {
     //   &::after {
@@ -296,17 +310,21 @@
 
         @include breakpoint(tabletAndDesktop) {
           position: absolute;
-          top: 45%;
+          top: 50%;
           right: 5%;
-          margin: 0;
+          margin: -16px 0 0 0;
         };
 
         &.text-only {
           margin-top: 27vw;
 
           @include breakpoint(tabletAndDesktop) {
-            margin-top: 0;
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            margin: -16px 0 0 0;
           };
+
         }
 
         &.active {
@@ -349,8 +367,14 @@
 
       @include breakpoint(desktopOnly) {
         padding: 0vw 6%;
-        line-height: 1.5vw;
-        margin-top: 1.5vw;
+        line-height: 1.3vw;
+        font-size: 0.8rem;
+        margin-top: 0.8vw;
+      };
+
+      @include breakpoint(desktopLarge) {
+        line-height: 1.2vw;
+        margin-top: 1.8vw;
       };
 
       &::before {
@@ -381,17 +405,41 @@
   }
 
   & .btn-confirm {
-    margin-top: 2vw;
-    padding-left: 2.5vw;
+    position: relative;
+    top: 3vw;
+
+    @include breakpoint(phoneAndTablet) {
+      display: none;
+    };
+
+    @include breakpoint(desktopLarge) {
+      top: 2vw;
+    };
+
+    & span {
+      display: inline-block;
+    }
 
     & i {
-      opacity: 0;
-      transition: opacity .2s linear;
+      display: none;
+      font-size: 1.5rem;
+      color: $white;
+      position: absolute;
+      right: 1.5vw;
+      top: 0.8vw;
+
+      @include breakpoint(desktopLarge) {
+        top: 0.5vw;
+      };
     }
   }
 
   & .btn-confirm:hover i {
-    opacity: 1;
+    display: inline-block;
+  }
+
+  & .btn-confirm:hover span {
+    padding-right: 2vw;
   }
 
   & a.btn-confirm {
