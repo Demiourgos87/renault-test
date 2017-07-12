@@ -2708,7 +2708,7 @@ p.article-paragraph__heading {
     overflow: hidden;
     position: relative;
     text-align: center;
-    background: url("../../../assets/image/psychotest/psychotest_intro2.png") no-repeat center;
+    background: url("../../assets/image/psychotest/psychotest_intro2.png") no-repeat center;
     background-size: 100%; }
     @media (min-width: 767px) and (max-width: 1024px) {
       .psychotest-intro__image {
