@@ -1,5 +1,5 @@
 .c-faq-slider {
-  margin-bottom: 150px;
+  margin-bottom: 35vw;
 }
 
 .c-faq-slider .slider__container {
@@ -62,6 +62,14 @@
 
   .c-faq-slider .c-section-title.heading--row {
     margin-bottom: 10px;
+  }
+
+  .c-faq-slider .slider__navigation {
+    margin-top: -4vw;
+  }
+
+  .c-faq-slider {
+    margin-bottom: 0;
   }
 }
 

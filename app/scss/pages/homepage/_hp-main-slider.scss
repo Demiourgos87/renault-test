@@ -1,0 +1,186 @@
+.hp-main-slider {
+
+  width: 100%;
+  position: relative;
+
+  &--wrap {
+    width: 100%;
+    position: relative;
+  }
+
+  &__navigation {
+
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 20;
+
+    &__left, &__right {
+      @include circled-icon(35px);
+      position: absolute;
+      top: 0;
+      cursor: pointer;
+      background: $yellow;
+      color: $black;
+    }
+
+    &__left {
+      left: 2vw;
+    }
+
+    &__right {
+      right: 2vw;
+    }
+
+    @include breakpoint(phoneOnly) {
+      display: none;
+    };
+
+  }
+
+  &__counter {
+    color: $white;
+    font-size: $fontMedium;
+    font-weight: 700;
+    position: absolute;
+    bottom: 8vw;
+    right: 5vw;
+    z-index: 1000;
+
+    @include breakpoint(tabletAndDesktop) {
+      font-size: $fontSmall;
+      bottom: 3vw;
+      left: 13vw;
+    };
+
+    @include breakpoint(desktopOnly) {
+      left: 15vw;
+    };
+
+    & .slider__current {
+      color: $yellow;
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    position: relative;
+
+    & img, & iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.image {
+
+      & .slide-text {
+        position: absolute;
+        top: 8vw;
+        left: 4vw;
+        width: 73%;
+
+        @include breakpoint(tabletOnly) {
+          top: 20vw;
+          left: 12vw;
+          width: 56%;
+        };
+
+        @include breakpoint(desktopOnly) {
+          top: 21vw;
+          left: 15vw;
+          width: 55%;
+        };
+
+        & .btn {
+          padding: 2vw;
+          font-size: $fontVerySmall;
+
+          @include breakpoint(tabletOnly) {
+            padding: 1vw 2vw;
+          };
+
+          @include breakpoint(desktopOnly) {
+            padding: 0.5vw 2vw;
+          };
+        }
+
+        & p {
+          margin: 0;
+        }
+
+        &__heading {
+          color: $yellow;
+          font-size: $fontMedium;
+          font-weight: 700;
+
+          @include breakpoint(tabletOnly) {
+            font-size: $fontLarge;
+          };
+
+          @include breakpoint(desktopOnly) {
+            font-size: $fontBig;
+          };
+        }
+
+        &__title {
+          color: $white;
+          font-size: $fontLarge;
+          font-weight: 900;
+
+          @include breakpoint(tabletOnly) {
+            font-size: $fontVeryBig;
+          };
+
+          @include breakpoint(desktopOnly) {
+            font-size: 3.2rem;
+          };
+        }
+
+        &__desc {
+          font-size: $fontNormal;
+          color: $white;
+
+          @include breakpoint(phoneOnly) {
+            display: none;
+          };
+
+          @include breakpoint(desktopOnly) {
+            font-size: $fontBig;
+          };
+        }
+      }
+
+    }
+
+    &.video {
+      // pointer-events: none;
+      & iframe {
+        height: 100%;
+        z-index: 0;
+      }
+
+      & .video__overlay {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 20;
+        background: transparent;
+
+        & span {
+          color: $white;
+          position: relative;
+          top: 21vw;
+
+          @include breakpoint(tabletAndDesktop) {
+            display: none;
+          };
+        }
+      }
+    }
+
+  }
+
+}

@@ -169,7 +169,7 @@ a img {
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
   .page__inner {
-    width: 80%;
+    width: 90%;
     padding: 40px 0;
     margin: 0 auto; } }
 
@@ -1311,7 +1311,7 @@ html.diaporamaOpened, body.diaporamaOpened {
     opacity: 1; }
 
 .c-faq-slider {
-  margin-bottom: 150px; }
+  margin-bottom: 35vw; }
 
 .c-faq-slider .slider__container {
   position: relative; }
@@ -1351,7 +1351,11 @@ html.diaporamaOpened, body.diaporamaOpened {
   .c-faq-slider .container--full {
     top: 0; }
   .c-faq-slider .c-section-title.heading--row {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .c-faq-slider .slider__navigation {
+    margin-top: -4vw; }
+  .c-faq-slider {
+    margin-bottom: 0; } }
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
   .c-faq-slider .container--full {
@@ -1744,8 +1748,11 @@ html.diaporamaOpened, body.diaporamaOpened {
 
 .hp-news {
   width: 100%;
-  margin: 50px 0 100px 0;
+  margin: 0 0 8vw 0;
   padding: 0; }
+  @media (min-width: 1025px) {
+    .hp-news {
+      margin: 2vw 0 7vw 0; } }
 
 @media only screen and (min-width: 767px) {
   .row--padded--top {
@@ -1760,6 +1767,9 @@ html.diaporamaOpened, body.diaporamaOpened {
   width: 90%;
   margin: 0 auto;
   position: relative; }
+
+.hp-fan__container.container--raised {
+  margin-top: -3.5%; }
 
 .teaser--fan .teaser__img {
   margin-bottom: -5px; }
@@ -1814,7 +1824,7 @@ html.diaporamaOpened, body.diaporamaOpened {
 
 @media only screen and (min-width: 767px) {
   .hp-astuces {
-    margin: 80px 0 50px 0; }
+    margin: 7vw 0 0 0; }
   .hp-astuces {
     border-top: 2px solid #f6f6f6; } }
 
@@ -1826,6 +1836,135 @@ html.diaporamaOpened, body.diaporamaOpened {
 @media only screen and (min-width: 767px) {
   .hp-business {
     border-top: 2px solid #f6f6f6; } }
+
+.hp-main-slider {
+  width: 100%;
+  position: relative; }
+  .hp-main-slider--wrap {
+    width: 100%;
+    position: relative; }
+  .hp-main-slider__navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 20; }
+    .hp-main-slider__navigation__left, .hp-main-slider__navigation__right {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 100%;
+      position: absolute;
+      top: 0;
+      cursor: pointer;
+      background: #ffcc33;
+      color: #000000; }
+    .hp-main-slider__navigation__left {
+      left: 2vw; }
+    .hp-main-slider__navigation__right {
+      right: 2vw; }
+    @media (max-width: 767px) {
+      .hp-main-slider__navigation {
+        display: none; } }
+  .hp-main-slider__counter {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 8vw;
+    right: 5vw;
+    z-index: 1000; }
+    @media (min-width: 768px) {
+      .hp-main-slider__counter {
+        font-size: 0.8rem;
+        bottom: 3vw;
+        left: 13vw; } }
+    @media (min-width: 1025px) {
+      .hp-main-slider__counter {
+        left: 15vw; } }
+    .hp-main-slider__counter .slider__current {
+      color: #ffcc33; }
+  .hp-main-slider__slide {
+    width: 100%;
+    position: relative; }
+    .hp-main-slider__slide img, .hp-main-slider__slide iframe {
+      width: 100%;
+      height: 100%; }
+    .hp-main-slider__slide.image .slide-text {
+      position: absolute;
+      top: 8vw;
+      left: 4vw;
+      width: 73%; }
+      @media (min-width: 767px) and (max-width: 1024px) {
+        .hp-main-slider__slide.image .slide-text {
+          top: 20vw;
+          left: 12vw;
+          width: 56%; } }
+      @media (min-width: 1025px) {
+        .hp-main-slider__slide.image .slide-text {
+          top: 21vw;
+          left: 15vw;
+          width: 55%; } }
+      .hp-main-slider__slide.image .slide-text .btn {
+        padding: 2vw;
+        font-size: 0.6rem; }
+        @media (min-width: 767px) and (max-width: 1024px) {
+          .hp-main-slider__slide.image .slide-text .btn {
+            padding: 1vw 2vw; } }
+        @media (min-width: 1025px) {
+          .hp-main-slider__slide.image .slide-text .btn {
+            padding: 0.5vw 2vw; } }
+      .hp-main-slider__slide.image .slide-text p {
+        margin: 0; }
+      .hp-main-slider__slide.image .slide-text__heading {
+        color: #ffcc33;
+        font-size: 1.2rem;
+        font-weight: 700; }
+        @media (min-width: 767px) and (max-width: 1024px) {
+          .hp-main-slider__slide.image .slide-text__heading {
+            font-size: 1.4rem; } }
+        @media (min-width: 1025px) {
+          .hp-main-slider__slide.image .slide-text__heading {
+            font-size: 1.6rem; } }
+      .hp-main-slider__slide.image .slide-text__title {
+        color: #ffffff;
+        font-size: 1.4rem;
+        font-weight: 900; }
+        @media (min-width: 767px) and (max-width: 1024px) {
+          .hp-main-slider__slide.image .slide-text__title {
+            font-size: 2rem; } }
+        @media (min-width: 1025px) {
+          .hp-main-slider__slide.image .slide-text__title {
+            font-size: 3.2rem; } }
+      .hp-main-slider__slide.image .slide-text__desc {
+        font-size: 1rem;
+        color: #ffffff; }
+        @media (max-width: 767px) {
+          .hp-main-slider__slide.image .slide-text__desc {
+            display: none; } }
+        @media (min-width: 1025px) {
+          .hp-main-slider__slide.image .slide-text__desc {
+            font-size: 1.6rem; } }
+    .hp-main-slider__slide.video iframe {
+      height: 100%;
+      z-index: 0; }
+    .hp-main-slider__slide.video .video__overlay {
+      text-align: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 20;
+      background: transparent; }
+      .hp-main-slider__slide.video .video__overlay span {
+        color: #ffffff;
+        position: relative;
+        top: 21vw; }
+        @media (min-width: 768px) {
+          .hp-main-slider__slide.video .video__overlay span {
+            display: none; } }
 
 @media only screen and (min-width: 767px) {
   .comm-editors-picks .c-section-title.heading--row {
