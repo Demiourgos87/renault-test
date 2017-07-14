@@ -169,7 +169,7 @@ a img {
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
   .page__inner {
-    width: 80%;
+    width: 90%;
     padding: 40px 0;
     margin: 0 auto; } }
 
@@ -1311,7 +1311,7 @@ html.diaporamaOpened, body.diaporamaOpened {
     opacity: 1; }
 
 .c-faq-slider {
-  margin-bottom: 150px; }
+  margin-bottom: 35vw; }
 
 .c-faq-slider .slider__container {
   position: relative; }
@@ -1351,7 +1351,11 @@ html.diaporamaOpened, body.diaporamaOpened {
   .c-faq-slider .container--full {
     top: 0; }
   .c-faq-slider .c-section-title.heading--row {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .c-faq-slider .slider__navigation {
+    margin-top: -4vw; }
+  .c-faq-slider {
+    margin-bottom: 0; } }
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
   .c-faq-slider .container--full {
@@ -1764,6 +1768,9 @@ html.diaporamaOpened, body.diaporamaOpened {
   margin: 0 auto;
   position: relative; }
 
+.hp-fan__container.container--raised {
+  margin-top: -3.5%; }
+
 .teaser--fan .teaser__img {
   margin-bottom: -5px; }
 
@@ -1817,7 +1824,7 @@ html.diaporamaOpened, body.diaporamaOpened {
 
 @media only screen and (min-width: 767px) {
   .hp-astuces {
-    margin: 80px 0 50px 0; }
+    margin: 7vw 0 0 0; }
   .hp-astuces {
     border-top: 2px solid #f6f6f6; } }
 
@@ -1955,7 +1962,7 @@ html.diaporamaOpened, body.diaporamaOpened {
         color: #ffffff;
         position: relative;
         top: 21vw; }
-        @media (min-width: 1025px) {
+        @media (min-width: 768px) {
           .hp-main-slider__slide.video .video__overlay span {
             display: none; } }
 

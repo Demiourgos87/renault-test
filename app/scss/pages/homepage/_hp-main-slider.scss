@@ -174,7 +174,7 @@
           position: relative;
           top: 21vw;
 
-          @include breakpoint(desktopOnly) {
+          @include breakpoint(tabletAndDesktop) {
             display: none;
           };
         }
