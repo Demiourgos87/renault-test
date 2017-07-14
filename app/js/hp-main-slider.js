@@ -1,9 +1,15 @@
 function onYouTubeIframeAPIReady() {
 
+  // Cache DOM
   var $sliderWrap = $('.hp-main-slider'),
       $slider = $sliderWrap.find('.hp-main-slider--wrap'),
       $allSlides = $slider.find('.hp-main-slider__slide:not(.slick-cloned)'),
-      player;
+      $navigation = $sliderWrap.find('.hp-main-slider__navigation')
+      $arrowPrev = $navigation.find('.hp-main-slider__navigation__left'),
+      $arrowNext = $navigation.find('.hp-main-slider__navigation__right'),
+      $sliderCounter = $sliderWrap.find('.hp-main-slider__counter'),
+      $sliderCurrent = $sliderCounter.find('.slider__current'),
+      $sliderTotal = $sliderCounter.find('.slider__total');
 
   var playersCreated = (function() {
 
@@ -80,6 +86,14 @@ function onYouTubeIframeAPIReady() {
 
   }
 
+  function updateNavigationCounter(currentIndex) {
+
+    $sliderCurrent.text('0' + (currentIndex + 1));
+
+  }
+
+  $sliderTotal.text('0' + $allSlides.length);
+
   function checkSlideType(index) {
 
     var slide = playersCreated[index];
@@ -87,6 +101,16 @@ function onYouTubeIframeAPIReady() {
     if (slide.hasOwnProperty('element')) return 'vimeo';
     else if (slide.hasOwnProperty('a')) return 'youtube';
     else return 'image';
+
+  }
+
+  function onVimeoEnded(player) {
+
+    player.on('ended', function(data) {
+      player.pause();
+      player.setCurrentTime(0);
+      $slider.slick('slickNext');
+    });
 
   }
 
@@ -109,55 +133,71 @@ function onYouTubeIframeAPIReady() {
     swipe: true
   });
 
-  $slider.on('afterChange', function(event, slick, currentSlide) {
+  // $slider.slick('slickPause');
 
-    // if (checkSlideType(currentSlide) == 'image') {
-    //
-    //   $slider.slick('slickPlay');
-    //
-    //   if (checkSlideType(nextSlide) == 'youtube') {
-    //
-    //     $slider.slick('slickPause');
-    //     playersCreated[nextSlide].playVideo();
-    //
-    //   } else if (checkSlideType(nextSlide) == 'vimeo') {
-    //
-    //     $slider.slick('slickPause');
-    //     playersCreated[nextSlide].play();
-    //
-    //   } else $slider.slick('slickPlay');
-    //
-    // }
-    //
-    // if (checkSlideType(currentSlide) == 'youtube' || checkSlideType(nextSlide) == 'youtube') {
-    //
-    //   $slider.slick('slickPause');
-    //   playersCreated[currentSlide].playVideo();
-    //
-    //   if (checkSlideType(nextSlide) == 'vimeo') {
-    //
-    //     playersCreated[nextSlide].play();
-    //
-    //   } else $slider.slick('slickPlay');
-    //
-    // }
+  $arrowPrev.on('click', function() {
+    $slider.slick('slickPrev');
+  });
 
-    if (checkSlideType(currentSlide) == 'youtube') {
+  $arrowNext.on('click', function() {
+    $slider.slick('slickNext');
+  });
+
+  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+
+    updateNavigationCounter(nextSlide);
+
+    var currentSlideType = checkSlideType(currentSlide),
+        nextSlideType = checkSlideType(nextSlide),
+        currentPlayer = playersCreated[currentSlide],
+        nextPlayer = playersCreated[nextSlide];
+
+    if (currentSlideType == 'image') {
+
+      if (nextSlideType == 'youtube') {
+
+        $slider.slick('slickPause');
+        nextPlayer.playVideo();
+
+      } else if (nextSlideType == 'vimeo') {
+
+        $slider.slick('slickPause');
+        nextPlayer.play();
+        onVimeoEnded(nextPlayer);
+
+      } else $slider.slick('slickPlay');
+
+    } else if (currentSlideType == 'youtube') {
 
       $slider.slick('slickPause');
-      playersCreated[currentSlide].playVideo();
+      currentPlayer.pauseVideo();
+      currentPlayer.seekTo(0, true);
 
-    } else if (checkSlideType(currentSlide) == 'vimeo') {
-      console.log(playersCreated[currentSlide]);
-      playersCreated[currentSlide].play();
-      playersCreated[currentSlide].on('ended', function() {
-        console.log('ended');
-        $slider.slick('slickNext');
-      });
-      // $slider.slick('slickPause');
-      // playersCreated[currentSlide].play();
+      if (nextSlideType == 'youtube') nextPlayer.playVideo();
+      else if (nextSlideType == 'vimeo') {
 
-    } else $slider.slick('slickPlay');
+        nextPlayer.play();
+        onVimeoEnded(nextPlayer);
+
+      }
+      else $slider.slick('slickPlay');
+
+    } else if (currentSlideType == 'vimeo') {
+
+      $slider.slick('slickPause');
+      currentPlayer.pause();
+      currentPlayer.setCurrentTime(0);
+      onVimeoEnded(currentPlayer);
+
+      if (nextSlideType == 'vimeo') {
+
+        nextPlayer.play();
+        onVimeoEnded(nextPlayer);
+
+      } else if (nextSlideType == 'youtube') { nextPlayer.playVideo(); }
+      else $slider.slick('slickPlay');
+
+    }
 
   });
 

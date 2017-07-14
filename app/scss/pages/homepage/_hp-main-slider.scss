@@ -10,11 +10,32 @@
 
   &__navigation {
 
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 20;
 
+    &__left, &__right {
+      @include circled-icon(35px);
+      position: absolute;
+      top: 0;
+      cursor: pointer;
+      background: $yellow;
+      color: $black;
+    }
+
+    &__left {
+      left: 2vw;
+    }
+
+    &__right {
+      right: 2vw;
+    }
 
     @include breakpoint(phoneOnly) {
       display: none;
     };
+
   }
 
   &__counter {
@@ -26,7 +47,17 @@
     right: 5vw;
     z-index: 1000;
 
-    & .current {
+    @include breakpoint(tabletAndDesktop) {
+      font-size: $fontSmall;
+      bottom: 3vw;
+      left: 13vw;
+    };
+
+    @include breakpoint(desktopOnly) {
+      left: 15vw;
+    };
+
+    & .slider__current {
       color: $yellow;
     }
   }
@@ -48,9 +79,29 @@
         left: 4vw;
         width: 73%;
 
+        @include breakpoint(tabletOnly) {
+          top: 20vw;
+          left: 12vw;
+          width: 56%;
+        };
+
+        @include breakpoint(desktopOnly) {
+          top: 21vw;
+          left: 15vw;
+          width: 55%;
+        };
+
         & .btn {
           padding: 2vw;
           font-size: $fontVerySmall;
+
+          @include breakpoint(tabletOnly) {
+            padding: 1vw 2vw;
+          };
+
+          @include breakpoint(desktopOnly) {
+            padding: 0.5vw 2vw;
+          };
         }
 
         & p {
@@ -59,20 +110,50 @@
 
         &__heading {
           color: $yellow;
-          font-size: 1.2rem;
+          font-size: $fontMedium;
           font-weight: 700;
+
+          @include breakpoint(tabletOnly) {
+            font-size: $fontLarge;
+          };
+
+          @include breakpoint(desktopOnly) {
+            font-size: $fontBig;
+          };
         }
 
         &__title {
           color: $white;
-          font-size: 1.4rem;
+          font-size: $fontLarge;
           font-weight: 900;
+
+          @include breakpoint(tabletOnly) {
+            font-size: $fontVeryBig;
+          };
+
+          @include breakpoint(desktopOnly) {
+            font-size: 3.2rem;
+          };
+        }
+
+        &__desc {
+          font-size: $fontNormal;
+          color: $white;
+
+          @include breakpoint(phoneOnly) {
+            display: none;
+          };
+
+          @include breakpoint(desktopOnly) {
+            font-size: $fontBig;
+          };
         }
       }
 
     }
 
     &.video {
+      // pointer-events: none;
       & iframe {
         height: 100%;
       }
