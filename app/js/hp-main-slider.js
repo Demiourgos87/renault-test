@@ -9,7 +9,8 @@ function onYouTubeIframeAPIReady() {
       $arrowNext = $navigation.find('.hp-main-slider__navigation__right'),
       $sliderCounter = $sliderWrap.find('.hp-main-slider__counter'),
       $sliderCurrent = $sliderCounter.find('.slider__current'),
-      $sliderTotal = $sliderCounter.find('.slider__total');
+      $sliderTotal = $sliderCounter.find('.slider__total'),
+      windowWidth = $(window).outerWidth();
 
   var playersCreated = (function() {
 
@@ -19,7 +20,6 @@ function onYouTubeIframeAPIReady() {
 
       return new YT.Player(id, {
         events: {
-          'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
         }
       });
@@ -59,10 +59,6 @@ function onYouTubeIframeAPIReady() {
     return created;
 
   })();
-
-  function onPlayerReady(event) {
-    // allPlayers[0].playVideo();
-  }
 
   function onPlayerStateChange(event) {
 
@@ -133,7 +129,7 @@ function onYouTubeIframeAPIReady() {
     swipe: true
   });
 
-  // $slider.slick('slickPause');
+  $slider.slick('slickPause');
 
   $arrowPrev.on('click', function() {
     $slider.slick('slickPrev');
@@ -143,6 +139,36 @@ function onYouTubeIframeAPIReady() {
     $slider.slick('slickNext');
   });
 
+  // function simulateClick(element) {
+  //   element.trigger('click');
+  // }
+  //
+  // if (windowWidth < 1025) {
+  //
+  //   $slider.on('afterChange', function(event, slick, currentSlide) {
+  //
+  //     var $currentSlide = $($allSlides[currentSlide]),
+  //         $videoOverlay = $currentSlide.find('.video__overlay'),
+  //         $iframe = $currentSlide.find('iframe'),
+  //         currentPlayer = playersCreated[currentSlide];
+  //
+  //     $slider.slick('slickPause');
+  //
+  //     $videoOverlay.on('click', function() {
+  //       currentPlayer.playVideo();
+  //     });
+  //
+  //     $iframe.on('click', function() {
+  //       currentPlayer.playVideo();
+  //     });
+  //
+  //     simulateClick($videoOverlay);
+  //     simulateClick($iframe);
+  //
+  //   });
+  //
+  // } else {
+
   $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
 
     updateNavigationCounter(nextSlide);
@@ -151,6 +177,22 @@ function onYouTubeIframeAPIReady() {
         nextSlideType = checkSlideType(nextSlide),
         currentPlayer = playersCreated[currentSlide],
         nextPlayer = playersCreated[nextSlide];
+
+      if (windowWidth < 1025) {
+
+        var $currentSlide = $($allSlides[nextSlide]),
+            $videoOverlay = $currentSlide.find('.video__overlay');
+
+        $videoOverlay.on('click', function() {
+
+          if (nextSlideType == 'youtube') nextPlayer.playVideo();
+          else nextPlayer.play();
+
+          $(this).find('span').fadeOut(200);
+
+        });
+
+      }
 
     if (currentSlideType == 'image') {
 
@@ -200,5 +242,7 @@ function onYouTubeIframeAPIReady() {
     }
 
   });
+
+  // }
 
 }

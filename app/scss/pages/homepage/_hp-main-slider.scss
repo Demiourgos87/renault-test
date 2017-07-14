@@ -156,6 +156,28 @@
       // pointer-events: none;
       & iframe {
         height: 100%;
+        z-index: 0;
+      }
+
+      & .video__overlay {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 20;
+        background: transparent;
+
+        & span {
+          color: $white;
+          position: relative;
+          top: 21vw;
+
+          @include breakpoint(desktopOnly) {
+            display: none;
+          };
+        }
       }
     }
 

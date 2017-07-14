@@ -1940,7 +1940,24 @@ html.diaporamaOpened, body.diaporamaOpened {
           .hp-main-slider__slide.image .slide-text__desc {
             font-size: 1.6rem; } }
     .hp-main-slider__slide.video iframe {
-      height: 100%; }
+      height: 100%;
+      z-index: 0; }
+    .hp-main-slider__slide.video .video__overlay {
+      text-align: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 20;
+      background: transparent; }
+      .hp-main-slider__slide.video .video__overlay span {
+        color: #ffffff;
+        position: relative;
+        top: 21vw; }
+        @media (min-width: 1025px) {
+          .hp-main-slider__slide.video .video__overlay span {
+            display: none; } }
 
 @media only screen and (min-width: 767px) {
   .comm-editors-picks .c-section-title.heading--row {
