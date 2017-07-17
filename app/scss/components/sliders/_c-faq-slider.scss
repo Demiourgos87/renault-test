@@ -91,6 +91,10 @@
   .c-faq-slider .slider__container {
     width: 80%;
   }
+
+  .c-faq-slider .slider__navigation {
+    margin-top: 0;
+  }
 }
 
 @media only screen and (min-width: $break-desk-large) {

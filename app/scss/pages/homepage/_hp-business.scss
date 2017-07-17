@@ -2,10 +2,27 @@
   @include container(100%, 50px 0, 0);
 }
 
+.hp-business .row--mob:last-child {
+  margin-left: 1%;
+}
+
 @media only screen and (min-width: $break-tab) {
 
   .hp-business {
     border-top: 2px solid $lightGray;
+    position: relative;
+  }
+
+  .hp-business::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 1.5vw;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: $lightGray;
+    z-index: -1;
   }
 
 }

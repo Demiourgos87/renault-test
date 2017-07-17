@@ -697,7 +697,7 @@ a img {
 
 .c-test-start {
   width: 100%;
-  margin: 100px 0; }
+  margin: 0; }
 
 .c-test-start .container--full {
   background: url("../image/test_start/trucks_background_full.png") no-repeat center;
@@ -707,6 +707,16 @@ a img {
 .c-test-start__body {
   margin: 0 auto; }
 
+.c-test-start__body .btn--centered {
+  width: 7vw;
+  text-align: center; }
+  @media (min-width: 767px) and (max-width: 1024px) {
+    .c-test-start__body .btn--centered {
+      width: 9vw; } }
+  @media (max-width: 767px) {
+    .c-test-start__body .btn--centered {
+      width: 20vw; } }
+
 .c-test-start__body .c-section-title.heading--row {
   text-align: center; }
 
@@ -714,12 +724,18 @@ a img {
   width: 90%;
   margin: 0 auto;
   position: relative;
-  top: -4.5vw; }
+  top: -5.5vw;
+  text-align: center; }
 
 .c-test-start__images .heading {
   font-weight: bold;
-  text-align: center;
   margin: 0; }
+
+.c-test-start__images .desc {
+  margin: 0; }
+  @media (max-width: 1024px) {
+    .c-test-start__images .desc {
+      display: none; } }
 
 .c-test-start__item {
   width: 32.7%;
@@ -751,6 +767,8 @@ a img {
     display: none; } }
 
 @media only screen and (min-width: 1025px) {
+  .c-test-start {
+    margin: 5vw 0; }
   .c-test-start__body {
     width: 20%;
     padding: 60px 0 120px 0; }
@@ -758,6 +776,9 @@ a img {
     display: block; }
   .c-test-start .container--full {
     background-size: 100%; }
+  .c-test-start__item:last-child {
+    position: relative;
+    top: 1.2vw; }
   .c-test-start__item img {
     width: 75%;
     margin: 0 auto;
@@ -1367,7 +1388,9 @@ html.diaporamaOpened, body.diaporamaOpened {
   .c-faq-slider .container--full {
     height: 20rem; }
   .c-faq-slider .slider__container {
-    width: 80%; } }
+    width: 80%; }
+  .c-faq-slider .slider__navigation {
+    margin-top: 0; } }
 
 @media only screen and (min-width: 1900px) {
   .c-faq-slider .container--full {
@@ -1833,9 +1856,23 @@ html.diaporamaOpened, body.diaporamaOpened {
   margin: 50px 0;
   padding: 0; }
 
+.hp-business .row--mob:last-child {
+  margin-left: 1%; }
+
 @media only screen and (min-width: 767px) {
   .hp-business {
-    border-top: 2px solid #f6f6f6; } }
+    border-top: 2px solid #f6f6f6;
+    position: relative; }
+  .hp-business::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 1.5vw;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: #f6f6f6;
+    z-index: -1; } }
 
 .hp-main-slider {
   width: 100%;
@@ -2259,6 +2296,8 @@ html.diaporamaOpened, body.diaporamaOpened {
     top: -1.8vw; }
   .article-body .c-test-start__images .c-test-start__item {
     width: 32.2%; }
+  .article-body .c-test-start__images .c-test-start__item:last-child {
+    top: 0; }
   .article-body .c-test-start__images .c-test-start__item p {
     font-size: 0.6rem; } }
 
@@ -2516,14 +2555,14 @@ p.article-paragraph__heading {
 @media only screen and (min-width: 319px) and (max-width: 767px) {
   .article-portrait-body__wrap {
     width: 90%;
-    margin: 50px auto; }
+    margin: 10vw auto 0 auto; }
   .article-portrait__table td {
     display: inline-block; } }
 
 @media only screen and (min-width: 767px) and (max-width: 1025px) {
   .article-portrait-body__wrap {
     width: 75%;
-    margin: 40px auto; }
+    margin: 7vw auto 0 auto; }
   .article-portrait-body__wrap .article-body__text-intro {
     font-size: 1.4rem; }
   .article-portrait-body__wrap .article-paragraph__heading {
@@ -2550,6 +2589,8 @@ p.article-paragraph__heading {
     width: 41.5%;
     margin: 0;
     float: left; }
+  .article-portrait-body__wrap .article-body {
+    margin-bottom: 0; }
   .article-portrait-body__wrap .c-social-share {
     float: none;
     width: auto; }

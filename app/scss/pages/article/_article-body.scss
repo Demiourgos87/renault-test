@@ -117,6 +117,10 @@
     width: 32.2%;
   }
 
+  .article-body .c-test-start__images .c-test-start__item:last-child {
+    top: 0;
+  }
+
   .article-body .c-test-start__images .c-test-start__item p {
     font-size: $fontVerySmall;
   }

@@ -1,6 +1,6 @@
 .c-test-start {
   width: 100%;
-  margin: 100px 0;
+  margin: 0;
 }
 
 .c-test-start .container--full {
@@ -13,6 +13,19 @@
   margin: 0 auto;
 }
 
+.c-test-start__body .btn--centered {
+  width: 7vw;
+  text-align: center;
+
+  @include breakpoint(tabletOnly) {
+    width: 9vw;
+  };
+
+  @include breakpoint(phoneOnly) {
+    width: 20vw;
+  };
+}
+
 .c-test-start__body .c-section-title.heading--row {
   text-align: center;
 }
@@ -21,13 +34,21 @@
   width: 90%;
   margin: 0 auto;
   position: relative;
-  top: -4.5vw;
+  top: -5.5vw;
+  text-align: center;
 }
 
 .c-test-start__images .heading {
   font-weight: bold;
-  text-align: center;
   margin: 0;
+}
+
+.c-test-start__images .desc {
+  margin: 0;
+
+  @include breakpoint(phoneAndTablet) {
+    display: none;
+  };
 }
 
 .c-test-start__item {
@@ -75,6 +96,10 @@
 }
 
 @media only screen and (min-width: $break-desk) {
+  .c-test-start {
+    margin: 5vw 0;
+  }
+
   .c-test-start__body {
     width: 20%;
     padding: 60px 0 120px 0;
@@ -86,6 +111,11 @@
 
   .c-test-start .container--full {
     background-size: 100%;
+  }
+
+  .c-test-start__item:last-child {
+    position: relative;
+    top: 1.2vw;
   }
 
   .c-test-start__item img {
