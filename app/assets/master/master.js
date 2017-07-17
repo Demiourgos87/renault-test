@@ -2900,8 +2900,8 @@
       $slider = $diaporamaTrigger.find('.diaporama-trigger__slider'),
       $slides = $slider.find('.diaporama-trigger__slide'),
       $navigation = $diaporamaTrigger.find('.diaporama-trigger__navigation'),
-      $arrowPrev = $navigation.find('.diaporama-trigger__prev i'),
-      $arrowNext = $navigation.find('.diaporama-trigger__next i'),
+      $arrowPrev = $navigation.find('.diaporama-trigger__prev'),
+      $arrowNext = $navigation.find('.diaporama-trigger__next'),
       $openDiaporama = $navigation.find('.diaporama__open'),
       windowWidth = $(window).outerWidth(),
       $diaporama = $('body').find('.c-diaporama'),
@@ -2928,7 +2928,7 @@
     $slider.slick('slickPause');
   });
 
-  if (windowWidth < 1025) {
+  if (windowWidth < 767) {
 
     $slider.slick({
       slidesToShow: 1,
@@ -2938,7 +2938,8 @@
       autoplay: false,
       dots: false,
       pauseOnHover: true,
-      arrows: false
+      arrows: false,
+      adaptiveHeight: true
     });
 
   } else {
