@@ -85,7 +85,7 @@ p.article-paragraph__heading {
 
   .article-portrait-body__wrap {
     width: 90%;
-    margin: 50px auto;
+    margin: 10vw auto 0 auto;
   }
 
   .article-portrait__table td {
@@ -98,7 +98,7 @@ p.article-paragraph__heading {
 
   .article-portrait-body__wrap {
     width: 75%;
-    margin: 40px auto;
+    margin: 7vw auto 0 auto;
   }
 
   .article-portrait-body__wrap .article-body__text-intro {
@@ -147,6 +147,10 @@ p.article-paragraph__heading {
     width: 41.5%;
     margin: 0;
     float: left;
+  }
+
+  .article-portrait-body__wrap .article-body {
+    margin-bottom: 0;
   }
 
   .article-portrait-body__wrap .c-social-share {
