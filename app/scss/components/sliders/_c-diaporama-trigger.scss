@@ -113,6 +113,10 @@
   overflow: hidden;
   z-index: 1000;
 
+  @include breakpoint(phoneAndTablet) {
+    display: none;
+  };
+
   &.slick-slider {
     height: 4vw;
   }
