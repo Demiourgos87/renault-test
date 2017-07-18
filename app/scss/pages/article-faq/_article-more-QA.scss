@@ -51,7 +51,7 @@
   margin-bottom: -4px;
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
 
   .article-more-QA .teaser {
     margin-bottom: 40px;
@@ -79,7 +79,7 @@
 
 }
 
-@media only screen and (min-width: $break-tab) {
+@media only screen and (min-width: $break-mob) {
 
   .article-more-QA::before, .article-more-QA::after {
     display: block;

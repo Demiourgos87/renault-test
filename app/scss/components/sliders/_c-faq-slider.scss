@@ -19,7 +19,7 @@
   overflow: visible;
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
   .c-faq-slider .teaser {
     margin-bottom: 0;
   }
@@ -36,7 +36,7 @@
   }
 }
 
-@media only screen and (min-width: $break-tab) {
+@media only screen and (min-width: $break-mob) {
 
   .c-faq-slider {
     border-top: 2px solid $lightGray;
@@ -71,9 +71,7 @@
   .c-faq-slider {
     margin-bottom: 0;
   }
-}
 
-@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
   .c-faq-slider .container--full {
     height: 15rem;
   }

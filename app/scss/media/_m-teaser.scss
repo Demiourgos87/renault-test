@@ -115,7 +115,7 @@
   }
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
 
   .teaser--raised--mob {
     margin-top: -24.5%;
@@ -123,7 +123,7 @@
 
 }
 
-@media only screen and (min-width: $break-tab) {
+@media only screen and (min-width: $break-mob) {
 
   .teaser--raised--tab {
     margin-top: -8vw;

@@ -11,7 +11,7 @@
   position: relative;
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
   .block-comm-QA-list .body__wrap {
     width: 100%;
     top: -5vw;
@@ -58,12 +58,12 @@
   }
 }
 
-@media only screen and (min-width: $break-tab) {
+@media only screen and (min-width: $break-mob) {
 
-  .block-comm-QA-list .section__title.heading--row {
+  .block-comm-QA-list .c-section-title.heading--row {
     position: relative;
-    top: 15vw;
-    left: 3.5vw;
+    top: 18vw;
+    left: 4vw;
     width: 20vw;
   }
 
@@ -126,6 +126,13 @@
 
   .block-comm-QA-list .teaser.teaser--m {
     height: 17rem;
+  }
+
+  .block-comm-QA-list .c-section-title.heading--row {
+    position: relative;
+    top: 12vw;
+    left: 3.5vw;
+    width: 20vw;
   }
 
 }

@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
 
   .accordion-wrap {
     width: 112%;
@@ -60,7 +60,7 @@
 
 }
 
-@media only screen and (min-width: $break-tab) {
+@media only screen and (min-width: $break-mob) {
 
   .accordion-wrap {
     margin: 50px 0;

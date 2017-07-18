@@ -18,7 +18,7 @@
 
   if (!$sliderWrap.hasClass('vu--slider')) {
 
-    if (windowWidth > 767) {
+    if (windowWidth > 599) {
 
       $.each($articles, function() {
 
