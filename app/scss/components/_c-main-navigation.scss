@@ -6,7 +6,7 @@
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-desk) {
+@media only screen and (max-width: $break-desk) {
 
   .page.menuOpened {
     left: 280px;
@@ -70,7 +70,7 @@
 
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
 
   .c-main-navigation > li > a {
     font-weight: 700;
@@ -87,7 +87,7 @@
 
 }
 
-@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+@media only screen and (min-width: $break-mob) {
 
   .b-header__menu-trigger, .b-header__search {
     font-size: $fontBig;

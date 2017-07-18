@@ -1,6 +1,6 @@
 // Font sizes
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
 
   html {
     font-size: 4.2vw;
@@ -8,7 +8,7 @@
 
 }
 
-@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+@media only screen and (min-width: $break-mob) {
 
   html {
     font-size: 1.8vw;

@@ -15,7 +15,7 @@
   font-size: $fontNormal;
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
 
   .article-hero {
     height: auto;
@@ -23,7 +23,7 @@
 
 }
 
-@media only screen and (min-width: $break-tab) {
+@media only screen and (min-width: $break-mob) {
 
   .article-hero__footnote {
     padding: 10px;

@@ -7,16 +7,16 @@
   position: relative;
 }
 
-@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+@media only screen and (min-width: $break-mob) {
   .vu-QA .c-faq-slider {
     width: 68%;
     float: left;
     margin-right: 2%;
-    margin-bottom: 20px;
+    margin-bottom: 7vw;
   }
 
   .vu-QA .c-faq-slider .container--full {
-    height: 18rem;
+    height: 22rem;
   }
 
   .vu-QA .c-faq-slider .teaser__body {
@@ -24,7 +24,7 @@
   }
 
   .vu-QA .c-faq-slider .slider__container {
-    width: 60%;
+    width: 65%;
     float: none;
     margin: 0 0 0 5vw;
   }
@@ -33,7 +33,7 @@
     float: none;
     position: absolute;
     bottom: 3.3vw;
-    right: -11vw;
+    right: -12vw;
   }
 
   .vu-QA .c-faq-slider .c-section-title {

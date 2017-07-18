@@ -2,7 +2,7 @@
   @include container(100%, 50px 0, 0);
 }
 
-@media only screen and (min-width: $break-tab) {
+@media only screen and (min-width: $break-mob) {
 
   .hp-astuces {
     margin: 7vw 0 0 0;

@@ -51,7 +51,7 @@
   margin-top: 10px;
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
   .portrait__slide__body {
     top: 8vw;
     left: 8vw;
@@ -77,7 +77,7 @@
   }
 }
 
-@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+@media only screen and (min-width: $break-mob) {
   .portrait__slide__heading {
     font-size: 1.2rem;
   }
@@ -101,7 +101,7 @@
   }
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-desk) {
+@media only screen and (max-width: $break-desk) {
   .portrait__slide__body .portrait__slide__desc {
     display: none;
   }

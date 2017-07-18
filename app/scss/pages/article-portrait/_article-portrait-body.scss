@@ -81,7 +81,7 @@ p.article-paragraph__heading {
   margin: 0 0 40px 0;
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
 
   .article-portrait-body__wrap {
     width: 90%;
@@ -94,7 +94,7 @@ p.article-paragraph__heading {
 
 }
 
-@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+@media only screen and (min-width: $break-mob) {
 
   .article-portrait-body__wrap {
     width: 75%;
@@ -112,10 +112,6 @@ p.article-paragraph__heading {
   .article-portrait__list li {
     margin-bottom: 4px;
   }
-
-}
-
-@media only screen and (min-width: $break-tab) {
 
   .article-portrait__table tr {
     display: inline-block;

@@ -3178,7 +3178,7 @@
 
   if (!$sliderWrap.hasClass('vu--slider')) {
 
-    if (windowWidth > 767) {
+    if (windowWidth > 599) {
 
       $.each($articles, function() {
 
@@ -3338,7 +3338,7 @@
       $arrowPrev = $wrap.find('.fa-arrow-circle-o-left'),
       windowWidth = $(window).outerWidth();
 
-  if (windowWidth > 767) {
+  if (windowWidth > 599) {
 
     $slider.slick({
       slidesToShow: 4,
@@ -3533,7 +3533,7 @@ function onYouTubeIframeAPIReady() {
     swipe: true
   });
 
-  // $slider.slick('slickPause');
+  $slider.slick('slickPause');
 
   $arrowPrev.on('click', function() {
     $slider.slick('slickPrev');
@@ -3661,7 +3661,7 @@ function onYouTubeIframeAPIReady() {
       $articlesToChange = $mainContainer.find('.teaser:nth-of-type(4n+0)'),
       windowWidth = $(window).outerWidth();
 
-  if (windowWidth > 767) {
+  if (windowWidth > 599) {
 
     for (var i = 0; i < $articlesToChange.length; i++) {
 

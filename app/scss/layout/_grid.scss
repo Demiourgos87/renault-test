@@ -59,7 +59,7 @@ a img {
   background: $yellow;
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
 
   .container {
     width: 90%;
@@ -72,15 +72,7 @@ a img {
 
 }
 
-@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
-
-  .row--raised {
-    margin-top: -10vw;
-  }
-
-}
-
-@media only screen and (min-width: $break-tab) {
+@media only screen and (min-width: $break-mob) {
 
   .container {
     width: 100%;
@@ -90,6 +82,10 @@ a img {
     float: left;
     width: 49.5%;
     margin-right: 0.5%;
+  }
+
+  .row--raised {
+    margin-top: -10vw;
   }
 
   .row--mob:nth-child(2n+0) {

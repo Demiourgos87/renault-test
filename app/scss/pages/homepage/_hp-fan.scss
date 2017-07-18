@@ -32,7 +32,7 @@
   box-shadow: 0 20px 30px 10px rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (min-width: $break-mob) and (max-width: $break-tab) {
+@media only screen and (max-width: $break-mob) {
   .teaser--fan .teaser__img, .teaser--fan .teaser__body {
     float: none;
   }
@@ -52,7 +52,7 @@
   }
 }
 
-@media only screen and (min-width: $break-tab) {
+@media only screen and (min-width: $break-mob) {
   .teaser--fan .teaser__img, .teaser--fan .teaser__body {
     float: left;
   }

@@ -1,4 +1,4 @@
-@media only screen and (min-width: $break-tab) and (max-width: $break-desk) {
+@media only screen and (min-width: $break-mob) {
 
   .comm-more-topics {
     width: 30%;
@@ -19,7 +19,7 @@
     position: relative;
     top: 4vw;
     width: calc(30% - 82px);
-    padding: 40px 40px 5vw 40px;
+    padding: 40px 40px 12vw 40px;
     float: left;
     border-left: 2px solid $lightGray;
   }
@@ -48,10 +48,6 @@
 
   .comm-more-topics::before, .comm-more-topics::after {
     width: 79.4vw;
-  }
-
-  .comm-more-topics {
-    padding-bottom: 7vw;
   }
 
 }

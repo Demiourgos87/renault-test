@@ -8,7 +8,7 @@
       $articlesToChange = $mainContainer.find('.teaser:nth-of-type(4n+0)'),
       windowWidth = $(window).outerWidth();
 
-  if (windowWidth > 767) {
+  if (windowWidth > 599) {
 
     for (var i = 0; i < $articlesToChange.length; i++) {
 
