@@ -19,11 +19,11 @@
 
   @include breakpoint(tabletOnly) {
     width: 9vw;
-  };
+  }
 
   @include breakpoint(phoneOnly) {
     width: 20vw;
-  };
+  }
 }
 
 .c-test-start__body .c-section-title.heading--row {
@@ -48,7 +48,7 @@
 
   @include breakpoint(phoneAndTablet) {
     display: none;
-  };
+  }
 }
 
 .c-test-start__item {
@@ -84,7 +84,7 @@
   }
 }
 
-@media only screen and (max-width: $break-desk) {
+@media only screen and (min-width: $break-mob) {
   .c-test-start__body {
     width: 40%;
     padding: 30px 0 80px 0;

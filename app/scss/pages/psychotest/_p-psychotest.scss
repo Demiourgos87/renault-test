@@ -4,7 +4,7 @@
 
   @include breakpoint(desktopOnly) {
     overflow-y: hidden;
-  };
+  }
 }
 
 .psychotest-intro {
@@ -14,7 +14,7 @@
 
   @include breakpoint(desktopOnly) {
     height: 100%;
-  };
+  }
 
   &__image {
 
@@ -29,14 +29,14 @@
 
     @include breakpoint(tabletOnly) {
       height: 50vw;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       display: inline-block;
       width: 45%;
       height: 100%;
       background-size: 100% 100%;
-    };
+    }
 
     & h2 {
 
@@ -47,13 +47,13 @@
 
       @include breakpoint(tabletOnly) {
         font-size: 3rem;
-      };
+      }
 
       @include breakpoint(desktopOnly) {
         display: block;
         position: relative;
         top: 36%;
-      };
+      }
 
     }
 
@@ -68,7 +68,7 @@
 
     @include breakpoint(tabletOnly) {
       width: 70%;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       display: inline-block;
@@ -76,7 +76,7 @@
       top: 10vw;
       width: 34%;
       padding: 0 10%;
-    };
+    }
 
     &__title {
 
@@ -85,7 +85,7 @@
 
       @include breakpoint(tabletOnly) {
         font-size: $fontBig;
-      };
+      }
 
     }
 
@@ -97,11 +97,11 @@
 
       @include breakpoint(tabletOnly) {
         margin: 5vw auto;
-      };
+      }
 
       @include breakpoint(desktopOnly) {
         margin: 3vw 0 0 0;
-      };
+      }
 
     }
 
@@ -120,14 +120,14 @@
     width: 18%;
     position: relative;
     top: -2.5vw;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     font-size: $fontLarge;
     width: 10%;
     top: -1.5vw;
     margin-left: 20%;
-  };
+  }
 
   &__separator {
     color: $yellow;
@@ -143,11 +143,11 @@
 
   @include breakpoint(tabletOnly) {
     padding: 5vw 0;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     padding: 2vw 0;
-  };
+  }
 
   &--wrap {
     width: 90%;
@@ -155,7 +155,7 @@
 
     @include breakpoint(desktopOnly) {
       width: 80%;
-    };
+    }
   }
 
   &__title {
@@ -169,13 +169,13 @@
       width: 75%;
       font-size: 2.2rem;
       letter-spacing: 1px;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       width: 50%;
       font-size: $fontBig;
       margin: 0 0 2vw 0;
-    };
+    }
   }
 
   & .question-option {
@@ -197,7 +197,7 @@
         border-bottom: none;
         margin-bottom: 1px;
       }
-    };
+    }
 
     &.no-image {
 
@@ -205,20 +205,9 @@
         @include breakpoint(desktopOnly) {
           padding: 1vw 6%;
           margin-top: 0;
-        };
+        }
       }
     }
-
-    // &.no-image:nth-of-type(3n+0) {
-    //   &::after {
-    //     display: block;
-    //     width: 1px;
-    //     position: absolute;
-    //     top: 0;
-    //     bottom: 0;
-    //     background: $darkGray;
-    //   }
-    // }
 
     &:last-child {
       border-bottom: none;
@@ -252,7 +241,7 @@
         @include breakpoint(tabletOnly) {
           margin-top: 12vw;
           padding: 15px 7.5vw;
-        };
+        }
       }
 
       & a.btn {
@@ -261,7 +250,7 @@
 
         @include breakpoint(tabletOnly) {
           width: 9vw;
-        };
+        }
       }
 
       & .option-cancel {
@@ -285,11 +274,11 @@
       @include breakpoint(tabletAndDesktop) {
         padding-bottom: 0;
         position: static;
-      };
+      }
 
       @include breakpoint(desktopOnly) {
         width: 20%;
-      };
+      }
 
       & img {
         width: 100%;
@@ -297,7 +286,7 @@
 
         @include breakpoint(tabletAndDesktop) {
           margin-bottom: 0;
-        };
+        }
       }
 
       & .question-option-circle {
@@ -313,7 +302,7 @@
           top: 50%;
           right: 5%;
           margin: -16px 0 0 0;
-        };
+        }
 
         &.text-only {
           margin-top: 27vw;
@@ -323,7 +312,7 @@
             top: 50%;
             right: 5%;
             margin: -16px 0 0 0;
-          };
+          }
 
         }
 
@@ -341,12 +330,12 @@
           @include breakpoint(tabletAndDesktop) {
             top: -0.6vw;
             left: 0.6vw;
-          };
+          }
 
           @include breakpoint(desktopOnly) {
             top: -0.4vw;
             left: 0.4vw;
-          };
+          }
         }
       }
 
@@ -363,19 +352,19 @@
       @include breakpoint(tabletOnly) {
         padding: 6vw 6%;
         line-height: 2.5vw;
-      };
+      }
 
       @include breakpoint(desktopOnly) {
         padding: 0vw 6%;
         line-height: 1.3vw;
         font-size: 0.8rem;
         margin-top: 0.8vw;
-      };
+      }
 
       @include breakpoint(desktopLarge) {
         line-height: 1.2vw;
         margin-top: 1.8vw;
-      };
+      }
 
       &::before {
         display: block;
@@ -389,7 +378,7 @@
 
         @include breakpoint(tabletAndDesktop) {
           display: none;
-        };
+        }
       }
 
       &__title {
@@ -410,11 +399,11 @@
 
     @include breakpoint(phoneAndTablet) {
       display: none;
-    };
+    }
 
     @include breakpoint(desktopLarge) {
       top: 2vw;
-    };
+    }
 
     & span {
       display: inline-block;
@@ -430,7 +419,7 @@
 
       @include breakpoint(desktopLarge) {
         top: 0.5vw;
-      };
+      }
     }
   }
 

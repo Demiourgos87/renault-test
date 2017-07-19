@@ -6,14 +6,14 @@
 
   @include breakpoint(tabletAndDesktop) {
     padding: 0 25px;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     float: left;
     width: 6%;
     margin: 0 4% 0 0;
     padding: 20px 0;
-  };
+  }
 
   & .share__icon {
     display: inline-block;
@@ -34,7 +34,7 @@
       width: 9vw;
       height: 9vw;
       line-height: 9vw;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       top: 0;
@@ -45,14 +45,14 @@
       margin-bottom: 20px;
       margin-right: 0;
       font-size: $fontLarge;
-    };
+    }
 
     &:last-child {
       margin-right: 0;
 
       @include breakpoint(desktopOnly) {
         margin-bottom: 0;
-      };
+      }
     }
 
     & i {
@@ -61,7 +61,7 @@
 
       @include breakpoint(tabletAndDesktop) {
         font-size: $fontBig;
-      };
+      }
     }
   }
 

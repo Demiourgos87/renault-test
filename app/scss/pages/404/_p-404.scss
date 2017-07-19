@@ -7,11 +7,11 @@
 
     @include breakpoint(tabletOnly) {
       width: 16vw;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       width: 10vw;
-    };
+    }
   }
 
   & .c-breadcrumbs {
@@ -26,11 +26,11 @@
 
   @include breakpoint(tabletOnly) {
     margin-bottom: 10vw;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     margin-bottom: 7vw;
-  };
+  }
 
   &__message {
     position: relative;
@@ -46,16 +46,16 @@
     @include breakpoint(tabletOnly) {
       top: 4vw;
       font-size: $fontHuge;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       font-size: 4.4rem;
       top: 4.5vw;
-    };
+    }
 
     @include breakpoint(desktopLarge) {
       font-size: 5.3rem;
-    };
+    }
 
     & .accented-word {
       position: relative;
@@ -66,17 +66,17 @@
       @include breakpoint(tabletOnly) {
         top: 3.2vw;
         font-size: 5.5rem;
-      };
+      }
 
       @include breakpoint(desktopOnly) {
         top: 3.2vw;
         font-size: 8rem;
-      };
+      }
 
       @include breakpoint(desktopLarge) {
         top: 3.4vw;
         font-size: 10rem;
-      };
+      }
     }
   }
 

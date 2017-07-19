@@ -3,7 +3,7 @@
 
   @include breakpoint(desktopOnly) {
     margin: 2vw 0 7vw 0;
-  };
+  }
 }
 
 @media only screen and (min-width: $break-mob) {

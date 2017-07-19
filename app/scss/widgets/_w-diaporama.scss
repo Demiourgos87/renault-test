@@ -1,4 +1,4 @@
-.c-diaporama {
+.w-diaporama {
   display: none;
   position: fixed;
   top: 0;
@@ -29,7 +29,7 @@ html.diaporamaOpened, body.diaporamaOpened {
   z-index: 999999999;
 }
 
-.c-diaporama .slick-dots {
+.w-diaporama .slick-dots {
   @include ulClean;
   position: absolute;
   top: 38vw;
@@ -39,7 +39,7 @@ html.diaporamaOpened, body.diaporamaOpened {
   z-index: 30;
 }
 
-.c-diaporama .slick-dots li {
+.w-diaporama .slick-dots li {
   display: inline-block;
   max-width: calc(100% / 6 - 2%);
   height: 5vw;
@@ -47,13 +47,13 @@ html.diaporamaOpened, body.diaporamaOpened {
   position: relative;
 }
 
-.c-diaporama .slick-dots li img {
+.w-diaporama .slick-dots li img {
   width: 100%;
   height: 100%;
   filter: grayscale(100%);
 }
 
-.c-diaporama .slick-dots li .shadow {
+.w-diaporama .slick-dots li .shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -62,11 +62,11 @@ html.diaporamaOpened, body.diaporamaOpened {
   box-shadow: inset 0 0 0 5px transparent;
 }
 
-.c-diaporama .slick-dots li:hover .shadow, .c-diaporama .slick-dots li.slick-active .shadow {
+.w-diaporama .slick-dots li:hover .shadow, .w-diaporama .slick-dots li.slick-active .shadow {
   box-shadow: inset 0 0 0 5px $yellow;
 }
 
-.c-diaporama .slick-dots li:hover img, .c-diaporama .slick-dots li.slick-active img {
+.w-diaporama .slick-dots li:hover img, .w-diaporama .slick-dots li.slick-active img {
   filter: grayscale(0);
 }
 
@@ -181,7 +181,7 @@ html.diaporamaOpened, body.diaporamaOpened {
 
 @media only screen and (min-width: $break-desk) {
 
-  .c-diaporama {
+  .w-diaporama {
     background: $white;
   }
 
@@ -200,7 +200,7 @@ html.diaporamaOpened, body.diaporamaOpened {
     left: 52vw;
   }
 
-  .c-diaporama .slick-list, .c-diaporama .slick-list .slick-track {
+  .w-diaporama .slick-list, .w-diaporama .slick-list .slick-track {
     height: 100%;
   }
 

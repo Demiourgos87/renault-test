@@ -9,7 +9,7 @@
 
     @include breakpoint(tabletAndDesktop) {
       width: 100%;
-    };
+    }
 
   }
 
@@ -28,7 +28,7 @@
         width: 45%;
       }
 
-    };
+    }
 
     @include breakpoint(tabletOnly) {
 
@@ -39,7 +39,7 @@
         width: 18%;
       }
 
-    };
+    }
 
     @include breakpoint(desktopOnly) {
 
@@ -50,7 +50,7 @@
         width: 14%;
       }
 
-    };
+    }
 
     &__heading {
       font-family: 'Airways';
@@ -69,11 +69,11 @@
 
       @include breakpoint(tabletOnly) {
         padding: 1vw 0;
-      };
+      }
 
       @include breakpoint(desktopOnly) {
         padding: 0.2vw 0;
-      };
+      }
 
     }
 
