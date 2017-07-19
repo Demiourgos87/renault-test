@@ -14,7 +14,7 @@
 
   @include breakpoint(phoneAndTablet) {
     display: none;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     position: absolute;
@@ -24,7 +24,7 @@
     left: 0;
     background: rgba(0,0,0,0.3);
     z-index: 10;
-  };
+  }
 
 }
 
@@ -57,7 +57,7 @@
 
   @include breakpoint(phoneAndTablet) {
     top: 0;
-  };
+  }
 }
 
 .diaporama-trigger__prev {
@@ -65,7 +65,7 @@
 
   @include breakpoint(phoneAndTablet) {
     left: 0;
-  };
+  }
 }
 
 .diaporama-trigger__next {
@@ -73,7 +73,7 @@
 
   @include breakpoint(phoneAndTablet) {
     right: 0;
-  };
+  }
 }
 
 .diaporama-trigger__navigation .btn {
@@ -89,7 +89,7 @@
     margin-left: -7.5vw;
     padding: 15px 25px;
 
-  };
+  }
 
   @include breakpoint(desktopOnly) {
 
@@ -99,7 +99,7 @@
     background: $yellow;
     color: $black;
 
-  };
+  }
 
 }
 
@@ -115,7 +115,7 @@
 
   @include breakpoint(phoneAndTablet) {
     display: none;
-  };
+  }
 
   &.slick-slider {
     height: 4vw;

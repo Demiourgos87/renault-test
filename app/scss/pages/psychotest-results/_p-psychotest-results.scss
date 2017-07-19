@@ -11,7 +11,7 @@
       position: relative;
       min-height: 30vw;
       margin-top: 2vw;
-    };
+    }
   }
 
   &__heading {
@@ -23,7 +23,7 @@
 
     @include breakpoint(tabletOnly) {
       font-size: 2.5rem;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       font-size: 2.2rem;
@@ -34,7 +34,7 @@
 	    top: 0;
       right: 0;
       margin-top: 0;
-    };
+    }
 
   }
 
@@ -45,13 +45,13 @@
     @include breakpoint(tabletOnly) {
       width: 120%;
       margin-left: -6%;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       width: 55%;
       position: absolute;
       left: 12%;
-    };
+    }
   }
 
   & .c-social-share {
@@ -63,7 +63,7 @@
     @include breakpoint(tabletOnly) {
       width: 34%;
       padding-bottom: 1vw;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       display: block;
@@ -73,7 +73,7 @@
       text-align: center;
       left: 0;
       top: 6vw;
-    };
+    }
 
     & .share__icon {
       width: 16vw;
@@ -90,14 +90,14 @@
         &:last-child {
           margin-right: 0;
         }
-      };
+      }
 
       @include breakpoint(desktopOnly) {
         width: 3vw;
         height: 3vw;
         line-height: 3vw;
         left: -1.5vw;
-      };
+      }
 
       & i {
         font-size: $fontNormal;
@@ -114,7 +114,7 @@
       line-height: 3vw;
       color: #7e7e7e;
       margin-bottom: 5vw;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       line-height: 1.5vw;
@@ -125,7 +125,7 @@
       right: 0;
       top: 3vw;
       font-size: 0.8rem;
-    };
+    }
   }
 
   & .buttons-wrap {
@@ -142,7 +142,7 @@
       margin-top: 5vw;
       display: inline-block;
       margin-left: 6vw;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
 
@@ -156,7 +156,7 @@
       display: inline-block;
       text-align: center;
       font-size: $fontVerySmall;
-    };
+    }
   }
 
 }
@@ -167,15 +167,15 @@
 
   @include breakpoint(tabletOnly) {
     margin-top: 4vw;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     margin-top: 2vw;
-  };
+  }
 
   @include breakpoint(desktopLarge) {
     margin-top: 0;
-  };
+  }
 
   & .teaser__img img {
     filter: grayscale(0);

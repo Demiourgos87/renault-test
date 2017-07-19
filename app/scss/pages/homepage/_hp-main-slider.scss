@@ -34,7 +34,7 @@
 
     @include breakpoint(phoneOnly) {
       display: none;
-    };
+    }
 
   }
 
@@ -51,11 +51,11 @@
       font-size: $fontSmall;
       bottom: 3vw;
       left: 13vw;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       left: 15vw;
-    };
+    }
 
     & .slider__current {
       color: $yellow;
@@ -83,13 +83,13 @@
           top: 20vw;
           left: 12vw;
           width: 56%;
-        };
+        }
 
         @include breakpoint(desktopOnly) {
           top: 21vw;
           left: 15vw;
           width: 55%;
-        };
+        }
 
         & .btn {
           padding: 2vw;
@@ -97,11 +97,11 @@
 
           @include breakpoint(tabletOnly) {
             padding: 1vw 2vw;
-          };
+          }
 
           @include breakpoint(desktopOnly) {
             padding: 0.5vw 2vw;
-          };
+          }
         }
 
         & p {
@@ -115,11 +115,11 @@
 
           @include breakpoint(tabletOnly) {
             font-size: $fontLarge;
-          };
+          }
 
           @include breakpoint(desktopOnly) {
             font-size: $fontBig;
-          };
+          }
         }
 
         &__title {
@@ -129,11 +129,11 @@
 
           @include breakpoint(tabletOnly) {
             font-size: $fontVeryBig;
-          };
+          }
 
           @include breakpoint(desktopOnly) {
             font-size: 3.2rem;
-          };
+          }
         }
 
         &__desc {
@@ -142,11 +142,11 @@
 
           @include breakpoint(phoneOnly) {
             display: none;
-          };
+          }
 
           @include breakpoint(desktopOnly) {
             font-size: $fontBig;
-          };
+          }
         }
       }
 
@@ -176,7 +176,7 @@
 
           @include breakpoint(tabletAndDesktop) {
             display: none;
-          };
+          }
         }
       }
     }

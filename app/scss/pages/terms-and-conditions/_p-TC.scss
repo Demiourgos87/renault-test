@@ -13,11 +13,11 @@
 
   @include breakpoint(tabletOnly) {
     margin-top: 4vw;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     margin-top: 3vw;
-  };
+  }
 
   &__heading {
     font-size: $fontMedium;

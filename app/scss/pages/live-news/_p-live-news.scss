@@ -4,7 +4,7 @@
   & .c-page-title {
     @include breakpoint(tabletAndDesktop) {
       width: 50%;
-    };
+    }
   }
 
   & .row--raised {
@@ -12,12 +12,12 @@
     @include breakpoint(tabletOnly) {
       margin-top: -15vw;
       margin-bottom: 3.5vw;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       margin-top: -13.2vw;
       margin-bottom: 5vw;
-    };
+    }
 
   }
 
@@ -41,7 +41,7 @@
         height: 2px;
         background: $lightGray;
 
-      };
+      }
 
     }
 

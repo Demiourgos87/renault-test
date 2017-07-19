@@ -19,11 +19,11 @@
 
   @include breakpoint(tabletOnly) {
     width: 9vw;
-  };
+  }
 
   @include breakpoint(phoneOnly) {
     width: 20vw;
-  };
+  }
 }
 
 .c-test-start__body .c-section-title.heading--row {
@@ -48,7 +48,7 @@
 
   @include breakpoint(phoneAndTablet) {
     display: none;
-  };
+  }
 }
 
 .c-test-start__item {

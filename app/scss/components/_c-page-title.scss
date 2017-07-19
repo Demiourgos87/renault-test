@@ -7,9 +7,9 @@
 
   @include breakpoint(phoneOnly) {
     margin-top: 5vw;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     margin-bottom: 5vw;
-  };
+  }
 }

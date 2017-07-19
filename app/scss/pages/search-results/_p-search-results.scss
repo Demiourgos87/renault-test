@@ -12,11 +12,11 @@
 
   @include breakpoint(tabletOnly) {
     margin: 7vw 0 0 0;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     margin-bottom: 5vw;
-  };
+  }
 
   &::before, &::after {
 
@@ -30,7 +30,7 @@
       height: 2px;
       background: $lightGray;
 
-    };
+    }
 
   }
 

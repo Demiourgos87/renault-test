@@ -5,11 +5,11 @@
 
   @include breakpoint(tabletonly) {
     margin-bottom: 5vw;
-  };
+  }
 
   @include breakpoint(desktopOnly) {
     margin-bottom: 4vw;
-  };
+  }
 
   &__heading {
 
@@ -22,11 +22,11 @@
 
     @include breakpoint(tabletOnly) {
       margin: 5vw 0;
-    };
+    }
 
     @include breakpoint(desktopOnly) {
       margin: 5vw 0 3vw 0;
-    };
+    }
 
   }
 
@@ -47,11 +47,11 @@
       @include breakpoint(tabletOnly) {
         width: calc(100% - 8vw - 4px);
         padding: 3vw 4vw;
-      };
+      }
 
       @include breakpoint(desktopOnly) {
         padding: 2vw 3vw;
-      };
+      }
 
     }
 
@@ -66,12 +66,12 @@
       @include breakpoint(tabletOnly) {
         top: 3vw;
         right: 2vw;
-      };
+      }
 
       @include breakpoint(desktopOnly) {
         top: 2vw;
         right: 3vw;
-      };
+      }
 
     }
 
