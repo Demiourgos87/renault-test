@@ -1849,9 +1849,14 @@ html.diaporamaOpened, body.diaporamaOpened {
 
 @media only screen and (min-width: 599px) {
   .hp-astuces {
-    margin: 7vw 0 0 0; }
-  .hp-astuces {
-    border-top: 2px solid #f6f6f6; } }
+    margin: 10vw 0 0 0;
+    border-top: 2px solid #f6f6f6; }
+    .hp-astuces .c-section-title.heading--row {
+      margin: 4vw 0; }
+    .hp-astuces .container--raised {
+      margin-top: -7.5%; }
+    .hp-astuces .row--centered {
+      top: -7vw; } }
 
 .hp-business {
   width: 100%;

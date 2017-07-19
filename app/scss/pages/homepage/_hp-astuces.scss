@@ -5,11 +5,20 @@
 @media only screen and (min-width: $break-mob) {
 
   .hp-astuces {
-    margin: 7vw 0 0 0;
-  }
-
-  .hp-astuces {
+    margin: 10vw 0 0 0;
     border-top: 2px solid $lightGray;
+
+    & .c-section-title.heading--row {
+      margin: 4vw 0;
+    }
+
+    & .container--raised {
+      margin-top: -7.5%;
+    }
+
+    & .row--centered {
+      top: -7vw;
+    }
   }
 
 }
