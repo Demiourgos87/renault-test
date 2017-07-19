@@ -1,8 +1,8 @@
-.c-diaporama-trigger {
+.w-diaporama-trigger {
   @include article-hero(100%, 48vw);
 }
 
-.c-diaporama-trigger .article-hero__footnote {
+.w-diaporama-trigger .article-hero__footnote {
   z-index: 30;
 }
 
@@ -28,11 +28,11 @@
 
 }
 
-.c-diaporama-trigger .slick-slider, .c-diaporama-trigger .slick-list, .c-diaporama-trigger .slick-track {
+.w-diaporama-trigger .slick-slider, .w-diaporama-trigger .slick-list, .w-diaporama-trigger .slick-track {
   height: 100%;
 }
 
-.c-diaporama-trigger .diaporama-trigger__slide img {
+.w-diaporama-trigger .diaporama-trigger__slide img {
   width: 100%;
   z-index: 20;
 }

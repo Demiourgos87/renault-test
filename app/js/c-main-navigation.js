@@ -9,8 +9,8 @@
       $subMenuTrigger = $('.sub__menu__trigger'),
       $menuOpenedOverlay = $('.menu__opened__overlay'),
       $mainContent = $('.page'),
-      $headerSearch = $('.c-search'),
-      $searchOverlay = $('.search__overlay'),
+      $headerSearch = $('.w-search-trigger'),
+      $searchOverlay = $('.w-search-popup'),
       $searchClose = $('.search__close'),
       windowWidth = $(window).outerWidth();
 

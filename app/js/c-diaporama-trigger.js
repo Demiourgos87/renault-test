@@ -3,7 +3,7 @@
 
   // Cache DOM \\
 
-  var $diaporamaTrigger = $('.c-diaporama-trigger'),
+  var $diaporamaTrigger = $('.w-diaporama-trigger'),
       $slider = $diaporamaTrigger.find('.diaporama-trigger__slider'),
       $slides = $slider.find('.diaporama-trigger__slide'),
       $navigation = $diaporamaTrigger.find('.diaporama-trigger__navigation'),
@@ -11,7 +11,7 @@
       $arrowNext = $navigation.find('.diaporama-trigger__next'),
       $openDiaporama = $navigation.find('.diaporama__open'),
       windowWidth = $(window).outerWidth(),
-      $diaporama = $('body').find('.c-diaporama'),
+      $diaporama = $('body').find('.w-diaporama'),
       $diaporamaSlider = $diaporama.find('.diaporama--wrap'),
       $diaporamaThumbs = $diaporamaTrigger.find('.diaporama-trigger__thumbs');
 
@@ -19,7 +19,7 @@
     e.stopPropagation();
     $diaporama.slideDown(200);
     $diaporamaSlider.slick('setPosition');
-    $('.c-diaporama .diaporama__thumbs').slick('setPosition');
+    $('.w-diaporama .diaporama__thumbs').slick('setPosition');
     $('body, html').addClass('diaporamaOpened');
   });
 

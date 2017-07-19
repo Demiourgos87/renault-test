@@ -1,0 +1,61 @@
+.w-search-trigger {
+  float: right;
+  font-size: $fontBig;
+
+  @include breakpoint(desktopOnly) {
+    position: relative;
+    font-size: $fontMedium;
+    top: 6px;
+  }
+}
+
+.w-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999999999;
+  background: rgba(0, 0, 0, 0.8);
+
+  & .search__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    @include breakpoint(desktopOnly) {
+      top: 25px;
+      right: 25px;
+    }
+  }
+
+  & .search__field {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 80%;
+    margin-left: -40%;
+    text-align: center;
+
+    & input {
+      width: 85%;
+      background: transparent;
+      border: 0;
+      color: $white;
+      border-bottom: 1px solid $white;
+      font-size: $fontBig;
+
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid $white;
+      }
+    }
+
+    & i {
+      font-size: 1.8rem;
+    }
+  }
+}

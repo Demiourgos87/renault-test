@@ -3,7 +3,7 @@
 
   // Cache DOM \\
 
-  var $diaporama = $('.c-diaporama'),
+  var $diaporama = $('.w-diaporama'),
       $diaporamaWrap = $diaporama.find('.diaporama--wrap'),
       $diaporamaClose = $diaporama.find('.diaporama__close'),
       $diaporamaSlides = $diaporamaWrap.find('.diaporama__slide'),
@@ -82,7 +82,7 @@
       $diaporamaThumbs.append(thumb);
     });
 
-    $('.c-diaporama .diaporama--wrap').slick({
+    $('.w-diaporama .diaporama--wrap').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
@@ -96,10 +96,10 @@
       //   return '<img src="' + thumb + '"><div class="shadow"></div>';
       // },
       arrows: false,
-      asNavFor: '.c-diaporama .diaporama__thumbs'
+      asNavFor: '.w-diaporama .diaporama__thumbs'
     });
 
-    $('.c-diaporama .diaporama__thumbs').slick({
+    $('.w-diaporama .diaporama__thumbs').slick({
       slidesToShow: 6,
       slidesToScroll: 1,
       speed: 400,
@@ -108,7 +108,7 @@
       pauseOnHover: true,
       centerMode: false,
       focusOnSelect: true,
-      asNavFor: '.c-diaporama .diaporama--wrap'
+      asNavFor: '.w-diaporama .diaporama--wrap'
     });
 
   }

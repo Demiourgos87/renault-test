@@ -2896,7 +2896,7 @@
 
   // Cache DOM \\
 
-  var $diaporamaTrigger = $('.c-diaporama-trigger'),
+  var $diaporamaTrigger = $('.w-diaporama-trigger'),
       $slider = $diaporamaTrigger.find('.diaporama-trigger__slider'),
       $slides = $slider.find('.diaporama-trigger__slide'),
       $navigation = $diaporamaTrigger.find('.diaporama-trigger__navigation'),
@@ -2904,7 +2904,7 @@
       $arrowNext = $navigation.find('.diaporama-trigger__next'),
       $openDiaporama = $navigation.find('.diaporama__open'),
       windowWidth = $(window).outerWidth(),
-      $diaporama = $('body').find('.c-diaporama'),
+      $diaporama = $('body').find('.w-diaporama'),
       $diaporamaSlider = $diaporama.find('.diaporama--wrap'),
       $diaporamaThumbs = $diaporamaTrigger.find('.diaporama-trigger__thumbs');
 
@@ -2912,7 +2912,7 @@
     e.stopPropagation();
     $diaporama.slideDown(200);
     $diaporamaSlider.slick('setPosition');
-    $('.c-diaporama .diaporama__thumbs').slick('setPosition');
+    $('.w-diaporama .diaporama__thumbs').slick('setPosition');
     $('body, html').addClass('diaporamaOpened');
   });
 
@@ -2993,7 +2993,7 @@
 
   // Cache DOM \\
 
-  var $diaporama = $('.c-diaporama'),
+  var $diaporama = $('.w-diaporama'),
       $diaporamaWrap = $diaporama.find('.diaporama--wrap'),
       $diaporamaClose = $diaporama.find('.diaporama__close'),
       $diaporamaSlides = $diaporamaWrap.find('.diaporama__slide'),
@@ -3072,7 +3072,7 @@
       $diaporamaThumbs.append(thumb);
     });
 
-    $('.c-diaporama .diaporama--wrap').slick({
+    $('.w-diaporama .diaporama--wrap').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
@@ -3086,10 +3086,10 @@
       //   return '<img src="' + thumb + '"><div class="shadow"></div>';
       // },
       arrows: false,
-      asNavFor: '.c-diaporama .diaporama__thumbs'
+      asNavFor: '.w-diaporama .diaporama__thumbs'
     });
 
-    $('.c-diaporama .diaporama__thumbs').slick({
+    $('.w-diaporama .diaporama__thumbs').slick({
       slidesToShow: 6,
       slidesToScroll: 1,
       speed: 400,
@@ -3098,7 +3098,7 @@
       pauseOnHover: true,
       centerMode: false,
       focusOnSelect: true,
-      asNavFor: '.c-diaporama .diaporama--wrap'
+      asNavFor: '.w-diaporama .diaporama--wrap'
     });
 
   }
@@ -3229,8 +3229,8 @@
       $subMenuTrigger = $('.sub__menu__trigger'),
       $menuOpenedOverlay = $('.menu__opened__overlay'),
       $mainContent = $('.page'),
-      $headerSearch = $('.c-search'),
-      $searchOverlay = $('.search__overlay'),
+      $headerSearch = $('.w-search-trigger'),
+      $searchOverlay = $('.w-search-popup'),
       $searchClose = $('.search__close'),
       windowWidth = $(window).outerWidth();
 
