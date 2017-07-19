@@ -10,12 +10,12 @@
   & .row--raised {
 
     @include breakpoint(tabletOnly) {
-      margin-top: -13.5vw;
-      margin-bottom: 3vw;
+      margin-top: -15vw;
+      margin-bottom: 3.5vw;
     };
 
     @include breakpoint(desktopOnly) {
-      margin-top: -13.4vw;
+      margin-top: -13.2vw;
       margin-bottom: 5vw;
     };
 
