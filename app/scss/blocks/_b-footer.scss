@@ -1,40 +1,38 @@
 .b-footer {
   @include container(92%, 40px 0 0, 20px 4%);
-
   text-align: center;
-}
 
-.b-footer__logo {
-  margin-bottom: 40px;
-}
-
-.b-footer__nav {
-  @include ulClean;
-
-  margin-bottom: 60px;
-}
-
-.b-footer__nav li {
-  display: block;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-
-  & a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: $fontNormal;
-    color: $gray;
-  }
-}
-
-@media only screen and (min-width: $break-mob) {
-  .b-footer__nav li {
-    display: inline-block;
-    margin-right: 20px;
-    margin-bottom: 0;
+  &__logo {
+    margin-bottom: 40px;
   }
 
-  .b-footer__nav li:last-child {
-    margin-right: 0;
+  &__nav {
+    @include ulClean;
+    margin-bottom: 60px;
+
+    & li {
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+
+      @include breakpoint(tabletAndDesktop) {
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        @include breakpoint(tabletAndDesktop) {
+          margin-right: 0;
+        }
+      }
+
+      & a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $fontNormal;
+        color: $gray;
+      }
+    }
   }
 }

@@ -1,21 +1,10 @@
-@media only screen and (min-width: $break-mob) {
-
-  .comm-more-topics {
+.comm-more-topics {
+  @include breakpoint(tabletOnly) {
     width: 30%;
     float: left;
   }
 
-  .comm-more-topics .btn {
-    padding: 10px 20px;
-    font-size: $fontVerySmall;
-    font-weight: bold;
-  }
-
-}
-
-@media only screen and (min-width: $break-desk) {
-
-  .comm-more-topics {
+  @include breakpoint(desktopOnly) {
     position: relative;
     top: 4vw;
     width: calc(30% - 82px);
@@ -24,30 +13,35 @@
     border-left: 2px solid $lightGray;
   }
 
-  .comm-more-topics::before, .comm-more-topics::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 79.2vw;
-    height: 2px;
-    background: $lightGray;
-    z-index: -1;
+  &::before, &::after {
+    @include breakpoint(desktopOnly) {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 79.2vw;
+      height: 2px;
+      background: $lightGray;
+      z-index: -1;
+    }
+
+    @include breakpoint(desktopLarge) {
+      width: 79.4vw;
+    }
   }
 
-  .comm-more-topics::before {
+  &::before {
     top: 0;
   }
 
-  .comm-more-topics::after {
+  &::after {
     bottom: 0;
   }
 
-}
-
-@media only screen and (min-width: $break-desk-large) {
-
-  .comm-more-topics::before, .comm-more-topics::after {
-    width: 79.4vw;
+  & .btn {
+    @include breakpoint(tabletOnly) {
+      padding: 10px 20px;
+      font-size: $fontVerySmall;
+      font-weight: bold;
+    }
   }
-
 }

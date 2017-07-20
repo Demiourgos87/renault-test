@@ -1,100 +1,93 @@
 .vu-QA {
   padding-top: 5vw;
-}
 
-.vu-QA .c-faq-slider {
-  border-top: none;
-  position: relative;
-}
-
-@media only screen and (min-width: $break-mob) {
-  .vu-QA .c-faq-slider {
-    width: 68%;
-    float: left;
-    margin-right: 2%;
-    margin-bottom: 7vw;
-  }
-
-  .vu-QA .c-faq-slider .container--full {
-    height: 22rem;
-  }
-
-  .vu-QA .c-faq-slider .teaser__body {
-    margin-top: 20px;
-  }
-
-  .vu-QA .c-faq-slider .slider__container {
-    width: 65%;
-    float: none;
-    margin: 0 0 0 5vw;
-  }
-
-  .vu-QA .c-faq-slider .slider__navigation {
-    float: none;
-    position: absolute;
-    bottom: 3.3vw;
-    right: -12vw;
-  }
-
-  .vu-QA .c-faq-slider .c-section-title {
+  & .c-faq-slider {
+    border-top: none;
     position: relative;
-    top: -6vw;
-    left: 5vw;
-  }
-}
 
-@media only screen and (min-width: $break-desk) {
-  .vu-QA .c-faq-slider {
-    width: calc(70% - 40px);
-    padding: 40px 40px 40px 0;
-    float: left;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
+    @include breakpoint(tabletOnly) {
+      width: 68%;
+      float: left;
+      margin-right: 2%;
+      margin-bottom: 7vw;
+    }
 
-  .vu-QA .c-faq-slider .container--full {
-    height: 26rem;
-  }
+    @include breakpoint(desktopOnly) {
+      width: calc(70% - 40px);
+      padding: 40px 40px 40px 0;
+      float: left;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
 
-  .vu-QA .c-faq-slider .teaser__body {
-    margin-top: 20px;
-    width: 70%;
-  }
+    & .container--full {
+      height: 22rem;
 
-  .vu-QA .c-faq-slider .slider__container {
-    width: 60%;
-    float: none;
-    margin: 0 auto;
-  }
+      @include breakpoint(desktopOnly) {
+        height: 26rem;
+      }
 
-  .vu-QA .c-faq-slider .slider__container {
-    top: -10vw;
-  }
+      @include breakpoint(desktopLarge) {
+        height: 28rem;
+      }
+    }
 
-  .vu-QA .slider__container .slider {
-    width: 100%;
-  }
+    & .teaser__body {
+      margin-top: 20px;
 
-  .vu-QA .c-faq-slider .slider__navigation {
-    float: none;
-    position: absolute;
-    top: 27.2vw;
-    right: 0;
-  }
+      @include breakpoint(desktopOnly) {
+        margin-top: 20px;
+        width: 70%;
+      }
+    }
 
-  .vu-QA .c-faq-slider .c-section-title {
-    position: relative;
-    top: -11vw;
-    left: 10vw;
-  }
-}
+    & .slider__container {
+      width: 65%;
+      float: none;
+      margin: 0 0 0 5vw;
 
-@media only screen and (min-width: $break-desk-large) {
-  .vu-QA .c-faq-slider .container--full {
-    height: 28rem;
-  }
+      @include breakpoint(desktopOnly) {
+        width: 60%;
+        float: none;
+        margin: 0 auto;
+        top: -10vw;
+      }
 
-  .vu-QA .c-faq-slider .slider__navigation {
-    top: 27.5vw;
+      & .slider {
+        @include breakpoint(desktopOnly) {
+          width: 100%;
+        }
+      }
+    }
+
+    & .slider__navigation {
+      float: none;
+      position: absolute;
+      bottom: 3.3vw;
+      right: -12vw;
+
+      @include breakpoint(desktopOnly) {
+        float: none;
+        position: absolute;
+        top: 27.2vw;
+        right: 0;
+      }
+
+      @include breakpoint(desktopLarge) {
+        top: 27.5vw;
+      }
+    }
+
+    & .c-section-title {
+      position: relative;
+      top: -6vw;
+      left: 5vw;
+
+      @include breakpoint(desktopOnly) {
+        position: relative;
+        top: -11vw;
+        left: 10vw;
+      }
+    }
   }
 }

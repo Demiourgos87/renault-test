@@ -1,28 +1,24 @@
 .hp-business {
   @include container(100%, 50px 0, 0);
-}
 
-.hp-business .row--mob:last-child {
-  margin-left: 1%;
-}
-
-@media only screen and (min-width: $break-mob) {
-
-  .hp-business {
+  @include breakpoint(tabletAndDesktop) {
     border-top: 2px solid $lightGray;
     position: relative;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 1.5vw;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background: $lightGray;
+      z-index: -1;
+    }
   }
 
-  .hp-business::after {
-    display: block;
-    content: "";
-    position: absolute;
-    bottom: 1.5vw;
-    right: 0;
-    left: 0;
-    height: 2px;
-    background: $lightGray;
-    z-index: -1;
+  & .row--mob:last-child {
+    margin-left: 1%;
   }
-
 }

@@ -1,24 +1,20 @@
 .hp-news {
   @include container(100%, 0 0 8vw 0, 0);
 
+  & .c-section-title {
+    @include breakpoint(phoneOnly) {
+      margin-top: 5%;
+      width: 20vw;
+    }
+  }
+
+  & .row--padded--top {
+    @include breakpoint(tabletAndDesktop) {
+      padding-top: 13%;
+    }
+  }
+
   @include breakpoint(desktopOnly) {
     margin: 2vw 0 7vw 0;
   }
-}
-
-@media only screen and (min-width: $break-mob) {
-
-  .row--padded--top {
-    padding-top: 13%;
-  }
-
-}
-
-@media only screen and (max-width: $break-mob) {
-
-  .hp-news .c-section-title {
-    margin-top: 5%;
-    width: 20vw;
-  }
-
 }

@@ -1,138 +1,155 @@
-.block-comm-QA-list .teaser {
-  overflow: visible;
-  background: $lightGray;
-}
-
-.block-comm-QA-list .teaser.teaser--xl {
-  float: none;
-}
-
-.block-comm-QA-list .body__wrap {
-  position: relative;
-}
-
-@media only screen and (max-width: $break-mob) {
-  .block-comm-QA-list .body__wrap {
-    width: 100%;
-    top: -5vw;
-  }
-
-  .block-comm-QA-list .teaser {
-    margin-bottom: 40px;
-  }
-
-  .QA__first-item {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .block-comm-QA-list .teaser--landscape .teaser__img {
-    box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6);
-  }
-
-  .block-comm-QA-list .teaser--landscape .teaser__img {
-    margin-right: 4%;
-  }
-
-  .block-comm-QA-list .teaser--landscape .teaser__img img {
-    margin-bottom: -4px;
-  }
-
-  .block-comm-QA-list .teaser--landscape .teaser__body {
-    width: 40%;
-    margin-top: 12vw;
-  }
-
-  .block-comm-QA-list .teaser--portrait .teaser__body {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .block-comm-QA-list .teaser--m {
-    height: 15rem;
-  }
-
-  .block-comm-QA-list .teaser--m:nth-child(2n+0) {
-    margin-right: 0;
-    margin-left: 1%;
-  }
-}
-
-@media only screen and (min-width: $break-mob) {
-
-  .block-comm-QA-list .c-section-title.heading--row {
+.block-comm-QA-list {
+  & .body__wrap {
     position: relative;
-    top: 18vw;
-    left: 4vw;
-    width: 20vw;
+    @include breakpoint(phoneOnly) {
+      width: 100%;
+      top: -5vw;
+    }
   }
 
-  .block-comm-QA-list .teaser {
-    margin-bottom: 10vw;
+  & .c-section-title {
+    &.heading--row {
+      @include breakpoint(tabletAndDesktop) {
+        position: relative;
+        top: 18vw;
+        left: 4vw;
+        width: 20vw;
+      }
+
+      @include breakpoint(desktopOnly) {
+        position: relative;
+        top: 12vw;
+        left: 3.5vw;
+        width: 20vw;
+      }
+    }
   }
 
-  .QA__first-item {
-    width: 60%;
-    float: right;
-    margin-bottom: 8vw;
+  & .teaser {
+    overflow: visible;
+    background: $lightGray;
+
+    @include breakpoint(phoneOnly) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(tabletAndDesktop) {
+      margin-bottom: 10vw;
+    }
+
+    &.float--right {
+      @include breakpoint(tabletAndDesktop) {
+        float: right;
+        margin-left: 5%;
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      @include breakpoint(tabletAndDesktop) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &.teaser--xl {
+      float: none;
+    }
+
+    &--landscape {
+      & .teaser__img {
+        @include breakpoint(phoneOnly) {
+          margin-right: 4%;
+          box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6);
+        }
+
+        @include breakpoint(tabletAndDesktop) {
+          margin-right: 6%;
+        }
+
+        & img {
+          margin-bottom: -4px;
+        }
+      }
+
+      & .teaser__body {
+        @include breakpoint(phoneOnly) {
+          width: 40%;
+          margin-top: 12vw;
+        }
+
+        @include breakpoint(tabletAndDesktop) {
+          margin-top: 12%;
+          width: 40%;
+        }
+      }
+
+      & .body__wrap {
+        @include breakpoint(tabletAndDesktop) {
+          width: 80%;
+          margin: 0 auto;
+          top: -2vw;
+        }
+      }
+    }
+
+    &--portrait {
+      & .teaser__body {
+        @include breakpoint(phoneOnly) {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+
+      & .body__wrap {
+        @include breakpoint(tabletAndDesktop) {
+          width: 70%;
+          margin: 0 auto;
+          top: -7vw;
+        }
+      }
+    }
   }
 
-  .block-comm-QA-list .teaser--m {
-    width: 30%;
-    height: 11rem;
-    margin-right: 2%;
+  & .QA__first-item {
+    @include breakpoint(phoneOnly) {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    @include breakpoint(tabletAndDesktop) {
+      width: 60%;
+      float: right;
+      margin-bottom: 8vw;
+    }
   }
 
-  .block-comm-QA-list .teaser--landscape .body__wrap {
-    width: 80%;
-    margin: 0 auto;
-    top: -2vw;
+  & .teaser--m {
+    @include breakpoint(phoneOnly) {
+      height: 15rem;
+    }
+
+    @include breakpoint(tabletAndDesktop) {
+      width: 30%;
+      height: 11rem;
+      margin-right: 2%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      height: 17rem;
+    }
+
+    &:nth-child(2n+0) {
+      margin-right: 0;
+      margin-left: 1%;
+    }
   }
 
-  .block-comm-QA-list .teaser--landscape .teaser__body {
-    margin-top: 12%;
-    width: 40%;
+  & .teaser--l {
+    @include breakpoint(tabletAndDesktop) {
+      width: 67%;
+      margin-top: -5vw;
+      margin-left: 3.4vw;
+      margin-right: 5%;
+    }
   }
-
-  .block-comm-QA-list .teaser--landscape .teaser__img {
-    margin-right: 6%;
-  }
-
-  .block-comm-QA-list .teaser--portrait .body__wrap {
-    width: 70%;
-    margin: 0 auto;
-    top: -7vw;
-  }
-
-  .block-comm-QA-list .teaser--l {
-    width: 67%;
-    margin-top: -5vw;
-    margin-left: 3.4vw;
-    margin-right: 5%;
-  }
-
-  .block-comm-QA-list .teaser.float--right {
-    float: right;
-    margin-left: 5%;
-    margin-right: 0;
-  }
-
-  .block-comm-QA-list .teaser:last-child {
-    margin-bottom: 20px;
-  }
-}
-
-@media only screen and (min-width: $break-desk) {
-
-  .block-comm-QA-list .teaser.teaser--m {
-    height: 17rem;
-  }
-
-  .block-comm-QA-list .c-section-title.heading--row {
-    position: relative;
-    top: 12vw;
-    left: 3.5vw;
-    width: 20vw;
-  }
-
 }

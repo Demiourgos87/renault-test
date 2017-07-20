@@ -2,128 +2,113 @@
   position: relative;
   width: calc(100% - 20px);
   border: 10px solid $yellow;
-}
 
-.portrait__slide__img {
-  width: 100%;
-  z-index: 10;
-}
-
-.portrait__slider .image__overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 20;
-}
-
-.portrait__slide__body {
-  width: 60%;
-  position: absolute;
-  color: $white;
-  z-index: 30;
-}
-
-.portrait__slide__title {
-  font-size: 1.8rem;
-  margin: 0 0 15px 0;
-}
-
-.portrait__slide__heading {
-  font-size: 1.5rem;
-}
-
-.portrait__slider .slider__navigation {
-  float: none;
-  position: absolute;
-  z-index: 99999998;
-}
-
-.portrait__slider .btn {
-  position: absolute;
-  padding: 10px 20px;
-}
-
-.portrait__slide__heading {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-@media only screen and (max-width: $break-mob) {
-  .portrait__slide__body {
-    top: 8vw;
-    left: 8vw;
+  & .portrait__slide__img {
+    width: 100%;
+    z-index: 10;
   }
 
-  .portrait__slider .btn {
-    padding: 8px 20px;
-    font-size: 0.7rem;
-    bottom: 20px;
+  & .image__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 20;
   }
 
-  .portrait__slide__body {
-    height: 70vw;
+  & .portrait__slide__body {
+    width: 60%;
+    position: absolute;
+    color: $white;
+    z-index: 30;
+
+    @include breakpoint(phoneOnly) {
+      top: 8vw;
+      left: 8vw;
+      height: 70vw;
+    }
+
+    @include breakpoint(tabletOnly) {
+      top: 3vw;
+      left: 3vw;
+      height: 29vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      top: 6vw;
+      left: 4vw;
+      width: 50%;
+      height: 28vw;
+    }
+
+    &.portrait__slide__desc {
+      @include breakpoint(phoneAndTablet) {
+        display: none;
+      }
+    }
   }
 
-  .portrait__slider .slider__navigation {
-    top: 8vw;
-    right: 2vw;
+  & .portrait__slide__title {
+    font-size: 1.8rem;
+    margin: 0 0 15px 0;
   }
 
-  .portrait__slide__heading {
-    font-size: 1.2rem;
-  }
-}
-
-@media only screen and (min-width: $break-mob) {
-  .portrait__slide__heading {
-    font-size: 1.2rem;
+  & .portrait__slide__heading {
+    font-size: 1.5rem;
   }
 
-  .portrait__slide__body {
-    top: 3vw;
-    left: 3vw;
+  & .slider__navigation {
+    float: none;
+    position: absolute;
+    z-index: 99999998;
+
+    @include breakpoint(phoneOnly) {
+      top: 8vw;
+      right: 2vw;
+    }
+
+    @include breakpoint(tabletOnly) {
+      top: 3vw;
+      right: 1vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      top: 6vw;
+      right: 1vw;
+    }
   }
 
-  .portrait__slider .slider__navigation {
-    top: 3vw;
-    right: 1vw;
+  & .btn {
+    position: absolute;
+    padding: 10px 20px;
+
+    @include breakpoint(phoneOnly) {
+      padding: 8px 20px;
+      font-size: 0.7rem;
+      bottom: 20px;
+    }
+
+    @include breakpoint(tabletOnly) {
+      bottom: 40px;
+    }
+
+    @include breakpoint(desktopOnly) {
+      bottom: 40px;
+    }
   }
 
-  .portrait__slide__body {
-    height: 29vw;
-  }
+  & .portrait__slide__heading {
+    font-weight: bold;
+    margin-top: 10px;
 
-  .portrait__slider .btn {
-    bottom: 40px;
-  }
-}
+    @include breakpoint(phoneOnly) {
+      font-size: 1.2rem;
+    }
 
-@media only screen and (max-width: $break-desk) {
-  .portrait__slide__body .portrait__slide__desc {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: $break-desk) {
-  .portrait__slide__body {
-    top: 6vw;
-    left: 4vw;
-  }
-
-  .portrait__slider .slider__navigation {
-    top: 6vw;
-    right: 1vw;
-  }
-
-  .portrait__slide__body {
-    width: 50%;
-    height: 28vw;
-  }
-
-  .portrait__slider .btn {
-    bottom: 40px;
+    @include breakpoint(tabletOnly) {
+      font-size: 1.2rem;
+    }
   }
 }

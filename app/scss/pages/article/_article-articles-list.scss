@@ -1,32 +1,32 @@
 .article-articles-list {
   margin-bottom: 10vw;
-}
 
-.article-articles-list .heading--fix {
-  margin-top: 59.9%;
-}
+  & .heading--fix {
+    margin-top: 59.9%;
 
-.article-articles-list .heading--col {
-  margin-top: 25%;
-}
-
-@media only screen and (min-width: $break-mob) {
-
-  .article-articles-list .teaser--s, .article-articles-list .teaser--l {
-    width: 48%;
-    margin-bottom: 10px;
+    @include breakpoint(tabletAndDesktop) {
+      margin-top: 24%;
+    }
   }
 
-  .article-articles-list .heading--fix {
-    margin-top: 24%;
+  & .heading--col {
+    margin-top: 25%;
+
+    @include breakpoint(tabletAndDesktop) {
+      margin-top: 5%;
+    }
   }
 
-  .article-articles-list .heading--col {
-    margin-top: 5%;
+  & .row--clipped--right {
+    @include breakpoint(tabletAndDesktop) {
+      margin-bottom: 2vw;
+    }
   }
 
-  .article-articles-list .row--clipped--right {
-    margin-bottom: 2vw;
+  & .teaser--s, & .teaser--l {
+    @include breakpoint(tabletAndDesktop) {
+      width: 48%;
+      margin-bottom: 10px;
+    }
   }
-
 }

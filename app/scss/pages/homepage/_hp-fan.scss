@@ -1,82 +1,68 @@
 .hp-fan {
   @include container(100%, 50px 0, 0);
-}
 
-.hp-fan__container {
-  width: 90%;
-  margin: 0 auto;
-  position: relative;
-}
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 
-.hp-fan__container.container--raised {
-  margin-top: -3.5%;
-}
+    &.container--raised {
+      margin-top: -3.5%;
+    }
 
-.teaser--fan .teaser__img {
-  margin-bottom: -5px;
-}
-
-.teaser--fan {
-  box-shadow: 0 20px 30px 10px rgba(0, 0, 0, 0.3);
-}
-
-.teaser--fan .teaser__body {
-  background: $white;
-}
-
-.teaser--fan .teaser__img {
-  margin-bottom: -5px;
-}
-
-.teaser--fan {
-  box-shadow: 0 20px 30px 10px rgba(0, 0, 0, 0.3);
-}
-
-@media only screen and (max-width: $break-mob) {
-  .teaser--fan .teaser__img, .teaser--fan .teaser__body {
-    float: none;
+    & .teaser:nth-child(2n+0) {
+      @include breakpoint(phoneOnly) {
+        margin-right: 0;
+        margin-left: 1%;
+      }
+    }
   }
 
-  .teaser--fan .teaser__body {
-    width: 80%;
-    padding: 20px 10%;
+  & .teaser--m {
+    @include breakpoint(tabletAndDesktop) {
+      width: 23%;
+      float: right;
+      margin-left: 2%;
+      margin-right: 0;
+    }
   }
 
-  .teaser--fan .teaser__img {
-    width: 100%;
-  }
+  & .teaser--fan {
+    box-shadow: 0 20px 30px 10px rgba(0, 0, 0, 0.3);
 
-  .hp-fan__container .teaser:nth-child(2n+0) {
-    margin-right: 0;
-    margin-left: 1%;
-  }
-}
+    & .teaser__img {
+      margin-bottom: -5px;
 
-@media only screen and (min-width: $break-mob) {
-  .teaser--fan .teaser__img, .teaser--fan .teaser__body {
-    float: left;
-  }
+      @include breakpoint(phoneOnly) {
+        width: 100%;
+        float: none;
+      }
 
-  .teaser--fan .teaser__body {
-    width: 17.33332%;
-    padding: 10px 8% 20em 8%;
-    margin-bottom: -20em;
-  }
+      @include breakpoint(tabletAndDesktop) {
+        width: 66.66665%;
+        float: left;
+      }
+    }
 
-  .teaser--fan .teaser__img {
-    width: 66.66665%;
-  }
+    & .teaser__body {
+      background: $white;
 
-  .hp-fan .teaser--m {
-    width: 23%;
-    float: right;
-    margin-left: 2%;
-    margin-right: 0;
-  }
-}
+      @include breakpoint(phoneOnly) {
+        float: none;
+        width: 80%;
+        padding: 20px 10%;
+      }
 
-@media only screen and (min-width: $break-desk) {
-  .teaser--fan .teaser__body {
-    padding: 40px 8% 20em 8%;
+      @include breakpoint(tabletAndDesktop) {
+        float: left;
+        width: 17.33332%;
+        padding: 10px 8% 20em 8%;
+        margin-bottom: -20em;
+      }
+
+      @include breakpoint(desktopOnly) {
+        padding: 40px 8% 20em 8%;
+      }
+    }
   }
 }

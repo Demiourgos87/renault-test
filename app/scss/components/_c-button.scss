@@ -11,30 +11,30 @@
   transition: all 0.15s linear;
   margin-bottom: 15px;
   outline: none;
-}
 
-.btn:hover {
-  background: $black;
-  color: $white;
-}
+  &:hover {
+    background: $black;
+    color: $white;
+  }
 
-.btn--shadowed {
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-}
+  &--shadowed {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  }
 
-.btn--centered {
-  display: block;
-  margin: 0 auto;
-}
+  &--centered {
+    display: block;
+    margin: 0 auto;
+  }
 
-.btn--small {
-  padding: 5px 15px;
-}
+  &--small {
+    padding: 5px 15px;
+  }
 
-.btn--yellow {
-  background: $yellow;
-}
+  &--yellow {
+    background: $yellow;
+  }
 
-.btn--lightGray {
-  background: $lightGray;
+  &--lightGray {
+    background: $lightGray;
+  }
 }
