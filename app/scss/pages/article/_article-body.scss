@@ -125,7 +125,12 @@
             font-size: $fontVerySmall;
           }
         }
+
       }
+    }
+
+    &::after {
+      display: none;
     }
   }
 

@@ -4,8 +4,10 @@
   @include breakpoint(tabletAndDesktop) {
     border-top: 2px solid $lightGray;
     position: relative;
+  }
 
-    &::after {
+  &::after {
+    @include breakpoint(tabletOnly) {
       display: block;
       content: "";
       position: absolute;
@@ -15,7 +17,12 @@
       height: 2px;
       background: $lightGray;
       z-index: -1;
+
+      @include breakpoint(desktopOnly) {
+        top: 4.5vw;
+      }
     }
+
   }
 
   & .row--mob:last-child {

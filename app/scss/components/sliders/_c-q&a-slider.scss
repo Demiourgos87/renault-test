@@ -1,5 +1,11 @@
 .vu-QA {
-  padding-top: 5vw;
+  @include breakpoint(tabletOnly) {
+    padding-top: 5vw;
+  }
+
+  @include breakpoint(desktopOnly) {
+    padding-top: 0;
+  }
 
   & .c-faq-slider {
     border-top: none;
@@ -9,7 +15,7 @@
       width: 68%;
       float: left;
       margin-right: 2%;
-      margin-bottom: 7vw;
+      margin-bottom: 5vw;
     }
 
     @include breakpoint(desktopOnly) {
@@ -21,7 +27,12 @@
     }
 
     & .container--full {
-      height: 22rem;
+      height: 20rem;
+      top: 20vw;
+
+      @include breakpoint(tabletOnly) {
+        top: 0;
+      }
 
       @include breakpoint(desktopOnly) {
         height: 26rem;
@@ -35,6 +46,10 @@
     & .teaser__body {
       margin-top: 20px;
 
+      @include breakpoint(tabletOnly) {
+        width: 70%;
+      }
+
       @include breakpoint(desktopOnly) {
         margin-top: 20px;
         width: 70%;
@@ -42,9 +57,15 @@
     }
 
     & .slider__container {
-      width: 65%;
+      width: 90%;
       float: none;
       margin: 0 0 0 5vw;
+      top: -21vw;
+
+      @include breakpoint(tabletOnly) {
+        width: 70%;
+        top: -12vw;
+      }
 
       @include breakpoint(desktopOnly) {
         width: 60%;
@@ -63,8 +84,13 @@
     & .slider__navigation {
       float: none;
       position: absolute;
-      bottom: 3.3vw;
-      right: -12vw;
+      bottom: -7vw;
+      right: -3vw;
+
+      @include breakpoint(tabletOnly) {
+        bottom: 3vw;
+        right: -12vw;
+      }
 
       @include breakpoint(desktopOnly) {
         float: none;
@@ -79,9 +105,12 @@
     }
 
     & .c-section-title {
-      position: relative;
-      top: -6vw;
-      left: 5vw;
+
+      @include breakpoint(tabletOnly) {
+        position: relative;
+        top: -12vw;
+        left: 5vw;
+      }
 
       @include breakpoint(desktopOnly) {
         position: relative;

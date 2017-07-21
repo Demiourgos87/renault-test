@@ -7,6 +7,7 @@
 
   @include breakpoint(tabletOnly) {
     margin-top: 10vw;
+    margin-bottom: 10vw;
   }
 
   & .row--raised {

@@ -12,14 +12,10 @@
 
     @include breakpoint(tabletOnly) {
       height: 17vw;
-      margin-left: 20vw;
-      top: -15vw;
     }
 
     @include breakpoint(desktopOnly) {
       height: 12vw;
-      margin-left: 20vw;
-      top: -11vw;
     }
 
     @include breakpoint(desktopLarge) {
@@ -32,6 +28,15 @@
 
     @include breakpoint(phoneOnly) {
       width: 100%;
+    }
+
+    @include breakpoint(tabletOnly) {
+      margin-left: 20vw;
+      top: -15vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      top: -11vw;
     }
 
     & i {
@@ -72,14 +77,19 @@
       }
     }
 
-    & .teaser:nth-child(2n+0) {
-      margin-right: 0;
-      margin-left: 1%;
-    }
   }
 
   & .teaser {
-    height: 67vw;
+    @include breakpoint(phoneOnly) {
+      height: 60vw;
+    }
+
+    & .teaser:nth-child(2n+0) {
+      @include breakpoint(phoneOnly) {
+        margin-right: 0;
+        margin-left: 1%;
+      }
+    }
   }
 
   & .teaser__body {

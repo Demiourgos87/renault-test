@@ -1,4 +1,11 @@
 .block-comm-QA-list {
+  @include breakpoint(tabletOnly) {
+    margin-bottom: 5vw;
+  }
+
+  @include breakpoint(desktopOnly) {
+    margin-bottom: 0;
+  }
   & .body__wrap {
     position: relative;
     @include breakpoint(phoneOnly) {
@@ -139,8 +146,10 @@
     }
 
     &:nth-child(2n+0) {
-      margin-right: 0;
-      margin-left: 1%;
+      @include breakpoint(phoneOnly) {
+        margin-right: 0;
+        margin-left: 1%;
+      }
     }
   }
 
