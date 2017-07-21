@@ -1,24 +1,26 @@
 .hp-astuces {
   @include container(100%, 50px 0, 0);
-}
 
-@media only screen and (min-width: $break-mob) {
-
-  .hp-astuces {
+  @include breakpoint(tabletAndDesktop) {
     margin: 10vw 0 0 0;
     border-top: 2px solid $lightGray;
+  }
 
-    & .c-section-title.heading--row {
+  & .c-section-title.heading--row {
+    @include breakpoint(tabletAndDesktop) {
       margin: 4vw 0;
-    }
-
-    & .container--raised {
-      margin-top: -7.5%;
-    }
-
-    & .row--centered {
-      top: -7vw;
     }
   }
 
+  & .container--raised {
+    @include breakpoint(tabletAndDesktop) {
+      margin-top: -7.5%;
+    }
+  }
+
+  & .row--centered {
+    @include breakpoint(tabletAndDesktop) {
+      top: -7vw;
+    }
+  }
 }

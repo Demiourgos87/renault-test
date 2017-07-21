@@ -1,128 +1,137 @@
 .article-body {
   width: 100%;
-}
 
-.article-body__category {
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: $fontSmall;
-  font-weight: bold;
-  text-transform: uppercase;
-  background: $yellow;
-}
-
-.article-body__main-title {
-  text-transform: uppercase;
-  font-size: $fontBig;
-  margin-top: 20px;
-}
-
-.article-body__date {
-  color: $darkGray;
-}
-
-.article-body__text-intro {
-  font-weight: bold;
-}
-
-.article-body__article-text p {
-  font-size: $fontNormal;
-  line-height: 1.4rem;
-  letter-spacing: 1px;
-}
-
-.article-body__article-text a {
-  color: $yellow;
-}
-
-.article-body__tags {
-  color: $yellow;
-  margin: 20px 0;
-}
-
-.article-body__body {
-  margin-top: 40px;
-}
-
-@media only screen and (max-width: $break-mob) {
-
-  .article-body .c-test-start .container--full {
-    width: 112%;
-    left: -6%;
-  }
-
-}
-
-@media only screen and (min-width: $break-mob) {
-
-  .article-body__main-title {
-    font-size: 2.3rem;
-  }
-
-}
-
-@media only screen and (min-width: $break-desk) {
-
-  .article-body {
+  @include breakpoint(desktopOnly) {
     margin-bottom: 10vw;
   }
 
-  .article-body__main-title {
-    font-size: 3rem;
-    width: 80%;
-    margin-left: 4vw;
+  &__main-title {
+    text-transform: uppercase;
+    font-size: $fontBig;
+    margin-top: 20px;
+
+    @include breakpoint(tabletOnly) {
+      font-size: 2.3rem;
+    }
+
+    @include breakpoint(desktopOnly) {
+      font-size: 3rem;
+      width: 80%;
+      margin-left: 4vw;
+    }
   }
 
-  .article-body__category {
-    margin-left: 4vw;
+  &__category {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: $fontSmall;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: $yellow;
+
+    @include breakpoint(desktopOnly) {
+      margin-left: 4vw;
+    }
   }
 
-  .article-body__main-content, .article-body__body .c-test-start {
-    float: left;
+  &__date {
+    color: $darkGray;
   }
 
-  .article-body__main-content {
-    width: 56%;
-    margin-right: 4%;
+  &__text-intro {
+    font-weight: bold;
   }
 
-  .article-body__body .c-test-start {
-    width: 30%;
+  &__article-text {
+    & p {
+      font-size: $fontNormal;
+      line-height: 1.4rem;
+      letter-spacing: 1px;
+    }
+
+    & a {
+      color: $yellow;
+    }
   }
 
-  .article-body .c-test-start .container--full {
-    background-size: auto 100%;
-    background-position: 20% 0%;
+  &__tags {
+    color: $yellow;
+    margin: 20px 0;
   }
 
-  .article-body .c-test-start {
-    margin-top: 3vw;
+  &__body {
+    margin-top: 40px;
   }
 
-  .article-body .c-test-start__body {
-    width: 70%;
-    padding: 80px 0;
+  &__main-content {
+    @include breakpoint(desktopOnly) {
+      float: left;
+      width: 56%;
+      margin-right: 4%;
+    }
   }
 
-  .article-body .c-test-start__item img {
-    width: 100%;
-  }
+  & .c-test-start {
+    @include breakpoint(desktopOnly) {
+      float: left;
+      width: 30%;
+      margin-top: 3vw;
+    }
 
-  .article-body .c-test-start__images {
-    width: 100%;
-    top: -1.8vw;
-  }
+    & .container--full {
+      @include breakpoint(phoneOnly) {
+        width: 112%;
+        left: -6%;
+      }
 
-  .article-body .c-test-start__images .c-test-start__item {
-    width: 32.2%;
-  }
+      @include breakpoint(desktopOnly) {
+        background-size: auto 100%;
+        background-position: 20% 0%;
+      }
+    }
 
-  .article-body .c-test-start__images .c-test-start__item:last-child {
-    top: 0;
-  }
+    &__body {
+      @include breakpoint(desktopOnly) {
+        width: 70%;
+        padding: 80px 0;
+      }
+    }
 
-  .article-body .c-test-start__images .c-test-start__item p {
-    font-size: $fontVerySmall;
+    &__item {
+      & img {
+        @include breakpoint(desktopOnly) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__images {
+      @include breakpoint(desktopOnly) {
+        width: 100%;
+        top: -1.8vw;
+      }
+
+      & .c-test-start__item {
+        @include breakpoint(desktopOnly) {
+          width: 32.2%;
+
+          &:last-child {
+            top: 0;
+          }
+        }
+
+        & p {
+          @include breakpoint(desktopOnly) {
+            font-size: $fontVerySmall;
+          }
+        }
+
+      }
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
 }

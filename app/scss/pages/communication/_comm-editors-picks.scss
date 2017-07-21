@@ -1,8 +1,20 @@
-@media only screen and (min-width: $break-mob) {
+.comm-editors-picks {
 
-  .comm-editors-picks .c-section-title.heading--row {
-    width: 50%;
-    margin-left: 50.5%;
+  & .c-section-title.heading--row {
+    @include breakpoint(tabletAndDesktop) {
+      width: 50%;
+      margin-left: 51%;
+    }
+  }
+
+  & .row--raised {
+    @include breakpoint(tabletOnly) {
+      margin-top: -10vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin-top: -8vw;
+    }
   }
 
 }

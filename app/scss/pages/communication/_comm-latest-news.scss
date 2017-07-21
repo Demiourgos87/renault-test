@@ -1,25 +1,19 @@
-@media only screen and (min-width: $break-mob) {
-
-  .comm-latest-news {
+.comm-latest-news {
+  @include breakpoint(tabletOnly) {
     border-top: 2px solid $lightGray;
-  }
-
-  .comm-latest-news {
     margin-top: 6vw;
     margin-bottom: 100px;
   }
 
-  .comm-latest-news .row--raised {
-    margin-top: -17%;
-    margin-bottom: 2.3vw;
-  }
-
-}
-
-@media only screen and (min-width: $break-desk) {
-
-  .comm-latest-news {
+  @include breakpoint(tabletOnly) {
     margin-top: 10vw;
+    margin-bottom: 10vw;
   }
 
+  & .row--raised {
+    @include breakpoint(tabletAndDesktop) {
+      margin-top: -17%;
+      margin-bottom: 2.3vw;
+    }
+  }
 }

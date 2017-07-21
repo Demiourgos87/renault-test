@@ -1,118 +1,94 @@
 .comm-hero {
   position: relative;
-}
+  margin-bottom: 20px;
 
-.comm-hero__image {
-  position: relative;
-}
-
-.comm-hero__image img {
-  width: 100%;
-  margin-bottom: -4px;
-}
-
-.comm-hero__text p {
-  margin: 0;
-}
-
-.comm-hero__title {
-  position: absolute;
-}
-
-.page__title {
-  margin-top: 10px;
-  font-weight: 900;
-}
-
-.comm-hero__text {
-  line-height: 1.5rem;
-}
-
-@media only screen and (max-width: $break-mob) {
-  .comm-hero {
-    margin-bottom: 20px;
-  }
-
-  .comm-hero__image {
-    width: 100%;
-  }
-
-  .page__title {
-    font-size: $fontLarge;
-  }
-
-  .comm-hero__text {
-    width: calc(100% - 60px);
-    padding: 30px;
-    font-size: 1rem;
-  }
-
-  .comm-hero__title {
-    top: 35%;
-    left: 17%;
-  }
-}
-
-@media only screen and (min-width: $break-mob) {
-  .comm-hero {
+  @include breakpoint(tabletOnly) {
     margin-bottom: 8vw;
   }
 
-  .comm-hero__image {
-    width: 90%;
-  }
-
-  .page__title {
-    font-size: $fontBig;
-  }
-
-  .comm-hero__text {
-    width: 30%;
-    padding: 40px;
-    position: absolute;
-    top: 15%;
-    right: 0;
-    line-height: 1.2rem;
-  }
-
-  .comm-hero__title {
-    top: 40%;
-    left: 12%;
-  }
-}
-
-@media only screen and (min-width: $break-desk) {
-  .comm-hero {
+  @include breakpoint(desktopOnly) {
     margin-bottom: 2vw;
   }
 
-  .comm-hero__image {
-    width: 80%;
-  }
-
-  .page__title {
-    font-size: 3rem;
-  }
-
-  .comm-hero__text {
-    width: 22%;
-    padding: 70px;
-    position: absolute;
-    top: 25%;
-    right: 0;
-    line-height: 1.3rem;
-    height: 27vw;
-  }
-
-  .comm-hero__title {
-    top: 40%;
-    left: 15%;
-  }
-}
-
-@media only screen and (min-width: $break-desk-large) {
-
-  .comm-hero {
+  @include breakpoint(desktopLarge) {
     margin-bottom: 3vw;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+
+    @include breakpoint(tabletOnly) {
+      width: 90%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 80%;
+    }
+
+    & img {
+      width: 100%;
+      margin-bottom: -4px;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 35%;
+    left: 17%;
+
+    @include breakpoint(tabletOnly) {
+      top: 40%;
+      left: 12%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      top: 40%;
+      left: 15%;
+    }
+
+    & .page__title {
+      margin-top: 10px;
+      font-weight: 900;
+      font-size: $fontLarge;
+
+      @include breakpoint(tabletOnly) {
+        font-size: $fontBig;
+      }
+
+      @include breakpoint(desktopOnly) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__text {
+    line-height: 1.5rem;
+    width: calc(100% - 60px);
+    padding: 30px;
+    font-size: 1rem;
+
+    @include breakpoint(tabletOnly) {
+      width: 30%;
+      padding: 40px;
+      position: absolute;
+      top: 15%;
+      right: 0;
+      line-height: 1.2rem;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 22%;
+      padding: 70px;
+      position: absolute;
+      top: 25%;
+      right: 0;
+      line-height: 1.3rem;
+      height: 27vw;
+    }
+
+    & p {
+      margin: 0;
+    }
   }
 }

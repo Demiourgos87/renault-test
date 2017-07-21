@@ -1,191 +1,178 @@
-p.article-paragraph__heading {
-  font-size: $fontMedium;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 40px 0 15px 0;
-}
+.article-portrait {
+  &-body__wrap {
+    @include breakpoint(phoneOnly) {
+      width: 90%;
+      margin: 10vw auto 0 auto;
+    }
 
-.article-portrait__video {
-  float: none;
-  clear: both;
-  position: relative;
-  padding-top: 25px;
-  padding-bottom: 56.25%;
-  width: 100%;
-  height: 0;
-  margin: 20px 0;
-}
+    @include breakpoint(tabletOnly) {
+      width: 75%;
+      margin: 7vw auto 0 auto;
+    }
 
-.article-portrait__video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+    @include breakpoint(desktopOnly) {
+      width: 41.5%;
+      margin: 0;
+      float: left;
+    }
 
-.article-portrait__list {
-  list-style-type: none;
-  padding: 0 0 0 1rem;
-  margin: 30px 0;
-}
+    & .article-body {
+      @include breakpoint(desktopOnly) {
+        margin-bottom: 0;
+      }
+    }
 
-.article-portrait__list li {
-  margin-left: 1rem;
-  text-indent: -2.4rem;
-}
+    & .c-social-share {
+      @include breakpoint(desktopOnly) {
+        float: none;
+        width: auto;
+        padding: 0 15px;
+        margin: 10px 0 30px 0;
+      }
 
-.article-portrait__list li::before {
-  display: inline-block;
-  content: "";
-  width: 10px;
-  height: 10px;
-  margin: 0 1rem 0 0.7rem;
-  background: $yellow;
-}
+      & .share__icon {
+        @include breakpoint(desktopOnly) {
+          margin-right: 1.5vw;
+          margin-bottom: 0;
+          top: -1.5vw;
+          left: 0;
 
-.article-portrait__table {
-  // width: calc(100% - 4px);
-  width: 100%;
-  border-collapse: collapse;
-  // border: 2px dashed $yellow;
-  text-align: left;
-}
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
 
-.article-portrait__table td {
-  padding: 10px;
-  border: 2px dashed $yellow;
-  border-bottom: none;
-  width: calc(100% - 24px);
-}
+    & .article-body__main-content {
+      @include breakpoint(desktopOnly) {
+        float: none;
+        width: 100%;
+        margin: 0;
+      }
+    }
 
-.article-portrait__table tr:last-child td:last-child {
-  border-bottom: 2px dashed $yellow;
-}
+    & .article-body__main-title {
+      @include breakpoint(desktopOnly) {
+        width: 100%;
+        font-size: 2.5rem;
+        margin-left: 0;
+      }
+    }
 
-.article-portrait__table .table__heading {
-  font-weight: 700;
-}
+    & .article-body__category {
+      @include breakpoint(desktopOnly) {
+        margin-left: 0;
+      }
+    }
 
-.article-portrait__image {
-  width: 100%;
-  margin: 30px 0;
-}
+    & .c-breadcrumbs {
+      @include breakpoint(desktopOnly) {
+        margin: 40px 0;
+        width: 100%;
+      }
+    }
 
-.article-portrait__image img {
-  width: 100%;
-  margin-bottom: 15px;
-}
+    & .article-body__text-intro {
+      @include breakpoint(tabletAndDesktop) {
+        font-size: $fontLarge;
+      }
+    }
 
-.c-test-start.article-portrait {
-  margin: 0 0 40px 0;
-}
-
-@media only screen and (max-width: $break-mob) {
-
-  .article-portrait-body__wrap {
-    width: 90%;
-    margin: 10vw auto 0 auto;
-  }
-
-  .article-portrait__table td {
-    display: inline-block;
-  }
-
-}
-
-@media only screen and (min-width: $break-mob) {
-
-  .article-portrait-body__wrap {
-    width: 75%;
-    margin: 7vw auto 0 auto;
-  }
-
-  .article-portrait-body__wrap .article-body__text-intro {
-    font-size: $fontLarge;
-  }
-
-  .article-portrait-body__wrap .article-paragraph__heading {
-    font-size: $fontLarge;
-  }
-
-  .article-portrait__list li {
-    margin-bottom: 4px;
-  }
-
-  .article-portrait__table tr {
-    display: inline-block;
-    width: 49%;
-  }
-
-  .article-portrait__table tr:first-child td {
-    border-right: none;
-  }
-
-  .article-portrait__table tr:first-child td:last-child {
-    border-bottom: 2px dashed $yellow;
-  }
-
-  .article-portrait__table td {
-    display: inline-block;
-    width: calc(100% - 24px);
-  }
-
-  .article-portrait__table td:not(.table__heading) {
-    padding: 20px 10px;
-  }
-
-  .article-portrait-body__wrap {
+    & p.article-paragraph__heading {
+      font-size: $fontMedium;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 40px 0 15px 0;
+    }
 
     & .w-diaporama-trigger {
-      height: auto;
-      overflow: visible;
-      margin-bottom: 13vw;
+      @include breakpoint(tabletOnly) {
+        height: auto;
+        overflow: visible;
+        margin-bottom: 13vw;
+      }
 
       & .slick-list {
         overflow: visible;
       }
 
       & .diaporama-trigger__navigation {
-        top: 11.5vw;
+        @include breakpoint(tabletOnly) {
+          top: 11.5vw;
+        }
+
+        @include breakpoint(desktopOnly) {
+          top: 2.5vw;
+        }
 
         & .btn {
-          top: 7vw;
+          @include breakpoint(tabletOnly) {
+            top: 7vw;
+          }
         }
 
         & .diaporama-trigger__prev {
-          left: -5%;
-          top: 29.5vw;
+          @include breakpoint(tabletOnly) {
+            left: -5%;
+            top: 29.5vw;
+          }
+
+          @include breakpoint(desktopOnly) {
+            top: 22vw;
+          }
         }
 
         & .diaporama-trigger__next {
-          right: -5%;
-          top: 29.5vw;
+          @include breakpoint(tabletOnly) {
+            right: -5%;
+            top: 29.5vw;
+          }
+
+          @include breakpoint(desktopOnly) {
+            top: 22vw;
+          }
         }
       }
 
       & .diaporama-trigger__thumbs {
-        display: block;
-        overflow: visible;
+        @include breakpoint(tabletOnly) {
+          display: block;
+          overflow: visible;
+        }
       }
 
       & .diaporama-trigger__thumbs.slick-slider {
-        height: 7vw;
-        width: 83%;
-        bottom: -8vw;
-        left: 6.5vw;
-        margin-left: 0;
+        @include breakpoint(tabletOnly) {
+          height: 7vw;
+          width: 83%;
+          bottom: -8vw;
+          left: 6.5vw;
+          margin-left: 0;
+        }
+
+        @include breakpoint(desktopOnly) {
+          height: 5vw;
+          bottom: -7vw;
+          left: 3.5vw;
+        }
 
         & .diaporama-trigger__thumb {
-          box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.4);
+          @include breakpoint(tabletOnly) {
+            box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.4);
+          }
         }
 
         & .diaporama-trigger__thumb .overlay {
-          display: none;
+          @include breakpoint(tabletOnly) {
+            display: none;
+          }
         }
 
         & .diaporama-trigger__thumb img {
-          filter: none;
+          @include breakpoint(tabletOnly) {
+            filter: none;
+          }
         }
 
       }
@@ -193,81 +180,113 @@ p.article-paragraph__heading {
 
   }
 
-}
-
-@media only screen and (min-width: $break-desk) {
-
-  .article-portrait-body__wrap {
-    width: 41.5%;
-    margin: 0;
-    float: left;
-  }
-
-  .article-portrait-body__wrap .article-body {
-    margin-bottom: 0;
-  }
-
-  .article-portrait-body__wrap .c-social-share {
-    float: none;
-    width: auto;
-  }
-
-  .article-portrait-body__wrap .article-body__main-content {
-    float: none;
+  &__table {
     width: 100%;
-    margin: 0;
-  }
+    border-collapse: collapse;
+    text-align: left;
 
-  .article-portrait-body__wrap .c-breadcrumbs {
-    margin: 40px 0;
-    width: 100%;
-  }
+    & tr {
+      @include breakpoint(tabletAndDesktop) {
+        display: inline-block;
+        width: 49%;
+      }
 
-  .article-portrait-body__wrap .article-body__main-title {
-    width: 100%;
-    font-size: 2.5rem;
-    margin-left: 0;
-  }
-
-  .article-portrait-body__wrap .c-social-share {
-    padding: 0 15px;
-    margin: 10px 0 30px 0;
-  }
-
-  .article-portrait-body__wrap .article-body__category {
-    margin-left: 0;
-  }
-
-  .article-portrait-body__wrap .share__icon {
-    margin-right: 1.5vw;
-    margin-bottom: 0;
-    top: -1.5vw;
-    left: 0;
-  }
-
-  .article-portrait-body__wrap .share__icon:last-child {
-    margin-right: 0;
-  }
-
-  .article-portrait-body__wrap {
-
-    & .w-diaporama-trigger {
-
-      & .diaporama-trigger__navigation {
-        top: 2.5vw;
-
-        & .diaporama-trigger__prev, .diaporama-trigger__next {
-          top: 22vw;
+      &:first-child td {
+        @include breakpoint(tabletAndDesktop) {
+          border-right: none;
         }
       }
 
-      & .diaporama-trigger__thumbs.slick-slider {
-        height: 5vw;
-        bottom: -7vw;
-        left: 3.5vw;
+      &:first-child td:last-child {
+        @include breakpoint(tabletAndDesktop) {
+          border-bottom: 2px dashed $yellow;
+        }
       }
     }
 
+    & td {
+      padding: 10px;
+      border: 2px dashed $yellow;
+      border-bottom: none;
+      width: calc(100% - 24px);
+
+      @include breakpoint(phoneOnly) {
+        display: inline-block;
+      }
+
+      @include breakpoint(tabletAndDesktop) {
+        display: inline-block;
+        width: calc(100% - 24px);
+      }
+
+      &:not(.table__heading) {
+        padding: 20px 10px;
+      }
+    }
+
+    & tr:last-child td:last-child {
+      border-bottom: 2px dashed $yellow;
+    }
+
+    & .table__heading {
+      font-weight: 700;
+    }
   }
 
+  &__video {
+    float: none;
+    clear: both;
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 56.25%;
+    width: 100%;
+    height: 0;
+    margin: 20px 0;
+
+    & iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0 0 0 1rem;
+    margin: 30px 0;
+
+    & li {
+      margin-left: 1rem;
+      text-indent: -2.4rem;
+
+      @include breakpoint(tabletAndDesktop) {
+        margin-bottom: 4px;
+      }
+
+      &::before {
+        display: inline-block;
+        content: "";
+        width: 10px;
+        height: 10px;
+        margin: 0 1rem 0 0.7rem;
+        background: $yellow;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin: 30px 0;
+
+    & img {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  & .c-test-start.article-portrait {
+    margin: 0 0 40px 0;
+  }
 }

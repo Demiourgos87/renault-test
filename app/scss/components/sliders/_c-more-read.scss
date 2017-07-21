@@ -1,141 +1,133 @@
 .c-more-read {
   width: 100%;
   padding-top: 20px;
-}
 
-.c-more-read .teaser__body {
-  background: transparent;
-}
+  &__wrap {
+    width: 80%;
+    margin: 0 auto;
 
-.c-more-read .teaser__title {
-  font-weight: 700;
-}
+    @include breakpoint(phoneOnly) {
+      width: 90%;
+    }
 
-.c-more-read .teaser__img img {
-  filter: grayscale(100%);
-}
+    @include breakpoint(tabletOnly) {
+      height: 17vw;
+    }
 
-.c-more-read .teaser__img:hover img {
-  filter: grayscale(0);
-}
+    @include breakpoint(desktopOnly) {
+      height: 12vw;
+    }
 
-.c-more-read__wrap {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.c-more-read .slider__wrap {
-  position: relative;
-}
-
-.c-more-read .slider {
-  overflow: hidden;
-}
-
-.c-more-read .slider__wrap i {
-  position: absolute;
-  top: 40%;
-  font-size: 2rem;
-  color: $darkGray;
-}
-
-.c-more-read .slider__wrap i.fa-arrow-circle-o-left {
-  left: -5vw;
-}
-
-.c-more-read .slider__wrap i.fa-arrow-circle-o-right {
-  right: -3vw;
-}
-
-.c-more-read .teaser .teaser__body {
-  font-size: 0.8rem;
-}
-
-.c-more-read .slider .teaser--m:last-child {
-  margin-left: 0;
-}
-
-.c-more-read i {
-  cursor: pointer;
-}
-
-@media only screen and (max-width: $break-mob) {
-  .c-more-read__wrap {
-    width: 90%;
+    @include breakpoint(desktopLarge) {
+      top: -8vw;
+    }
   }
 
-  .c-more-read .slider__wrap {
-    width: 100%;
+  & .slider__wrap {
+    position: relative;
+
+    @include breakpoint(phoneOnly) {
+      width: 100%;
+    }
+
+    @include breakpoint(tabletOnly) {
+      margin-left: 20vw;
+      top: -15vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      top: -11vw;
+    }
+
+    & i {
+      position: absolute;
+      top: 40%;
+      font-size: 2rem;
+      color: $darkGray;
+
+      &.fa-arrow-circle-o-left {
+        left: -5vw;
+      }
+
+      &.fa-arrow-circle-o-right {
+        right: -3vw;
+      }
+    }
   }
 
-  .c-more-read .teaser {
-    height: 67vw;
+  & .slider {
+    overflow: hidden;
+
+    & .teaser--m {
+      @include breakpoint(tabletOnly) {
+        margin-right: 1%;
+        width: 24%;
+      }
+
+      @include breakpoint(desktopOnly) {
+        width: 24%;
+      }
+
+      @include breakpoint(desktopLarge) {
+        margin-right: 1.1%;
+      }
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+
   }
 
-  .c-more-read i {
-    display: none;
+  & .teaser {
+    @include breakpoint(phoneOnly) {
+      height: 60vw;
+    }
+
+    & .teaser:nth-child(2n+0) {
+      @include breakpoint(phoneOnly) {
+        margin-right: 0;
+        margin-left: 1%;
+      }
+    }
   }
 
-  .c-more-read .slider .teaser:nth-child(2n+0) {
-    margin-right: 0;
-    margin-left: 1%;
-  }
-}
-
-@media only screen and (min-width: $break-mob) {
-  .c-more-read__wrap {
-    height: 17vw;
+  & .teaser__body {
+    background: transparent;
+    font-size: 0.8rem;
   }
 
-  .c-more-read .slider__wrap {
-    margin-left: 20vw;
+  & .teaser__title {
+    font-weight: 700;
   }
 
-  .c-more-read .slider__wrap {
-    top: -15vw;
+  & .teaser__img {
+    & img {
+      filter: grayscale(100%);
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
   }
 
-  .c-more-read .teaser--m {
-    margin-right: 1%;
+  & i {
+    cursor: pointer;
+
+    @include breakpoint(phoneOnly) {
+      display: none;
+    }
   }
 
-  .c-more-read .slider .teaser--m {
-    width: 24%;
-  }
+  & .c-section-title {
+    &.heading--row {
+      @include breakpoint(tabletOnly) {
+        width: 8vw;
+      }
 
-  .c-more-read .c-section-title.heading--row {
-    width: 8vw;
-  }
-}
-
-@media only screen and (min-width: $break-desk) {
-  .c-more-read__wrap {
-    height: 12vw;
-  }
-
-  .c-more-read .slider__wrap {
-    margin-left: 20vw;
-  }
-
-  .c-more-read .slider__wrap {
-    top: -11vw;
-  }
-
-  .c-more-read .slider .teaser--m {
-    width: 24%;
-  }
-
-  .c-more-read .c-section-title.heading--row {
-    width: 6vw;
-  }
-}
-
-@media only screen and (min-width: $break-desk-large) {
-  .c-more-read .slider__wrap {
-    top: -8vw;
-  }
-
-  .c-more-read .teaser--m {
-    margin-right: 1.1%;
+      @include breakpoint(desktopOnly) {
+        width: 6vw;
+      }
+    }
   }
 }

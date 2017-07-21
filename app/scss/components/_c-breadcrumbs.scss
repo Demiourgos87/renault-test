@@ -1,38 +1,30 @@
-@media only screen and (max-width: $break-desk) {
-
-  .c-breadcrumbs {
+.c-breadcrumbs {
+  @include breakpoint(phoneAndTablet) {
     display: none;
   }
 
-}
+  display: block;
+  width: 80%;
+  margin: 50px 0 0 10%;
+  font-size: $fontSmall;
+  color: $black;
 
-@media only screen and (min-width: $break-desk) {
-
-  .c-breadcrumbs {
-    display: block;
-    width: 80%;
-    margin: 50px 0 0 10%;
-    font-size: $fontSmall;
-    color: $black;
-  }
-
-  .c-breadcrumbs a {
+  & a {
     text-decoration: none;
     color: inherit;
     margin: 0 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
-  .c-breadcrumbs a:first-child {
-    margin-left: 0;
-  }
-
-  .c-breadcrumbs span {
+  & span {
     margin-left: 0 10px;
     cursor: default;
   }
 
-  .c-breadcrumbs.breadcrumbs--article {
+  &.breadcrumbs--article {
     margin-left: 14vw;
   }
-
 }
