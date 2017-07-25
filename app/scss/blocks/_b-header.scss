@@ -1,6 +1,6 @@
 .b-header {
-  @include container(92%, 0, 15px 4%);
-  height: 32px;
+  @include container(92%, 0, 4vw 4%);
+  height: 5vw;
   background: $black;
   position: fixed;
   top: 0;
@@ -16,11 +16,11 @@
   }
 
   &__logo {
-    width: 170px;
+    width: 37.4vw;
     position: absolute;
-    top: 15px;
+    top: 2.6vw;
     left: 50%;
-    margin-left: -85px;
+    margin-left: -18.5vw;
     z-index: 120;
 
     & img {
@@ -69,7 +69,10 @@
 
   &__menu-trigger {
     float: left;
-    font-size: $fontBig;
+    font-size: $fontLarge;
+    position: relative;
+    top: -0.7vw;
+    left: 2.5vw;
 
     @include breakpoint(desktopOnly) {
       display: none;

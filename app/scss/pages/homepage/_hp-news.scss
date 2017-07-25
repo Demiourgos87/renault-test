@@ -3,8 +3,10 @@
 
   & .c-section-title {
     @include breakpoint(phoneOnly) {
-      margin-top: 5%;
+      margin-top: 4.5%;
       width: 20vw;
+      font-size: 1.66rem;
+      line-height: 1.6rem;
     }
   }
 
@@ -16,5 +18,36 @@
 
   @include breakpoint(desktopOnly) {
     margin: 2vw 0 7vw 0;
+  }
+
+  & .container {
+    @include breakpoint(phoneOnly) {
+      width: 87.8%;
+    }
+  }
+
+  & .heading--fix {
+    margin-top: 29.2vw;
+  }
+
+  & .teaser--s {
+    width: 35.6%;
+  }
+
+  & .teaser--l {
+    margin-left: 1%;
+    width: 61%;
+  }
+
+  & .teaser__img__footnote {
+    bottom: 0.9vw;
+    padding: 1.5vw 2.5vw;
+    font-size: 0.5rem;
+  }
+
+  & .teaser__title {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 400;
   }
 }

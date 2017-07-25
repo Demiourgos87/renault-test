@@ -7,7 +7,7 @@
 
 .teaser__img {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 1.4vw;
 }
 
 .teaser__img img {
@@ -28,6 +28,10 @@
 
 .teaser__body {
   background: transparent;
+}
+
+.teaser p {
+  margin: 0;
 }
 
 .teaser__title {

@@ -155,7 +155,7 @@ a img {
 
 .page {
   width: 100%;
-  margin-top: 62px;
+  margin-top: 13.2vw;
   position: relative;
   left: 0;
   transition: all 0.2s linear; }
@@ -163,7 +163,7 @@ a img {
 @media only screen and (max-width: 599px) {
   .page__inner {
     width: 100%;
-    padding: 40px 0; } }
+    padding: 6.5vw 0; } }
 
 @media only screen and (min-width: 599px) {
   .page__inner {
@@ -210,8 +210,8 @@ a img {
 .b-header {
   width: 92%;
   margin: 0;
-  padding: 15px 4%;
-  height: 32px;
+  padding: 4vw 4%;
+  height: 5vw;
   background: #000000;
   position: fixed;
   top: 0;
@@ -223,11 +223,11 @@ a img {
   .b-header i {
     cursor: pointer; }
   .b-header__logo {
-    width: 170px;
+    width: 37.4vw;
     position: absolute;
-    top: 15px;
+    top: 2.6vw;
     left: 50%;
-    margin-left: -85px;
+    margin-left: -18.5vw;
     z-index: 120; }
     .b-header__logo img {
       width: 100%; }
@@ -261,7 +261,10 @@ a img {
         margin-right: 0; }
   .b-header__menu-trigger {
     float: left;
-    font-size: 1.6rem; }
+    font-size: 1.4rem;
+    position: relative;
+    top: -0.7vw;
+    left: 2.5vw; }
     @media (min-width: 1024px) {
       .b-header__menu-trigger {
         display: none; } }
@@ -864,6 +867,67 @@ a img {
           top: 2vw;
           right: 3vw; } }
 
+.c-article-video {
+  width: 100%;
+  position: relative;
+  z-index: 20; }
+  @media (min-width: 1024px) {
+    .c-article-video {
+      background: url("../../assets/image/article_page/article_header_1.png") no-repeat center;
+      background-size: cover;
+      padding: 3vw 0; } }
+  .c-article-video__shadow {
+    display: none; }
+    @media (min-width: 1024px) {
+      .c-article-video__shadow {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9); } }
+  .c-article-video--wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 30; }
+    @media (min-width: 1024px) {
+      .c-article-video--wrap {
+        width: 70%;
+        margin: 0 auto; } }
+    .c-article-video--wrap iframe {
+      width: 100%;
+      height: 100%;
+      z-index: 40; }
+  .c-article-video__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    text-align: center;
+    z-index: 50; }
+    .c-article-video__overlay .fa-play {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 100%;
+      background: #000000;
+      color: #ffcc33;
+      margin-top: 21vw;
+      z-index: 60; }
+      @media (min-width: 1024px) {
+        .c-article-video__overlay .fa-play {
+          margin-top: 16vw;
+          width: 80px;
+          height: 80px;
+          line-height: 80px;
+          font-size: 1.4em; } }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -1283,7 +1347,7 @@ a img {
 
 .teaser__img {
   position: relative;
-  margin-bottom: 10px; }
+  margin-bottom: 1.4vw; }
 
 .teaser__img img {
   width: 100%; }
@@ -1301,6 +1365,9 @@ a img {
 
 .teaser__body {
   background: transparent; }
+
+.teaser p {
+  margin: 0; }
 
 .teaser__title {
   font-weight: 900;
@@ -1381,14 +1448,34 @@ a img {
   padding: 0; }
   @media (max-width: 599px) {
     .hp-news .c-section-title {
-      margin-top: 5%;
-      width: 20vw; } }
+      margin-top: 4.5%;
+      width: 20vw;
+      font-size: 1.66rem;
+      line-height: 1.6rem; } }
   @media (min-width: 600px) {
     .hp-news .row--padded--top {
       padding-top: 13%; } }
   @media (min-width: 1024px) {
     .hp-news {
       margin: 2vw 0 7vw 0; } }
+  @media (max-width: 599px) {
+    .hp-news .container {
+      width: 87.8%; } }
+  .hp-news .heading--fix {
+    margin-top: 29.2vw; }
+  .hp-news .teaser--s {
+    width: 35.6%; }
+  .hp-news .teaser--l {
+    margin-left: 1%;
+    width: 61%; }
+  .hp-news .teaser__img__footnote {
+    bottom: 0.9vw;
+    padding: 1.5vw 2.5vw;
+    font-size: 0.5rem; }
+  .hp-news .teaser__title {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 400; }
 
 .hp-fan {
   width: 100%;
@@ -3420,7 +3507,10 @@ html.diaporamaOpened, body.diaporamaOpened {
 
 .w-search-trigger {
   float: right;
-  font-size: 1.6rem; }
+  font-size: 1.4rem;
+  position: relative;
+  top: -0.7vw;
+  right: 2.5vw; }
   @media (min-width: 1024px) {
     .w-search-trigger {
       position: relative;
