@@ -2,7 +2,6 @@
   margin-bottom: 31vw;
 
   @include breakpoint(tabletAndDesktop) {
-    border-top: 2px solid $lightGray;
     margin-bottom: 0;
   }
 
@@ -16,10 +15,10 @@
     }
 
     @include breakpoint(tabletOnly) {
-      top: -50px;
-      width: 75%;
+      top: -7vw;
+      width: 77.4%;
       float: right;
-      margin-right: 2%;
+      margin-right: 3.5%;
     }
 
     @include breakpoint(desktopOnly) {
@@ -55,12 +54,14 @@
     }
   }
 
-  & .teaser__body {
+  & .teaser--landscape .teaser__body {
     position: relative;
     background: transparent;
 
     @include breakpoint(tabletOnly) {
       margin-top: 20%;
+      width: 29%;
+      letter-spacing: 0.12vw;
     }
 
     @include breakpoint(desktopOnly) {
@@ -68,8 +69,21 @@
     }
   }
 
-  & .teaser__img {
+  & .teaser--landscape .teaser__title {
+
+    @include breakpoint(tabletOnly) {
+      line-height: 2.6vw;
+      font-weight: 700;
+    }
+  }
+
+  & .teaser--landscape .teaser__img {
     margin-bottom: 8vw;
+
+    @include breakpoint(tabletOnly) {
+      width: 55%;
+      margin-right: 6%;
+    }
   }
 
   & .teaser__img {
@@ -83,7 +97,10 @@
     font-size: 1.66rem;
 
     @include breakpoint(tabletOnly) {
-      margin-bottom: 10px;
+      margin: 9vw 0 1vw 0;
+      font-size: 1.45rem;
+      line-height: 2.4vw;
+      padding-top: 0.5vw;
     }
   }
 
@@ -93,7 +110,9 @@
     font-size: 0.9rem;
 
     @include breakpoint(tabletOnly) {
-      margin-top: -4vw;
+      margin-top: -12vw;
+      font-size: 1.6vw;
+      right: -1.6vw;
     }
 
     @include breakpoint(desktopOnly) {
@@ -102,6 +121,10 @@
 
     & i {
       padding: 3vw 3vw 3vw 2vw;
+
+      @include breakpoint(tabletOnly) {
+        padding: 1.6vw;
+      }
     }
   }
 }

@@ -1,9 +1,9 @@
 .hp-business {
   @include container(100%, 43vw 0 0 0, 0);
 
-  @include breakpoint(tabletAndDesktop) {
-    border-top: 2px solid $lightGray;
+  @include breakpoint(tabletOnly) {
     position: relative;
+    margin: 4.7vw 0 0 0;
   }
 
   &::after {
@@ -28,6 +28,14 @@
   & .c-section-title.heading--row {
     margin: 7.2vw 0;
     font-size: 1.7rem;
+
+    @include breakpoint(tabletOnly) {
+      margin: 0 0 14vw 0;
+      font-size: 1.45rem;
+      position: relative;
+      top: 10vw;
+      line-height: 2.3vw;
+    }
   }
 
   & .row--mob {
@@ -36,9 +44,26 @@
 
   & .row--mob:first-child {
     margin-bottom: 10vw;
+
+    @include breakpoint(tabletOnly) {
+      margin-bottom: 2vw;
+    }
   }
 
   & .row--mob:last-child {
     // margin-left: 1%;
+  }
+
+  & .container--raised--tab {
+    @include breakpoint(tabletOnly) {
+      margin-top: -9%;
+      margin-bottom: 12%;
+    }
+  }
+
+  & .teaser--raised--tab {
+    @include breakpoint(tabletOnly) {
+      margin-top: -6vw;
+    }
   }
 }

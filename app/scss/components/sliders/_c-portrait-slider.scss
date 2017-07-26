@@ -4,6 +4,10 @@
   border: 10px solid $yellow;
   margin-top: 8vw;
 
+  @include breakpoint(tabletOnly) {
+    margin-top: 0;
+  }
+
   & .portrait__slide__img {
     width: 100%;
     z-index: 10;
