@@ -1,5 +1,5 @@
 .hp-business {
-  @include container(100%, 50px 0, 0);
+  @include container(100%, 43vw 0 0 0, 0);
 
   @include breakpoint(tabletAndDesktop) {
     border-top: 2px solid $lightGray;
@@ -25,7 +25,20 @@
 
   }
 
+  & .c-section-title.heading--row {
+    margin: 7.2vw 0;
+    font-size: 1.7rem;
+  }
+
+  & .row--mob {
+    margin-bottom: 2vw;
+  }
+
+  & .row--mob:first-child {
+    margin-bottom: 10vw;
+  }
+
   & .row--mob:last-child {
-    margin-left: 1%;
+    // margin-left: 1%;
   }
 }

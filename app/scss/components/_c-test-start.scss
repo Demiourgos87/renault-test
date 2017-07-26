@@ -3,7 +3,7 @@
   margin: 0;
 
   @include breakpoint(phoneOnly) {
-    margin: 50px 0;
+    margin: 11vw 0 0 0;
   }
 
   @include breakpoint(desktopOnly) {
@@ -38,7 +38,7 @@
 
     @include breakpoint(phoneOnly) {
       width: 65%;
-      padding: 20px 0;
+      padding: 4vw 0 6vw 0;
     }
 
     @include breakpoint(tabletOnly) {
@@ -52,20 +52,22 @@
     }
 
     & .btn--centered {
-      width: 7vw;
+      width: 24vw;
       text-align: center;
+      font-size: 0.6rem;
+      padding: 4vw 8vw;
 
       @include breakpoint(tabletOnly) {
         width: 9vw;
       }
 
-      @include breakpoint(phoneOnly) {
-        width: 20vw;
-      }
     }
 
     & .c-section-title.heading--row {
-      text-align: center;
+      font-size: 1.6rem;
+      letter-spacing: 0.2vw;
+      line-height: 8vw;
+      margin: 6vw 0;
     }
   }
 
@@ -118,7 +120,9 @@
   }
 
   &__desc {
-    margin-bottom: 30px;
+    margin-bottom: 9vw;
+    line-height: 4.7vw;
+    letter-spacing: 0.15vw;
 
     @include breakpoint(tabletOnly) {
       display: none;

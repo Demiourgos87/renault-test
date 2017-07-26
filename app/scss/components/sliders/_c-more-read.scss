@@ -1,13 +1,14 @@
 .c-more-read {
   width: 100%;
-  padding-top: 20px;
+  padding-top: 9vw;
+  margin-top: 8vw;
 
   &__wrap {
     width: 80%;
     margin: 0 auto;
 
     @include breakpoint(phoneOnly) {
-      width: 90%;
+      width: 87.8%;
     }
 
     @include breakpoint(tabletOnly) {
@@ -81,7 +82,14 @@
 
   & .teaser {
     @include breakpoint(phoneOnly) {
-      height: 60vw;
+      height: 65vw;
+      width: 49%;
+      margin-right: 2%;
+      margin-bottom: 6vw;
+
+      &:nth-child(2n+0) {
+        margin-right: 0;
+      }
     }
 
     & .teaser:nth-child(2n+0) {
@@ -98,10 +106,14 @@
   }
 
   & .teaser__title {
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.17vw;
+    width: 85%;
   }
 
   & .teaser__img {
+    margin-bottom: 2vw;
     & img {
       filter: grayscale(100%);
 
@@ -121,6 +133,11 @@
 
   & .c-section-title {
     &.heading--row {
+      font-size: 1.5rem;
+      margin: 0 0 10vw 0;
+      padding-left: 1vw;
+      letter-spacing: 0.4vw;
+
       @include breakpoint(tabletOnly) {
         width: 8vw;
       }

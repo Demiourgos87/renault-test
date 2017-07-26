@@ -1,18 +1,68 @@
 .hp-news {
   @include container(100%, 0 0 8vw 0, 0);
 
+  @include breakpoint(tabletOnly) {
+    margin: 0 0 4vw 0;
+  }
+
   & .c-section-title {
     @include breakpoint(phoneOnly) {
-      margin-top: 4.5%;
-      width: 20vw;
+      margin-top: 5%;
+      width: 21vw;
       font-size: 1.66rem;
-      line-height: 1.6rem;
+      line-height: 1.5rem;
+    }
+
+    @include breakpoint(tabletOnly) {
+      margin-top: -3.4vw;
+      width: 18vw;
+      font-size: 1.4rem;
+    }
+
+    & .text--italic {
+      font-size: 1.9rem;
+      margin-left: 1vw;
+
+      @include breakpoint(tabletOnly) {
+        margin-left: 0;
+      }
+    }
+
+    & .text--regular {
+      font-size: 1.6rem;
+
+      @include breakpoint(tabletOnly) {
+        font-size: 1.47rem;
+        letter-spacing: 0.1vw;
+      }
+    }
+  }
+
+  & .row--mob {
+    margin-bottom: 6vw;
+
+    @include breakpoint(tabletOnly) {
+      width: 55.5%;
+      margin-right: 1.7%;
+      margin-bottom: 4vw;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
   & .row--padded--top {
     @include breakpoint(tabletAndDesktop) {
-      padding-top: 13%;
+      padding-top: 13.2%;
+    }
+  }
+
+  & .row--clipped--right {
+    @include breakpoint(tabletOnly) {
+      width: 42.7%;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -27,27 +77,88 @@
   }
 
   & .heading--fix {
-    margin-top: 29.2vw;
+    margin-top: 29.4vw;
+
+    @include breakpoint(tabletOnly) {
+      margin-top: 7vw;
+    }
   }
 
   & .teaser--s {
     width: 35.6%;
+
+    @include breakpoint(tabletOnly) {
+      width: 42.6%;
+    }
   }
 
   & .teaser--l {
-    margin-left: 1%;
+    margin-left: 2%;
     width: 61%;
+
+    @include breakpoint(tabletOnly) {
+      margin-left: 2%;
+      width: 54%;
+    }
   }
 
-  & .teaser__img__footnote {
-    bottom: 0.9vw;
-    padding: 1.5vw 2.5vw;
-    font-size: 0.5rem;
+  & .teaser--xl {
+    margin-bottom: 15.5vw;
+
+    @include breakpoint(tabletOnly) {
+      margin-bottom: 5.5vw;
+    }
+
+    &:last-child {
+      margin-bottom: 5vw;
+
+      @include breakpoint(tabletOnly) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   & .teaser__title {
-    font-size: 1.2rem;
+    font-size: 1.16rem;
     line-height: 1.2rem;
     font-weight: 400;
+
+    @include breakpoint(tabletOnly) {
+      font-weight: 700;
+      line-height: 1.25rem;
+    }
+  }
+
+  & .teaser--landscape .teaser__img {
+    width: 49%;
+    margin-right: 2%;
+
+    @include breakpoint(tabletOnly) {
+      width: 55.5%;
+      margin-right: 4%;
+    }
+  }
+
+  & .teaser--landscape .teaser__body {
+    width: 47%;
+
+    @include breakpoint(tabletOnly) {
+      width: 40%;
+    }
+  }
+
+  & .btn {
+    padding: 3vw 4vw;
+    font-size: 0.6rem;
+    font-weight: 400;
+
+    @include breakpoint(tabletOnly) {
+      padding: 2vw 3vw;
+      font-size: 0.85rem;
+    }
+  }
+
+  & .btn--centered {
+    margin: 3vw auto;
   }
 }

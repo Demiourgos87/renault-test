@@ -1,5 +1,5 @@
 .hp-astuces {
-  @include container(100%, 50px 0, 0);
+  @include container(100%, 0, 0);
 
   @include breakpoint(tabletAndDesktop) {
     margin: 10vw 0 0 0;
@@ -7,8 +7,25 @@
   }
 
   & .c-section-title.heading--row {
+    font-size: 1.66rem;
+    margin-top: 1vw;
+    margin-bottom: 7vw;
+    line-height: 1.6rem;
+
     @include breakpoint(tabletAndDesktop) {
       margin: 4vw 0;
+    }
+  }
+
+  & .container {
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: $lightGray;
+      position: relative;
+      top: -4vw;
     }
   }
 
@@ -22,5 +39,13 @@
     @include breakpoint(tabletAndDesktop) {
       top: -7vw;
     }
+  }
+
+  & .teaser {
+    margin-bottom: 10.2vw;
+  }
+
+  & .teaser--xl {
+    margin-bottom: 17vw;
   }
 }

@@ -1,5 +1,5 @@
 .c-faq-slider {
-  margin-bottom: 35vw;
+  margin-bottom: 31vw;
 
   @include breakpoint(tabletAndDesktop) {
     border-top: 2px solid $lightGray;
@@ -10,7 +10,7 @@
     position: relative;
 
     @include breakpoint(phoneOnly) {
-      width: 90%;
+      width: 87%;
       margin: 0 auto;
       top: -100px;
     }
@@ -29,7 +29,7 @@
 
   & .container--full {
     @include breakpoint(phoneOnly) {
-      height: 18.5rem;
+      height: 17.2rem;
       top: 100px;
     }
 
@@ -69,24 +69,39 @@
   }
 
   & .teaser__img {
+    margin-bottom: 8vw;
+  }
+
+  & .teaser__img {
     & img {
       box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.4);
     }
   }
 
   & .c-section-title.heading--row {
+    margin: 9vw 0 6vw 0;
+    font-size: 1.66rem;
+
     @include breakpoint(tabletOnly) {
       margin-bottom: 10px;
     }
   }
 
   & .slider__navigation {
+    position: relative;
+    right: -2.8vw;
+    font-size: 0.9rem;
+
     @include breakpoint(tabletOnly) {
       margin-top: -4vw;
     }
 
     @include breakpoint(desktopOnly) {
       margin-top: 0;
+    }
+
+    & i {
+      padding: 3vw 3vw 3vw 2vw;
     }
   }
 }

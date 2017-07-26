@@ -4,4 +4,8 @@
   position: relative;
   left: 0;
   transition: all 0.2s linear;
+
+  @include breakpoint(tabletOnly) {
+    margin-top: 11vw;
+  }
 }

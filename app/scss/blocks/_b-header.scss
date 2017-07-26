@@ -6,6 +6,10 @@
   top: 0;
   z-index: 99999999;
 
+  @include breakpoint(tabletOnly) {
+    @include container(90%, 0, 3vw 5%);
+  }
+
   @include breakpoint(desktopOnly) {
     width: 96%;
     padding: 15px 2%;
@@ -22,6 +26,10 @@
     left: 50%;
     margin-left: -18.5vw;
     z-index: 120;
+
+    @include breakpoint(tabletOnly) {
+      top: 0.6vw;
+    }
 
     & img {
       width: 100%;
@@ -71,8 +79,13 @@
     float: left;
     font-size: $fontLarge;
     position: relative;
-    top: -0.7vw;
+    top: -1vw;
     left: 2.5vw;
+
+    @include breakpoint(tabletOnly){
+      font-size: 4rem;
+      left: 3vw;
+    }
 
     @include breakpoint(desktopOnly) {
       display: none;
