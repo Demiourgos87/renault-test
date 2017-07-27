@@ -6,6 +6,10 @@
     margin: 11vw 0 0 0;
   }
 
+  @include breakpoint(tabletOnly) {
+    margin: 7vw 0 2vw 0;
+  }
+
   @include breakpoint(desktopOnly) {
     margin: 5vw 0;
   }
@@ -42,8 +46,8 @@
     }
 
     @include breakpoint(tabletOnly) {
-      width: 40%;
-      padding: 30px 0 80px 0;
+      width: 38%;
+      padding: 5vw 0 10vw 0;
     }
 
     @include breakpoint(desktopOnly) {
@@ -58,7 +62,11 @@
       padding: 4vw 8vw;
 
       @include breakpoint(tabletOnly) {
-        width: 9vw;
+        width: 16vw;
+        text-align: center;
+        font-size: 0.7rem;
+        padding: 1.2vw 1.2vw;
+        letter-spacing: 0.1vw;
       }
 
     }
@@ -68,6 +76,12 @@
       letter-spacing: 0.2vw;
       line-height: 8vw;
       margin: 6vw 0;
+
+      @include breakpoint(tabletOnly) {
+        line-height: 3vw;
+        margin: 0 0 2.8vw 0;
+        text-align: center;
+      }
     }
   }
 
@@ -76,16 +90,23 @@
     width: 90%;
     margin: 0 auto;
     position: relative;
-    top: -5.5vw;
-    text-align: center;
+    top: -6vw;
 
     @include breakpoint(phoneOnly) {
       display: none;
     }
 
+    @include breakpoint(tabletOnly) {
+      width: 100%;
+    }
+
     & .heading {
       font-weight: bold;
       margin: 0;
+
+      @include breakpoint(tabletOnly) {
+        font-size: 0.9rem;
+      }
     }
 
     & .desc {
@@ -100,8 +121,29 @@
   &__item {
     width: 32.7%;
     display: inline-block;
+    text-align: center;
+
+    @include breakpoint(tabletOnly) {
+      width: 26.7%;
+    }
+
+    &:first-child {
+      @include breakpoint(tabletOnly) {
+        margin-left: 2%;
+      }
+    }
+
+    &:nth-child(2) {
+      @include breakpoint(tabletOnly) {
+        margin-left: 6%;
+      }
+    }
 
     &:last-child {
+      @include breakpoint(tabletOnly) {
+        margin-left: 7%;
+      }
+
       @include breakpoint(desktopOnly) {
         position: relative;
         top: 1.2vw;

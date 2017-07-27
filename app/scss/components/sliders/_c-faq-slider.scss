@@ -22,7 +22,9 @@
     }
 
     @include breakpoint(desktopOnly) {
-      width: 80%;
+      width: 77.3%;
+      top: -5vw;
+      margin-right: 2.3%;
     }
   }
 
@@ -39,6 +41,7 @@
 
     @include breakpoint(desktopOnly) {
       height: 20rem;
+      width: 93.5%;
     }
 
     @include breakpoint(desktopLarge) {
@@ -65,7 +68,8 @@
     }
 
     @include breakpoint(desktopOnly) {
-      margin-top: 12%;
+      width: 38%;
+      margin-top: 17.2%;
     }
   }
 
@@ -75,6 +79,19 @@
       line-height: 2.6vw;
       font-weight: 700;
     }
+
+    @include breakpoint(desktopOnly) {
+      line-height: 1.8vw;
+      font-size: 1rem;
+      margin-bottom: 1.4vw;
+    }
+  }
+
+  & .teaser--landscape .teaser__desc {
+    @include breakpoint(desktopOnly) {
+      font-size: 0.6rem;
+      line-height: 1vw;
+    }
   }
 
   & .teaser--landscape .teaser__img {
@@ -83,6 +100,11 @@
     @include breakpoint(tabletOnly) {
       width: 55%;
       margin-right: 6%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 56%;
+      margin-right: 3%;
     }
   }
 
@@ -102,6 +124,12 @@
       line-height: 2.4vw;
       padding-top: 0.5vw;
     }
+
+    @include breakpoint(desktopOnly) {
+      margin: 5.8vw 0 1vw 0;
+      font-size: 1.55rem;
+      line-height: 1.9vw;
+    }
   }
 
   & .slider__navigation {
@@ -116,6 +144,10 @@
     }
 
     @include breakpoint(desktopOnly) {
+      position: absolute;
+      font-size: 0.8rem;
+      top: 8.7vw;
+      right: 0.8vw;
       margin-top: 0;
     }
 
@@ -124,6 +156,10 @@
 
       @include breakpoint(tabletOnly) {
         padding: 1.6vw;
+      }
+
+      @include breakpoint(desktopOnly) {
+        padding: 0.6vw;
       }
     }
   }

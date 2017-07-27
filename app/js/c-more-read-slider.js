@@ -4,8 +4,8 @@
   // cache DOM \\
   var $slider = $('.c-more-read .slider'),
       $wrap = $slider.closest('.slider__wrap'),
-      $arrowNext = $wrap.find('.fa-arrow-circle-o-right'),
-      $arrowPrev = $wrap.find('.fa-arrow-circle-o-left'),
+      $arrowNext = $wrap.find('.arrow-right'),
+      $arrowPrev = $wrap.find('.arrow-left'),
       windowWidth = $(window).outerWidth();
 
   if (windowWidth > 599) {

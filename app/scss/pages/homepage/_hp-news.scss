@@ -19,6 +19,12 @@
       font-size: 1.4rem;
     }
 
+    @include breakpoint(desktopOnly) {
+      margin-top: -0.4vw;
+      width: 14vw;
+      font-size: 1.5rem;
+    }
+
     & .text--italic {
       font-size: 1.9rem;
       margin-left: 1vw;
@@ -47,14 +53,22 @@
       margin-bottom: 4vw;
     }
 
+    @include breakpoint(desktopOnly) {
+      width: 49.2%;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
   }
 
   & .row--padded--top {
-    @include breakpoint(tabletAndDesktop) {
+    @include breakpoint(tabletOnly) {
       padding-top: 13.2%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      padding-top: 12.2%;
     }
   }
 
@@ -82,6 +96,10 @@
     @include breakpoint(tabletOnly) {
       margin-top: 7vw;
     }
+
+    @include breakpoint(desktopOnly) {
+      margin-top: 13.5vw;
+    }
   }
 
   & .teaser--s {
@@ -89,6 +107,11 @@
 
     @include breakpoint(tabletOnly) {
       width: 42.6%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 35%;
+      margin-right: 1.7%;
     }
   }
 
@@ -100,6 +123,11 @@
       margin-left: 2%;
       width: 54%;
     }
+
+    @include breakpoint(desktopOnly) {
+      margin-left: 2%;
+      width: 61%;
+    }
   }
 
   & .teaser--xl {
@@ -107,6 +135,10 @@
 
     @include breakpoint(tabletOnly) {
       margin-bottom: 5.5vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin-bottom: 6vw;
     }
 
     &:last-child {
@@ -126,6 +158,19 @@
     @include breakpoint(tabletOnly) {
       font-weight: 700;
       line-height: 1.25rem;
+    }
+
+    @include breakpoint(desktopOnly) {
+      line-height: 1.54vw;
+      font-size: 1rem;
+      margin-bottom: 1.2vw;
+    }
+  }
+
+  & .teaser__desc {
+    @include breakpoint(desktopOnly) {
+      font-size: 0.76rem;
+      line-height: 1.07vw;
     }
   }
 
@@ -156,9 +201,18 @@
       padding: 2vw 3vw;
       font-size: 0.85rem;
     }
+
+    @include breakpoint(desktopOnly) {
+      padding: 1vw 1.5vw;
+      font-size: 0.64rem;
+    }
   }
 
   & .btn--centered {
     margin: 3vw auto;
+
+    @include breakpoint(desktopOnly) {
+      margin: 2.4vw auto;
+    }
   }
 }

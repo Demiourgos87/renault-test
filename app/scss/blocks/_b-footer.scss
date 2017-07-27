@@ -2,14 +2,26 @@
   @include container(100%, 11.5vw 0, 0);
   text-align: center;
 
+  @include breakpoint(tabletOnly) {
+    margin: 6.5vw 0;
+  }
+
   &__logo {
     margin: 0 auto;
     width: 30%;
+
+    @include breakpoint(tabletOnly) {
+      width: 22%;
+    }
   }
 
   &__nav {
     @include ulClean;
     margin: 8vw 0;
+
+    @include breakpoint(tabletOnly) {
+      margin: 1.6vw 0;
+    }
 
     & li {
       display: block;

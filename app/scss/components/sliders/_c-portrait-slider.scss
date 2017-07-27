@@ -6,6 +6,13 @@
 
   @include breakpoint(tabletOnly) {
     margin-top: 0;
+    border: 2vw solid $yellow;
+    width: calc(100% - 4vw);
+  }
+
+  @include breakpoint(desktopOnly) {
+    border: 1.4vw solid #ffcc33;
+    width: calc(100% - 2.8vw);
   }
 
   & .portrait__slide__img {
@@ -36,15 +43,15 @@
     }
 
     @include breakpoint(tabletOnly) {
-      top: 3vw;
-      left: 3vw;
-      height: 29vw;
+      top: 5vw;
+      left: 3.3vw;
+      height: 31vw;
     }
 
     @include breakpoint(desktopOnly) {
-      top: 6vw;
-      left: 4vw;
-      width: 50%;
+      top: 5.5vw;
+      left: 3.6vw;
+      width: 39%;
       height: 28vw;
     }
 
@@ -52,12 +59,28 @@
       @include breakpoint(phoneAndTablet) {
         display: none;
       }
+
+      @include breakpoint(desktopOnly) {
+        font-size: 0.7rem;
+        line-height: 1.1vw;
+      }
     }
   }
 
   & .portrait__slide__title {
     font-size: 1.8rem;
     margin: 0 0 3vw 0;
+
+    @include breakpoint(tabletOnly) {
+      font-size: 1.4rem;
+      margin: 0 0 1vw 0;
+    }
+
+    @include breakpoint(desktopOnly) {
+      font-size: 1.6rem;
+      margin: 0 0 0.8vw 0;
+      letter-spacing: 0.03vw;
+    }
   }
 
   & .slider__navigation {
@@ -72,13 +95,15 @@
     }
 
     @include breakpoint(tabletOnly) {
-      top: 3vw;
+      top: 4.6vw;
       right: 1vw;
+      font-size: 0.8rem;
     }
 
     @include breakpoint(desktopOnly) {
-      top: 6vw;
-      right: 1vw;
+      top: 5.4vw;
+      right: 2.4vw;
+      font-size: 0.7rem;
     }
   }
 
@@ -93,7 +118,10 @@
     }
 
     @include breakpoint(tabletOnly) {
-      bottom: 40px;
+      bottom: 6.4vw;
+      font-size: 0.7rem;
+      padding: 1.3vw 2vw;
+      letter-spacing: 0.1vw;
     }
 
     @include breakpoint(desktopOnly) {
@@ -111,7 +139,16 @@
     }
 
     @include breakpoint(tabletOnly) {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      line-height: 2.5vw;
+      margin-top: 0;
+    }
+
+    @include breakpoint(desktopOnly) {
+      font-size: 1.5rem;
+      line-height: 2vw;
+      margin-top: 0;
+      margin-bottom: 0.6vw;
     }
   }
 }

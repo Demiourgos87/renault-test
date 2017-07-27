@@ -33,6 +33,11 @@
     padding: 1vw 1.6vw 0.9vw 1.2vw;
     font-size: 1.1vw;
   }
+
+  @include breakpoint(desktopOnly) {
+    padding: 0.8vw 1.2vw 0.8vw 1.3vw;
+    font-size: 0.72vw;
+  }
 }
 
 .teaser__body {

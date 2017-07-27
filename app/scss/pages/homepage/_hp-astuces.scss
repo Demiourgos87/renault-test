@@ -5,6 +5,10 @@
     margin: 5vw 0 0 0;
   }
 
+  @include breakpoint(desktopOnly) {
+    margin: 2.2vw 0 0 0;
+  }
+
   &::before {
     @include breakpoint(tabletOnly) {
       display: block;
@@ -15,6 +19,10 @@
       width: 100%;
       height: 2px;
       background: $lightGray;
+    }
+
+    @include breakpoint(desktopOnly) {
+      top: 3.6vw;
     }
   }
 
@@ -28,6 +36,10 @@
       margin: 4vw 0 5vw 0;
       line-height: 1.4rem;
       letter-spacing: 0.12vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin: 6.4vw 0 3.5vw 0;
     }
 
     & .text--bold, & .text--regular {
@@ -44,6 +56,10 @@
       background: $lightGray;
       position: relative;
       top: 2.8vw;
+
+      @include breakpoint(desktopOnly) {
+        top: 1.8vw;
+      }
     }
   }
 
@@ -52,16 +68,30 @@
       width: 55.4%;
     }
 
+    @include breakpoint(desktopOnly) {
+      width: 49%;
+      margin-left: 6.5%;
+    }
+
     & .teaser--m:nth-child(2) {
         @include breakpoint(tabletOnly) {
           margin-right: 2%;
           width: 54%;
+        }
+
+        @include breakpoint(desktopOnly) {
+          margin-right: 2.5%;
+          width: 48.5%;
         }
       }
 
     & .teaser--m:last-child {
       @include breakpoint(tabletOnly) {
         width: 43%;
+      }
+
+      @include breakpoint(desktopOnly) {
+        width: 48%;
       }
     }
   }
@@ -71,6 +101,10 @@
       width: 42.6%;
       margin-top: 1vw;
     }
+
+    @include breakpoint(desktopOnly) {
+      width: 42.5%;
+    }
   }
 
   & .row--mob:last-child {
@@ -79,9 +113,19 @@
       margin: -10.5vw 0 0 32%;
     }
 
+    @include breakpoint(desktopOnly) {
+      width: 49.1%;
+      margin: -7.5vw 0 0 31.9%;
+    }
+
     & .teaser--m:first-child {
       @include breakpoint(tabletOnly) {
         width: 42%;
+        margin-right: 2%;
+      }
+
+      @include breakpoint(desktopOnly) {
+        width: 48%;
         margin-right: 2%;
       }
     }
@@ -89,6 +133,11 @@
     & .teaser--m:last-child {
       @include breakpoint(tabletOnly) {
         width: 54%;
+        margin-left: 2%;
+      }
+
+      @include breakpoint(desktopOnly) {
+        width: 48%;
         margin-left: 2%;
       }
     }
@@ -116,5 +165,35 @@
 
   & .teaser--xl {
     margin-bottom: 17vw;
+  }
+
+  & .teaser__img {
+    @include breakpoint(tabletOnly) {
+      margin-bottom: 1.2vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin-bottom: 1.4vw;
+    }
+  }
+
+  & .teaser__title {
+    @include breakpoint(tabletOnly) {
+      line-height: 1.3rem;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin-bottom: 1vw;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  & .teaser__desc {
+    @include breakpoint(desktopOnly) {
+      font-size: 0.76rem;
+      letter-spacing: 0.01vw;
+      line-height: 1.1vw;
+    }
   }
 }

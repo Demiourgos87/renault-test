@@ -1,11 +1,11 @@
 @mixin breakpoint($break) {
 
   @if $break == phoneOnly {
-      @media (max-width: 599px)                           { @content; }
+      @media (max-width: 767px)                           { @content; }
   }
 
   @else if $break == tabletOnly {
-      @media (min-width: 600px)                           { @content; }
+      @media (min-width: 768px)                           { @content; }
   }
 
   @else if $break == phoneAndTablet {
@@ -13,7 +13,7 @@
   }
 
   @else if $break == tabletAndDesktop {
-      @media (min-width: 600px)                           { @content; }
+      @media (min-width: 768px)                           { @content; }
   }
 
   @else if $break == desktopOnly {

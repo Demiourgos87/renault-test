@@ -12,7 +12,8 @@
 
   @include breakpoint(desktopOnly) {
     width: 96%;
-    padding: 15px 2%;
+    padding: 1vw 2%;
+    height: 2vw;
   }
 
   & i {
@@ -31,38 +32,47 @@
       top: 0.6vw;
     }
 
+    @include breakpoint(desktopOnly) {
+      width: 11.6vw;
+      margin-left: -5.8vw;
+    }
+
     & img {
       width: 100%;
     }
   }
 
   &__social {
-    text-align: center;
 
     @include breakpoint(phoneAndTablet) {
       float: none;
       position: relative;
-      font-size: 1.8rem;
+      font-size: 2.4rem;
       color: $black;
+      width: 50%;
+      margin: 0 auto;
     }
 
     @include breakpoint(tabletOnly) {
-      font-size: 3rem;
+      font-size: 3.6rem;
+      width: 57%;
     }
 
     @include breakpoint(desktopOnly) {
       position: relative;
-      font-size: $fontMedium;
-      top: 6px;
-      color: $white;
+      font-size: 1rem;
+      top: -9.7vw;
+      color: #ffffff;
       float: left;
+      left: -0.3vw;
+      width: auto;
     }
 
     & i {
-      margin-right: 20px;
+      margin-right: 13vw;
 
       @include breakpoint(tabletOnly) {
-        margin-right: 40px;
+        margin-right: 9vw;
       }
 
       @include breakpoint(desktopOnly) {
@@ -79,12 +89,12 @@
     float: left;
     font-size: $fontLarge;
     position: relative;
-    top: -1vw;
     left: 2.5vw;
 
     @include breakpoint(tabletOnly){
       font-size: 4rem;
       left: 3vw;
+      top: -1.2vw;
     }
 
     @include breakpoint(desktopOnly) {

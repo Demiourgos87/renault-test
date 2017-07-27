@@ -2,7 +2,6 @@
   float: right;
   font-size: $fontMedium;
   position: relative;
-  top: -0.7vw;
   right: 2.5vw;
 
   @include breakpoint(tabletOnly) {
@@ -12,9 +11,9 @@
   }
 
   @include breakpoint(desktopOnly) {
-    position: relative;
-    font-size: $fontMedium;
-    top: 6px;
+    font-size: 0.8rem;
+    top: 0.6vw;
+    right: 0.4vw;
   }
 }
 
@@ -30,10 +29,16 @@
 
   & .search__close {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 2.3vw;
+    right: 5.4vw;
     font-size: 1.8rem;
     cursor: pointer;
+
+    @include breakpoint(tabletOnly) {
+      top: 2vw;
+      right: 4.2vw;
+      font-size: 4rem;
+    }
 
     @include breakpoint(desktopOnly) {
       top: 25px;
@@ -43,11 +48,18 @@
 
   & .search__field {
     position: absolute;
-    top: 45%;
+    top: 48.2%;
     left: 50%;
-    width: 80%;
-    margin-left: -40%;
+    width: 93%;
+    margin-left: -46.5%;
     text-align: center;
+
+    @include breakpoint(tabletOnly) {
+      top: 34.4%;
+      left: 50%;
+      width: 92%;
+      margin-left: -46%;
+    }
 
     & input {
       width: 85%;
@@ -56,6 +68,15 @@
       color: $white;
       border-bottom: 1px solid $white;
       font-size: $fontBig;
+      padding-bottom: 3vw;
+      position: relative;
+      top: -3vw;
+
+      @include breakpoint(tabletOnly) {
+        font-size: 2rem;
+        padding-bottom: 1vw;
+        top: -3vw;
+      }
 
       &:focus {
         outline: none;
@@ -65,6 +86,15 @@
 
     & i {
       font-size: 1.8rem;
+      position: relative;
+      top: -3vw;
+      left: -1vw;
+
+      @include breakpoint(tabletOnly) {
+        font-size: 3rem;
+        top: -2.5vw;
+        left: 0;
+      }
     }
   }
 }

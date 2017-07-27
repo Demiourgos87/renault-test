@@ -3,6 +3,11 @@
   padding-top: 9vw;
   margin-top: 8vw;
 
+  @include breakpoint(tabletOnly) {
+    padding-top: 4vw;
+    margin-top: 4.2vw;
+  }
+
   &__wrap {
     width: 80%;
     margin: 0 auto;
@@ -12,7 +17,9 @@
     }
 
     @include breakpoint(tabletOnly) {
-      height: 17vw;
+      height: 20vw;
+      width: 80.5%;
+      margin: 0 5% 0 8%;
     }
 
     @include breakpoint(desktopOnly) {
@@ -32,27 +39,34 @@
     }
 
     @include breakpoint(tabletOnly) {
-      margin-left: 20vw;
-      top: -15vw;
+      margin-left: 16vw;
+      top: -22vw;
     }
 
     @include breakpoint(desktopOnly) {
       top: -11vw;
     }
 
-    & i {
+    & .arrow-left, & .arrow-right {
       position: absolute;
-      top: 40%;
-      font-size: 2rem;
-      color: $darkGray;
+      top: 35%;
 
-      &.fa-arrow-circle-o-left {
-        left: -5vw;
+      @include breakpoint(phoneOnly) {
+        display: none;
       }
 
-      &.fa-arrow-circle-o-right {
-        right: -3vw;
+      @include breakpoint(tabletOnly) {
+        width: 3.5vw;
+        height: 3.5vw;
       }
+    }
+
+    & .arrow-left {
+      left: -5.7vw;
+    }
+
+    & .arrow-right {
+      right: -3.6vw;
     }
   }
 
@@ -110,6 +124,12 @@
     font-size: 1rem;
     letter-spacing: 0.17vw;
     width: 85%;
+
+    @include breakpoint(tabletOnly) {
+      font-size: 0.81rem;
+      width: 100%;
+      line-height: 1.8vw;
+    }
   }
 
   & .teaser__img {
@@ -139,7 +159,11 @@
       letter-spacing: 0.4vw;
 
       @include breakpoint(tabletOnly) {
-        width: 8vw;
+        width: 10vw;
+        font-size: 1.3rem;
+        margin: 0 0 10vw 0;
+        padding-left: 0;
+        letter-spacing: 0;
       }
 
       @include breakpoint(desktopOnly) {
