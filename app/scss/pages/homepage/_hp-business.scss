@@ -40,7 +40,7 @@
       z-index: -1;
 
       @include breakpoint(desktopOnly) {
-        bottom: 4.5vw;
+        display: none;
       }
     }
 

@@ -52,7 +52,7 @@
       top: 5.5vw;
       left: 3.6vw;
       width: 39%;
-      height: 28vw;
+      height: 29vw;
     }
 
     & .portrait__slide__desc {
@@ -125,7 +125,9 @@
     }
 
     @include breakpoint(desktopOnly) {
-      bottom: 40px;
+      bottom: 7vw;
+      font-size: 0.55rem;
+      padding: 1vw 1.3vw;
     }
   }
 

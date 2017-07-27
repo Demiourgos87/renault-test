@@ -41,8 +41,9 @@
     }
 
     @include breakpoint(desktopOnly) {
-      top: 25px;
-      right: 25px;
+      font-size: 3rem;
+      top: 1.5vw;
+      right: 2.5vw;
     }
   }
 
@@ -59,6 +60,13 @@
       left: 50%;
       width: 92%;
       margin-left: -46%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      top: 35%;
+      left: 50%;
+      width: 74%;
+      margin-left: -38%;
     }
 
     & input {
@@ -94,6 +102,12 @@
         font-size: 3rem;
         top: -2.5vw;
         left: 0;
+      }
+
+      @include breakpoint(desktopOnly) {
+        font-size: 3.3rem;
+        top: -2.3vw;
+        left: 1.8vw;
       }
     }
   }

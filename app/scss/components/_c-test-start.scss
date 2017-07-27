@@ -11,7 +11,7 @@
   }
 
   @include breakpoint(desktopOnly) {
-    margin: 5vw 0;
+    margin: 6vw 0 0 0;
   }
 
   &::after {
@@ -19,10 +19,10 @@
       display: block;
       content: "";
       position: relative;
-      bottom: 0;
+      bottom: 3vw;
       left: 0;
       right: 0;
-      height: 2px;
+      height: 1px;
       background: $lightGray;
     }
   }
@@ -51,8 +51,8 @@
     }
 
     @include breakpoint(desktopOnly) {
-      width: 20%;
-      padding: 60px 0 120px 0;
+      width: 25%;
+      padding: 5.3vw 0 8.3vw 3vw;
     }
 
     & .btn--centered {
@@ -69,6 +69,13 @@
         letter-spacing: 0.1vw;
       }
 
+      @include breakpoint(desktopOnly) {
+        width: 9vw;
+        font-size: 0.55rem;
+        padding: 0.8vw 1.2vw;
+        margin: 0;
+      }
+
     }
 
     & .c-section-title.heading--row {
@@ -81,6 +88,13 @@
         line-height: 3vw;
         margin: 0 0 2.8vw 0;
         text-align: center;
+      }
+
+      @include breakpoint(desktopOnly) {
+        line-height: 2.1vw;
+        font-size: 1.5rem;
+        margin: 0 0 1.1vw 0;
+        text-align: left;
       }
     }
   }
@@ -100,12 +114,20 @@
       width: 100%;
     }
 
+    @include breakpoint(desktopOnly) {
+      top: -6.5vw;
+    }
+
     & .heading {
       font-weight: bold;
       margin: 0;
 
       @include breakpoint(tabletOnly) {
         font-size: 0.9rem;
+      }
+
+      @include breakpoint(desktopOnly) {
+        font-size: 1.1rem;
       }
     }
 
@@ -114,6 +136,11 @@
 
       @include breakpoint(phoneAndTablet) {
         display: none;
+      }
+
+      @include breakpoint(desktopOnly) {
+        display: block;
+        font-size: 0.8rem;
       }
     }
   }
@@ -152,12 +179,6 @@
 
     & img {
       width: 100%;
-
-      @include breakpoint(desktopOnly) {
-        width: 75%;
-        margin: 0 auto;
-        display: block;
-      }
     }
   }
 
@@ -172,6 +193,10 @@
 
     @include breakpoint(desktopOnly) {
       display: block;
+      margin-bottom: 1.4vw;
+      line-height: 1.1vw;
+      font-size: 0.62rem;
+      letter-spacing: 0.15vw;
     }
   }
 }

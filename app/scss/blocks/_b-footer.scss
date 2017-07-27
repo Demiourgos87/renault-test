@@ -6,12 +6,20 @@
     margin: 6.5vw 0;
   }
 
+  @include breakpoint(desktopOnly) {
+    margin: 4.5vw 0;
+  }
+
   &__logo {
     margin: 0 auto;
     width: 30%;
 
     @include breakpoint(tabletOnly) {
       width: 22%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 9%;
     }
   }
 
@@ -21,6 +29,10 @@
 
     @include breakpoint(tabletOnly) {
       margin: 1.6vw 0;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin: 1.8vw 0;
     }
 
     & li {
@@ -45,6 +57,10 @@
         text-transform: uppercase;
         font-size: $fontSmall;
         color: $gray;
+
+        @include breakpoint(desktopOnly) {
+          font-size: 0.55rem;
+        }
       }
     }
   }
