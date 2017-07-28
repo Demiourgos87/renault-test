@@ -44,12 +44,13 @@
     }
 
     @include breakpoint(desktopOnly) {
-      height: 62px;
+      height: auto;
       position: absolute;
-      width: 90%;
+      width: 5%;
       z-index: 110;
-      padding: 0 0 0 2%;
-      left: 0;
+      padding: 0 0 0 0%;
+      left: 2vw;
+      top: 0;
     }
   }
 
