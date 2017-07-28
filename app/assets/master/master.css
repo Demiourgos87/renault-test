@@ -2605,7 +2605,7 @@ a img {
     width: 100%; }
     @media (min-width: 768px) {
       .comm-hero__image {
-        width: 90%; } }
+        width: 92%; } }
     @media (min-width: 1024px) {
       .comm-hero__image {
         width: 80%; } }
@@ -2614,31 +2614,40 @@ a img {
       margin-bottom: -4px; }
   .comm-hero__title {
     position: absolute;
-    top: 35%;
-    left: 17%; }
+    top: 21.5%;
+    left: 18%; }
     @media (min-width: 768px) {
       .comm-hero__title {
-        top: 40%;
-        left: 12%; } }
+        top: 45.5%;
+        left: 8.6%; } }
     @media (min-width: 1024px) {
       .comm-hero__title {
         top: 40%;
         left: 15%; } }
     .comm-hero__title .page__title {
-      margin-top: 10px;
+      margin-top: 4vw;
       font-weight: 900;
-      font-size: 1.4rem; }
+      font-size: 1.41rem; }
       @media (min-width: 768px) {
         .comm-hero__title .page__title {
           font-size: 1.6rem; } }
       @media (min-width: 1024px) {
         .comm-hero__title .page__title {
           font-size: 3rem; } }
+    .comm-hero__title .btn {
+      font-size: 0.48rem;
+      padding: 1.5vw 4.8vw; }
+      @media (min-width: 768px) {
+        .comm-hero__title .btn {
+          font-size: 0.6rem;
+          padding: 0.7vw 2vw; } }
   .comm-hero__text {
-    line-height: 1.5rem;
-    width: calc(100% - 60px);
-    padding: 30px;
-    font-size: 1rem; }
+    width: calc(100% - 12vw);
+    padding: 6.5vw 6vw;
+    font-size: 1.15rem;
+    letter-spacing: 0.006vw;
+    line-height: 6.6vw;
+    font-weight: 400; }
     @media (min-width: 768px) {
       .comm-hero__text {
         width: 30%;
