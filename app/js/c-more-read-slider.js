@@ -8,7 +8,7 @@
       $arrowPrev = $wrap.find('.arrow-left'),
       windowWidth = $(window).outerWidth();
 
-  if (windowWidth > 599) {
+  if (windowWidth > 767) {
 
     $slider.slick({
       slidesToShow: 4,

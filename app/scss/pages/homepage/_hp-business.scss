@@ -1,5 +1,5 @@
 .hp-business {
-  @include container(100%, 43vw 0 0 0, 0);
+  @include container(100%, 28vw 0 0 0, 0);
 
   @include breakpoint(tabletOnly) {
     position: relative;
@@ -67,11 +67,15 @@
   }
 
   & .row--mob {
-    margin-bottom: 2vw;
+    margin-bottom: 7vw;
+
+    @include breakpoint(tabletOnly) {
+      margin-bottom: 7vw;
+    }
   }
 
   & .row--mob:first-child {
-    margin-bottom: 10vw;
+    margin-bottom: 13vw;
 
     @include breakpoint(tabletOnly) {
       margin-bottom: 2vw;
@@ -123,6 +127,10 @@
   }
 
   & .teaser__title {
+    @include breakpoint(phoneOnly) {
+      line-height: 4.9vw;
+    }
+
     @include breakpoint(tabletOnly) {
       line-height: 1.3rem;
     }

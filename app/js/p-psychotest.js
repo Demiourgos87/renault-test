@@ -8,6 +8,8 @@
       $allSlides = $pageWrap.find('.psychotest-slide'),
       $questions = $pageWrap.find('.psychotest-question'),
       $counters = $pageWrap.find('.psychotest-counter'),
+      $header = $('.b-header'),
+      headerHeight = $header.outerHeight(),
       windowWidth = $(window).outerWidth(),
       windowHeight = $(window).outerHeight();
 
@@ -42,8 +44,8 @@
 
   if (windowWidth > 1024) {
 
-    $intro.height(windowHeight - 62);
-    $slickList.height(windowHeight - 62);
+    $intro.height(windowHeight - headerHeight);
+    $slickList.height(windowHeight - headerHeight);
 
     $pageWrap.on('afterChange', function(event, slick, currentSlide) {
 

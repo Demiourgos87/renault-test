@@ -1,5 +1,5 @@
 .c-faq-slider {
-  margin-bottom: 31vw;
+  margin-bottom: 0;
 
   @include breakpoint(tabletAndDesktop) {
     margin-bottom: 0;
@@ -30,8 +30,8 @@
 
   & .container--full {
     @include breakpoint(phoneOnly) {
-      height: 17.2rem;
-      top: 100px;
+      height: 21rem;
+      top: 16vw;
     }
 
     @include breakpoint(tabletOnly) {
@@ -60,6 +60,7 @@
   & .teaser--landscape .teaser__body {
     position: relative;
     background: transparent;
+    width: 100%;
 
     @include breakpoint(tabletOnly) {
       margin-top: 20%;
@@ -74,7 +75,6 @@
   }
 
   & .teaser--landscape .teaser__title {
-
     @include breakpoint(tabletOnly) {
       line-height: 2.6vw;
       font-weight: 700;
@@ -96,6 +96,8 @@
 
   & .teaser--landscape .teaser__img {
     margin-bottom: 8vw;
+    width: 100%;
+    margin-right: 0;
 
     @include breakpoint(tabletOnly) {
       width: 55%;
