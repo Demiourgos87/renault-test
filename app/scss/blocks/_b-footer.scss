@@ -7,7 +7,7 @@
   }
 
   @include breakpoint(desktopOnly) {
-    margin: 4.5vw 0;
+    margin: 4vw 0;
   }
 
   &__logo {
@@ -32,7 +32,7 @@
     }
 
     @include breakpoint(desktopOnly) {
-      margin: 1.8vw 0;
+      margin: 2.3vw 0;
     }
 
     & li {
