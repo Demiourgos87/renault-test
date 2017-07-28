@@ -7,7 +7,11 @@
 
 .teaser__img {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 2.2vw;
+
+  @include breakpoint(tabletOnly) {
+    margin-bottom: 1.7vw;
+  }
 }
 
 .teaser__img img {
@@ -18,22 +22,36 @@
   text-transform: uppercase;
   position: absolute;
   left: 0;
-  bottom: 4px;
-  padding: 8px;
-  font-size: 0.6rem;
+  bottom: 0;
+  padding: 2vw 3.6vw;
+  font-size: 0.45rem;
   background: $yellow;
   color: $black;
   font-weight: bold;
+
+  @include breakpoint(tabletOnly) {
+    padding: 1vw 1.6vw 0.9vw 1.2vw;
+    font-size: 1.1vw;
+  }
+
+  @include breakpoint(desktopOnly) {
+    padding: 0.8vw 1.2vw 0.8vw 1.3vw;
+    font-size: 0.72vw;
+  }
 }
 
 .teaser__body {
   background: transparent;
 }
 
+.teaser p {
+  margin: 0;
+}
+
 .teaser__title {
-  font-weight: 900;
-  color: $black;
-  margin: 15px 0;
+  font-size: 1.16rem;
+  line-height: 1.2rem;
+  font-weight: 400;
 }
 
 .teaser__desc {
@@ -52,8 +70,8 @@
 }
 
 .teaser--landscape .teaser__img {
-  width: 48%;
-  margin-right: 2%;
+  width: 49%;
+  margin-right: 1%;
 }
 
 .teaser--landscape .teaser__body {
@@ -65,7 +83,7 @@
 }
 
 .teaser--s, .teaser--m, .teaser--l {
-  margin-right: 2%;
+  margin-right: 1%;
 }
 
 .teaser--s {
@@ -73,11 +91,11 @@
 }
 
 .teaser--m {
-  width: 48%;
+  width: 49%;
 }
 
 .teaser--l {
-  width: 64.66665%;
+  width: 65.66665%;
 }
 
 .teaser--xl:last-child {
@@ -93,11 +111,7 @@
 }
 
 .teaser:last-child {
-  margin-left: 2%;
-}
-
-.heading--fix {
-  margin-top: 34.8%;
+  margin-left: 1%;
 }
 
 .teaser__img--right .teaser__img {
@@ -119,14 +133,6 @@
 
   .teaser--raised--mob {
     margin-top: -24.5%;
-  }
-
-}
-
-@media only screen and (min-width: $break-mob) {
-
-  .teaser--raised--tab {
-    margin-top: -8vw;
   }
 
 }

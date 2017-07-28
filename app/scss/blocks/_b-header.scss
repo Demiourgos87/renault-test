@@ -1,14 +1,19 @@
 .b-header {
-  @include container(92%, 0, 15px 4%);
-  height: 32px;
+  @include container(92%, 0, 4vw 4%);
+  height: 5vw;
   background: $black;
   position: fixed;
   top: 0;
   z-index: 99999999;
 
+  @include breakpoint(tabletOnly) {
+    @include container(90%, 0, 3vw 5%);
+  }
+
   @include breakpoint(desktopOnly) {
     width: 96%;
-    padding: 15px 2%;
+    padding: 1vw 2%;
+    height: 2vw;
   }
 
   & i {
@@ -16,12 +21,21 @@
   }
 
   &__logo {
-    width: 170px;
+    width: 37.4vw;
     position: absolute;
-    top: 15px;
+    top: 2.6vw;
     left: 50%;
-    margin-left: -85px;
+    margin-left: -18.5vw;
     z-index: 120;
+
+    @include breakpoint(tabletOnly) {
+      top: 0.6vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 11.6vw;
+      margin-left: -5.8vw;
+    }
 
     & img {
       width: 100%;
@@ -29,32 +43,36 @@
   }
 
   &__social {
-    text-align: center;
 
     @include breakpoint(phoneAndTablet) {
       float: none;
       position: relative;
-      font-size: 1.8rem;
+      font-size: 2.4rem;
       color: $black;
+      width: 50%;
+      margin: 0 auto;
     }
 
     @include breakpoint(tabletOnly) {
-      font-size: 3rem;
+      font-size: 3.6rem;
+      width: 57%;
     }
 
     @include breakpoint(desktopOnly) {
       position: relative;
-      font-size: $fontMedium;
-      top: 6px;
-      color: $white;
+      font-size: 1rem;
+      top: 1.4vw;
+      color: #ffffff;
       float: left;
+      left: -0.3vw;
+      width: auto;
     }
 
     & i {
-      margin-right: 20px;
+      margin-right: 13vw;
 
       @include breakpoint(tabletOnly) {
-        margin-right: 40px;
+        margin-right: 9vw;
       }
 
       @include breakpoint(desktopOnly) {
@@ -69,7 +87,15 @@
 
   &__menu-trigger {
     float: left;
-    font-size: $fontBig;
+    font-size: $fontLarge;
+    position: relative;
+    left: 2.5vw;
+
+    @include breakpoint(tabletOnly){
+      font-size: 4rem;
+      left: 3vw;
+      top: -1.2vw;
+    }
 
     @include breakpoint(desktopOnly) {
       display: none;

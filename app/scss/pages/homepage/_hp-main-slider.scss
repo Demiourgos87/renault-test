@@ -11,25 +11,41 @@
   &__navigation {
 
     position: absolute;
-    top: 50%;
+    top: 54.7%;
     width: 100%;
     z-index: 20;
 
+    @include breakpoint(desktopOnly) {
+      top: 49%;
+    }
+
     &__left, &__right {
-      @include circled-icon(35px);
       position: absolute;
       top: 0;
       cursor: pointer;
-      background: $yellow;
-      color: $black;
+
+      & img {
+        @include breakpoint(tabletOnly) {
+          width: 3.2vw;
+          height: 3.2vw;
+        }
+      }
     }
 
     &__left {
-      left: 2vw;
+      left: 3vw;
+
+      @include breakpoint(desktopOnly) {
+        left: 2.8vw;
+      }
     }
 
     &__right {
-      right: 2vw;
+      right: 3vw;
+
+      @include breakpoint(desktopOnly) {
+        right: 3.3vw;
+      }
     }
 
     @include breakpoint(phoneOnly) {
@@ -40,21 +56,22 @@
 
   &__counter {
     color: $white;
-    font-size: $fontMedium;
+    font-size: 0.9rem;
     font-weight: 700;
     position: absolute;
-    bottom: 8vw;
-    right: 5vw;
+    bottom: 9vw;
+    right: 6vw;
     z-index: 1000;
 
-    @include breakpoint(tabletAndDesktop) {
-      font-size: $fontSmall;
-      bottom: 3vw;
-      left: 13vw;
+    @include breakpoint(tabletOnly) {
+      font-size: 0.8rem;
+      bottom: 3.5vw;
+      left: 15.5vw;
     }
 
     @include breakpoint(desktopOnly) {
-      left: 15vw;
+      left: 15.5vw;
+      bottom: 3.9vw;
     }
 
     & .slider__current {
@@ -75,32 +92,36 @@
 
       & .slide-text {
         position: absolute;
-        top: 8vw;
-        left: 4vw;
+        top: 14vw;
+        left: 6vw;
         width: 73%;
 
         @include breakpoint(tabletOnly) {
-          top: 20vw;
-          left: 12vw;
+          top: 24.2vw;
+          left: 15.5vw;
           width: 56%;
         }
 
         @include breakpoint(desktopOnly) {
-          top: 21vw;
-          left: 15vw;
+          top: 24.8vw;
+          left: 15.4vw;
           width: 55%;
         }
 
         & .btn {
           padding: 2vw;
-          font-size: $fontVerySmall;
+          font-size: 0.5rem;
+          margin-bottom: 4vw;
 
           @include breakpoint(tabletOnly) {
-            padding: 1vw 2vw;
+            padding: 0.6vw 1.8vw;
+            margin-bottom: 1vw;
           }
 
           @include breakpoint(desktopOnly) {
-            padding: 0.5vw 2vw;
+            padding: 0.67vw 2vw;
+            letter-spacing: 0.04vw;
+            margin-bottom: 1.2vw;
           }
         }
 
@@ -110,15 +131,16 @@
 
         &__heading {
           color: $yellow;
-          font-size: $fontMedium;
+          font-size: 1.1rem;
           font-weight: 700;
 
           @include breakpoint(tabletOnly) {
-            font-size: $fontLarge;
+            font-size: 1.1rem;
           }
 
           @include breakpoint(desktopOnly) {
             font-size: $fontBig;
+            letter-spacing: 0.1vw;
           }
         }
 
@@ -126,13 +148,16 @@
           color: $white;
           font-size: $fontLarge;
           font-weight: 900;
+          line-height: 7.5vw;
 
           @include breakpoint(tabletOnly) {
-            font-size: $fontVeryBig;
+            font-size: 2.2rem;
+            line-height: 4.5vw;
           }
 
           @include breakpoint(desktopOnly) {
-            font-size: 3.2rem;
+            font-size: 3.26rem;
+            line-height: 4.3vw;
           }
         }
 
@@ -144,8 +169,13 @@
             display: none;
           }
 
+          @include breakpoint(tabletOnly) {
+            font-size: 1.1rem;
+            letter-spacing: 0.07vw;
+          }
+
           @include breakpoint(desktopOnly) {
-            font-size: $fontBig;
+            font-size: 1.46rem;
           }
         }
       }

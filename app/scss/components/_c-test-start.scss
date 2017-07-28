@@ -3,11 +3,15 @@
   margin: 0;
 
   @include breakpoint(phoneOnly) {
-    margin: 50px 0;
+    margin: 11vw 0 0 0;
+  }
+
+  @include breakpoint(tabletOnly) {
+    margin: 7vw 0 2vw 0;
   }
 
   @include breakpoint(desktopOnly) {
-    margin: 5vw 0;
+    margin: 6vw 0 0 0;
   }
 
   &::after {
@@ -15,10 +19,10 @@
       display: block;
       content: "";
       position: relative;
-      bottom: 0;
+      bottom: 3vw;
       left: 0;
       right: 0;
-      height: 2px;
+      height: 1px;
       background: $lightGray;
     }
   }
@@ -38,34 +42,60 @@
 
     @include breakpoint(phoneOnly) {
       width: 65%;
-      padding: 20px 0;
+      padding: 4vw 0 6vw 0;
     }
 
     @include breakpoint(tabletOnly) {
-      width: 40%;
-      padding: 30px 0 80px 0;
+      width: 38%;
+      padding: 5vw 0 10vw 0;
     }
 
     @include breakpoint(desktopOnly) {
-      width: 20%;
-      padding: 60px 0 120px 0;
+      width: 25%;
+      padding: 5.3vw 0 8.3vw 3vw;
     }
 
     & .btn--centered {
-      width: 7vw;
+      width: 24vw;
       text-align: center;
+      font-size: 0.6rem;
+      padding: 4vw 8vw;
 
       @include breakpoint(tabletOnly) {
-        width: 9vw;
+        width: 16vw;
+        text-align: center;
+        font-size: 0.7rem;
+        padding: 1.2vw 1.2vw;
+        letter-spacing: 0.1vw;
       }
 
-      @include breakpoint(phoneOnly) {
-        width: 20vw;
+      @include breakpoint(desktopOnly) {
+        width: 9vw;
+        font-size: 0.55rem;
+        padding: 0.8vw 1.2vw;
+        margin: 0;
       }
+
     }
 
     & .c-section-title.heading--row {
-      text-align: center;
+      font-size: 1.6rem;
+      letter-spacing: 0.2vw;
+      line-height: 8vw;
+      margin: 6vw 0;
+
+      @include breakpoint(tabletOnly) {
+        line-height: 3vw;
+        margin: 0 0 2.8vw 0;
+        text-align: center;
+      }
+
+      @include breakpoint(desktopOnly) {
+        line-height: 2.1vw;
+        font-size: 1.5rem;
+        margin: 0 0 1.1vw 0;
+        text-align: left;
+      }
     }
   }
 
@@ -74,16 +104,31 @@
     width: 90%;
     margin: 0 auto;
     position: relative;
-    top: -5.5vw;
-    text-align: center;
+    top: -6vw;
 
     @include breakpoint(phoneOnly) {
       display: none;
     }
 
+    @include breakpoint(tabletOnly) {
+      width: 100%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      top: -6.5vw;
+    }
+
     & .heading {
       font-weight: bold;
       margin: 0;
+
+      @include breakpoint(tabletOnly) {
+        font-size: 0.9rem;
+      }
+
+      @include breakpoint(desktopOnly) {
+        font-size: 1.1rem;
+      }
     }
 
     & .desc {
@@ -92,14 +137,40 @@
       @include breakpoint(phoneAndTablet) {
         display: none;
       }
+
+      @include breakpoint(desktopOnly) {
+        display: block;
+        font-size: 0.8rem;
+      }
     }
   }
 
   &__item {
     width: 32.7%;
     display: inline-block;
+    text-align: center;
+
+    @include breakpoint(tabletOnly) {
+      width: 26.7%;
+    }
+
+    &:first-child {
+      @include breakpoint(tabletOnly) {
+        margin-left: 2%;
+      }
+    }
+
+    &:nth-child(2) {
+      @include breakpoint(tabletOnly) {
+        margin-left: 6%;
+      }
+    }
 
     &:last-child {
+      @include breakpoint(tabletOnly) {
+        margin-left: 7%;
+      }
+
       @include breakpoint(desktopOnly) {
         position: relative;
         top: 1.2vw;
@@ -108,17 +179,13 @@
 
     & img {
       width: 100%;
-
-      @include breakpoint(desktopOnly) {
-        width: 75%;
-        margin: 0 auto;
-        display: block;
-      }
     }
   }
 
   &__desc {
-    margin-bottom: 30px;
+    margin-bottom: 9vw;
+    line-height: 4.7vw;
+    letter-spacing: 0.15vw;
 
     @include breakpoint(tabletOnly) {
       display: none;
@@ -126,6 +193,10 @@
 
     @include breakpoint(desktopOnly) {
       display: block;
+      margin-bottom: 1.4vw;
+      line-height: 1.1vw;
+      font-size: 0.62rem;
+      letter-spacing: 0.15vw;
     }
   }
 }
