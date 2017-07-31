@@ -936,7 +936,7 @@ a img {
       margin: 7vw 0 2vw 0; } }
   @media (min-width: 1024px) {
     .c-test-start {
-      margin: 6vw 0 0 0; } }
+      margin: 1vw 0 0 0; } }
   @media (min-width: 1024px) {
     .c-test-start::after {
       display: block;
@@ -1070,7 +1070,7 @@ a img {
         margin-bottom: 1.4vw;
         line-height: 1.1vw;
         font-size: 0.62rem;
-        letter-spacing: 0.15vw; } }
+        letter-spacing: 0.07vw; } }
 
 .c-social-share {
   display: inline-block;
@@ -1559,8 +1559,10 @@ a img {
         line-height: 1.8vw; } }
     @media (min-width: 1024px) {
       .c-more-read .teaser__title {
-        font-size: 0.7rem;
-        line-height: 1.2vw; } }
+        font-size: 0.65rem;
+        line-height: 1.12vw;
+        font-weight: 900;
+        letter-spacing: 0.12vw; } }
   .c-more-read .teaser__img {
     margin-bottom: 2vw; }
     @media (min-width: 1024px) {

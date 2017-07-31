@@ -154,8 +154,10 @@
     }
 
     @include breakpoint(desktopOnly) {
-      font-size: 0.7rem;
-      line-height: 1.2vw;
+      font-size: 0.65rem;
+      line-height: 1.12vw;
+      font-weight: 900;
+      letter-spacing: 0.12vw;
     }
   }
 

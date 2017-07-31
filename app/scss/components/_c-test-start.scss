@@ -11,7 +11,7 @@
   }
 
   @include breakpoint(desktopOnly) {
-    margin: 6vw 0 0 0;
+    margin: 1vw 0 0 0;
   }
 
   &::after {
@@ -196,7 +196,7 @@
       margin-bottom: 1.4vw;
       line-height: 1.1vw;
       font-size: 0.62rem;
-      letter-spacing: 0.15vw;
+      letter-spacing: 0.07vw;
     }
   }
 }
