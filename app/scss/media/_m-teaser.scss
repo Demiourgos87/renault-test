@@ -7,10 +7,14 @@
 
 .teaser__img {
   position: relative;
-  margin-bottom: 2.2vw;
+  margin-bottom: 2.5vw;
 
   @include breakpoint(tabletOnly) {
     margin-bottom: 1.7vw;
+  }
+
+  @include breakpoint(desktopOnly) {
+    margin-bottom: 1.4vw;
   }
 }
 
@@ -44,20 +48,40 @@
   background: transparent;
 }
 
-.teaser p {
-  margin: 0;
-}
-
 .teaser__title {
-  font-size: 1.16rem;
-  line-height: 1.2rem;
-  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 5.1vw;
+  font-weight: 700;
+  letter-spacing: 0.26vw;
+
+  @include breakpoint(tabletOnly) {
+    font-size: 1.04rem;
+    line-height: 2.4vw;
+    font-weight: 700;
+    letter-spacing: 0.091vw;
+  }
+
+  @include breakpoint(desktopOnly) {
+    font-size: 0.9rem;
+    line-height: 1.5vw;
+    font-weight: 700;
+    letter-spacing: 0.054vw;
+    margin-bottom: 1.1vw;
+  }
 }
 
 .teaser__desc {
-  font-weight: 400;
-  margin: 0 0 15px 0;
-  color: #7e7e7e;
+  display: none;
+
+  @include breakpoint(desktopOnly) {
+    display: block;
+    font-weight: 400;
+    font-size: 0.7rem;
+    letter-spacing: 0.035vw;
+    line-height: 1.1vw;
+    margin: 0 0 15px 0;
+    color: #7e7e7e;
+  }
 }
 
 .teaser--portrait .teaser__img, .teaser--portrait .teaser__body {
@@ -114,13 +138,29 @@
   margin-left: 1%;
 }
 
-.teaser__img--right .teaser__img {
-  margin-right: 0;
-  margin-left: 1%;
+.teaser--landscape.teaser__img--right .teaser__img {
+  width: 48%;
+  margin: 1.7% 0 0 0;
+
+  @include breakpoint(tabletOnly) {
+    width: 55%;
+  }
 }
 
-.teaser__img--right .teaser__body {
-  margin-right: 1%;
+.teaser--landscape.teaser__img--right .teaser__body {
+  width: 49%;
+  margin-right: 2.5%;
+  margin-top: 0%;
+
+  @include breakpoint(tabletOnly) {
+    width: 34%;
+    margin-right: 10.5%;
+  }
+
+  @include breakpoint(desktopOnly) {
+    width: 43%;
+    margin-right: 1.5%;
+  }
 }
 
 @media only screen and (max-width: $break-desk) {

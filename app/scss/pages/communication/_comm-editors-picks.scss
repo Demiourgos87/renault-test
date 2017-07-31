@@ -1,19 +1,110 @@
 .comm-editors-picks {
 
   & .c-section-title.heading--row {
-    @include breakpoint(tabletAndDesktop) {
-      width: 50%;
-      margin-left: 51%;
-    }
-  }
+    text-align: left;
+    width: 100%;
+    margin: 2.3vw 0 7vw 0;
+    line-height: 7.2vw;
 
-  & .row--raised {
     @include breakpoint(tabletOnly) {
-      margin-top: -10vw;
+      width: 50%;
+      margin: 0 0 2vw 44.5%;
+      line-height: 2.2vw;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-top: -8vw;
+      margin: 0 0 3vw 50.7%;
+      line-height: 1.9vw;
+      font-size: 1.6rem;
+    }
+
+    & .text--italic {
+      position: relative;
+      left: 1.8vw;
+      top: -1.5vw;
+
+      @include breakpoint(tabletOnly) {
+        left: 0.8vw;
+        top: -0.5vw;
+      }
+
+      @include breakpoint(desktopOnly) {
+        left: 0.2vw;
+        top: -0.4vw;
+      }
+    }
+  }
+
+  & .c-breadcrumbs {
+    @include breakpoint(desktopOnly) {
+      margin: 3vw 0 0 15.2%;
+    }
+  }
+
+  & .row--mob.row--raised {
+    @include breakpoint(tabletOnly) {
+      margin-top: -9vw;
+      width: 43%;
+      margin-right: 0.5%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 42.8%;
+      margin-right: 0.7%;
+      margin-left: 6.3%;
+      margin-top: -9.5vw;
+    }
+  }
+
+  & .row--mob:last-child {
+    @include breakpoint(tabletOnly) {
+      width: 55.5%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 49.1%;
+    }
+  }
+
+  & .teaser {
+    margin-bottom: 8vw;
+
+    @include breakpoint(tabletOnly) {
+      margin-bottom: 6.4vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin-bottom: 4vw;
+    }
+  }
+
+  & .teaser.teaser__img--right {
+    margin-bottom: 6vw;
+  }
+
+  & .teaser--s {
+    width: 36%;
+
+    @include breakpoint(tabletOnly) {
+      width: 43%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 35.5%;
+    }
+  }
+
+  & .teaser--l {
+    width: 61.5%;
+    margin-left: 1.5%;
+
+    @include breakpoint(tabletOnly) {
+      width: 54.5%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 61.5%;
+      margin-left: 2%;
     }
   }
 

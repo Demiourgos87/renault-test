@@ -1,5 +1,13 @@
 .c-section-title {
-  font-size: 1.3rem;
+  font-size: 1.65rem;
+
+  @include breakpoint(tabletOnly) {
+    font-size: 1.4rem;
+  }
+
+  @include breakpoint(desktopOnly) {
+    font-size: 1.5rem;
+  }
 
   &.heading--col {
     position: absolute;
