@@ -2593,10 +2593,10 @@ a img {
   margin-bottom: 20px; }
   @media (min-width: 768px) {
     .comm-hero {
-      margin-bottom: 8vw; } }
+      margin-bottom: 11.2vw; } }
   @media (min-width: 1024px) {
     .comm-hero {
-      margin-bottom: 2vw; } }
+      margin-bottom: 3vw; } }
   @media (min-width: 1900px) {
     .comm-hero {
       margin-bottom: 3vw; } }
@@ -2608,7 +2608,7 @@ a img {
         width: 92%; } }
     @media (min-width: 1024px) {
       .comm-hero__image {
-        width: 80%; } }
+        width: 79.6%; } }
     .comm-hero__image img {
       width: 100%;
       margin-bottom: -4px; }
@@ -2622,18 +2622,20 @@ a img {
         left: 8.6%; } }
     @media (min-width: 1024px) {
       .comm-hero__title {
-        top: 40%;
-        left: 15%; } }
+        top: 41.8%;
+        left: 19.2%; } }
     .comm-hero__title .page__title {
       margin-top: 4vw;
       font-weight: 900;
       font-size: 1.41rem; }
       @media (min-width: 768px) {
         .comm-hero__title .page__title {
-          font-size: 1.6rem; } }
+          margin-top: 2.2vw;
+          font-size: 2.21rem; } }
       @media (min-width: 1024px) {
         .comm-hero__title .page__title {
-          font-size: 3rem; } }
+          font-size: 3.28rem;
+          margin-top: 1.4vw; } }
     .comm-hero__title .btn {
       font-size: 0.48rem;
       padding: 1.5vw 4.8vw; }
@@ -2641,6 +2643,9 @@ a img {
         .comm-hero__title .btn {
           font-size: 0.6rem;
           padding: 0.7vw 2vw; } }
+      @media (min-width: 1024px) {
+        .comm-hero__title .btn {
+          padding: 0.6vw 1.9vw; } }
   .comm-hero__text {
     width: calc(100% - 12vw);
     padding: 6.5vw 6vw;
@@ -2650,20 +2655,23 @@ a img {
     font-weight: 400; }
     @media (min-width: 768px) {
       .comm-hero__text {
-        width: 30%;
-        padding: 40px;
+        width: 36%;
+        padding: 5.5vw 6vw 4vw 7vw;
         position: absolute;
-        top: 15%;
+        top: 13.7%;
         right: 0;
-        line-height: 1.2rem; } }
+        font-size: 1rem;
+        letter-spacing: 0.09vw;
+        line-height: 2.7vw; } }
     @media (min-width: 1024px) {
       .comm-hero__text {
-        width: 22%;
-        padding: 70px;
+        width: 24%;
+        padding: 6.8vw 5vw 3.2vw 5vw;
         position: absolute;
-        top: 25%;
+        top: 22.4%;
         right: 0;
-        line-height: 1.3rem;
+        font-size: 0.8rem;
+        line-height: 1.7vw;
         height: 27vw; } }
     .comm-hero__text p {
       margin: 0; }

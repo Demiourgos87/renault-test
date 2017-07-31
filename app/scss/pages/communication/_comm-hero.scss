@@ -3,11 +3,11 @@
   margin-bottom: 20px;
 
   @include breakpoint(tabletOnly) {
-    margin-bottom: 8vw;
+    margin-bottom: 11.2vw;
   }
 
   @include breakpoint(desktopOnly) {
-    margin-bottom: 2vw;
+    margin-bottom: 3vw;
   }
 
   @include breakpoint(desktopLarge) {
@@ -23,7 +23,7 @@
     }
 
     @include breakpoint(desktopOnly) {
-      width: 80%;
+      width: 79.6%;
     }
 
     & img {
@@ -43,8 +43,8 @@
     }
 
     @include breakpoint(desktopOnly) {
-      top: 40%;
-      left: 15%;
+      top: 41.8%;
+      left: 19.2%;
     }
 
     & .page__title {
@@ -53,11 +53,13 @@
       font-size: 1.41rem;
 
       @include breakpoint(tabletOnly) {
-        font-size: $fontBig;
+        margin-top: 2.2vw;
+        font-size: 2.21rem;
       }
 
       @include breakpoint(desktopOnly) {
-        font-size: 3rem;
+        font-size: 3.28rem;
+        margin-top: 1.4vw;
       }
     }
 
@@ -68,6 +70,10 @@
       @include breakpoint(tabletOnly) {
         font-size: 0.6rem;
         padding: 0.7vw 2vw;
+      }
+
+      @include breakpoint(desktopOnly) {
+        padding: 0.6vw 1.9vw;
       }
     }
   }
@@ -81,21 +87,24 @@
     font-weight: 400;
 
     @include breakpoint(tabletOnly) {
-      width: 30%;
-      padding: 40px;
+      width: 36%;
+      padding: 5.5vw 6vw 4vw 7vw;
       position: absolute;
-      top: 15%;
+      top: 13.7%;
       right: 0;
-      line-height: 1.2rem;
+      font-size: 1rem;
+      letter-spacing: 0.09vw;
+      line-height: 2.7vw;
     }
 
     @include breakpoint(desktopOnly) {
-      width: 22%;
-      padding: 70px;
+      width: 24%;
+      padding: 6.8vw 5vw 3.2vw 5vw;
       position: absolute;
-      top: 25%;
+      top: 22.4%;
       right: 0;
-      line-height: 1.3rem;
+      font-size: 0.8rem;
+      line-height: 1.7vw;
       height: 27vw;
     }
 
