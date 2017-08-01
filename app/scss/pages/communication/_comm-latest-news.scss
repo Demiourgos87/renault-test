@@ -3,11 +3,12 @@
 
   @include breakpoint(tabletOnly) {
     margin-top: 9vw;
-    margin-bottom: 10vw;
+    margin-bottom: 6.7vw;
   }
 
   @include breakpoint(desktopOnly) {
     margin-top: 6vw;
+    margin-bottom: 7vw;
   }
 
   &::before {
@@ -33,19 +34,19 @@
   }
 
   & .row--mob {
-    margin-bottom: 6vw;
+    margin-bottom: 9vw;
 
     @include breakpoint(tabletOnly) {
-      margin-bottom: 0;
+      margin-bottom: 3vw;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-bottom: 3vw;
+      margin-bottom: 4vw;
     }
   }
 
   & .row--clipped--right {
-    margin-bottom: 3vw;
+    margin-bottom: 6vw;
 
     @include breakpoint(tabletOnly) {
       width: 42.7%;
@@ -53,13 +54,17 @@
   }
 
   & .row--raised {
-    @include breakpoint(tabletAndDesktop) {
+    @include breakpoint(tabletOnly) {
       margin-top: -15.6%;
-      margin-bottom: 0;
+      margin-bottom: 4vw;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-bottom: 3vw;
+      margin-bottom: 4vw;
+    }
+
+    @include breakpoint(desktopLarge) {
+      margin-bottom: 5vw;
     }
   }
 
