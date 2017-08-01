@@ -1,6 +1,6 @@
 .comm-hero {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 1vw;
 
   @include breakpoint(tabletOnly) {
     margin-bottom: 13.2vw;

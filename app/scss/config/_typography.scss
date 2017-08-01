@@ -1,3 +1,81 @@
+// $site-desk-design         : 1700;
+// $site-tab-design          : 768;
+// $site-mob-design          : 640;
+// $font-size-base           : 10;
+//
+// // Font sizes
+//
+// // vw Font Size for HTML
+// @mixin font-size-vw($fz-desktop, $fz-tablet, $fz-phone) {
+//   font-size: $fz-desktop;
+//   @include breakpoint(phoneOnly) {
+//     font-size: cvw($fz-phone, $site-mob-design);
+//   }
+//   @include breakpoint(tabletOnly) {
+//     font-size: cvw($fz-tablet, $site-tab-design);
+//   }
+//   @include breakpoint(desktopOnly) {
+//     font-size: cvw($fz-desktop, $site-desk-design);
+//   }
+// }
+//
+//
+// // rem font size for all vieworts
+// @mixin font-size($fz-desktop, $fz-tablet, $fz-phone) {
+//   @include breakpoint(phoneOnly) {
+//     font-size: cr($fz-phone);
+//   }
+//   @include breakpoint(tabletOnly){
+//     font-size: cr($fz-tablet);
+//   }
+//   @include breakpoint(desktopOnly){
+//     font-size: cr($fz-desktop);
+//   }
+// }
+//
+// // rem letter spacing for all viewports
+// @mixin letter-spacing($lsz-desktop, $lsz-tablet, $lsz-phone) {
+//   @include breakpoint(phoneOnly) {
+//     letter-spacing: cls($lsz-phone);
+//   }
+//   @include breakpoint(tabletOnly){
+//     letter-spacing: cls($lsz-tablet);
+//   }
+//   @include breakpoint(desktopOnly){
+//     letter-spacing: cls($lsz-desktop);
+//   }
+// }
+//
+// // Calculate letter spacing to rem from PSD tracking size in pixels
+// @function cls($psdTracking) {
+//   $remSpace: $psdTracking / 1000;
+//   @return #{$remSpace}em;
+// }
+//
+// // Calculate vw from pixels
+// @function cvw($target, $container) {
+//   @return ($target / $container) * 100vw;
+// }
+//
+// // Calculate rem from pixels
+// @function cr($size) {
+//   $remSize: $size / $font-size-base;
+//   @return #{$remSize}rem;
+// }
+//
+// // Calculate line height to rem from PSD leading size in pixels
+// @function clh($size) {
+//   // Convert pixels to points
+//   $toPoint: $size * 72 / 96;
+//   $remHeight: $toPoint / $font-size-base;
+//   @return #{$remHeight}rem;
+// }
+//
+// //------GLOBAL FONT SETTINGS
+// html {
+//   @include font-size-vw($font-size-base, $font-size-base, $font-size-base);
+// }
+
 // Font sizes
 
 @media only screen and (max-width: $break-mob) {

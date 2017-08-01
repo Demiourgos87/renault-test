@@ -6,6 +6,7 @@
   @include breakpoint(desktopOnly) {
     margin-bottom: 0;
   }
+
   & .body__wrap {
     position: relative;
     @include breakpoint(phoneOnly) {
@@ -16,7 +17,10 @@
 
   & .c-section-title {
     &.heading--row {
-      @include breakpoint(tabletAndDesktop) {
+      margin: 3vw 0 13.8vw 0;
+      line-height: 2rem;
+
+      @include breakpoint(tabletOnly) {
         position: relative;
         top: 18vw;
         left: 4vw;
@@ -118,15 +122,24 @@
   }
 
   & .QA__first-item {
+
     @include breakpoint(phoneOnly) {
-      width: 90%;
-      margin: 0 auto;
+      width: 87.8%;
+      margin: 0 auto 10vw auto;
     }
 
     @include breakpoint(tabletAndDesktop) {
       width: 60%;
       float: right;
       margin-bottom: 8vw;
+    }
+
+    & .body__wrap {
+      top: -6vw;
+    }
+
+    & .teaser--xl {
+      padding-bottom: 1vw;
     }
   }
 

@@ -1,4 +1,7 @@
 .comm-editors-picks {
+  @include breakpoint(phoneOnly) {
+    padding-top: 2vw;
+  }
 
   & .c-section-title.heading--row {
     text-align: left;
