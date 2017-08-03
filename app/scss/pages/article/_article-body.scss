@@ -4,7 +4,7 @@
 
   @include breakpoint(tabletOnly) {
     width: 87.2%;
-    margin: 0 auto;
+    margin: 0 auto 4.6vw auto;
   }
 
   @include breakpoint(desktopOnly) {
@@ -133,7 +133,7 @@
     letter-spacing: 0.23vw;
 
     @include breakpoint(tabletOnly) {
-      margin: 8vw 0 9.2vw 0;
+      margin: 8vw 0 5vw 0;
     }
 
     @include breakpoint(desktopOnly) {
@@ -153,6 +153,8 @@
   }
 
   & .c-test-start {
+    margin: 0 0 2vw 0;
+
     @include breakpoint(desktopOnly) {
       float: left;
       width: 30%;
@@ -160,10 +162,8 @@
     }
 
     & .container--full {
-      @include breakpoint(phoneOnly) {
-        width: 112%;
-        left: -6%;
-      }
+      width: 115%;
+      left: -8%;
 
       @include breakpoint(desktopOnly) {
         background-size: auto 100%;
