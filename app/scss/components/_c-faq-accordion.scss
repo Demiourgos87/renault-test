@@ -1,12 +1,19 @@
 .accordion-wrap {
   width: 100%;
+  margin-bottom: 10vw;
   @include breakpoint(phoneOnly) {
-    width: 112%;
-    margin-left: -6%;
+    width: 115%;
+    margin-left: -7%;
   }
 
-  @include breakpoint(tabletAndDesktop) {
-    margin: 50px 0;
+  @include breakpoint(tabletOnly) {
+    margin-top: 8.5vw;
+    margin-bottom: 6vw;
+  }
+
+  @include breakpoint(desktopOnly) {
+    margin-top: 3.5vw;
+    margin-bottom: 3.4vw;
   }
 
   & .c-faq-accordion {
@@ -15,7 +22,11 @@
     & .accordion__element {
       width: 100%;
       background: $lightGray;
-      border-bottom: 1px solid #e1dede;
+      border-bottom: 2px solid #e1dede;
+
+      @include breakpoint(tabletOnly) {
+        border-bottom: 1px solid #e1dede;
+      }
 
       &:last-child {
         border-bottom: none;
@@ -24,18 +35,33 @@
       &__heading {
         position: relative;
         width: 100%;
-        padding: 30px 0;
+        padding: 8vw 0;
         font-size: $fontNormal;
         cursor: pointer;
 
+        @include breakpoint(tabletOnly) {
+          padding: 5vw 0;
+        }
+
+        @include breakpoint(desktopOnly) {
+          padding: 2.9vw 0;
+        }
+
         & .accordion-heading__text {
-          width: 76%;
-          margin: 0 0 0 6%;
-          letter-spacing: 2px;
+          width: 72%;
+          margin: 0 0 0 7.7%;
+          letter-spacing: 0.23vw;
           color: #6e6d6d;
 
-          @include breakpoint(tabletAndDesktop) {
-            font-size: $fontMedium;
+          @include breakpoint(tabletOnly) {
+            font-size: 1.15rem;
+            margin: 0 0 0 9.3%;
+            letter-spacing: 0.13vw;
+          }
+
+          @include breakpoint(desktopOnly) {
+            font-size: 0.85rem;
+            letter-spacing: 0.077vw;
           }
         }
 
@@ -48,34 +74,51 @@
         }
 
         & .accordion-heading__arrow {
-          @include circled-icon(30px);
+          @include circled-icon(8vw);
           background: $white;
           color: #6e6d6d;
           position: absolute;
           top: 50%;
-          right: 20px;
-          margin-top: -15px;
-          font-size: $fontMedium;
+          right: 7vw;
+          margin-top: -4vw;
+          font-size: 1rem;
 
-          @include breakpoint(tabletAndDesktop) {
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            margin-top: -20px;
+          @include breakpoint(tabletOnly) {
+            width: 5.5vw;
+            height: 5.5vw;
+            line-height: 5.5vw;
+            margin-top: -2.75vw;
+            right: 5.1vw;
+          }
+
+          @include breakpoint(desktopOnly) {
+            width: 3.1vw;
+            height: 3.1vw;
+            line-height: 3.1vw;
+            margin-top: -1.505vw;
+            right: 2.9vw;
           }
         }
       }
 
       &__text {
         display: none;
-        padding-bottom: 30px;
+        padding-bottom: 9vw;
         width: 76%;
-        margin: 0 0 0 6%;
-        letter-spacing: 2px;
+        margin-left: 7.7%;
+        letter-spacing: 0.21vw;
         color: #6e6d6d;
 
-        @include breakpoint(tabletAndDesktop) {
+        @include breakpoint(tabletOnly) {
+          margin-left: 9.3%;
+          padding-bottom: 4vw;
           font-size: $fontNormal;
+        }
+
+        @include breakpoint(desktopOnly) {
+          font-size: 0.74rem;
+          width: 69%;
+          letter-spacing: 0.07vw;
         }
       }
     }

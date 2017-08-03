@@ -530,45 +530,66 @@ a img {
     background: #f6f6f6; }
 
 .accordion-wrap {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 10vw; }
   @media (max-width: 767px) {
     .accordion-wrap {
-      width: 112%;
-      margin-left: -6%; } }
+      width: 115%;
+      margin-left: -7%; } }
   @media (min-width: 768px) {
     .accordion-wrap {
-      margin: 50px 0; } }
+      margin-top: 8.5vw;
+      margin-bottom: 6vw; } }
+  @media (min-width: 1024px) {
+    .accordion-wrap {
+      margin-top: 3.5vw;
+      margin-bottom: 3.4vw; } }
   .accordion-wrap .c-faq-accordion {
     width: 100%; }
     .accordion-wrap .c-faq-accordion .accordion__element {
       width: 100%;
       background: #f6f6f6;
-      border-bottom: 1px solid #e1dede; }
+      border-bottom: 2px solid #e1dede; }
+      @media (min-width: 768px) {
+        .accordion-wrap .c-faq-accordion .accordion__element {
+          border-bottom: 1px solid #e1dede; } }
       .accordion-wrap .c-faq-accordion .accordion__element:last-child {
         border-bottom: none; }
       .accordion-wrap .c-faq-accordion .accordion__element__heading {
         position: relative;
         width: 100%;
-        padding: 30px 0;
+        padding: 8vw 0;
         font-size: 1rem;
         cursor: pointer; }
+        @media (min-width: 768px) {
+          .accordion-wrap .c-faq-accordion .accordion__element__heading {
+            padding: 5vw 0; } }
+        @media (min-width: 1024px) {
+          .accordion-wrap .c-faq-accordion .accordion__element__heading {
+            padding: 2.9vw 0; } }
         .accordion-wrap .c-faq-accordion .accordion__element__heading .accordion-heading__text {
-          width: 76%;
-          margin: 0 0 0 6%;
-          letter-spacing: 2px;
+          width: 72%;
+          margin: 0 0 0 7.7%;
+          letter-spacing: 0.23vw;
           color: #6e6d6d; }
           @media (min-width: 768px) {
             .accordion-wrap .c-faq-accordion .accordion__element__heading .accordion-heading__text {
-              font-size: 1.2rem; } }
+              font-size: 1.15rem;
+              margin: 0 0 0 9.3%;
+              letter-spacing: 0.13vw; } }
+          @media (min-width: 1024px) {
+            .accordion-wrap .c-faq-accordion .accordion__element__heading .accordion-heading__text {
+              font-size: 0.85rem;
+              letter-spacing: 0.077vw; } }
         .accordion-wrap .c-faq-accordion .accordion__element__heading .accordion-heading__text {
           font-weight: 900; }
           @media (min-width: 768px) {
             .accordion-wrap .c-faq-accordion .accordion__element__heading .accordion-heading__text {
               font-weight: 700; } }
         .accordion-wrap .c-faq-accordion .accordion__element__heading .accordion-heading__arrow {
-          width: 30px;
-          height: 30px;
-          line-height: 30px;
+          width: 8vw;
+          height: 8vw;
+          line-height: 8vw;
           text-align: center;
           cursor: pointer;
           border-radius: 100%;
@@ -576,25 +597,40 @@ a img {
           color: #6e6d6d;
           position: absolute;
           top: 50%;
-          right: 20px;
-          margin-top: -15px;
-          font-size: 1.2rem; }
+          right: 7vw;
+          margin-top: -4vw;
+          font-size: 1rem; }
           @media (min-width: 768px) {
             .accordion-wrap .c-faq-accordion .accordion__element__heading .accordion-heading__arrow {
-              width: 40px;
-              height: 40px;
-              line-height: 40px;
-              margin-top: -20px; } }
+              width: 5.5vw;
+              height: 5.5vw;
+              line-height: 5.5vw;
+              margin-top: -2.75vw;
+              right: 5.1vw; } }
+          @media (min-width: 1024px) {
+            .accordion-wrap .c-faq-accordion .accordion__element__heading .accordion-heading__arrow {
+              width: 3.1vw;
+              height: 3.1vw;
+              line-height: 3.1vw;
+              margin-top: -1.505vw;
+              right: 2.9vw; } }
       .accordion-wrap .c-faq-accordion .accordion__element__text {
         display: none;
-        padding-bottom: 30px;
+        padding-bottom: 9vw;
         width: 76%;
-        margin: 0 0 0 6%;
-        letter-spacing: 2px;
+        margin-left: 7.7%;
+        letter-spacing: 0.21vw;
         color: #6e6d6d; }
         @media (min-width: 768px) {
           .accordion-wrap .c-faq-accordion .accordion__element__text {
+            margin-left: 9.3%;
+            padding-bottom: 4vw;
             font-size: 1rem; } }
+        @media (min-width: 1024px) {
+          .accordion-wrap .c-faq-accordion .accordion__element__text {
+            font-size: 0.74rem;
+            width: 69%;
+            letter-spacing: 0.07vw; } }
 
 .c-main-navigation {
   list-style-type: none;
