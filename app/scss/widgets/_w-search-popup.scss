@@ -5,9 +5,9 @@
   right: 2.5vw;
 
   @include breakpoint(tabletOnly) {
-    font-size: 2.8rem;
-    top: -0.4vw;
-    right: 3vw;
+    font-size: 2.4rem;
+    top: 0;
+    right: 1vw;
   }
 
   @include breakpoint(desktopOnly) {

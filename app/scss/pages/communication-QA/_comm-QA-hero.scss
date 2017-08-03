@@ -1,0 +1,25 @@
+.comm-hero {
+  &__title.qa--page {
+    top: 16.5%;
+
+    @include breakpoint(tabletOnly) {
+      top: 49.5%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      top: 37.5%;
+    }
+
+    & .page__title.qa--page{
+      line-height: 1.5rem;
+
+      @include breakpoint(tabletOnly) {
+        line-height: 2.2rem;
+      }
+
+      @include breakpoint(desktopOnly) {
+        line-height: 3.5rem;
+      }
+    }
+  }
+}

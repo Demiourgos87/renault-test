@@ -1,26 +1,62 @@
 .article-articles-list {
-  margin-bottom: 10vw;
 
-  & .heading--fix {
-    margin-top: 59.9%;
+  // & .heading--fix {
+  //   margin-top: 59.9%;
+  //
+  //   @include breakpoint(tabletAndDesktop) {
+  //     margin-top: 24%;
+  //   }
+  // }
 
-    @include breakpoint(tabletAndDesktop) {
-      margin-top: 24%;
+  @include breakpoint(tabletOnly) {
+    margin-bottom: 6.4vw;
+  }
+
+  @include breakpoint(tabletOnly) {
+    margin-bottom: 7.2vw;
+  }
+
+  & .c-section-title.heading--col {
+    margin-top: 24%;
+    width: 33vw;
+
+    @include breakpoint(tabletOnly) {
+      margin-top: 2.8%;
+      margin-left: 5%;
     }
   }
 
-  & .heading--col {
-    margin-top: 25%;
+  & .row--mob {
+    margin-bottom: 11vw;
 
-    @include breakpoint(tabletAndDesktop) {
-      margin-top: 5%;
+    @include breakpoint(tabletOnly) {
+      margin-bottom: 0;
     }
   }
 
   & .row--clipped--right {
-    @include breakpoint(tabletAndDesktop) {
-      margin-bottom: 2vw;
+    @include breakpoint(tabletOnly) {
+      width: 42.6%;
+      margin-bottom: 7.3vw;
     }
+
+    @include breakpoint(desktopOnly) {
+      margin-bottom: 4.5vw;
+    }
+  }
+
+  & .teaser--s {
+    width: 36%;
+    margin-top: 51.7%;
+
+    @include breakpoint(tabletOnly) {
+      margin-top: 23.7%;
+      margin-right: 3%;
+    }
+  }
+
+  & .teaser--l {
+    width: 61.6%;
   }
 
   & .teaser--s, & .teaser--l {
