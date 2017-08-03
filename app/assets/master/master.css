@@ -3227,7 +3227,7 @@ a img {
 
 .article-body {
   width: 100%;
-  margin-bottom: 7vw; }
+  margin-bottom: 5vw; }
   @media (min-width: 768px) {
     .article-body {
       width: 87.2%;
@@ -3344,36 +3344,40 @@ a img {
     @media (min-width: 1024px) {
       .article-body__main-content {
         float: left;
-        width: 53.5%;
-        margin-right: 7.3%; } }
+        width: 56.5%;
+        margin-right: 8.9%; } }
   .article-body .c-test-start {
     margin: 0 0 2vw 0; }
     @media (min-width: 1024px) {
       .article-body .c-test-start {
         float: left;
-        width: 30%;
-        margin-top: 3vw; } }
+        width: 34.5%;
+        margin-top: 2vw; } }
     .article-body .c-test-start .container--full {
       width: 115%;
       left: -8%; }
       @media (min-width: 1024px) {
         .article-body .c-test-start .container--full {
           background-size: auto 100%;
-          background-position: 20% 0%; } }
+          background-position: 20% 0%;
+          width: 100%;
+          left: 0; } }
     @media (min-width: 1024px) {
       .article-body .c-test-start__body {
-        width: 70%;
-        padding: 80px 0; } }
+        width: 73%;
+        padding: 9.3vw 0 7.6vw 0;
+        margin: 0 0 0 19%; } }
     @media (min-width: 1024px) {
-      .article-body .c-test-start__item img {
-        width: 100%; } }
+      .article-body .c-test-start__body .c-section-title.heading--row {
+        letter-spacing: 0.05vw; } }
     @media (min-width: 1024px) {
       .article-body .c-test-start__images {
         width: 100%;
         top: -1.8vw; } }
     @media (min-width: 1024px) {
       .article-body .c-test-start__images .c-test-start__item {
-        width: 32.2%; }
+        width: 32.2%;
+        margin-left: 0; }
         .article-body .c-test-start__images .c-test-start__item:last-child {
           top: 0; } }
     @media (min-width: 1024px) {
@@ -3381,6 +3385,16 @@ a img {
         font-size: 0.6rem; } }
     .article-body .c-test-start::after {
       display: none; }
+  @media (min-width: 1024px) {
+    .article-body__body {
+      position: relative;
+      padding-left: 7%; } }
+  @media (min-width: 1024px) {
+    .article-body__body .c-social-share {
+      position: absolute;
+      top: 0;
+      left: -3.4vw;
+      margin: 0; } }
 
 .article-hero {
   width: 100%;
