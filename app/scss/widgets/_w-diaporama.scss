@@ -91,10 +91,10 @@ html.diaporamaOpened, body.diaporamaOpened {
   }
 
   @include breakpoint(desktopOnly) {
-    width: 56vw;
-    height: 34.5vw;
-    top: 7vw;
-    left: 10vw;
+    width: 55.7%;
+    height: 62.4%;
+    top: 13%;
+    left: 10.2%;
     z-index: 100;
   }
 
@@ -121,7 +121,7 @@ html.diaporamaOpened, body.diaporamaOpened {
     position: absolute;
     top: 0;
     right: 0;
-    width: 41.2vw;
+    width: 41.2%;
     height: 100%;
     padding: 0;
     z-index: 10;
@@ -132,7 +132,9 @@ html.diaporamaOpened, body.diaporamaOpened {
 
     @include breakpoint(desktopOnly) {
       width: 47%;
-      margin: 6.7vw 0 0 12vw;
+      position: relative;
+      top: 13%;
+      left: 29.5%;
     }
   }
 }
@@ -206,9 +208,9 @@ html.diaporamaOpened, body.diaporamaOpened {
   }
 
   @include breakpoint(desktopOnly) {
-    width: 8.5vw;
-    top: 43.5vw;
-    left: 54.5vw;
+    width: 8.5%;
+    top: 79.5%;
+    left: 54.5%;
   }
 }
 
@@ -294,10 +296,10 @@ html.diaporamaOpened, body.diaporamaOpened {
     display: none;
   }
 
-  width: 41.7vw;
+  width: 41.7%;
   position: absolute;
-  top: 42.5vw;
-  left: 10vw;
+  top: 77.5%;
+  left: 10.2%;
   overflow: hidden;
   z-index: 30;
 
@@ -363,14 +365,6 @@ html.diaporamaOpened, body.diaporamaOpened {
 
   .diaporama__slide {
     position: relative;
-  }
-
-}
-
-@media only screen and (min-width: $break-desk-large) {
-
-  .diaporama__arrows {
-    left: 53vw;
   }
 
 }
