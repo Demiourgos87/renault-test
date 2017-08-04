@@ -1,12 +1,7 @@
 .article-articles-list {
-
-  // & .heading--fix {
-  //   margin-top: 59.9%;
-  //
-  //   @include breakpoint(tabletAndDesktop) {
-  //     margin-top: 24%;
-  //   }
-  // }
+  @include breakpoint(phoneOnly) {
+    margin-top: 8vw;
+  }
 
   @include breakpoint(tabletOnly) {
     margin-bottom: 6.4vw;
@@ -63,6 +58,20 @@
     @include breakpoint(tabletAndDesktop) {
       width: 48%;
       margin-bottom: 10px;
+    }
+  }
+
+  & .teaser--m {
+    @include breakpoint(tabletAndDesktop) {
+      width: 48%;
+      margin-right: 2%;
+    }
+
+    &:nth-child(2n+0) {
+      @include breakpoint(tabletAndDesktop) {
+        margin-right: 0;
+        margin-left: 2%;
+      }
     }
   }
 }
