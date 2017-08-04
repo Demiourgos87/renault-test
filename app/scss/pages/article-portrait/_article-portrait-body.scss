@@ -96,6 +96,11 @@
         font-size: 1.57rem;
         margin: 5vw 0 3vw 0;
       }
+
+      @include breakpoint(desktopOnly) {
+        font-size: 1.099rem;
+        margin: 1.6vw 0;
+      }
     }
 
     & .w-diaporama-trigger {

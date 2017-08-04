@@ -3811,6 +3811,10 @@ a img {
     .article-portrait-body__wrap p.article-paragraph__heading {
       font-size: 1.57rem;
       margin: 5vw 0 3vw 0; } }
+  @media (min-width: 1024px) {
+    .article-portrait-body__wrap p.article-paragraph__heading {
+      font-size: 1.099rem;
+      margin: 1.6vw 0; } }
 
 @media (max-width: 767px) {
   .article-portrait-body__wrap .w-diaporama-trigger {
