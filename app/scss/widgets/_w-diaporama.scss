@@ -22,11 +22,21 @@ html.diaporamaOpened, body.diaporamaOpened {
 .diaporama__close {
   color: $black;
   position: fixed;
-  top: 10px;
-  right: 15px;
+  top: 2.6vw;
+  right: 3.6vw;
   font-size: $fontBig;
   cursor: pointer;
   z-index: 999999999;
+
+  @include breakpoint(tabletOnly) {
+    font-size: 3rem;
+    right: 4.6vw;
+  }
+
+  @include breakpoint(desktopOnly) {
+    top: 0.8vw;
+    right: 1.5vw;
+  }
 }
 
 .w-diaporama .slick-dots {
@@ -71,8 +81,12 @@ html.diaporamaOpened, body.diaporamaOpened {
 }
 
 .diaporama__image {
-  height: 17rem;
+  height: 20.5rem;
   position: relative;
+
+  @include breakpoint(tabletOnly) {
+    height: 41.3rem;
+  }
 }
 
 .diaporama__image img {
@@ -81,102 +95,129 @@ html.diaporamaOpened, body.diaporamaOpened {
 }
 
 .diaporama__body {
-  width: calc(100% - 40px);
-  padding: 40px 20px;
+  width: 87%;
+  padding: 7vw 0;
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   background: $yellow;
   color: $black;
-  letter-spacing: 2px;
+
+  @include breakpoint(tabletOnly) {
+    width: 84.5%;
+    padding: 5vw 0;
+  }
 }
 
 .diaporama__heading {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 900;
+  font-size: 1.4881rem;
+  line-height: 1.563rem;
+  margin-bottom: 4vw;
+
+  @include breakpoint(tabletOnly) {
+    font-size: 2.24rem;
+    line-height: 2.2rem;
+    margin-bottom: 4.4vw;
+  }
+}
+
+.diaporama__text {
+  font-size: 1.042rem;
+  line-height: 1.563rem;
+  margin-bottom: 8vw;
+
+  @include breakpoint(tabletOnly) {
+    font-size: 1.25rem;
+    line-height: 1.76rem;
+    margin-bottom: 6vw;
+  }
+}
+
+.diaporama__social i {
+  @include circled-icon(10vw);
+  background: $black;
+  color: $yellow;
+  margin-right: 8vw;
+  font-size: 1.2rem;
+
+  @include breakpoint(tabletOnly) {
+    @include circled-icon(6.5vw);
+    margin-right: 0.4vw;
+    font-size: 1.6rem;
+  }
 }
 
 .diaporama__arrows {
   position: absolute;
-  top: 35vw;
-  width: calc(100% - 40px);
-  padding: 0 20px;
+  top: 41.5vw;
+  width: 100%;
   z-index: 1000;
+
+  @include breakpoint(tabletOnly) {
+    top: 34.4vw;
+  }
 }
 
 .diaporama__prev, .diaporama__next {
-  @include circled-icon(30px);
+  @include circled-icon(9vw);
   color: $yellow;
   background: $black;
   font-size: $fontSmall;
   z-index: 20;
+  position: relative;
+
+  @include breakpoint(tabletOnly) {
+    @include circled-icon(6vw);
+  }
 }
 
 .diaporama__prev {
   float: left;
+  left: 6vw;
+
+  @include breakpoint(tabletOnly) {
+    left: 3.5vw;
+  }
 }
 
 .diaporama__next {
   float: right;
-}
+  right: 6vw;
 
-.diaporama__social i {
-  @include circled-icon(40px);
-  background: $black;
-  color: $yellow;
-  margin: 20px 25px 0 0;
+  @include breakpoint(tabletOnly) {
+    right: 3.5vw;
+  }
 }
 
 .diaporama__counter {
-  font-size: $fontNormal;
-  font-weight: 700;
+  font-size: 1.191rem;
+  font-weight: 900;
   color: $white;
+  margin-bottom: 4.2vw;
+
+  @include breakpoint(tabletOnly) {
+    font-size: 1.6rem;
+    margin-bottom: 4vw;
+  }
+
+  & .diaporama__separator {
+    margin: 0 -1.3vw;
+
+    @include breakpoint(tabletOnly) {
+      margin: 0 -0.7vw;
+    }
+  }
 }
 
 .diaporama__counter .diaporama__current {
   color: $black;
 }
 
-@media only screen and (max-width: $break-desk) {
-
-  .diaporama__thumbs {
+.diaporama__thumbs {
+  @include breakpoint(phoneAndTablet) {
     display: none;
   }
-
-}
-
-@media only screen and (min-width: $break-mob) {
-
-  .diaporama__close {
-    font-size: $fontVeryBig;
-  }
-
-  .diaporama__arrows {
-    top: 26vw;
-  }
-
-  .diaporama__image {
-    height: auto;
-  }
-
-  .diaporama__image img {
-    width: 100%;
-  }
-
-  .diaporama__body {
-    width: calc(100% - 80px);
-    padding: 40px;
-    letter-spacing: 1px;
-  }
-
-  .diaporama__heading {
-    font-size: 2rem;
-    font-weight: 900;
-  }
-
-  .diaporama__social i {
-    margin-right: 5px;
-  }
-
 }
 
 @media only screen and (min-width: $break-desk) {
@@ -187,11 +228,6 @@ html.diaporamaOpened, body.diaporamaOpened {
 
   .diaporama--wrap, .diaporama__slide {
     height: 100%;
-  }
-
-  .diaporama__close {
-    top: 30px;
-    right: 30px;
   }
 
   .diaporama__arrows {
