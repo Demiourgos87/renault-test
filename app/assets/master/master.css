@@ -4184,10 +4184,20 @@ a img {
 .p-all-tags {
   width: 100%; }
   .p-all-tags .c-breadcrumbs {
-    margin: 2vw; }
-  @media (min-width: 768px) {
-    .p-all-tags .c-page-title {
-      width: 100%; } }
+    margin: 0.2vw 0 0 6%; }
+  .p-all-tags .c-page-title {
+    margin: 13vw 0; }
+    @media (min-width: 768px) {
+      .p-all-tags .c-page-title {
+        width: 100%;
+        margin: 7.5vw 0 12vw 0; } }
+    @media (min-width: 1024px) {
+      .p-all-tags .c-page-title {
+        margin: 4.5vw 0 6.2vw 0; } }
+  @media (min-width: 1024px) {
+    .p-all-tags .container {
+      width: 90%;
+      margin-left: 6.3%; } }
   .p-all-tags .single-tag {
     display: inline-block;
     box-sizing: border-box;
@@ -4195,40 +4205,52 @@ a img {
     @media (max-width: 767px) {
       .p-all-tags .single-tag {
         width: 52%;
-        padding: 3vw; }
+        margin-left: 4%;
+        margin-bottom: 7vw; }
         .p-all-tags .single-tag:nth-child(2n+2) {
-          width: 45%; } }
+          width: 40%;
+          margin-left: 2%; } }
     @media (min-width: 768px) {
       .p-all-tags .single-tag {
         width: 40%;
-        padding: 3vw; }
+        margin-bottom: 4.8vw; }
         .p-all-tags .single-tag:nth-child(3n+3) {
-          width: 18%; } }
+          width: 18%;
+          margin-right: 0; } }
     @media (min-width: 1024px) {
       .p-all-tags .single-tag {
         width: 28%;
-        padding: 2vw; }
+        margin-bottom: 3vw; }
         .p-all-tags .single-tag:nth-child(3n+3) {
           width: 28%; }
         .p-all-tags .single-tag:nth-child(4n+4) {
           width: 14%; } }
     .p-all-tags .single-tag__heading {
       font-family: 'Airways';
-      font-size: 3rem;
+      font-size: 2.6rem;
       color: #ffcc33;
-      margin: 0; }
+      margin-bottom: 2vw; }
+      @media (min-width: 768px) {
+        .p-all-tags .single-tag__heading {
+          font-size: 3.4rem; } }
+      @media (min-width: 1024px) {
+        .p-all-tags .single-tag__heading {
+          font-size: 2.6rem;
+          margin-bottom: 0.9vw; } }
     .p-all-tags .single-tag__link {
       display: block;
       text-align: left;
-      padding: 2vw 0;
       color: #000000;
-      text-decoration: none; }
+      text-decoration: none;
+      margin-bottom: 3.8vw; }
       @media (min-width: 768px) {
         .p-all-tags .single-tag__link {
-          padding: 1vw 0; } }
+          font-size: 1.4rem;
+          margin-bottom: 2.2vw; } }
       @media (min-width: 1024px) {
         .p-all-tags .single-tag__link {
-          padding: 0.2vw 0; } }
+          font-size: 0.9rem;
+          margin-bottom: 0.47vw; } }
 
 .p-cgu {
   width: 100%; }
