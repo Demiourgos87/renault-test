@@ -6,7 +6,7 @@
 // // Font sizes
 //
 // // vw Font Size for HTML
-// @mixin font-size-vw($fz-desktop, $fz-tablet, $fz-phone) {
+// @mixin font-size-vw($fz-phone, $fz-tablet, $fz-desktop) {
 //   font-size: $fz-desktop;
 //   @include breakpoint(phoneOnly) {
 //     font-size: cvw($fz-phone, $site-mob-design);
@@ -21,7 +21,7 @@
 //
 //
 // // rem font size for all vieworts
-// @mixin font-size($fz-desktop, $fz-tablet, $fz-phone) {
+// @mixin font-size($fz-phone, $fz-tablet, $fz-desktop) {
 //   @include breakpoint(phoneOnly) {
 //     font-size: cr($fz-phone);
 //   }
@@ -32,9 +32,21 @@
 //     font-size: cr($fz-desktop);
 //   }
 // }
+// // rem line height for all viewports
+// @mixin line-height($lh-phone, $lh-tablet, $lh-desktop) {
+//   @include breakpoint(phoneOnly) {
+//     letter-spacing: cr($lhz-phone);
+//   }
+//   @include breakpoint(tabletOnly){
+//     letter-spacing: cr($lhz-tablet);
+//   }
+//   @include breakpoint(desktopOnly){
+//     letter-spacing: cr($lhz-desktop);
+//   }
+// }
 //
-// // rem letter spacing for all viewports
-// @mixin letter-spacing($lsz-desktop, $lsz-tablet, $lsz-phone) {
+// // em letter spacing for all viewports
+// @mixin letter-spacing($ls-phone, $ls-tablet, $ls-desktop) {
 //   @include breakpoint(phoneOnly) {
 //     letter-spacing: cls($lsz-phone);
 //   }
