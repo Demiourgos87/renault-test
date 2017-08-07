@@ -1,5 +1,19 @@
 .p-search-results {
   width: 100%;
+
+  & .row--mob {
+    margin-bottom: 10vw;
+
+    @include breakpoint(tabletOnly) {
+      margin-bottom: 4.3vw;
+    }
+  }
+
+  & .c-pagination {
+    @include breakpoint(desktopOnly) {
+      margin-top: 1vw;
+    }
+  }
 }
 
 .p-search-results .c-breadcrumbs {
@@ -9,13 +23,14 @@
 .p-search-results .c-test-start {
 
   position: relative;
+  margin: 15vw 0 0 0;
 
   @include breakpoint(tabletOnly) {
-    margin: 7vw 0 0 0;
+    margin: 7vw 0 2vw 0;
   }
 
   @include breakpoint(desktopOnly) {
-    margin-bottom: 5vw;
+    margin: 8.5vw 0 1vw 0;
   }
 
   &::before, &::after {
@@ -41,5 +56,4 @@
   &::after {
     bottom: 0;
   }
-
 }
