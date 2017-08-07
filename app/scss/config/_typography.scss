@@ -45,7 +45,7 @@
 //   }
 // }
 //
-// // rem letter spacing for all viewports
+// // em letter spacing for all viewports
 // @mixin letter-spacing($ls-phone, $ls-tablet, $ls-desktop) {
 //   @include breakpoint(phoneOnly) {
 //     letter-spacing: cls($lsz-phone);
