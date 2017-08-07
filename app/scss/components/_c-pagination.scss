@@ -10,7 +10,7 @@
   }
 
   @include breakpoint(desktopOnly) {
-    margin-top: 1vw;
+    margin-top: 2.2vw;
     margin-bottom: 0;
   }
 
@@ -67,7 +67,7 @@
   }
 }
 
-.c-pagination__forward {
+.c-pagination .c-pagination__forward {
   @include breakpoint(tabletOnly) {
     margin-right: 1vw;
   }
