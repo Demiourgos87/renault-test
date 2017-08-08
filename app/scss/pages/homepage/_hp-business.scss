@@ -109,44 +109,14 @@
   }
 
   & .teaser__img {
-    margin-bottom: 1.4vw;
-  }
-
-  & .teaser__title {
-    line-height: 2.2vw;
-  }
-
-  & .teaser__img {
-    @include breakpoint(tabletOnly) {
+    @include breakpoint(desktopOnly) {
       margin-bottom: 1.2vw;
     }
-
-    @include breakpoint(desktopOnly) {
-      margin-bottom: 1.4vw;
-    }
   }
 
   & .teaser__title {
-    @include breakpoint(phoneOnly) {
-      line-height: 4.9vw;
-    }
-
-    @include breakpoint(tabletOnly) {
-      line-height: 1.3rem;
-    }
-
     @include breakpoint(desktopOnly) {
-      margin-bottom: 1vw;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-  }
-
-  & .teaser__desc {
-    @include breakpoint(desktopOnly) {
-      font-size: 0.76rem;
-      letter-spacing: 0.01vw;
-      line-height: 1.1vw;
+      margin-bottom: 0.75vw;
     }
   }
 

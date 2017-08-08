@@ -166,34 +166,4 @@
   & .teaser--xl {
     margin-bottom: 17vw;
   }
-
-  & .teaser__img {
-    @include breakpoint(tabletOnly) {
-      margin-bottom: 1.2vw;
-    }
-
-    @include breakpoint(desktopOnly) {
-      margin-bottom: 1.4vw;
-    }
-  }
-
-  & .teaser__title {
-    @include breakpoint(tabletOnly) {
-      line-height: 1.3rem;
-    }
-
-    @include breakpoint(desktopOnly) {
-      margin-bottom: 1vw;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-  }
-
-  & .teaser__desc {
-    @include breakpoint(desktopOnly) {
-      font-size: 0.76rem;
-      letter-spacing: 0.01vw;
-      line-height: 1.1vw;
-    }
-  }
 }
