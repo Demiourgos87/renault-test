@@ -694,7 +694,8 @@ a img {
   @media (min-width: 1024px) {
     .c-main-navigation > li {
       display: inline-block;
-      margin-right: 40px;
+      margin-right: 3.2vw;
+      margin-bottom: 0;
       z-index: 110; }
       .c-main-navigation > li:first-child {
         margin-left: 6vw; }
