@@ -1,10 +1,9 @@
 .p-psychotest-results {
   width: 100%;
-  letter-spacing: 1px;
 
   &--wrap {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    // margin: 0 auto;
 
     @include breakpoint(desktopOnly) {
       width: 100%;
@@ -15,11 +14,13 @@
   }
 
   &__heading {
-    font-size: $fontVeryBig;
+    font-size: 1.861rem;
+    letter-spacing: 0.05em;
     color: $yellow;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 0;
+    margin-top: 12vw;
+    margin-bottom: 1vw;
 
     @include breakpoint(tabletOnly) {
       font-size: 2.5rem;
@@ -39,8 +40,9 @@
   }
 
   &__image {
-    width: 140%;
-    margin-left: -16%;
+    max-width: 126%;
+    margin-left: -10%;
+    margin-bottom: 15vw;
 
     @include breakpoint(tabletOnly) {
       width: 120%;
@@ -56,9 +58,10 @@
 
   & .c-social-share {
     display: block;
-    width: 70%;
-    margin: 10vw auto 7vw auto;
+    width: 59%;
+    margin: 0 auto 7vw auto;
     text-align: center;
+    padding: 0 3vw;
 
     @include breakpoint(tabletOnly) {
       width: 34%;
@@ -76,9 +79,9 @@
     }
 
     & .share__icon {
-      width: 16vw;
-      height: 16vw;
-      line-height: 16vw;
+      width: 15vw;
+      height: 15vw;
+      line-height: 15vw;
 
       @include breakpoint(tabletOnly) {
         width: 6vw;
@@ -106,9 +109,12 @@
   }
 
   &__text {
-    line-height: 7vw;
+    font-size: 1.042rem;
+    line-height: 6.57vw;
+    letter-spacing: 0.05em;
+    width: 88%;
     color: #7e7e7e;
-    margin-bottom: 10vw;
+    margin: 0 auto 0 auto;
 
     @include breakpoint(tabletOnly) {
       line-height: 3vw;
@@ -130,12 +136,14 @@
 
   & .buttons-wrap {
     text-align: center;
+    margin-top: 11vw;
   }
 
   & .btn {
-    width: 50%;
-    margin-top: 7vw;
+    width: 53%;
     text-align: center;
+    padding: 4vw 4vw;
+    margin-bottom: 4vw;
 
     @include breakpoint(tabletOnly) {
       width: 21vw;
@@ -162,8 +170,8 @@
 }
 
 .c-more-read.psychotest-results {
-  padding-top: 1vw;
-  margin-top: 15vw;
+  padding-top: 5vw;
+  margin-top: 9vw;
 
   @include breakpoint(tabletOnly) {
     margin-top: 4vw;
@@ -175,6 +183,20 @@
 
   @include breakpoint(desktopLarge) {
     margin-top: 0;
+  }
+
+  & .c-section-title.heading--row {
+    margin: 0 0 5.4vw 0;
+
+    & .text--italic {
+      font-size: 1.861rem;
+      letter-spacing: 0;
+    }
+
+    & .text--bold {
+      font-size: 1.675rem;
+      letter-spacing: 0;
+    }
   }
 
   & .teaser__img img {

@@ -1583,11 +1583,14 @@ a img {
   @media (max-width: 767px) {
     .c-more-read .teaser {
       height: 65vw;
-      width: 49%;
-      margin-right: 2%;
+      width: 48.3%;
+      margin-right: 2.8%;
       margin-bottom: 6vw; }
       .c-more-read .teaser:nth-child(2n+0) {
-        margin-right: 0; } }
+        margin-right: 0;
+        width: 48.7%; }
+        .c-more-read .teaser:nth-child(2n+0) .teaser__title {
+          width: 100%; } }
   @media (max-width: 767px) {
     .c-more-read .teaser .teaser:nth-child(2n+0) {
       margin-right: 0;
@@ -4834,11 +4837,9 @@ a img {
     width: 7vw; }
 
 .p-psychotest-results {
-  width: 100%;
-  letter-spacing: 1px; }
+  width: 100%; }
   .p-psychotest-results--wrap {
-    width: 90%;
-    margin: 0 auto; }
+    width: 100%; }
     @media (min-width: 1024px) {
       .p-psychotest-results--wrap {
         width: 100%;
@@ -4846,11 +4847,13 @@ a img {
         min-height: 30vw;
         margin-top: 2vw; } }
   .p-psychotest-results__heading {
-    font-size: 2rem;
+    font-size: 1.861rem;
+    letter-spacing: 0.05em;
     color: #ffcc33;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 0; }
+    margin-top: 12vw;
+    margin-bottom: 1vw; }
     @media (min-width: 768px) {
       .p-psychotest-results__heading {
         font-size: 2.5rem; } }
@@ -4865,8 +4868,9 @@ a img {
         right: 0;
         margin-top: 0; } }
   .p-psychotest-results__image {
-    width: 140%;
-    margin-left: -16%; }
+    max-width: 126%;
+    margin-left: -10%;
+    margin-bottom: 15vw; }
     @media (min-width: 768px) {
       .p-psychotest-results__image {
         width: 120%;
@@ -4878,9 +4882,10 @@ a img {
         left: 12%; } }
   .p-psychotest-results .c-social-share {
     display: block;
-    width: 70%;
-    margin: 10vw auto 7vw auto;
-    text-align: center; }
+    width: 59%;
+    margin: 0 auto 7vw auto;
+    text-align: center;
+    padding: 0 3vw; }
     @media (min-width: 768px) {
       .p-psychotest-results .c-social-share {
         width: 34%;
@@ -4895,9 +4900,9 @@ a img {
         left: 0;
         top: 6vw; } }
     .p-psychotest-results .c-social-share .share__icon {
-      width: 16vw;
-      height: 16vw;
-      line-height: 16vw; }
+      width: 15vw;
+      height: 15vw;
+      line-height: 15vw; }
       @media (min-width: 768px) {
         .p-psychotest-results .c-social-share .share__icon {
           width: 6vw;
@@ -4916,9 +4921,12 @@ a img {
       .p-psychotest-results .c-social-share .share__icon i {
         font-size: 1rem; }
   .p-psychotest-results__text {
-    line-height: 7vw;
+    font-size: 1.042rem;
+    line-height: 6.57vw;
+    letter-spacing: 0.05em;
+    width: 88%;
     color: #7e7e7e;
-    margin-bottom: 10vw; }
+    margin: 0 auto 0 auto; }
     @media (min-width: 768px) {
       .p-psychotest-results__text {
         line-height: 3vw;
@@ -4935,11 +4943,13 @@ a img {
         top: 3vw;
         font-size: 0.8rem; } }
   .p-psychotest-results .buttons-wrap {
-    text-align: center; }
+    text-align: center;
+    margin-top: 11vw; }
   .p-psychotest-results .btn {
-    width: 50%;
-    margin-top: 7vw;
-    text-align: center; }
+    width: 53%;
+    text-align: center;
+    padding: 4vw 4vw;
+    margin-bottom: 4vw; }
     @media (min-width: 768px) {
       .p-psychotest-results .btn {
         width: 21vw;
@@ -4958,8 +4968,8 @@ a img {
           margin-right: 1vw; } }
 
 .c-more-read.psychotest-results {
-  padding-top: 1vw;
-  margin-top: 15vw; }
+  padding-top: 5vw;
+  margin-top: 9vw; }
   @media (min-width: 768px) {
     .c-more-read.psychotest-results {
       margin-top: 4vw; } }
@@ -4969,6 +4979,14 @@ a img {
   @media (min-width: 1900px) {
     .c-more-read.psychotest-results {
       margin-top: 0; } }
+  .c-more-read.psychotest-results .c-section-title.heading--row {
+    margin: 0 0 5.4vw 0; }
+    .c-more-read.psychotest-results .c-section-title.heading--row .text--italic {
+      font-size: 1.861rem;
+      letter-spacing: 0; }
+    .c-more-read.psychotest-results .c-section-title.heading--row .text--bold {
+      font-size: 1.675rem;
+      letter-spacing: 0; }
   .c-more-read.psychotest-results .teaser__img img {
     filter: grayscale(0); }
 
