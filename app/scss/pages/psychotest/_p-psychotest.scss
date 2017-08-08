@@ -151,7 +151,7 @@
   margin-top: 4vw;
   margin-bottom: 7.4vw;
 
-  @include breakpoint(tabletAndDesktop) {
+  @include breakpoint(tabletOnly) {
     font-size: 2.171rem;
     letter-spacing: 0.05em;
     line-height: 4.43vw;
@@ -163,10 +163,11 @@
   }
 
   @include breakpoint(desktopOnly) {
-    font-size: $fontLarge;
-    width: 10%;
-    top: -1.5vw;
-    margin-left: 20%;
+    font-size: 1.471rem;
+    line-height: 2vw;
+    width: 7%;
+    top: -0.8vw;
+    margin: 0 3.5% 0 14.5%;
   }
 
   &__separator {
@@ -197,7 +198,7 @@
     }
 
     @include breakpoint(desktopOnly) {
-      width: 80%;
+      width: 79.5%;
     }
   }
 
@@ -220,8 +221,9 @@
 
     @include breakpoint(desktopOnly) {
       width: 50%;
-      font-size: $fontBig;
-      margin: 0 0 2vw 0;
+      font-size: 1.471rem;
+      line-height: 2vw;
+      margin: 1% 0 2.8vw 0;
     }
   }
 
@@ -247,6 +249,12 @@
     }
 
     &.no-image {
+      &:nth-of-type(2n+3) {
+        @include breakpoint(desktopOnly) {
+          width: calc(50% - 1px);
+          border-right: 1px solid #e1dede;
+        }
+      }
 
       & .question-option__text {
         @include breakpoint(tabletOnly) {
@@ -255,8 +263,8 @@
         }
 
         @include breakpoint(desktopOnly) {
-          padding: 1vw 6%;
-          margin-top: 0;
+          width: 65%;
+          padding: 6% 1% 6% 11%;
         }
       }
     }
@@ -335,7 +343,7 @@
       }
 
       @include breakpoint(desktopOnly) {
-        width: 20%;
+        width: 21.5%;
       }
 
       & img {
@@ -363,6 +371,12 @@
           margin: -3vw 0 0 0;
         }
 
+        @include breakpoint(desktopOnly) {
+          @include circled-icon(3vw);
+          top: 62%;
+          right: 7%;
+        }
+
         &.text-only {
           margin-top: 133%;
 
@@ -374,9 +388,8 @@
           }
 
           @include breakpoint(desktopOnly) {
-            top: 50%;
-            right: 5%;
-            margin: -16px 0 0 0;
+            top: 39%;
+            right: 7%;
           }
 
         }
@@ -422,10 +435,9 @@
       }
 
       @include breakpoint(desktopOnly) {
-        padding: 0vw 6%;
+        padding: 6% 0 0 7.5%;
         line-height: 1.3vw;
         font-size: 0.8rem;
-        margin-top: 0.8vw;
       }
 
       @include breakpoint(desktopLarge) {
@@ -459,6 +471,13 @@
           letter-spacing: 0.05em;
           line-height: 3.386vw;
         }
+
+        @include breakpoint(desktopOnly) {
+          margin-bottom: 0.6vw;
+          font-size: 0.883rem;
+          letter-spacing: 0.05em;
+          line-height: 1.412vw;
+        }
       }
 
       &__body {
@@ -469,6 +488,12 @@
           letter-spacing: 0.05em;
           line-height: 2.87vw;
         }
+
+        @include breakpoint(desktopOnly) {
+          font-size: 0.785rem;
+          letter-spacing: 0.05em;
+          line-height: 1.412vw;
+        }
       }
     }
 
@@ -477,13 +502,14 @@
   & .btn-confirm {
     position: relative;
     top: 3vw;
+    width: 11.5%;
+    padding: 1.1vw 1vw;
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
 
     @include breakpoint(phoneAndTablet) {
       display: none;
-    }
-
-    @include breakpoint(desktopLarge) {
-      top: 2vw;
     }
 
     & span {
@@ -495,12 +521,8 @@
       font-size: 1.5rem;
       color: $white;
       position: absolute;
-      right: 1.5vw;
-      top: 0.8vw;
-
-      @include breakpoint(desktopLarge) {
-        top: 0.5vw;
-      }
+      right: 15%;
+      top: 22%;
     }
   }
 
@@ -509,11 +531,17 @@
   }
 
   & .btn-confirm:hover span {
-    padding-right: 2vw;
+    padding-right: 1.6vw;
   }
 
   & a.btn-confirm {
     width: 7vw;
+
+    @include breakpoint(desktopOnly) {
+      width: 10%;
+      text-align: center;
+      padding: 1.2vw 1vw;
+    }
   }
 
 }

@@ -4604,10 +4604,11 @@ a img {
       top: -2vw; } }
   @media (min-width: 1024px) {
     .psychotest-counter {
-      font-size: 1.4rem;
-      width: 10%;
-      top: -1.5vw;
-      margin-left: 20%; } }
+      font-size: 1.471rem;
+      line-height: 2vw;
+      width: 7%;
+      top: -0.8vw;
+      margin: 0 3.5% 0 14.5%; } }
   .psychotest-counter__separator {
     color: #ffcc33; }
 
@@ -4629,7 +4630,7 @@ a img {
         width: 84%; } }
     @media (min-width: 1024px) {
       .psychotest-question--wrap {
-        width: 80%; } }
+        width: 79.5%; } }
   .psychotest-question__title {
     color: #000000;
     font-size: 1.49rem;
@@ -4648,8 +4649,9 @@ a img {
     @media (min-width: 1024px) {
       .psychotest-question__title {
         width: 50%;
-        font-size: 1.6rem;
-        margin: 0 0 2vw 0; } }
+        font-size: 1.471rem;
+        line-height: 2vw;
+        margin: 1% 0 2.8vw 0; } }
   .psychotest-question .question-option {
     width: 100%;
     background: #f6f6f6;
@@ -4667,14 +4669,18 @@ a img {
         .psychotest-question .question-option:nth-last-child(-n+2) {
           border-bottom: none;
           margin-bottom: 1px; } }
+    @media (min-width: 1024px) {
+      .psychotest-question .question-option.no-image:nth-of-type(2n+3) {
+        width: calc(50% - 1px);
+        border-right: 1px solid #e1dede; } }
     @media (min-width: 768px) {
       .psychotest-question .question-option.no-image .question-option__text {
         width: 72%;
         padding: 6.6% 0 6.6% 9.4%; } }
     @media (min-width: 1024px) {
       .psychotest-question .question-option.no-image .question-option__text {
-        padding: 1vw 6%;
-        margin-top: 0; } }
+        width: 65%;
+        padding: 6% 1% 6% 11%; } }
     .psychotest-question .question-option:last-child {
       border-bottom: none; }
     .psychotest-question .question-option.inactive {
@@ -4742,7 +4748,7 @@ a img {
           position: static; } }
       @media (min-width: 1024px) {
         .psychotest-question .question-option__image {
-          width: 20%; } }
+          width: 21.5%; } }
       .psychotest-question .question-option__image img {
         width: 100%;
         margin-bottom: -3px; }
@@ -4773,6 +4779,16 @@ a img {
             top: 48%;
             right: 3.2%;
             margin: -3vw 0 0 0; } }
+        @media (min-width: 1024px) {
+          .psychotest-question .question-option__image .question-option-circle {
+            width: 3vw;
+            height: 3vw;
+            line-height: 3vw;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 100%;
+            top: 62%;
+            right: 7%; } }
         .psychotest-question .question-option__image .question-option-circle.text-only {
           margin-top: 133%; }
           @media (min-width: 768px) {
@@ -4783,9 +4799,8 @@ a img {
               margin: 0; } }
           @media (min-width: 1024px) {
             .psychotest-question .question-option__image .question-option-circle.text-only {
-              top: 50%;
-              right: 5%;
-              margin: -16px 0 0 0; } }
+              top: 39%;
+              right: 7%; } }
         .psychotest-question .question-option__image .question-option-circle.active {
           background: #f6f6f6;
           border-color: #ffffff; }
@@ -4817,10 +4832,9 @@ a img {
           padding: 6.6% 0 2% 6.6%; } }
       @media (min-width: 1024px) {
         .psychotest-question .question-option__text {
-          padding: 0vw 6%;
+          padding: 6% 0 0 7.5%;
           line-height: 1.3vw;
-          font-size: 0.8rem;
-          margin-top: 0.8vw; } }
+          font-size: 0.8rem; } }
       @media (min-width: 1900px) {
         .psychotest-question .question-option__text {
           line-height: 1.2vw;
@@ -4847,6 +4861,12 @@ a img {
             font-size: 1.303rem;
             letter-spacing: 0.05em;
             line-height: 3.386vw; } }
+        @media (min-width: 1024px) {
+          .psychotest-question .question-option__text__title {
+            margin-bottom: 0.6vw;
+            font-size: 0.883rem;
+            letter-spacing: 0.05em;
+            line-height: 1.412vw; } }
       .psychotest-question .question-option__text__body {
         color: #7e7e7e; }
         @media (min-width: 768px) {
@@ -4854,15 +4874,22 @@ a img {
             font-size: 1.158rem;
             letter-spacing: 0.05em;
             line-height: 2.87vw; } }
+        @media (min-width: 1024px) {
+          .psychotest-question .question-option__text__body {
+            font-size: 0.785rem;
+            letter-spacing: 0.05em;
+            line-height: 1.412vw; } }
   .psychotest-question .btn-confirm {
     position: relative;
-    top: 3vw; }
+    top: 3vw;
+    width: 11.5%;
+    padding: 1.1vw 1vw;
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.05em; }
     @media (max-width: 1024px) {
       .psychotest-question .btn-confirm {
         display: none; } }
-    @media (min-width: 1900px) {
-      .psychotest-question .btn-confirm {
-        top: 2vw; } }
     .psychotest-question .btn-confirm span {
       display: inline-block; }
     .psychotest-question .btn-confirm i {
@@ -4870,17 +4897,19 @@ a img {
       font-size: 1.5rem;
       color: #ffffff;
       position: absolute;
-      right: 1.5vw;
-      top: 0.8vw; }
-      @media (min-width: 1900px) {
-        .psychotest-question .btn-confirm i {
-          top: 0.5vw; } }
+      right: 15%;
+      top: 22%; }
   .psychotest-question .btn-confirm:hover i {
     display: inline-block; }
   .psychotest-question .btn-confirm:hover span {
-    padding-right: 2vw; }
+    padding-right: 1.6vw; }
   .psychotest-question a.btn-confirm {
     width: 7vw; }
+    @media (min-width: 1024px) {
+      .psychotest-question a.btn-confirm {
+        width: 10%;
+        text-align: center;
+        padding: 1.2vw 1vw; } }
 
 .p-psychotest-results {
   width: 100%; }
