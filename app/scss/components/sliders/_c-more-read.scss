@@ -119,12 +119,17 @@
   & .teaser {
     @include breakpoint(phoneOnly) {
       height: 65vw;
-      width: 49%;
-      margin-right: 2%;
+      width: 48.3%;
+      margin-right: 2.8%;
       margin-bottom: 6vw;
 
       &:nth-child(2n+0) {
         margin-right: 0;
+        width: 48.7%;
+
+        & .teaser__title {
+          width: 100%;
+        }
       }
     }
 
