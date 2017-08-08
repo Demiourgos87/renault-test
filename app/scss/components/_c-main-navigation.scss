@@ -74,7 +74,8 @@
 
     @include breakpoint(desktopOnly) {
       display: inline-block;
-      margin-right: 40px;
+      margin-right: 3.2vw;
+      margin-bottom: 0;
       z-index: 110;
 
       &:first-child {
