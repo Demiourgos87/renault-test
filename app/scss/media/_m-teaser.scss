@@ -13,7 +13,7 @@
   }
 
   @include breakpoint(desktopOnly) {
-    margin-bottom: 1.4vw;
+    margin-bottom: 1.7vw;
   }
 }
 
@@ -48,24 +48,23 @@
 }
 
 .teaser__title {
-  font-size: 1.05rem;
-  line-height: 5.1vw;
-  font-weight: 700;
-  letter-spacing: 0.26vw;
+  font-size: 1.045rem;
+  line-height: 5vw;
+  letter-spacing: 0.05em;
+  font-weight: 900;
 
   @include breakpoint(tabletOnly) {
-    font-size: 1.04rem;
-    line-height: 2.4vw;
-    font-weight: 700;
-    letter-spacing: 0.091vw;
+    font-weight: 900;
+    line-height: 2.35vw;
+    font-size: 1.02rem;
+    width: 94%;
   }
 
   @include breakpoint(desktopOnly) {
-    font-size: 0.9rem;
-    line-height: 1.5vw;
-    font-weight: 700;
-    letter-spacing: 0.054vw;
-    margin-bottom: 1.1vw;
+    line-height: 1.531vw;
+    letter-spacing: 0.05em;
+    font-size: 0.883rem;
+    margin-bottom: 1.2vw;
   }
 }
 
@@ -76,7 +75,7 @@
     display: block;
     font-weight: 400;
     font-size: 0.7rem;
-    letter-spacing: 0.035vw;
+    letter-spacing: 0.05em;
     line-height: 1.1vw;
     margin: 0 0 15px 0;
     color: #7e7e7e;

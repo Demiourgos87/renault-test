@@ -1938,7 +1938,7 @@ a img {
       margin-bottom: 1.7vw; } }
   @media (min-width: 1024px) {
     .teaser__img {
-      margin-bottom: 1.4vw; } }
+      margin-bottom: 1.7vw; } }
 
 .teaser__img img {
   width: 100%; }
@@ -1966,23 +1966,22 @@ a img {
   background: transparent; }
 
 .teaser__title {
-  font-size: 1.05rem;
-  line-height: 5.1vw;
-  font-weight: 700;
-  letter-spacing: 0.26vw; }
+  font-size: 1.045rem;
+  line-height: 5vw;
+  letter-spacing: 0.05em;
+  font-weight: 900; }
   @media (min-width: 768px) {
     .teaser__title {
-      font-size: 1.04rem;
-      line-height: 2.4vw;
-      font-weight: 700;
-      letter-spacing: 0.091vw; } }
+      font-weight: 900;
+      line-height: 2.35vw;
+      font-size: 1.02rem;
+      width: 94%; } }
   @media (min-width: 1024px) {
     .teaser__title {
-      font-size: 0.9rem;
-      line-height: 1.5vw;
-      font-weight: 700;
-      letter-spacing: 0.054vw;
-      margin-bottom: 1.1vw; } }
+      line-height: 1.531vw;
+      letter-spacing: 0.05em;
+      font-size: 0.883rem;
+      margin-bottom: 1.2vw; } }
 
 .teaser__desc {
   display: none; }
@@ -1991,7 +1990,7 @@ a img {
       display: block;
       font-weight: 400;
       font-size: 0.7rem;
-      letter-spacing: 0.035vw;
+      letter-spacing: 0.05em;
       line-height: 1.1vw;
       margin: 0 0 15px 0;
       color: #7e7e7e; } }
@@ -2164,29 +2163,12 @@ a img {
         margin-bottom: 5.5vw; } }
     @media (min-width: 1024px) {
       .hp-news .teaser--xl {
-        margin-bottom: 6vw; } }
+        margin-bottom: 3.5vw; } }
     .hp-news .teaser--xl:last-child {
       margin-bottom: 5vw; }
       @media (min-width: 768px) {
         .hp-news .teaser--xl:last-child {
           margin-bottom: 0; } }
-  .hp-news .teaser__title {
-    font-size: 1.16rem;
-    line-height: 1.2rem;
-    font-weight: 400; }
-    @media (min-width: 768px) {
-      .hp-news .teaser__title {
-        font-weight: 700;
-        line-height: 1.25rem; } }
-    @media (min-width: 1024px) {
-      .hp-news .teaser__title {
-        line-height: 1.54vw;
-        font-size: 1rem;
-        margin-bottom: 1.2vw; } }
-  @media (min-width: 1024px) {
-    .hp-news .teaser__desc {
-      font-size: 0.76rem;
-      line-height: 1.07vw; } }
   .hp-news .teaser--landscape .teaser__img {
     width: 49%;
     margin-right: 2%; }
@@ -2466,25 +2448,6 @@ a img {
         margin-bottom: 2vw; } }
   .hp-astuces .teaser--xl {
     margin-bottom: 17vw; }
-  @media (min-width: 768px) {
-    .hp-astuces .teaser__img {
-      margin-bottom: 1.2vw; } }
-  @media (min-width: 1024px) {
-    .hp-astuces .teaser__img {
-      margin-bottom: 1.4vw; } }
-  @media (min-width: 768px) {
-    .hp-astuces .teaser__title {
-      line-height: 1.3rem; } }
-  @media (min-width: 1024px) {
-    .hp-astuces .teaser__title {
-      margin-bottom: 1vw;
-      font-size: 1rem;
-      font-weight: 700; } }
-  @media (min-width: 1024px) {
-    .hp-astuces .teaser__desc {
-      font-size: 0.76rem;
-      letter-spacing: 0.01vw;
-      line-height: 1.1vw; } }
 
 .hp-business {
   width: 100%;
@@ -2564,32 +2527,12 @@ a img {
   @media (min-width: 1024px) {
     .hp-business .teaser--raised--tab {
       margin-top: -9.9vw; } }
-  .hp-business .teaser__img {
-    margin-bottom: 1.4vw; }
-  .hp-business .teaser__title {
-    line-height: 2.2vw; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .hp-business .teaser__img {
       margin-bottom: 1.2vw; } }
   @media (min-width: 1024px) {
-    .hp-business .teaser__img {
-      margin-bottom: 1.4vw; } }
-  @media (max-width: 767px) {
     .hp-business .teaser__title {
-      line-height: 4.9vw; } }
-  @media (min-width: 768px) {
-    .hp-business .teaser__title {
-      line-height: 1.3rem; } }
-  @media (min-width: 1024px) {
-    .hp-business .teaser__title {
-      margin-bottom: 1vw;
-      font-size: 1rem;
-      font-weight: 700; } }
-  @media (min-width: 1024px) {
-    .hp-business .teaser__desc {
-      font-size: 0.76rem;
-      letter-spacing: 0.01vw;
-      line-height: 1.1vw; } }
+      margin-bottom: 0.75vw; } }
   @media (min-width: 1024px) {
     .hp-business .teaser {
       width: 48%;
