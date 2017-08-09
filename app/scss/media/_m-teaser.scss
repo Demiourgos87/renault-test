@@ -9,11 +9,11 @@
   margin-bottom: 2.5vw;
 
   @include breakpoint(tabletOnly) {
-    margin-bottom: 1.7vw;
+    margin-bottom: 1.9vw;
   }
 
   @include breakpoint(desktopOnly) {
-    margin-bottom: 1.7vw;
+    margin-bottom: 1.6vw;
   }
 }
 
@@ -22,24 +22,22 @@
 }
 
 .teaser__img__footnote {
+  @include fontSize(12,8,12);
   text-transform: uppercase;
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 2vw 3.6vw;
-  font-size: 0.45rem;
+  padding: 1.7vw 3.1vw;
   background: $yellow;
   color: $black;
-  font-weight: bold;
+  font-weight: 700;
 
   @include breakpoint(tabletOnly) {
-    padding: 1vw 1.6vw 0.9vw 1.2vw;
-    font-size: 1.1vw;
+    padding: 1vw 1.6vw;
   }
 
   @include breakpoint(desktopOnly) {
-    padding: 0.8vw 1.2vw 0.8vw 1.3vw;
-    font-size: 0.72vw;
+    padding: 0.9vw 1.3vw;
   }
 }
 
@@ -48,24 +46,18 @@
 }
 
 .teaser__title {
-  font-size: 1.045rem;
-  line-height: 5vw;
-  letter-spacing: 0.05em;
+  @include fontSize(28,14,18);
+  @include lineHeight(32,18,26);
+  @include letterSpacing(50,50,50);
   font-weight: 900;
 
   @include breakpoint(tabletOnly) {
-    font-weight: 900;
-    line-height: 2.35vw;
-    font-size: 1.02rem;
     width: 94%;
   }
 
   @include breakpoint(desktopOnly) {
     width: 100%;
-    line-height: 1.531vw;
-    letter-spacing: 0.05em;
-    font-size: 0.883rem;
-    margin-bottom: 1.2vw;
+    margin-bottom: 1.1vw;
   }
 }
 
@@ -75,10 +67,9 @@
   @include breakpoint(desktopOnly) {
     display: block;
     font-weight: 400;
-    font-size: 0.7rem;
+    font-size: calcRem(14);
+    line-height: calcRem(18);
     letter-spacing: 0.05em;
-    line-height: 1.1vw;
-    margin: 0 0 15px 0;
     color: #7e7e7e;
   }
 }

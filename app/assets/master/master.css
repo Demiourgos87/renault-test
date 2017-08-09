@@ -1990,10 +1990,10 @@ a img {
   margin-bottom: 2.5vw; }
   @media (min-width: 768px) {
     .teaser__img {
-      margin-bottom: 1.7vw; } }
+      margin-bottom: 1.9vw; } }
   @media (min-width: 1024px) {
     .teaser__img {
-      margin-bottom: 1.7vw; } }
+      margin-bottom: 1.6vw; } }
 
 .teaser__img img {
   width: 100%; }
@@ -2003,41 +2003,65 @@ a img {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 2vw 3.6vw;
-  font-size: 0.45rem;
+  padding: 1.7vw 3.1vw;
   background: #ffcc33;
   color: #000000;
-  font-weight: bold; }
+  font-weight: 700; }
+  @media (max-width: 767px) {
+    .teaser__img__footnote {
+      font-size: 1.2rem; } }
   @media (min-width: 768px) {
     .teaser__img__footnote {
-      padding: 1vw 1.6vw 0.9vw 1.2vw;
-      font-size: 1.1vw; } }
+      font-size: 0.8rem; } }
   @media (min-width: 1024px) {
     .teaser__img__footnote {
-      padding: 0.8vw 1.2vw 0.8vw 1.3vw;
-      font-size: 0.72vw; } }
+      font-size: 1.2rem; } }
+  @media (min-width: 768px) {
+    .teaser__img__footnote {
+      padding: 1vw 1.6vw; } }
+  @media (min-width: 1024px) {
+    .teaser__img__footnote {
+      padding: 0.9vw 1.3vw; } }
 
 .teaser__body {
   background: transparent; }
 
 .teaser__title {
-  font-size: 1.045rem;
-  line-height: 5vw;
-  letter-spacing: 0.05em;
   font-weight: 900; }
+  @media (max-width: 767px) {
+    .teaser__title {
+      font-size: 2.8rem; } }
   @media (min-width: 768px) {
     .teaser__title {
-      font-weight: 900;
-      line-height: 2.35vw;
-      font-size: 1.02rem;
+      font-size: 1.4rem; } }
+  @media (min-width: 1024px) {
+    .teaser__title {
+      font-size: 1.8rem; } }
+  @media (max-width: 767px) {
+    .teaser__title {
+      line-height: 3.2rem; } }
+  @media (min-width: 768px) {
+    .teaser__title {
+      line-height: 1.8rem; } }
+  @media (min-width: 1024px) {
+    .teaser__title {
+      line-height: 2.6rem; } }
+  @media (max-width: 767px) {
+    .teaser__title {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 768px) {
+    .teaser__title {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 1024px) {
+    .teaser__title {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 768px) {
+    .teaser__title {
       width: 94%; } }
   @media (min-width: 1024px) {
     .teaser__title {
       width: 100%;
-      line-height: 1.531vw;
-      letter-spacing: 0.05em;
-      font-size: 0.883rem;
-      margin-bottom: 1.2vw; } }
+      margin-bottom: 1.1vw; } }
 
 .teaser__desc {
   display: none; }
@@ -2045,10 +2069,9 @@ a img {
     .teaser__desc {
       display: block;
       font-weight: 400;
-      font-size: 0.7rem;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
       letter-spacing: 0.05em;
-      line-height: 1.1vw;
-      margin: 0 0 15px 0;
       color: #7e7e7e; } }
 
 .teaser--portrait .teaser__img, .teaser--portrait .teaser__body {
