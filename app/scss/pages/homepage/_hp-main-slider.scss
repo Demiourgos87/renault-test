@@ -56,7 +56,7 @@
 
   &__counter {
     color: $white;
-    font-size: 0.9rem;
+    @include fontSize(25,12,22);
     font-weight: 700;
     position: absolute;
     bottom: 9vw;
@@ -64,7 +64,6 @@
     z-index: 1000;
 
     @include breakpoint(tabletOnly) {
-      font-size: 0.8rem;
       bottom: 3.5vw;
       left: 15.5vw;
     }
@@ -72,7 +71,6 @@
     @include breakpoint(desktopOnly) {
       left: 15.5vw;
       bottom: 3.9vw;
-      font-size: 1rem;
     }
 
     & .slider__current {
@@ -93,13 +91,13 @@
 
       & .slide-text {
         position: absolute;
-        top: 14vw;
-        left: 6vw;
+        top: 10vw;
+        left: 6.2vw;
         width: 73%;
 
         @include breakpoint(tabletOnly) {
-          top: 24.2vw;
-          left: 15.5vw;
+          top: 19.4vw;
+          left: 15.48vw;
           width: 56%;
         }
 
@@ -110,73 +108,64 @@
         }
 
         & .btn {
-          padding: 2vw;
-          font-size: 0.5rem;
-          margin-bottom: 4vw;
+          @include fontSize(12,8,12);
+          @include letterSpacing(50,50,50);
+          padding: 1.6vw 3vw;
+          margin-bottom: 1.8rem;
+          font-weight: 700;
 
           @include breakpoint(tabletOnly) {
             padding: 0.6vw 1.8vw;
-            margin-bottom: 1vw;
+            margin-bottom: 0;
           }
 
           @include breakpoint(desktopOnly) {
             padding: 0.67vw 2vw;
-            letter-spacing: 0.04vw;
             margin-bottom: 1.2vw;
           }
         }
 
-        & p {
-          margin: 0;
-        }
-
         &__heading {
           color: $yellow;
-          font-size: 1.1rem;
-          font-weight: 700;
+          @include fontSize(30,16,36);
+          @include lineHeight(48.87,37.75,83.36);
+          @include letterSpacing(-25,-25,-25);
+          font-weight: 900;
+          margin-bottom: -0.2rem;
 
           @include breakpoint(tabletOnly) {
-            font-size: 1.1rem;
+            margin-bottom: -0.9rem;
           }
 
           @include breakpoint(desktopOnly) {
-            font-size: $fontBig;
-            letter-spacing: 0.1vw;
+
           }
         }
 
         &__title {
           color: $white;
-          font-size: $fontLarge;
           font-weight: 900;
-          line-height: 7.5vw;
+          @include fontSize(40,32,70);
+          @include lineHeight(42,32,70.78);
+          @include letterSpacing(-25,-25,-25);
 
           @include breakpoint(tabletOnly) {
-            font-size: 2.2rem;
-            line-height: 4.5vw;
+
           }
 
           @include breakpoint(desktopOnly) {
-            font-size: 3.26rem;
-            line-height: 4.3vw;
+
           }
         }
 
         &__desc {
-          font-size: $fontNormal;
           color: $white;
+          @include fontSize(0,16,32);
+          @include lineHeight(0,32.05,70.78);
+          @include letterSpacing(0,0,0);
 
           @include breakpoint(phoneOnly) {
             display: none;
-          }
-
-          @include breakpoint(tabletOnly) {
-            font-size: 1.1rem;
-            letter-spacing: 0.07vw;
-          }
-
-          @include breakpoint(desktopOnly) {
-            font-size: 1.46rem;
           }
         }
       }

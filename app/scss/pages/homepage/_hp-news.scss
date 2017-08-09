@@ -6,41 +6,17 @@
   }
 
   & .c-section-title {
-    @include breakpoint(phoneOnly) {
-      margin-top: 5%;
-      width: 21vw;
-      font-size: 1.66rem;
-      line-height: 1.5rem;
-    }
+    margin-top: 5%;
+    width: 14rem;
 
     @include breakpoint(tabletOnly) {
-      margin-top: -3.4vw;
-      width: 18vw;
-      font-size: 1.4rem;
+      margin-top: -2rem;
+      width: 12rem;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-top: -0.4vw;
-      width: 14vw;
-      font-size: 1.5rem;
-    }
-
-    & .text--italic {
-      font-size: 1.9rem;
-      margin-left: 1vw;
-
-      @include breakpoint(tabletOnly) {
-        margin-left: 0;
-      }
-    }
-
-    & .text--regular {
-      font-size: 1.6rem;
-
-      @include breakpoint(tabletOnly) {
-        font-size: 1.47rem;
-        letter-spacing: 0.1vw;
-      }
+      margin-top: -0.4rem;
+      width: 20rem;
     }
   }
 

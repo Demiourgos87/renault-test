@@ -1,12 +1,28 @@
 .c-section-title {
-  font-size: 1.65rem;
 
-  @include breakpoint(tabletOnly) {
-    font-size: 1.4rem;
+  & .text--bold {
+    font-weight: 900;
+    @include fontSize(45,20,32);
+    // @include lineHeight(48,24.52,48);
+    @include letterSpacing(0,0,0);
   }
 
-  @include breakpoint(desktopOnly) {
-    font-size: 1.5rem;
+  & .text--italic {
+    font-weight: 400;
+    @include fontSize(50,20,30);
+    @include letterSpacing(0,0,0);
+    line-height: 3.8rem;
+    
+    @include breakpoint(tabletOnly) {
+      line-height: 2.4rem;
+    }
+  }
+
+  & .text--regular {
+    font-weight: 400;
+    @include fontSize(40,20,30);
+    // @include lineHeight(48,24.52,48);
+    @include letterSpacing(50,50,50);
   }
 
   &.heading--col {
