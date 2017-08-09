@@ -1,0 +1,5 @@
+// Calculate letter spacing to rem from PSD tracking size
+@function calcLS($psdTracking) {
+  $emLS: $psdTracking / 1000;
+  @return #{$emLS}em;
+}

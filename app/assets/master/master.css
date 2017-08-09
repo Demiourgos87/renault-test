@@ -162,17 +162,17 @@ section,
 summary {
   display: block; }
 
-@media only screen and (max-width: 767px) {
-  html {
-    font-size: 4.2vw; } }
-
-@media only screen and (min-width: 767px) {
-  html {
-    font-size: 1.8vw; } }
-
-@media only screen and (min-width: 1024px) {
-  html {
-    font-size: 1.2vw; } }
+html {
+  font-size: 10; }
+  @media (max-width: 767px) {
+    html {
+      font-size: 1.5625vw; } }
+  @media (min-width: 768px) {
+    html {
+      font-size: 1.30208vw; } }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 0.58824vw; } }
 
 body {
   font-family: 'Lato', sans-serif; }
@@ -220,15 +220,8 @@ body {
 .text--right {
   text-align: right; }
 
-section, article, aside, figure, figcaption, header, footer, nav {
-  display: block; }
-
 html, body {
   overflow-x: hidden; }
-
-body, figure {
-  margin: 0;
-  padding: 0; }
 
 body {
   font-size: 100%;

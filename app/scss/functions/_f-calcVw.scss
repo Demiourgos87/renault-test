@@ -1,0 +1,4 @@
+// Calculate vw from pixels
+@function calcVw($target, $container) {
+  @return ($target / $container) * 100vw;
+}
