@@ -6,13 +6,13 @@
   display: block;
   width: 80%;
   margin: 3vw 0 0 15.2%;
-  font-size: $fontSmall;
+  font-size: 0.69rem;
   color: $black;
 
   & a {
     text-decoration: none;
     color: inherit;
-    margin: 0 10px;
+    margin: 0 0.2vw;
 
     &:first-child {
       margin-left: 0;
@@ -22,9 +22,5 @@
   & span {
     margin-left: 0 10px;
     cursor: default;
-  }
-
-  &.breadcrumbs--article {
-    margin-left: 14vw;
   }
 }

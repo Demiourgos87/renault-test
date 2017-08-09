@@ -480,7 +480,7 @@ a img {
   display: block;
   width: 80%;
   margin: 3vw 0 0 15.2%;
-  font-size: 0.8rem;
+  font-size: 0.69rem;
   color: #000000; }
   @media (max-width: 1024px) {
     .c-breadcrumbs {
@@ -488,14 +488,12 @@ a img {
   .c-breadcrumbs a {
     text-decoration: none;
     color: inherit;
-    margin: 0 10px; }
+    margin: 0 0.2vw; }
     .c-breadcrumbs a:first-child {
       margin-left: 0; }
   .c-breadcrumbs span {
     margin-left: 0 10px;
     cursor: default; }
-  .c-breadcrumbs.breadcrumbs--article {
-    margin-left: 14vw; }
 
 .btn {
   padding: 15px 25px;
