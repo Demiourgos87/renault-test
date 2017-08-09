@@ -114,10 +114,6 @@
       width: 100%;
     }
 
-    @include breakpoint(desktopOnly) {
-      top: -6.5vw;
-    }
-
     & .heading {
       font-weight: bold;
       margin: 0;
