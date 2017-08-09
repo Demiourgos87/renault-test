@@ -1045,9 +1045,6 @@ a img {
     @media (min-width: 768px) {
       .c-test-start__images {
         width: 100%; } }
-    @media (min-width: 1024px) {
-      .c-test-start__images {
-        top: -6.5vw; } }
     .c-test-start__images .heading {
       font-weight: bold;
       margin: 0; }
@@ -1976,6 +1973,7 @@ a img {
       width: 94%; } }
   @media (min-width: 1024px) {
     .teaser__title {
+      width: 100%;
       line-height: 1.531vw;
       letter-spacing: 0.05em;
       font-size: 0.883rem;
