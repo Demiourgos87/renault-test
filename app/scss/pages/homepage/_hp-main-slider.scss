@@ -76,6 +76,12 @@
     & .slider__current {
       color: $yellow;
     }
+
+    & .separator {
+      @include breakpoint(tabletAndDesktop) {
+        margin: 0 -0.1rem;
+      }
+    }
   }
 
   &__slide {
@@ -96,13 +102,13 @@
         width: 73%;
 
         @include breakpoint(tabletOnly) {
-          top: 19.4vw;
+          top: 42.5%;
           left: 15.48vw;
           width: 56%;
         }
 
         @include breakpoint(desktopOnly) {
-          top: 24.8vw;
+          top: 44%;
           left: 15.4vw;
           width: 55%;
         }
@@ -120,15 +126,15 @@
           }
 
           @include breakpoint(desktopOnly) {
-            padding: 0.67vw 2vw;
-            margin-bottom: 1.2vw;
+            padding: 0.67vw 1.6vw;
+            margin-bottom: 0.7vw;
           }
         }
 
         &__heading {
           color: $yellow;
           @include fontSize(30,16,36);
-          @include lineHeight(48.87,37.75,83.36);
+          @include lineHeight(48.87,37.75,45);
           @include letterSpacing(-25,-25,-25);
           font-weight: 900;
           margin-bottom: -0.2rem;
@@ -138,7 +144,7 @@
           }
 
           @include breakpoint(desktopOnly) {
-
+            margin-bottom: -0.2vw;
           }
         }
 
@@ -149,12 +155,8 @@
           @include lineHeight(42,32,70.78);
           @include letterSpacing(-25,-25,-25);
 
-          @include breakpoint(tabletOnly) {
-
-          }
-
           @include breakpoint(desktopOnly) {
-
+            margin-bottom: -1vw;
           }
         }
 
@@ -163,6 +165,7 @@
           @include fontSize(0,16,32);
           @include lineHeight(0,32.05,70.78);
           @include letterSpacing(0,0,0);
+          margin-top: -0.5rem;
 
           @include breakpoint(phoneOnly) {
             display: none;
