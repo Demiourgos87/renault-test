@@ -123,7 +123,8 @@
     &.active, &:hover {
       @include breakpoint(desktopOnly) {
         color: $white;
-        border-bottom: 2px solid $white;
+        padding-bottom: 0.35rem;
+        border-bottom: 3px solid $white;
       }
     }
   }

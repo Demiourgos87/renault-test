@@ -742,7 +742,8 @@ a img {
     @media (min-width: 1024px) {
       .c-main-navigation > li > a.active, .c-main-navigation > li > a:hover {
         color: #ffffff;
-        border-bottom: 2px solid #ffffff; } }
+        padding-bottom: 0.35rem;
+        border-bottom: 3px solid #ffffff; } }
   .c-main-navigation .sub__menu {
     display: none;
     padding-left: 12.6vw; }
