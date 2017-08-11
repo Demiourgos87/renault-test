@@ -1,13 +1,13 @@
 .hp-business {
-  @include container(100%, 0 0 0 0, 0);
+  @include container(100%, 0 0 3rem 0, 0);
 
   @include breakpoint(tabletOnly) {
     position: relative;
-    margin: 0 0 0 0;
+    margin: 0 0 1.5rem 0;
   }
 
   @include breakpoint(desktopOnly) {
-    margin: -1.3vw 0 0 0;
+    margin: -1.3vw 0 1.2rem 0;
   }
 
   &::before {
@@ -40,7 +40,7 @@
       z-index: -1;
 
       @include breakpoint(desktopOnly) {
-        display: none;
+        bottom: 25rem;
       }
     }
 
