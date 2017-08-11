@@ -1065,7 +1065,7 @@ a img {
 
 .c-test-start {
   width: 100%;
-  margin: 0; }
+  margin: 0 0 5.4rem 0; }
   @media (min-width: 768px) {
     .c-test-start {
       margin: 0 0 2vw 0; } }
@@ -1745,22 +1745,18 @@ a img {
 
 .c-more-read {
   width: 100%;
-  padding-top: 9vw;
-  margin-top: 8vw; }
+  padding-top: 8vw; }
   @media (min-width: 768px) {
     .c-more-read {
-      padding-top: 4vw;
-      margin-top: 4.2vw; } }
+      padding-top: 4vw; } }
   @media (min-width: 1024px) {
     .c-more-read {
-      padding-top: 3.6vw;
-      margin-top: 3vw; } }
+      padding-top: 3.6vw; } }
   .c-more-read__wrap {
-    width: 80%;
     margin: 0 auto; }
     @media (max-width: 767px) {
       .c-more-read__wrap {
-        width: 87.8%; } }
+        width: 87.5%; } }
     @media (min-width: 768px) {
       .c-more-read__wrap {
         height: 20vw;
@@ -1829,12 +1825,11 @@ a img {
   @media (max-width: 767px) {
     .c-more-read .teaser {
       height: 65vw;
-      width: 48.3%;
-      margin-right: 2.8%;
+      width: 48.572%;
+      margin-right: 2.856%;
       margin-bottom: 6vw; }
       .c-more-read .teaser:nth-child(2n+0) {
-        margin-right: 0;
-        width: 48.7%; }
+        margin-right: 0; }
         .c-more-read .teaser:nth-child(2n+0) .teaser__title {
           width: 100%; } }
   @media (max-width: 767px) {
@@ -1845,21 +1840,41 @@ a img {
     background: transparent;
     font-size: 0.8rem; }
   .c-more-read .teaser__title {
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 0.17vw;
+    font-weight: 700;
     width: 85%; }
+    @media (max-width: 767px) {
+      .c-more-read .teaser__title {
+        font-size: 2.6rem; } }
     @media (min-width: 768px) {
       .c-more-read .teaser__title {
-        font-size: 0.81rem;
-        width: 100%;
-        line-height: 1.8vw; } }
+        font-size: 1.2rem; } }
     @media (min-width: 1024px) {
       .c-more-read .teaser__title {
-        font-size: 0.65rem;
-        line-height: 1.12vw;
-        font-weight: 900;
-        letter-spacing: 0.12vw; } }
+        font-size: 1.6rem; } }
+    @media (max-width: 767px) {
+      .c-more-read .teaser__title {
+        line-height: 3.2rem; } }
+    @media (min-width: 768px) {
+      .c-more-read .teaser__title {
+        line-height: 1.4rem; } }
+    @media (min-width: 1024px) {
+      .c-more-read .teaser__title {
+        line-height: 2rem; } }
+    @media (max-width: 767px) {
+      .c-more-read .teaser__title {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 768px) {
+      .c-more-read .teaser__title {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 1024px) {
+      .c-more-read .teaser__title {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 768px) {
+      .c-more-read .teaser__title {
+        width: 100%; } }
+    @media (min-width: 1024px) {
+      .c-more-read .teaser__title {
+        font-weight: 900; } }
   .c-more-read .teaser__img {
     margin-bottom: 2vw; }
     @media (min-width: 1024px) {
@@ -1874,25 +1889,22 @@ a img {
     @media (max-width: 767px) {
       .c-more-read i {
         display: none; } }
-  .c-more-read .c-section-title.heading--row {
-    font-size: 1.5rem;
-    margin: 0 0 10vw 0;
-    padding-left: 1vw;
-    letter-spacing: 0.4vw; }
+  .c-more-read .c-section-title {
+    margin: 0 0 10.3vw 0; }
     @media (min-width: 768px) {
-      .c-more-read .c-section-title.heading--row {
+      .c-more-read .c-section-title {
         width: 10vw;
-        font-size: 1.3rem;
         margin: 0 0 10vw 0;
-        padding-left: 0;
-        letter-spacing: 0; } }
+        padding-left: 0; } }
     @media (min-width: 1024px) {
-      .c-more-read .c-section-title.heading--row {
+      .c-more-read .c-section-title {
         width: 7vw;
-        font-size: 1.55rem;
         margin: 0 0 0 0;
-        padding-left: 0;
-        letter-spacing: 0; } }
+        padding-left: 0; } }
+    .c-more-read .c-section-title .text--italic {
+      margin-right: 2vw; }
+    .c-more-read .c-section-title .text--regular {
+      margin-right: 1vw; }
 
 .portrait__slider {
   position: relative;
