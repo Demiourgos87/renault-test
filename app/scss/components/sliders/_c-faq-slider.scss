@@ -1,8 +1,12 @@
 .c-faq-slider {
-  margin-bottom: 0;
+  margin-bottom: 9rem;
 
-  @include breakpoint(tabletAndDesktop) {
-    margin-bottom: 0;
+  @include breakpoint(tabletOnly) {
+    margin-bottom: 11.4rem;
+  }
+
+  @include breakpoint(desktopOnly) {
+    margin-bottom: 18.7rem;
   }
 
   & .slider__container {
