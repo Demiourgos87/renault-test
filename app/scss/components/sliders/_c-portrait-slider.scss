@@ -1,18 +1,16 @@
 .portrait__slider {
   position: relative;
-  width: calc(100% - 6vw);
-  border: 3vw solid #ffcc33;
-  margin-top: 8vw;
+  width: calc(100% - 4rem);
+  border: 2rem solid #ffcc33;
 
   @include breakpoint(tabletOnly) {
-    margin-top: 0;
-    border: 2vw solid $yellow;
-    width: calc(100% - 4vw);
+    border: 1.3rem solid $yellow;
+    width: calc(100% - 2.6rem);
   }
 
   @include breakpoint(desktopOnly) {
-    border: 1.4vw solid #ffcc33;
-    width: calc(100% - 2.8vw);
+    border: 2.4rem solid #ffcc33;
+    width: calc(100% - 4.8rem);
   }
 
   & .portrait__slide__img {
@@ -43,13 +41,14 @@
     }
 
     @include breakpoint(tabletOnly) {
-      top: 5vw;
-      left: 3.3vw;
-      height: 31vw;
+      width: 47%;
+      top: 5.6vw;
+      left: 3.7vw;
+      height: 30vw;
     }
 
     @include breakpoint(desktopOnly) {
-      top: 5.5vw;
+      top: 5.4vw;
       left: 3.6vw;
       width: 39%;
       height: 29vw;
@@ -61,96 +60,90 @@
       }
 
       @include breakpoint(desktopOnly) {
-        font-size: 0.7rem;
-        line-height: 1.1vw;
+        font-size: calcRem(14);
+        line-height: calcRem(18);
+        letter-spacing: calcLS(50);
+        width: 82%;
+        font-weight: 400;
       }
     }
   }
 
   & .portrait__slide__title {
-    font-size: 1.8rem;
+    @include fontSize(50,18,30);
+    @include letterSpacing(0,0,0);
     margin: 0 0 3vw 0;
 
     @include breakpoint(tabletOnly) {
-      font-size: 1.4rem;
-      margin: 0 0 1vw 0;
+      margin: 0 0 0.7vw 0;
     }
 
     @include breakpoint(desktopOnly) {
-      font-size: 1.6rem;
       margin: 0 0 0.8vw 0;
-      letter-spacing: 0.03vw;
     }
   }
 
   & .slider__navigation {
+    @include fontSize(25,10,14);
+    @include letterSpacing(50,50,50);
     float: none;
     position: absolute;
     z-index: 99999998;
-
-    @include breakpoint(phoneOnly) {
-      top: 10vw;
-      right: 2vw;
-      font-size: 0.9rem;
-    }
+    top: 11.5vw;
+    right: 2.5vw;
 
     @include breakpoint(tabletOnly) {
-      top: 4.6vw;
-      right: 1vw;
-      font-size: 0.8rem;
+      top: 5.6vw;
+      right: 1.6vw;
     }
 
     @include breakpoint(desktopOnly) {
-      top: 5.4vw;
+      top: 5.2vw;
       right: 2.4vw;
-      font-size: 0.7rem;
+    }
+
+    & i {
+      padding: 1.2vw;
+
+      @include breakpoint(tabletOnly) {
+        padding: 0.6vw;
+      }
+
+      @include breakpoint(desktopOnly) {
+        padding: 0.5vw;
+      }
     }
   }
 
   & .btn {
     position: absolute;
-    padding: 10px 20px;
+    @include fontSize(12,10,12);
+    @include letterSpacing(100,100,100);
 
     @include breakpoint(phoneOnly) {
       padding: 2vw 3.6vw;
-      font-size: 0.5rem;
       bottom: 6.4vw;
     }
 
     @include breakpoint(tabletOnly) {
-      bottom: 6.4vw;
-      font-size: 0.7rem;
-      padding: 1.3vw 2vw;
-      letter-spacing: 0.1vw;
+      bottom: 5.7vw;
+      padding: 1.3vw 1.7vw;
     }
 
     @include breakpoint(desktopOnly) {
-      bottom: 7vw;
-      font-size: 0.55rem;
-      padding: 1vw 1.3vw;
+      bottom: 7.2vw;
+      padding: 0.75vw 1.3vw;
     }
   }
 
   & .portrait__slide__heading {
-    font-weight: bold;
-    margin-top: 10px;
-
-    @include breakpoint(phoneOnly) {
-      font-size: 1.5rem;
-      line-height: 6vw;
-    }
-
-    @include breakpoint(tabletOnly) {
-      font-size: 1.3rem;
-      line-height: 2.5vw;
-      margin-top: 0;
-    }
+    @include fontSize(36,16,28);
+    @include lineHeight(38,20,34);
+    @include letterSpacing(50,50,50);
+    font-weight: 900;
 
     @include breakpoint(desktopOnly) {
-      font-size: 1.5rem;
-      line-height: 2vw;
-      margin-top: 0;
-      margin-bottom: 0.6vw;
+      margin-bottom: 0.65vw;
     }
   }
 }

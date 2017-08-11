@@ -1799,18 +1799,16 @@ a img {
 
 .portrait__slider {
   position: relative;
-  width: calc(100% - 6vw);
-  border: 3vw solid #ffcc33;
-  margin-top: 8vw; }
+  width: calc(100% - 4rem);
+  border: 2rem solid #ffcc33; }
   @media (min-width: 768px) {
     .portrait__slider {
-      margin-top: 0;
-      border: 2vw solid #ffcc33;
-      width: calc(100% - 4vw); } }
+      border: 1.3rem solid #ffcc33;
+      width: calc(100% - 2.6rem); } }
   @media (min-width: 1024px) {
     .portrait__slider {
-      border: 1.4vw solid #ffcc33;
-      width: calc(100% - 2.8vw); } }
+      border: 2.4rem solid #ffcc33;
+      width: calc(100% - 4.8rem); } }
   .portrait__slider .portrait__slide__img {
     width: 100%;
     z-index: 10; }
@@ -1834,12 +1832,13 @@ a img {
         height: 66vw; } }
     @media (min-width: 768px) {
       .portrait__slider .portrait__slide__body {
-        top: 5vw;
-        left: 3.3vw;
-        height: 31vw; } }
+        width: 47%;
+        top: 5.6vw;
+        left: 3.7vw;
+        height: 30vw; } }
     @media (min-width: 1024px) {
       .portrait__slider .portrait__slide__body {
-        top: 5.5vw;
+        top: 5.4vw;
         left: 3.6vw;
         width: 39%;
         height: 29vw; } }
@@ -1848,76 +1847,141 @@ a img {
         display: none; } }
     @media (min-width: 1024px) {
       .portrait__slider .portrait__slide__body .portrait__slide__desc {
-        font-size: 0.7rem;
-        line-height: 1.1vw; } }
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.05em;
+        width: 82%;
+        font-weight: 400; } }
   .portrait__slider .portrait__slide__title {
-    font-size: 1.8rem;
     margin: 0 0 3vw 0; }
+    @media (max-width: 767px) {
+      .portrait__slider .portrait__slide__title {
+        font-size: 5rem; } }
     @media (min-width: 768px) {
       .portrait__slider .portrait__slide__title {
-        font-size: 1.4rem;
-        margin: 0 0 1vw 0; } }
+        font-size: 1.8rem; } }
     @media (min-width: 1024px) {
       .portrait__slider .portrait__slide__title {
-        font-size: 1.6rem;
-        margin: 0 0 0.8vw 0;
-        letter-spacing: 0.03vw; } }
+        font-size: 3rem; } }
+    @media (max-width: 767px) {
+      .portrait__slider .portrait__slide__title {
+        letter-spacing: 0em; } }
+    @media (min-width: 768px) {
+      .portrait__slider .portrait__slide__title {
+        letter-spacing: 0em; } }
+    @media (min-width: 1024px) {
+      .portrait__slider .portrait__slide__title {
+        letter-spacing: 0em; } }
+    @media (min-width: 768px) {
+      .portrait__slider .portrait__slide__title {
+        margin: 0 0 0.7vw 0; } }
+    @media (min-width: 1024px) {
+      .portrait__slider .portrait__slide__title {
+        margin: 0 0 0.8vw 0; } }
   .portrait__slider .slider__navigation {
     float: none;
     position: absolute;
-    z-index: 99999998; }
+    z-index: 99999998;
+    top: 11.5vw;
+    right: 2.5vw; }
     @media (max-width: 767px) {
       .portrait__slider .slider__navigation {
-        top: 10vw;
-        right: 2vw;
-        font-size: 0.9rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 768px) {
       .portrait__slider .slider__navigation {
-        top: 4.6vw;
-        right: 1vw;
-        font-size: 0.8rem; } }
+        font-size: 1rem; } }
     @media (min-width: 1024px) {
       .portrait__slider .slider__navigation {
-        top: 5.4vw;
-        right: 2.4vw;
-        font-size: 0.7rem; } }
+        font-size: 1.4rem; } }
+    @media (max-width: 767px) {
+      .portrait__slider .slider__navigation {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 768px) {
+      .portrait__slider .slider__navigation {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 1024px) {
+      .portrait__slider .slider__navigation {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 768px) {
+      .portrait__slider .slider__navigation {
+        top: 5.6vw;
+        right: 1.6vw; } }
+    @media (min-width: 1024px) {
+      .portrait__slider .slider__navigation {
+        top: 5.2vw;
+        right: 2.4vw; } }
+    .portrait__slider .slider__navigation i {
+      padding: 1.2vw; }
+      @media (min-width: 768px) {
+        .portrait__slider .slider__navigation i {
+          padding: 0.6vw; } }
+      @media (min-width: 1024px) {
+        .portrait__slider .slider__navigation i {
+          padding: 0.5vw; } }
   .portrait__slider .btn {
-    position: absolute;
-    padding: 10px 20px; }
+    position: absolute; }
+    @media (max-width: 767px) {
+      .portrait__slider .btn {
+        font-size: 1.2rem; } }
+    @media (min-width: 768px) {
+      .portrait__slider .btn {
+        font-size: 1rem; } }
+    @media (min-width: 1024px) {
+      .portrait__slider .btn {
+        font-size: 1.2rem; } }
+    @media (max-width: 767px) {
+      .portrait__slider .btn {
+        letter-spacing: 0.1em; } }
+    @media (min-width: 768px) {
+      .portrait__slider .btn {
+        letter-spacing: 0.1em; } }
+    @media (min-width: 1024px) {
+      .portrait__slider .btn {
+        letter-spacing: 0.1em; } }
     @media (max-width: 767px) {
       .portrait__slider .btn {
         padding: 2vw 3.6vw;
-        font-size: 0.5rem;
         bottom: 6.4vw; } }
     @media (min-width: 768px) {
       .portrait__slider .btn {
-        bottom: 6.4vw;
-        font-size: 0.7rem;
-        padding: 1.3vw 2vw;
-        letter-spacing: 0.1vw; } }
+        bottom: 5.7vw;
+        padding: 1.3vw 1.7vw; } }
     @media (min-width: 1024px) {
       .portrait__slider .btn {
-        bottom: 7vw;
-        font-size: 0.55rem;
-        padding: 1vw 1.3vw; } }
+        bottom: 7.2vw;
+        padding: 0.75vw 1.3vw; } }
   .portrait__slider .portrait__slide__heading {
-    font-weight: bold;
-    margin-top: 10px; }
+    font-weight: 900; }
     @media (max-width: 767px) {
       .portrait__slider .portrait__slide__heading {
-        font-size: 1.5rem;
-        line-height: 6vw; } }
+        font-size: 3.6rem; } }
     @media (min-width: 768px) {
       .portrait__slider .portrait__slide__heading {
-        font-size: 1.3rem;
-        line-height: 2.5vw;
-        margin-top: 0; } }
+        font-size: 1.6rem; } }
     @media (min-width: 1024px) {
       .portrait__slider .portrait__slide__heading {
-        font-size: 1.5rem;
-        line-height: 2vw;
-        margin-top: 0;
-        margin-bottom: 0.6vw; } }
+        font-size: 2.8rem; } }
+    @media (max-width: 767px) {
+      .portrait__slider .portrait__slide__heading {
+        line-height: 3.8rem; } }
+    @media (min-width: 768px) {
+      .portrait__slider .portrait__slide__heading {
+        line-height: 2rem; } }
+    @media (min-width: 1024px) {
+      .portrait__slider .portrait__slide__heading {
+        line-height: 3.4rem; } }
+    @media (max-width: 767px) {
+      .portrait__slider .portrait__slide__heading {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 768px) {
+      .portrait__slider .portrait__slide__heading {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 1024px) {
+      .portrait__slider .portrait__slide__heading {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 1024px) {
+      .portrait__slider .portrait__slide__heading {
+        margin-bottom: 0.65vw; } }
 
 @media (min-width: 768px) {
   .vu-QA {
