@@ -35,13 +35,17 @@
     }
 
     @include breakpoint(desktopOnly) {
-      margin: 6.4vw 0 3.5vw 0;
+      margin: 6.6vw 0 3.5vw 0;
     }
 
     & .text--regular {
       @include breakpoint(tabletOnly) {
         position: relative;
         top: -0.5rem;
+      }
+
+      @include breakpoint(desktopOnly) {
+        top: 0;
       }
     }
   }
@@ -74,12 +78,6 @@
       margin-left: 0;
       margin-right: 0;
     }
-
-    & .teaser__img {
-      @include breakpoint(tabletOnly) {
-        margin-bottom: 1.2vw;
-      }
-    }
   }
 
   & .row--mob:first-child {
@@ -89,8 +87,9 @@
     }
 
     @include breakpoint(desktopOnly) {
-      width: 49%;
-      margin-left: 6.5%;
+      width: 49.223%;
+      margin-left: 6.26%;
+      margin-right: 1.735%;
     }
 
     & .teaser--m:nth-child(2) {
@@ -100,8 +99,8 @@
         }
 
         @include breakpoint(desktopOnly) {
-          margin-right: 2.5%;
-          width: 48.5%;
+          margin-right: 3.761%;
+          width: 48.121%;
         }
       }
 
@@ -111,7 +110,7 @@
       }
 
       @include breakpoint(desktopOnly) {
-        width: 48%;
+        width: 48.121%;
       }
     }
   }
@@ -124,14 +123,15 @@
     }
 
     @include breakpoint(desktopOnly) {
-      width: 42.5%;
+      width: 42.784%;
+      margin-top: 1.7%;
     }
   }
 
   & .row--mob:last-child {
     @include breakpoint(tabletOnly) {
       width: 55.386%;
-      margin: -11.5rem 0 0 32%;
+      margin: -5.1rem 0 0 32%;
     }
 
     @include breakpoint(desktopOnly) {
@@ -183,9 +183,27 @@
     @include breakpoint(tabletOnly) {
       margin-bottom: 2vw;
     }
+
+    & .teaser__img {
+      @include breakpoint(tabletOnly) {
+        margin-bottom: 1.3vw;
+      }
+    }
+
+    & .teaser__title {
+      @include breakpoint(desktopOnly) {
+        margin-bottom: 1vw;
+      }
+    }
   }
 
   & .teaser--xl {
     margin-bottom: 17vw;
+
+    & .teaser__title {
+      @include breakpoint(desktopOnly) {
+        margin-bottom: 1.4vw;
+      }
+    }
   }
 }
