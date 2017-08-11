@@ -135,8 +135,8 @@
     }
 
     @include breakpoint(desktopOnly) {
-      width: 49.1%;
-      margin: -7.5vw 0 0 31.9%;
+      width: 49.223%;
+      margin: -18rem 0 0 31.9%;
     }
 
     & .teaser--m:first-child {
@@ -146,8 +146,8 @@
       }
 
       @include breakpoint(desktopOnly) {
-        width: 48%;
-        margin-right: 2%;
+        margin-right: 3.761%;
+        width: 48.121%;
       }
     }
 
@@ -159,8 +159,7 @@
       }
 
       @include breakpoint(desktopOnly) {
-        width: 48%;
-        margin-left: 2%;
+        width: 48.121%;
       }
     }
   }

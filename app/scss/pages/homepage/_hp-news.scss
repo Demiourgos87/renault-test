@@ -95,7 +95,7 @@
 
     @include breakpoint(desktopOnly) {
       width: 35.296%;
-      margin-right: 3.6222%;
+      margin-right: 3.62%;
     }
   }
 
@@ -139,12 +139,16 @@
   }
 
   & .teaser--landscape .teaser__img {
-    width: 48.93%;
+    width: 48.573%;
     margin-right: 2.5%;
 
     @include breakpoint(tabletOnly) {
       width: 55.645%;
       margin-right: 3.9%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 55.365%;
     }
   }
 
