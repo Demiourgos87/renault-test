@@ -29,61 +29,59 @@
 
   & .search__close {
     position: absolute;
-    top: 2.3vw;
+    top: 2.7vw;
     right: 5.4vw;
-    font-size: 1.8rem;
+    font-size: 4.8rem;
     cursor: pointer;
 
     @include breakpoint(tabletOnly) {
-      top: 2vw;
+      top: 2.1vw;
       right: 4.2vw;
-      font-size: 4rem;
+      font-size: 5.5rem;
     }
 
     @include breakpoint(desktopOnly) {
-      font-size: 3rem;
+      font-size: 6rem;
       top: 1.5vw;
       right: 2.5vw;
     }
   }
 
   & .search__field {
-    position: absolute;
-    top: 48.2%;
-    left: 50%;
+    position: relative;
+    top: 37.2%;
     width: 93%;
-    margin-left: -46.5%;
-    text-align: center;
+    margin-left: 6.3%;
 
     @include breakpoint(tabletOnly) {
-      top: 34.4%;
-      left: 50%;
+      top: 34.3%;
       width: 92%;
-      margin-left: -46%;
+      margin-left: 7.8%;
     }
 
     @include breakpoint(desktopOnly) {
-      top: 35%;
-      left: 50%;
+      top: 43%;
       width: 74%;
-      margin-left: -38%;
+      margin-left: 15.5%;
     }
 
     & input {
-      width: 85%;
+      width: 85.7%;
       background: transparent;
       border: 0;
       color: $white;
       border-bottom: 1px solid $white;
-      font-size: $fontBig;
-      padding-bottom: 3vw;
-      position: relative;
-      top: -3vw;
+      padding-bottom: 2vw;
+      @include fontSize(40,40,80);
+      @include letterSpacing(0,0,0);
 
       @include breakpoint(tabletOnly) {
-        font-size: 2rem;
         padding-bottom: 1vw;
-        top: -3vw;
+        width: 85.5%;
+      }
+
+      @include breakpoint(desktopOnly) {
+
       }
 
       &:focus {
@@ -93,21 +91,19 @@
     }
 
     & i {
-      font-size: 1.8rem;
+      font-size: 4rem;
       position: relative;
-      top: -3vw;
-      left: -1vw;
+      top: -1.6vw;
 
       @include breakpoint(tabletOnly) {
-        font-size: 3rem;
-        top: -2.5vw;
-        left: 0;
+        font-size: 4rem;
+        top: 0.5vw;
       }
 
       @include breakpoint(desktopOnly) {
-        font-size: 3.3rem;
-        top: -2.3vw;
-        left: 1.8vw;
+        font-size: 7rem;
+        top: 0.3vw;
+        left: 1.4vw;
       }
     }
   }

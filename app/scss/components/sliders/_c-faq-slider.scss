@@ -43,10 +43,6 @@
       height: 39.8rem;
       width: 93.5%;
     }
-
-    @include breakpoint(desktopLarge) {
-      height: 23rem;
-    }
   }
 
   & .teaser {
@@ -176,6 +172,10 @@
 
     & .separator {
       margin: 0 -0.4rem;
+
+      @include breakpoint(tabletOnly) {
+        margin: 0;
+      }
 
       @include breakpoint(desktopOnly) {
         margin: 0 -0.2rem;

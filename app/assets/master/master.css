@@ -1632,9 +1632,6 @@ a img {
       .c-faq-slider .container--full {
         height: 39.8rem;
         width: 93.5%; } }
-    @media (min-width: 1900px) {
-      .c-faq-slider .container--full {
-        height: 23rem; } }
   .c-faq-slider .teaser {
     overflow: visible; }
     @media (max-width: 767px) {
@@ -1753,6 +1750,9 @@ a img {
         margin-top: 0; } }
     .c-faq-slider .slider__navigation .separator {
       margin: 0 -0.4rem; }
+      @media (min-width: 768px) {
+        .c-faq-slider .slider__navigation .separator {
+          margin: 0; } }
       @media (min-width: 1024px) {
         .c-faq-slider .slider__navigation .separator {
           margin: 0 -0.2rem; } }
@@ -2515,7 +2515,7 @@ a img {
     @media (min-width: 1024px) {
       .hp-news .teaser--s {
         width: 35.296%;
-        margin-right: 3.62%; } }
+        margin-right: 3.617%; } }
   .hp-news .teaser--l {
     margin-left: 0;
     width: 61.25%; }
@@ -2697,7 +2697,7 @@ a img {
       @media (min-width: 1024px) {
         .hp-fan .teaser--fan .teaser__body {
           padding: 4.5rem 5% 20em 7.4%;
-          width: 16.7545%; } }
+          width: 16.752%; } }
       .hp-fan .teaser--fan .teaser__body .c-section-title {
         margin-bottom: 3.3rem; }
         @media (min-width: 768px) {
@@ -2761,7 +2761,7 @@ a img {
       top: 2vw;
       left: -5vw;
       width: 100%;
-      height: 2px;
+      height: 1px;
       background: #f6f6f6; } }
   @media (min-width: 1024px) {
     .hp-astuces::before {
@@ -6092,69 +6092,77 @@ html.diaporamaOpened, body.diaporamaOpened {
   background: rgba(0, 0, 0, 0.8); }
   .w-search-popup .search__close {
     position: absolute;
-    top: 2.3vw;
+    top: 2.7vw;
     right: 5.4vw;
-    font-size: 1.8rem;
+    font-size: 4.8rem;
     cursor: pointer; }
     @media (min-width: 768px) {
       .w-search-popup .search__close {
-        top: 2vw;
+        top: 2.1vw;
         right: 4.2vw;
-        font-size: 4rem; } }
+        font-size: 5.5rem; } }
     @media (min-width: 1024px) {
       .w-search-popup .search__close {
-        font-size: 3rem;
+        font-size: 6rem;
         top: 1.5vw;
         right: 2.5vw; } }
   .w-search-popup .search__field {
-    position: absolute;
-    top: 48.2%;
-    left: 50%;
+    position: relative;
+    top: 37.2%;
     width: 93%;
-    margin-left: -46.5%;
-    text-align: center; }
+    margin-left: 6.3%; }
     @media (min-width: 768px) {
       .w-search-popup .search__field {
-        top: 34.4%;
-        left: 50%;
+        top: 34.3%;
         width: 92%;
-        margin-left: -46%; } }
+        margin-left: 7.8%; } }
     @media (min-width: 1024px) {
       .w-search-popup .search__field {
-        top: 35%;
-        left: 50%;
+        top: 43%;
         width: 74%;
-        margin-left: -38%; } }
+        margin-left: 15.5%; } }
     .w-search-popup .search__field input {
-      width: 85%;
+      width: 85.7%;
       background: transparent;
       border: 0;
       color: #ffffff;
       border-bottom: 1px solid #ffffff;
-      font-size: 1.6rem;
-      padding-bottom: 3vw;
-      position: relative;
-      top: -3vw; }
+      padding-bottom: 2vw; }
+      @media (max-width: 767px) {
+        .w-search-popup .search__field input {
+          font-size: 4rem; } }
       @media (min-width: 768px) {
         .w-search-popup .search__field input {
-          font-size: 2rem;
+          font-size: 4rem; } }
+      @media (min-width: 1024px) {
+        .w-search-popup .search__field input {
+          font-size: 8rem; } }
+      @media (max-width: 767px) {
+        .w-search-popup .search__field input {
+          letter-spacing: 0em; } }
+      @media (min-width: 768px) {
+        .w-search-popup .search__field input {
+          letter-spacing: 0em; } }
+      @media (min-width: 1024px) {
+        .w-search-popup .search__field input {
+          letter-spacing: 0em; } }
+      @media (min-width: 768px) {
+        .w-search-popup .search__field input {
           padding-bottom: 1vw;
-          top: -3vw; } }
+          width: 85.5%; } }
       .w-search-popup .search__field input:focus {
         outline: none;
         border-bottom: 1px solid #ffffff; }
     .w-search-popup .search__field i {
-      font-size: 1.8rem;
+      font-size: 4rem;
       position: relative;
-      top: -3vw;
-      left: -1vw; }
+      top: -1.6vw; }
       @media (min-width: 768px) {
         .w-search-popup .search__field i {
-          font-size: 3rem;
-          top: -2.5vw;
-          left: 0; } }
+          font-size: 4rem;
+          top: 0.5vw; } }
       @media (min-width: 1024px) {
         .w-search-popup .search__field i {
-          font-size: 3.3rem;
-          top: -2.3vw;
-          left: 1.8vw; } }
+          font-size: 7rem;
+          top: 0.3vw;
+          left: 1.4vw; } }
