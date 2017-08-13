@@ -3,11 +3,11 @@
   margin: 0 0 5.4rem 0;
 
   @include breakpoint(tabletOnly) {
-    margin: 0 0 2vw 0;
+    margin: 0 0 6vw 0;
   }
 
   @include breakpoint(desktopOnly) {
-    margin: 0 0 0 0;
+    margin: 0 0 3.5vw 0;
   }
 
   &::after {
@@ -49,7 +49,7 @@
 
     @include breakpoint(desktopOnly) {
       width: 25%;
-      padding: 5.6vw 0 8.6vw 3vw;
+      padding: 5.8vw 0 8.6vw 3vw;
       margin: 0 0 0 35.5%;
     }
 
@@ -83,7 +83,7 @@
       }
 
       @include breakpoint(desktopOnly) {
-        margin: 0 0 1.1vw 0;
+        margin: 0 0 1.3vw 0;
         text-align: left;
       }
 
@@ -143,10 +143,8 @@
       @include fontSize(0,13.63,22);
       @include letterSpacing(0,-25,-25);
 
-      @include breakpoint(tabletOnly) {
-      }
-
       @include breakpoint(desktopOnly) {
+        margin-bottom: 0.2vw;
       }
     }
 

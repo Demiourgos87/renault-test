@@ -3,7 +3,7 @@
   padding-top: 8vw;
 
   @include breakpoint(tabletOnly) {
-    padding-top: 4vw;
+    padding-top: 3.8vw;
   }
 
   @include breakpoint(desktopOnly) {
@@ -20,13 +20,13 @@
     @include breakpoint(tabletOnly) {
       height: 20vw;
       width: 80.5%;
-      margin: 0 5% 0 8%;
+      margin: 0 5% 0 7.8%;
     }
 
     @include breakpoint(desktopOnly) {
       height: 15vw;
       width: 76%;
-      margin: 0 5% 0 10.5%;
+      margin: 0 5% 0 10.7%;
     }
 
     @include breakpoint(desktopLarge) {
@@ -43,18 +43,18 @@
 
     @include breakpoint(tabletOnly) {
       margin-left: 16vw;
-      top: -22vw;
+      top: -22.5vw;
     }
 
     @include breakpoint(desktopOnly) {
       top: -11vw;
       width: 80%;
-      margin-left: 15vw;
+      margin-left: 19.5%;
     }
 
     & .arrow-left, & .arrow-right {
       position: absolute;
-      top: 35%;
+      top: 39%;
 
       @include breakpoint(phoneOnly) {
         display: none;
@@ -66,14 +66,14 @@
       }
 
       @include breakpoint(desktopOnly) {
-        top: 45%;
+        top: 48%;
         width: 3.2vw;
         height: 3.2vw;
       }
     }
 
     & .arrow-left {
-      left: -5.7vw;
+      left: -5.5vw;
 
       @include breakpoint(desktopOnly) {
         left: -4.8vw;
@@ -81,7 +81,7 @@
     }
 
     & .arrow-right {
-      right: -3.6vw;
+      right: -3.8vw;
 
       @include breakpoint(desktopOnly) {
         right: -3.4vw;
@@ -94,16 +94,16 @@
 
     & .teaser--m {
       @include breakpoint(tabletOnly) {
-        margin-right: 1%;
+        margin-right: 0.806%;
       }
 
       @include breakpoint(desktopOnly) {
-        margin-right: 0.8%;
+        margin-right: 0.7421%;
       }
 
-      @include breakpoint(desktopLarge) {
-        margin-right: 1.1%;
-      }
+      // @include breakpoint(desktopLarge) {
+      //   margin-right: 1.1%;
+      // }
 
       &:last-child {
         margin-left: 0;
@@ -117,7 +117,7 @@
       height: 65vw;
       width: 48.572%;
       margin-right: 2.856%;
-      margin-bottom: 6vw;
+      margin-bottom: 5.2vw;
 
       &:nth-child(2n+0) {
         margin-right: 0;
@@ -160,6 +160,10 @@
   & .teaser__img {
     margin-bottom: 2vw;
 
+    @include breakpoint(tabletOnly) {
+      margin-bottom: 1.4vw;
+    }
+
     @include breakpoint(desktopOnly) {
       margin-bottom: 1.4vw;
     }
@@ -197,10 +201,39 @@
 
     & .text--italic {
       margin-right: 2vw;
+
+      @include breakpoint(tabletOnly) {
+        margin: 0;
+        font-size: calcRem(18);
+      }
+
+      @include breakpoint(desktopOnly) {
+        font-size: calcRem(30);
+      }
     }
 
     & .text--regular {
       margin-right: 1vw;
+
+      @include breakpoint(tabletOnly) {
+        margin: 0;
+        font-size: calcRem(18);
+      }
+
+      @include breakpoint(desktopOnly) {
+        font-size: calcRem(30);
+      }
+    }
+
+    & .text--bold {
+      @include breakpoint(tabletOnly) {
+        margin: 0;
+        font-size: calcRem(18);
+      }
+
+      @include breakpoint(desktopOnly) {
+        font-size: calcRem(32);
+      }
     }
   }
 }
