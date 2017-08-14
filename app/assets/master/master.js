@@ -3336,7 +3336,7 @@ function onYouTubeIframeAPIReady() {
     swipe: true
   });
 
-  $slider.slick('slickPause');
+  // $slider.slick('slickPause');
 
   $arrowPrev.on('click', function() {
     $slider.slick('slickPrev');
