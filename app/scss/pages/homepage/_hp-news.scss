@@ -69,14 +69,14 @@
   }
 
   & .heading--fix {
-    margin-top: 29.4vw;
+    margin-top: 33.6%;
 
     @include breakpoint(tabletOnly) {
-      margin-top: 5.5rem;
+      margin-top: 15.5%;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-top: 22.6rem;
+      margin-top: 34%;
     }
   }
 
@@ -90,7 +90,7 @@
 
     @include breakpoint(tabletOnly) {
       width: 42.533%;
-      margin-right: 3%;
+      margin-right: 3.067%;
     }
 
     @include breakpoint(desktopOnly) {
