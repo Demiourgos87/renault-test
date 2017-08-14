@@ -19,56 +19,55 @@
     width: 100%;
 
     @include breakpoint(tabletOnly) {
-      width: 92%;
+      width: 92.188%;
     }
 
     @include breakpoint(desktopOnly) {
-      width: 79.6%;
+      width: 79.6471%;
     }
 
     & img {
       width: 100%;
-      margin-bottom: -4px;
     }
   }
 
   &__title {
     position: absolute;
-    top: 21.5%;
+    top: 25%;
     left: 18%;
 
     @include breakpoint(tabletOnly) {
-      top: 45.5%;
+      top: 43%;
       left: 8.6%;
     }
 
     @include breakpoint(desktopOnly) {
-      top: 41.8%;
+      top: 43%;
       left: 19.2%;
     }
 
     & .page__title {
       margin-top: 4vw;
       font-weight: 900;
-      font-size: 1.41rem;
+      @include fontSize(40,32,70);
+      @include letterSpacing(-25,-25,-25);
 
       @include breakpoint(tabletOnly) {
         margin-top: 2.2vw;
-        font-size: 2.21rem;
       }
 
       @include breakpoint(desktopOnly) {
-        font-size: 3.28rem;
         margin-top: 1.4vw;
       }
     }
 
     & .btn {
-      font-size: 0.48rem;
+      @include fontSize(12,8,12);
+      @include letterSpacing(50,50,50);
       padding: 1.5vw 4.8vw;
+      font-weight: 700;
 
       @include breakpoint(tabletOnly) {
-        font-size: 0.6rem;
         padding: 0.7vw 2vw;
       }
 
@@ -80,36 +79,28 @@
 
   &__text {
     width: calc(100% - 12vw);
-    padding: 6.5vw 6vw;
-    font-size: 1.15rem;
-    letter-spacing: 0.006vw;
-    line-height: 6.6vw;
+    padding: 5.8vw 6vw;
     font-weight: 400;
+    @include fontSize(28,14,18);
+    @include lineHeight(42,20,28);
+    @include letterSpacing(50,50,50);
 
     @include breakpoint(tabletOnly) {
       width: 36%;
-      padding: 5.5vw 6vw 4vw 7vw;
+      padding: 5.1vw 6vw 4vw 7.3vw;
       position: absolute;
-      top: 13.7%;
+      top: 13%;
       right: 0;
-      font-size: 1rem;
-      letter-spacing: 0.09vw;
-      line-height: 2.7vw;
+      line-height: 2.001rem;
     }
 
     @include breakpoint(desktopOnly) {
       width: 24%;
-      padding: 6.8vw 5vw 3.2vw 5vw;
+      padding: 6.8vw 5vw 7.3vw 5vw;
       position: absolute;
       top: 22.4%;
       right: 0;
-      font-size: 0.8rem;
-      line-height: 1.7vw;
-      height: 27vw;
-    }
-
-    & p {
-      margin: 0;
+      line-height: 2.8rem;
     }
   }
 }
