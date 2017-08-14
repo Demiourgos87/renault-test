@@ -1,17 +1,13 @@
 .c-test-start {
   width: 100%;
-  margin: 0;
-
-  @include breakpoint(phoneOnly) {
-    margin: 11vw 0 0 0;
-  }
+  margin: 0 0 5.4rem 0;
 
   @include breakpoint(tabletOnly) {
-    margin: 7vw 0 2vw 0;
+    margin: 0 0 6vw 0;
   }
 
   @include breakpoint(desktopOnly) {
-    margin: 1vw 0 0 0;
+    margin: 0 0 3.5vw 0;
   }
 
   &::after {
@@ -29,8 +25,8 @@
 
   & .container--full {
     background: url("../image/test_start/trucks_background_full.png") no-repeat center;
-    filter: brightness(120%);
-    box-shadow: inset 0 0 0 500px rgba($yellow, 0.85);
+    filter: brightness(115%);
+    box-shadow: inset 0 0 0 1000px rgba(#ffd451, 0.85);
 
     @include breakpoint(desktopOnly) {
       background-size: 100%;
@@ -46,32 +42,33 @@
     }
 
     @include breakpoint(tabletOnly) {
-      width: 38%;
+      width: 33%;
+      margin: 0 0 0 35%;
       padding: 5vw 0 10vw 0;
     }
 
     @include breakpoint(desktopOnly) {
       width: 25%;
-      padding: 5.3vw 0 8.3vw 3vw;
+      padding: 5.8vw 0 8.6vw 3vw;
+      margin: 0 0 0 35.5%;
     }
 
     & .btn--centered {
+      @include fontSize(18,10,12);
+      @include letterSpacing(100,100,100);
       width: 24vw;
       text-align: center;
-      font-size: 0.6rem;
       padding: 4vw 8vw;
 
       @include breakpoint(tabletOnly) {
         width: 16vw;
         text-align: center;
-        font-size: 0.7rem;
-        padding: 1.2vw 1.2vw;
-        letter-spacing: 0.1vw;
+        padding: 1.4vw 1.2vw;
+        margin: 0 0 0 12%;
       }
 
       @include breakpoint(desktopOnly) {
         width: 9vw;
-        font-size: 0.55rem;
         padding: 0.8vw 1.2vw;
         margin: 0;
       }
@@ -79,22 +76,44 @@
     }
 
     & .c-section-title.heading--row {
-      font-size: 1.6rem;
-      letter-spacing: 0.2vw;
-      line-height: 8vw;
-      margin: 6vw 0;
+      margin: 6.8vw 0 6vw 0;
 
       @include breakpoint(tabletOnly) {
-        line-height: 3vw;
-        margin: 0 0 2.8vw 0;
-        text-align: center;
+        margin: 0 0 2.2vw 0;
       }
 
       @include breakpoint(desktopOnly) {
-        line-height: 2.1vw;
-        font-size: 1.5rem;
-        margin: 0 0 1.1vw 0;
+        margin: 0 0 1.3vw 0;
         text-align: left;
+      }
+
+      & .text--bold {
+        @include fontSize(45.31,22,32);
+
+        @include breakpoint(desktopOnly) {
+          line-height: 3.7rem;
+        }
+      }
+
+      & .text--italic {
+        @include fontSize(42.48,22,30);
+        margin-left: 0;
+        margin-right: 1.6rem;
+        line-height: 5rem;
+
+        @include breakpoint(tabletOnly) {
+          margin-right: 0.5rem;
+          line-height: 3rem;
+        }
+
+        @include breakpoint(desktopOnly) {
+          line-height: 1rem;
+          margin-right: 0.5rem;
+        }
+      }
+
+      & .text--regular {
+        @include fontSize(42.48,22,30);
       }
     }
   }
@@ -104,7 +123,7 @@
     width: 90%;
     margin: 0 auto;
     position: relative;
-    top: -6vw;
+    top: -5.8vw;
 
     @include breakpoint(phoneOnly) {
       display: none;
@@ -114,16 +133,18 @@
       width: 100%;
     }
 
-    & .heading {
-      font-weight: bold;
-      margin: 0;
+    @include breakpoint(desktopOnly) {
+      top: -6.3vw;
+    }
 
-      @include breakpoint(tabletOnly) {
-        font-size: 0.9rem;
-      }
+    & .heading {
+      font-weight: 900;
+      margin: 0;
+      @include fontSize(0,13.63,22);
+      @include letterSpacing(0,-25,-25);
 
       @include breakpoint(desktopOnly) {
-        font-size: 1.1rem;
+        margin-bottom: 0.2vw;
       }
     }
 
@@ -136,7 +157,7 @@
 
       @include breakpoint(desktopOnly) {
         display: block;
-        font-size: 0.8rem;
+        font-size: calcRem(14);
       }
     }
   }
@@ -152,24 +173,39 @@
 
     &:first-child {
       @include breakpoint(tabletOnly) {
-        margin-left: 2%;
+        margin-left: 1.6%;
+        width: 26.7%;
+      }
+
+      @include breakpoint(desktopOnly) {
+        width: 27%;
+        margin-left: 1.7%;
       }
     }
 
     &:nth-child(2) {
       @include breakpoint(tabletOnly) {
-        margin-left: 6%;
+        margin-left: 6.6%;
+        width: 26%;
+      }
+
+      @include breakpoint(desktopOnly) {
+
       }
     }
 
     &:last-child {
       @include breakpoint(tabletOnly) {
-        margin-left: 7%;
+        margin-left: 8%;
+        width: 26.7%;
+        position: relative;
+        top: -0.2vw;
       }
 
       @include breakpoint(desktopOnly) {
         position: relative;
-        top: 1.2vw;
+        top: 0.6vw;
+        margin-left: 7.7%;
       }
     }
 
@@ -179,9 +215,10 @@
   }
 
   &__desc {
-    margin-bottom: 9vw;
-    line-height: 4.7vw;
-    letter-spacing: 0.15vw;
+    @include fontSize(26,0,14);
+    @include lineHeight(32,0,18);
+    @include letterSpacing(50,0,50);
+    margin-bottom: 7.4vw;
 
     @include breakpoint(tabletOnly) {
       display: none;
@@ -189,10 +226,8 @@
 
     @include breakpoint(desktopOnly) {
       display: block;
+      width: 92%;
       margin-bottom: 1.4vw;
-      line-height: 1.1vw;
-      font-size: 0.62rem;
-      letter-spacing: 0.07vw;
     }
   }
 }

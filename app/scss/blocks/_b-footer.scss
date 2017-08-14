@@ -7,19 +7,21 @@
   }
 
   @include breakpoint(desktopOnly) {
-    margin: 4vw 0;
+    margin: 4.3vw 0;
   }
 
   &__logo {
     margin: 0 auto;
-    width: 30%;
+    width: 31%;
 
     @include breakpoint(tabletOnly) {
       width: 22%;
+      margin: 0 auto 3vw auto;
     }
 
     @include breakpoint(desktopOnly) {
       width: 9%;
+      margin: 0 auto 2.6vw auto;
     }
   }
 
@@ -38,12 +40,16 @@
     & li {
       display: block;
       text-transform: uppercase;
-      margin-bottom: 3vw;
+      margin-bottom: 4vw;
 
       @include breakpoint(tabletAndDesktop) {
         display: inline-block;
-        margin-right: 20px;
+        margin-right: 3.5vw;
         margin-bottom: 0;
+      }
+
+      @include breakpoint(desktopOnly) {
+        margin-right: 1.5vw;
       }
 
       &:last-child {
@@ -55,11 +61,12 @@
       & a {
         text-decoration: none;
         text-transform: uppercase;
-        font-size: $fontSmall;
         color: $gray;
+        @include fontSize(20,10,10);
+        @include letterSpacing(50,50,50);
 
         @include breakpoint(desktopOnly) {
-          font-size: 0.55rem;
+
         }
       }
     }

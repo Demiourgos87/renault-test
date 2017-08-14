@@ -4,18 +4,32 @@
   }
 
   float: left;
-  width: 30%;
-  padding: 4vw 10% 0 5.5%;
+  width: 32%;
+  padding: 4% 10% 0 5.7%;
 
   & .heading--row {
-    font-size: 1.3rem;
-    margin-bottom: 0.8vw;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0;
+
+    & .text--bolder {
+      font-size: calcRem(26);
+    }
+
+    & .text--italic {
+      font-size: calcRem(30);
+      position: relative;
+      top: -0.1rem;
+      left: 0.5rem;
+    }
+  }
+
+  & .row--full {
+    margin-bottom: 1.8rem;
   }
 
   & .top__article {
-    width: 48%;
-    margin-right: 4%;
-    font-size: 0.7rem;
+    width: 45%;
+    margin-right: 8%;
     text-align: left;
     float: left;
 
@@ -26,13 +40,16 @@
     & img {
       float: left;
       width: 28%;
-      margin-right: 10%;
+      margin-right: 9%;
     }
 
     & p {
-      margin: 0;
+      font-size: calcRem(13);
+      line-height: calcRem(15);
+      letter-spacing: calcLS(50);
       float: left;
-      width: 56%;
+      width: 63%;
+      margin-top: -0.3rem;
     }
   }
 }

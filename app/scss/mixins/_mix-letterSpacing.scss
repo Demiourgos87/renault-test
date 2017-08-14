@@ -1,0 +1,12 @@
+// em letter spacing for all viewports
+@mixin letterSpacing($ls-phone, $ls-tablet, $ls-desktop) {
+  @include breakpoint(phoneOnly) {
+    letter-spacing: calcLS($ls-phone);
+  }
+  @include breakpoint(tabletOnly){
+    letter-spacing: calcLS($ls-tablet);
+  }
+  @include breakpoint(desktopOnly){
+    letter-spacing: calcLS($ls-desktop);
+  }
+}

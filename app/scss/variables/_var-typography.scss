@@ -1,0 +1,71 @@
+$font-size-base: 10;
+
+//------GLOBAL FONT SETTINGS
+html {
+  @include fontSizeVw($font-size-base, $font-size-base, $font-size-base);
+}
+
+// Fonts \\
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+  font-family: 'Airways';
+  src: url('../../assets/fonts/Airways.woff');
+}
+
+// text modifiers \\
+
+.text--regular {
+  font-weight: 400;
+}
+
+.text--bold {
+  font-weight: 700;
+}
+
+.text--bolder {
+  font-weight: 900;
+}
+
+.text--italic {
+  font-family: 'Airways';
+}
+
+.text--clear {
+  text-decoration: none;
+}
+
+.text--underline {
+  text-decoration: underline;
+}
+
+.text--white {
+  color: $white;
+}
+
+.text--gray {
+  color: $gray;
+}
+
+.text--yellow {
+  color: $yellow;
+}
+
+.text--black {
+  color: $black;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--right {
+  text-align: right;
+}

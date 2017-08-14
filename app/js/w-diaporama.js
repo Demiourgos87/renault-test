@@ -46,7 +46,7 @@
 
   // Mobile + Tablet version \\
 
-  if (windowWidth < 1025) {
+  if (windowWidth < 1024) {
 
     $diaporamaWrap.slick({
       slidesToShow: 1,
@@ -63,7 +63,7 @@
 
   // Desktop version \\
 
-  if (windowWidth >= 1025) {
+  if (windowWidth >= 1024) {
 
     $.each($diaporamaSlides, function() {
       $(this).width(windowWidth);

@@ -1,0 +1,12 @@
+// rem font size for all vieworts
+@mixin fontSize($fs-phone, $fs-tablet, $fs-desktop) {
+  @include breakpoint(phoneOnly) {
+    font-size: calcRem($fs-phone);
+  }
+  @include breakpoint(tabletOnly){
+    font-size: calcRem($fs-tablet);
+  }
+  @include breakpoint(desktopOnly){
+    font-size: calcRem($fs-desktop);
+  }
+}

@@ -5,56 +5,36 @@
     margin: 0 0 4vw 0;
   }
 
+  @include breakpoint(desktopOnly) {
+    margin: 2vw 0 12.6rem 0;
+  }
+
   & .c-section-title {
-    @include breakpoint(phoneOnly) {
-      margin-top: 5%;
-      width: 21vw;
-      font-size: 1.66rem;
-      line-height: 1.5rem;
-    }
+    margin-top: 4.6%;
+    width: 14rem;
 
     @include breakpoint(tabletOnly) {
-      margin-top: -3.4vw;
-      width: 18vw;
-      font-size: 1.4rem;
+      margin-top: -2rem;
+      width: 12rem;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-top: -0.4vw;
-      width: 14vw;
-      font-size: 1.5rem;
-    }
-
-    & .text--italic {
-      font-size: 1.9rem;
-      margin-left: 1vw;
-
-      @include breakpoint(tabletOnly) {
-        margin-left: 0;
-      }
-    }
-
-    & .text--regular {
-      font-size: 1.6rem;
-
-      @include breakpoint(tabletOnly) {
-        font-size: 1.47rem;
-        letter-spacing: 0.1vw;
-      }
+      margin-top: -0.4rem;
+      width: 20rem;
     }
   }
 
   & .row--mob {
-    margin-bottom: 6vw;
+    margin-bottom: 7.6rem;
 
     @include breakpoint(tabletOnly) {
       width: 55.5%;
-      margin-right: 1.7%;
+      margin-right: 1.8%;
       margin-bottom: 4vw;
     }
 
     @include breakpoint(desktopOnly) {
-      width: 49.2%;
+      width: 49.075%;
     }
 
     &:last-child {
@@ -78,55 +58,57 @@
       margin-left: 0;
       margin-right: 0;
     }
+
+    @include breakpoint(desktopOnly) {
+      width: 42.784%;
+    }
   }
 
   @include breakpoint(desktopOnly) {
     margin: 2vw 0 7vw 0;
   }
 
-  & .container {
-    @include breakpoint(phoneOnly) {
-      width: 87.8%;
-    }
-  }
-
   & .heading--fix {
-    margin-top: 29.4vw;
+    margin-top: 33.6%;
 
     @include breakpoint(tabletOnly) {
-      margin-top: 7vw;
+      margin-top: 15.5%;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-top: 13.5vw;
+      margin-top: 34%;
     }
+  }
+
+  & .teaser {
+    overflow: visible;
   }
 
   & .teaser--s {
-    width: 35.6%;
+    width: 35.7145%;
+    margin-right: 2.8%;
 
     @include breakpoint(tabletOnly) {
-      width: 42.6%;
+      width: 42.533%;
+      margin-right: 3.067%;
     }
 
     @include breakpoint(desktopOnly) {
-      width: 35%;
-      margin-right: 1.7%;
+      width: 35.296%;
+      margin-right: 3.617%;
     }
   }
 
   & .teaser--l {
-    margin-left: 2%;
-    width: 61%;
+    margin-left: 0;
+    width: 61.25%;
 
     @include breakpoint(tabletOnly) {
-      margin-left: 2%;
-      width: 54%;
+      width: 54.4%;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-left: 2%;
-      width: 61%;
+      width: 61.087%;
     }
   }
 
@@ -134,11 +116,11 @@
     margin-bottom: 15.5vw;
 
     @include breakpoint(tabletOnly) {
-      margin-bottom: 5.5vw;
+      margin-bottom: 2.7rem;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-bottom: 3.5vw;
+      margin-bottom: 8rem;
     }
 
     &:last-child {
@@ -148,39 +130,50 @@
         margin-bottom: 0;
       }
     }
+
+    & .teaser__img {
+      @include breakpoint(tabletOnly) {
+        margin-bottom: 1.4vw;
+      }
+    }
   }
 
   & .teaser--landscape .teaser__img {
-    width: 49%;
-    margin-right: 2%;
+    width: 48.573%;
+    margin-right: 2.5%;
 
     @include breakpoint(tabletOnly) {
-      width: 55.5%;
-      margin-right: 4%;
+      width: 55.645%;
+      margin-right: 3.9%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 55.365%;
     }
   }
 
   & .teaser--landscape .teaser__body {
-    width: 47%;
+    width: 48.5%;
+    margin-top: -0.6rem;
 
     @include breakpoint(tabletOnly) {
       width: 40%;
+      margin-left: 0;
     }
   }
 
   & .btn {
     padding: 3vw 4vw;
-    font-size: 0.6rem;
     font-weight: 400;
+    @include fontSize(15,10.8,12);
+    @include letterSpacing(100,100,100);
 
     @include breakpoint(tabletOnly) {
-      padding: 2vw 3vw;
-      font-size: 0.85rem;
+      padding: 2.4vw 2.7vw;
     }
 
     @include breakpoint(desktopOnly) {
-      padding: 1vw 1.5vw;
-      font-size: 0.64rem;
+      padding: 1.1vw 1.5vw;
     }
   }
 

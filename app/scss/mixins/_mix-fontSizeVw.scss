@@ -1,0 +1,13 @@
+// vw Font Size for HTML
+@mixin fontSizeVw($fs-phone, $fs-tablet, $fs-desktop) {
+  font-size: #{$fs-desktop}px;
+  @include breakpoint(phoneOnly) {
+    font-size: calcVw($fs-phone, $site-mob-design);
+  }
+  @include breakpoint(tabletOnly) {
+    font-size: calcVw($fs-tablet, $site-tab-design);
+  }
+  @include breakpoint(desktopOnly) {
+    font-size: calcVw($fs-desktop, $site-desk-design);
+  }
+}

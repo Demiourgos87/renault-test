@@ -1,32 +1,29 @@
-// Configuration
+//  Core
+@import "core/master-core";
 
-@import "config/master-config";
+// Functions
+@import "functions/master-functions";
 
 // Mixins
-
 @import "mixins/master-mixins";
 
-// Layout
+// Configuration
+@import "variables/master-variables";
 
+// Layout
 @import "layout/master-layout";
 
 // Blocks
-
 @import "blocks/master-blocks";
 
 // Components
-
 @import "components/master-components";
 
 // Media object
-
 @import "media/m-teaser";
 
 // Pages
-
 @import "pages/master-pages";
 
-
 // Widgets
-
 @import "widgets/master-widgets";

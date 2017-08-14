@@ -1,19 +1,20 @@
 .b-header {
-  @include container(92%, 0, 4vw 4%);
-  height: 5vw;
-  background: $black;
+  @include container(88%, 0, 0 6%);
+  width: 88%;
+  height: 8.5rem;
+  background: #000000;
   position: fixed;
   top: 0;
   z-index: 99999999;
 
   @include breakpoint(tabletOnly) {
-    @include container(90%, 0, 3vw 5%);
+    @include container(90%, 0, 0 5%);
+    height: 8.5001rem;
   }
 
   @include breakpoint(desktopOnly) {
-    width: 96%;
-    padding: 1vw 2%;
-    height: 2vw;
+    @include container(96%, 0, 0 2%);
+    height: 6.6rem;
   }
 
   & i {
@@ -47,20 +48,20 @@
     @include breakpoint(phoneAndTablet) {
       float: none;
       position: relative;
-      font-size: 2.4rem;
+      font-size: 6rem;
       color: $black;
       width: 50%;
       margin: 0 auto;
     }
 
     @include breakpoint(tabletOnly) {
-      font-size: 3.6rem;
+      font-size: 5rem;
       width: 57%;
     }
 
     @include breakpoint(desktopOnly) {
       position: relative;
-      font-size: 1rem;
+      font-size: 2rem;
       top: 1.4vw;
       color: #ffffff;
       float: left;
@@ -87,18 +88,24 @@
 
   &__menu-trigger {
     float: left;
-    font-size: $fontLarge;
     position: relative;
-    left: 2.5vw;
+    cursor: pointer;
+    top: 2.5rem;
+    left: 0.2rem;
+    font-size: 3.9rem;
 
     @include breakpoint(tabletOnly){
-      font-size: 2.9rem;
-      left: 0.4vw;
-      top: 0;
+      font-size: 4.1rem;
+      top: 2.35rem;
+      left: 0.4rem;
     }
 
     @include breakpoint(desktopOnly) {
       display: none;
+    }
+
+    & img {
+      width: 100%;
     }
   }
 
