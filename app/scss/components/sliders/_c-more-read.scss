@@ -151,10 +151,6 @@
     @include breakpoint(tabletOnly) {
       width: 100%;
     }
-
-    @include breakpoint(desktopOnly) {
-      font-weight: 900;
-    }
   }
 
   & .teaser__img {
