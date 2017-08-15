@@ -1,4 +1,13 @@
 .comm-editors-picks {
+  margin-bottom: 9.5vw;
+
+  @include breakpoint(tabletOnly) {
+    margin-bottom: 8.5vw;
+  }
+
+  @include breakpoint(desktopOnly) {
+    margin-bottom: 9.8vw;
+  }
 
   & .c-section-title.heading--row {
     text-align: left;
