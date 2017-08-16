@@ -1,4 +1,8 @@
 .comm-more-topics {
+  @include breakpoint(phoneOnly) {
+    margin-bottom: 15vw;
+  }
+
   @include breakpoint(tabletOnly) {
     width: 29.7%;
     float: left;
