@@ -1,12 +1,13 @@
 .comm-latest-news {
   position: relative;
+  margin-bottom: 19.8vw;
 
   @include breakpoint(tabletOnly) {
-    margin-bottom: 6.7vw;
+    margin-bottom: 8.1vw;
   }
 
   @include breakpoint(desktopOnly) {
-    margin-bottom: 7vw;
+    margin-bottom: 5.9vw;
   }
 
   &::before {

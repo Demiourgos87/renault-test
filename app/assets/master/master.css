@@ -924,7 +924,8 @@ a img {
     .c-pagination__row {
       margin-bottom: 0.15vw; } }
   .c-pagination__row:last-child {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 0; }
     .c-pagination__row:last-child a {
       margin-right: 7vw; }
       @media (min-width: 768px) {
@@ -2164,11 +2165,12 @@ a img {
 
 @media (min-width: 768px) {
   .vu-QA {
-    padding-top: 5vw; } }
+    padding-top: 11vw;
+    margin-bottom: 4vw; } }
 
 @media (min-width: 1024px) {
   .vu-QA {
-    padding-top: 0;
+    padding-top: 8.7vw;
     position: relative;
     margin-bottom: 6.4vw; } }
 
@@ -2205,98 +2207,141 @@ a img {
   .vu-QA .c-faq-slider::after {
     bottom: -2.33vw; }
   .vu-QA .c-faq-slider .container--full {
-    height: 19.5rem;
+    height: 51.8rem;
     top: 20vw; }
     @media (min-width: 768px) {
       .vu-QA .c-faq-slider .container--full {
         top: 0;
-        height: 18.7rem; } }
+        height: 26.7rem; } }
     @media (min-width: 1024px) {
       .vu-QA .c-faq-slider .container--full {
-        height: 25.6rem;
+        height: 52rem;
         top: -2vw; } }
     @media (min-width: 1900px) {
       .vu-QA .c-faq-slider .container--full {
         height: 30.7rem; } }
-  .vu-QA .c-faq-slider .teaser__body {
-    margin-top: 20px; }
-    @media (min-width: 768px) {
-      .vu-QA .c-faq-slider .teaser__body {
-        width: 70%;
-        margin-top: 0; } }
-    @media (min-width: 1024px) {
-      .vu-QA .c-faq-slider .teaser__body {
-        width: 70%; } }
+  @media (min-width: 768px) {
+    .vu-QA .c-faq-slider .teaser__body {
+      width: 75%; } }
+  @media (min-width: 1024px) {
+    .vu-QA .c-faq-slider .teaser__body {
+      width: 70%; } }
   .vu-QA .c-faq-slider .slider__container {
-    width: 87.8%;
+    width: 87.5%;
     float: none;
     margin: 0 auto;
-    top: -21vw; }
+    top: -27.5%; }
     @media (min-width: 768px) {
       .vu-QA .c-faq-slider .slider__container {
         width: 68%;
-        top: -12vw;
+        top: -30.7%;
         margin: 0 0 0 9.2%; } }
     @media (min-width: 1024px) {
       .vu-QA .c-faq-slider .slider__container {
-        width: 59%;
+        width: 58.895%;
         float: none;
         margin: 0 auto;
-        top: -8vw; } }
+        top: -7.95vw; } }
     @media (min-width: 1024px) {
       .vu-QA .c-faq-slider .slider__container .slider {
         width: 100%; } }
   .vu-QA .c-faq-slider .slider__navigation {
-    float: none;
-    position: absolute;
-    bottom: -10vw;
-    right: -2vw; }
+    float: right; }
     @media (min-width: 768px) {
       .vu-QA .c-faq-slider .slider__navigation {
-        bottom: 3.3vw;
-        right: -11vw; } }
+        margin: 0;
+        position: absolute;
+        top: 36.5vw;
+        right: -11.6vw; } }
     @media (min-width: 1024px) {
       .vu-QA .c-faq-slider .slider__navigation {
         float: none;
         position: absolute;
-        top: 26vw;
+        top: 25.8vw;
         right: -0.5vw; } }
     @media (min-width: 1900px) {
       .vu-QA .c-faq-slider .slider__navigation {
         top: 27.5vw; } }
   .vu-QA .c-faq-slider .c-section-title.heading--row {
-    margin: 7.3vw 0 5.8vw 0;
-    font-size: 1.65rem; }
+    margin: 0 0 6.5vw 0; }
     @media (min-width: 768px) {
       .vu-QA .c-faq-slider .c-section-title.heading--row {
         position: relative;
-        top: -12vw;
-        left: 5vw; } }
-  @media (min-width: 768px) and (min-width: 768px) {
-    .vu-QA .c-faq-slider .c-section-title.heading--row {
-      margin: 7.3vw 0 2.5vw 0; } }
+        top: -10.75vw;
+        left: 5vw;
+        margin: 0 0 1.9vw 0; } }
     @media (min-width: 1024px) {
       .vu-QA .c-faq-slider .c-section-title.heading--row {
         position: relative;
-        top: -8.5vw;
+        top: -8.7vw;
         left: 10vw;
-        margin: 7.3vw 0 3.1vw 0; } }
+        margin: 0 0 3.1vw 0; } }
+    .vu-QA .c-faq-slider .c-section-title.heading--row .text--italic, .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+      margin-left: 0;
+      margin-right: 1vw;
+      position: relative;
+      top: -0.6vw; }
+      @media (max-width: 767px) {
+        .vu-QA .c-faq-slider .c-section-title.heading--row .text--italic, .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+          font-size: 4.5rem; } }
+      @media (min-width: 768px) {
+        .vu-QA .c-faq-slider .c-section-title.heading--row .text--italic, .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+          font-size: 2rem; } }
+      @media (min-width: 1024px) {
+        .vu-QA .c-faq-slider .c-section-title.heading--row .text--italic, .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+          font-size: 3rem; } }
+      @media (max-width: 767px) {
+        .vu-QA .c-faq-slider .c-section-title.heading--row .text--italic, .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+          letter-spacing: 0em; } }
+      @media (min-width: 768px) {
+        .vu-QA .c-faq-slider .c-section-title.heading--row .text--italic, .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+          letter-spacing: 0em; } }
+      @media (min-width: 1024px) {
+        .vu-QA .c-faq-slider .c-section-title.heading--row .text--italic, .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+          letter-spacing: 0em; } }
+      @media (min-width: 768px) {
+        .vu-QA .c-faq-slider .c-section-title.heading--row .text--italic, .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+          margin-right: 0.2vw;
+          top: -0.2vw; } }
+      @media (min-width: 1024px) {
+        .vu-QA .c-faq-slider .c-section-title.heading--row .text--italic, .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+          top: 0; } }
+    @media (min-width: 1024px) {
+      .vu-QA .c-faq-slider .c-section-title.heading--row .text--bold {
+        font-size: 3.2rem; } }
+    @media (max-width: 767px) {
+      .vu-QA .c-faq-slider .c-section-title.heading--row .text--regular {
+        font-size: 4.5rem; } }
+    @media (min-width: 768px) {
+      .vu-QA .c-faq-slider .c-section-title.heading--row .text--regular {
+        font-size: 2rem; } }
+    @media (min-width: 1024px) {
+      .vu-QA .c-faq-slider .c-section-title.heading--row .text--regular {
+        font-size: 3rem; } }
+    @media (max-width: 767px) {
+      .vu-QA .c-faq-slider .c-section-title.heading--row .text--regular {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 768px) {
+      .vu-QA .c-faq-slider .c-section-title.heading--row .text--regular {
+        letter-spacing: 0.05em; } }
+    @media (min-width: 1024px) {
+      .vu-QA .c-faq-slider .c-section-title.heading--row .text--regular {
+        letter-spacing: 0.05em; } }
 
 .vu-QA .teaser__img {
-  margin-bottom: 7vw; }
+  margin-bottom: 7.5vw; }
   @media (min-width: 768px) {
     .vu-QA .teaser__img {
-      margin-bottom: 2.4vw; } }
+      margin-bottom: 2.5vw; } }
   @media (min-width: 1024px) {
     .vu-QA .teaser__img {
-      margin-bottom: 2vw; } }
+      margin-bottom: 1.8vw; } }
 
 @media (min-width: 1024px) {
   .vu-QA .teaser__title {
-    font-size: 1.2rem;
-    letter-spacing: 0.01vw;
-    line-height: 1.6vw;
-    margin-bottom: 1.4vw; } }
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-bottom: 1.25vw; } }
 
 .slider__navigation {
   z-index: 30;
@@ -3542,13 +3587,14 @@ a img {
         line-height: 2.8rem; } }
 
 .comm-latest-news {
-  position: relative; }
+  position: relative;
+  margin-bottom: 19.8vw; }
   @media (min-width: 768px) {
     .comm-latest-news {
-      margin-bottom: 6.7vw; } }
+      margin-bottom: 8.1vw; } }
   @media (min-width: 1024px) {
     .comm-latest-news {
-      margin-bottom: 7vw; } }
+      margin-bottom: 5.9vw; } }
   @media (min-width: 768px) {
     .comm-latest-news::before {
       display: block;
