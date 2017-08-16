@@ -1,10 +1,6 @@
 .article-hero {
   @include article-hero(100%, auto);
 
-  @include breakpoint(desktopOnly) {
-    height: 41vw;
-  }
-
   & img {
     width: 100%;
   }
@@ -13,19 +9,22 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    padding: 2vw 2vw 0.6vw 2vw;
+    padding: 2vw 2vw 0.75vw 2.6vw;
     background: #ffffff;
-    font-size: 0.77rem;
-    letter-spacing: 0.1vw;
+    @include fontSize(20,11,11);
+    @include letterSpacing(50,50,50);
+    font-weight: 400;
 
     @include breakpoint(tabletOnly) {
-      padding: 2vw 2vw 1.2vw 3vw;
-      font-size: 0.82rem;
+      padding: 2.2vw 3.4vw 1.2vw 3vw;
     }
 
     @include breakpoint(desktopOnly) {
-      padding: 1vw 2vw 0.8vw 2vw;
-      font-size: 0.55rem;
+      padding: 1vw 1.6vw 0.8vw 2vw;
     }
   }
+}
+
+.c-breadcrumbs.breadcrumbs--article {
+  margin: 3.1% 0 0 15.2%;
 }

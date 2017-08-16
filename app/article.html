@@ -152,7 +152,15 @@
 
       <section class="article-hero"> <!-- ARTICLE PAGE HEADER -->
 
-        <img src="assets/image/article_page/article_header_1.png" alt="">
+        <!-- <img src="assets/image/article_page/article_header_1.png" alt=""> -->
+        <picture>
+          <!-- Desk img -->
+          <source srcset="https://via.placeholder.com/1700x700" media="(min-width: 1025px)">
+          <!-- Tab img -->
+          <source srcset="https://via.placeholder.com/768x396" media="(min-width: 768px)">
+          <!-- Mob img -->
+          <img srcset="https://via.placeholder.com/640x330" alt="">
+        </picture>
 
         <div class="article-hero__footnote">
           Lorem ipsum dolor sit amet, consectetur
