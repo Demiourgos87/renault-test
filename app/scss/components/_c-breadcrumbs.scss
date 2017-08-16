@@ -5,8 +5,10 @@
 
   display: block;
   width: 80%;
-  margin: 3vw 0 0 15.2%;
-  font-size: 0.69rem;
+  margin: 3% 0 0 15.2%;
+  font-size: calcRem(14);
+  letter-spacing: calcLS(50);
+  font-weight: 400;
   color: $black;
 
   & a {

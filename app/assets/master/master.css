@@ -497,8 +497,10 @@ a img {
 .c-breadcrumbs {
   display: block;
   width: 80%;
-  margin: 3vw 0 0 15.2%;
-  font-size: 0.69rem;
+  margin: 3% 0 0 15.2%;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  font-weight: 400;
   color: #000000; }
   @media (max-width: 1023px) {
     .c-breadcrumbs {
@@ -904,33 +906,41 @@ a img {
 
 .c-pagination {
   width: 100%;
-  margin-bottom: 5vw;
-  margin-top: 8vw;
-  text-align: center; }
+  margin-top: 9.8vw; }
   @media (min-width: 768px) {
     .c-pagination {
-      margin-bottom: 5vw;
-      margin-top: 5vw; } }
+      margin-top: 5.3vw; } }
   @media (min-width: 1024px) {
     .c-pagination {
-      margin-top: 2.2vw;
-      margin-bottom: 0; } }
+      margin-top: 0.5vw; } }
 
 .c-pagination__row {
-  margin-bottom: 10vw;
-  text-align: center; }
+  margin-bottom: 8.4vw; }
   @media (min-width: 768px) {
     .c-pagination__row {
-      margin-bottom: 0; } }
+      margin-bottom: 0.3vw;
+      text-align: center; } }
+  @media (min-width: 1024px) {
+    .c-pagination__row {
+      margin-bottom: 0.15vw; } }
+  .c-pagination__row:last-child {
+    text-align: center; }
+    .c-pagination__row:last-child a {
+      margin-right: 7vw; }
+      @media (min-width: 768px) {
+        .c-pagination__row:last-child a {
+          margin-right: 0; } }
 
 .c-pagination__nums, .c-pagination__controls {
   display: inline-block; }
 
 .c-pagination__nums {
-  width: 60%; }
+  width: 62.5%; }
   @media (min-width: 768px) {
     .c-pagination__nums {
       width: auto; } }
+  .c-pagination__nums a:first-child {
+    margin-left: 1vw; }
 
 .c-pagination__controls {
   width: 36%; }
@@ -945,31 +955,48 @@ a img {
   text-align: center;
   cursor: pointer;
   border-radius: 100%;
-  font-size: 1.2rem;
   display: inline-block;
   text-decoration: none;
+  font-weight: 400;
   color: #000000;
   vertical-align: middle;
-  margin-right: 5vw;
+  margin-right: 4.3vw;
   transition: background 0.15s linear; }
+  @media (max-width: 767px) {
+    .c-pagination a {
+      font-size: 3.22rem; } }
   @media (min-width: 768px) {
     .c-pagination a {
-      width: 6.5vw;
-      height: 6.5vw;
-      line-height: 6.5vw;
+      font-size: 1.938rem; } }
+  @media (min-width: 1024px) {
+    .c-pagination a {
+      font-size: 2rem; } }
+  @media (max-width: 767px) {
+    .c-pagination a {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 768px) {
+    .c-pagination a {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 1024px) {
+    .c-pagination a {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 768px) {
+    .c-pagination a {
+      width: 6.2vw;
+      height: 6.2vw;
+      line-height: 6.2vw;
       text-align: center;
       cursor: pointer;
       border-radius: 100%;
       margin-right: -1.4vw; } }
   @media (min-width: 1024px) {
     .c-pagination a {
-      width: 3vw;
-      height: 3vw;
-      line-height: 3vw;
+      width: 2.8vw;
+      height: 2.8vw;
+      line-height: 2.8vw;
       text-align: center;
       cursor: pointer;
       border-radius: 100%;
-      font-size: 0.8rem;
       margin-right: -0.4vw; } }
 
 @media (min-width: 768px) {
@@ -983,7 +1010,10 @@ a img {
   background: #f6f6f6; }
 
 .c-pagination a.c-pagination__forward, .c-pagination a.c-pagination__last {
-  font-size: 0.6rem; }
+  font-size: 1.5rem; }
+  @media (min-width: 768px) {
+    .c-pagination a.c-pagination__forward, .c-pagination a.c-pagination__last {
+      font-size: 1rem; } }
 
 .c-section-title .text--bold {
   font-weight: 900; }
@@ -3385,7 +3415,7 @@ a img {
       margin-bottom: 8.8vw; } }
   @media (min-width: 1024px) {
     .comm-hero {
-      margin-bottom: 3.5vw; } }
+      margin-bottom: 3vw; } }
   .comm-hero__image {
     position: relative;
     width: 100%; }
