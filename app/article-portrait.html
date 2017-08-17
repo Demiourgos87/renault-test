@@ -154,7 +154,15 @@
 
         <section class="block-article-portrait-hero"> <!-- ARTICLE PAGE HEADER -->
 
-          <img src="assets/image/article_page/article_header_1.png" alt="">
+          <!-- <img src="assets/image/article_page/article_header_1.png" alt=""> -->
+          <picture>
+            <!-- Desk img -->
+            <source srcset="https://via.placeholder.com/692x955" media="(min-width: 1025px)">
+            <!-- Tab img -->
+            <source srcset="https://via.placeholder.com/566x782" media="(min-width: 768px)">
+            <!-- Mob img -->
+            <img srcset="https://via.placeholder.com/640x890" alt="">
+          </picture>
 
           <div class="article-hero__footnote">
             Lorem ipsum dolor sit amet, consectetur
@@ -802,7 +810,7 @@
                     </article>
 
                   </section> <!-- / DIAPORAMA -->
-                  
+
                   <div class="article-body__tags">
 
                     <span>Tags : </span>

@@ -1,8 +1,8 @@
 .article-portrait {
   &-body__wrap {
     @include breakpoint(phoneOnly) {
-      width: 87.8%;
-      margin: 8vw auto 0 auto;
+      width: 87.5%;
+      margin: 8.5vw auto 0 auto;
     }
 
     @include breakpoint(tabletOnly) {
@@ -28,6 +28,7 @@
     }
 
     & .c-social-share {
+      margin-bottom: 8vw;
       @include breakpoint(desktopOnly) {
         position: static;
         float: none;
@@ -59,15 +60,16 @@
     }
 
     & .article-body__main-title {
+      margin-bottom: 7vw;
       @include breakpoint(desktopOnly) {
         width: 100%;
-        font-size: 2.5rem;
         margin-left: 0;
         margin-bottom: 4vw;
       }
     }
 
     & .article-body__category {
+      margin-top: 0;
       @include breakpoint(desktopOnly) {
         margin-left: 0;
       }
@@ -87,18 +89,18 @@
     }
 
     & p.article-paragraph__heading {
-      font-size: 1.27rem;
+      font-size: 3.4rem;
       font-weight: 700;
       text-transform: uppercase;
-      margin: 9vw 0 4vw 0;
+      margin: 7vw 0 3.7vw 0;
 
       @include breakpoint(tabletOnly) {
-        font-size: 1.57rem;
+        font-size: 2.2rem;
         margin: 5vw 0 3vw 0;
       }
 
       @include breakpoint(desktopOnly) {
-        font-size: 1.099rem;
+        font-size: 1.8rem;
         margin: 1.6vw 0;
       }
     }
@@ -322,34 +324,38 @@
   &__list {
     list-style-type: none;
     padding: 0 0 0 1rem;
-    font-size: 1.05rem;
-    line-height: 1.566rem;
     margin-bottom: 13vw;
+    margin-top: 9.5vw;
+
+    @include fontSize(28,16,16);
+    @include lineHeight(42,22,22);
+    @include letterSpacing(50,50,50);
 
     @include breakpoint(tabletOnly) {
-      font-size: 1rem;
-      line-height: 1.45rem;
-      margin-bottom: 3vw;
+      margin-top: 4.2vw;
+      margin-bottom: 6vw;
     }
 
     @include breakpoint(desktopOnly) {
-      font-size: 0.785rem;
-      line-height: 1.08rem;
+      margin-top: 2.3vw;
       margin-bottom: 3vw;
-      letter-spacing: 0.05em;
+      padding: 0;
     }
 
     & li {
-      margin-left: 0.6rem;
-      text-indent: -1.83rem;
+      margin-left: 3.6rem;
+      text-indent: -4.83rem;
 
       @include breakpoint(tabletAndDesktop) {
+        margin-left: 1.4rem;
+        text-indent: -2.4rem;
         margin-bottom: 0.4vw;
       }
 
       @include breakpoint(desktopOnly) {
+        margin-left: 2rem;
         margin-bottom: 0;
-        text-indent: -1.24rem;
+        text-indent: -2.7rem;
       }
 
       &::before {
@@ -357,19 +363,19 @@
         content: "";
         width: 14px;
         height: 14px;
-        margin: 0 1rem 0 0.3rem;
+        margin: 0 3rem 0 0.3rem;
         background: $yellow;
 
         @include breakpoint(tabletOnly) {
           width: 5px;
           height: 5px;
-          margin: 0 1.2rem 0 0.3rem;
+          margin: 0 1.5rem 0 0.3rem;
         }
 
         @include breakpoint(desktopOnly) {
           width: 4px;
           height: 4px;
-          margin: 0 0.7rem 0 0.3rem;
+          margin: 0 2.2rem 0 0;
         }
       }
     }
