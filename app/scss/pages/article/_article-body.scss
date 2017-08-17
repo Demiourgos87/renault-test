@@ -1,15 +1,15 @@
 .article-body {
   width: 100%;
-  margin-bottom: 5vw;
+  margin-bottom: 5.5vw;
 
   @include breakpoint(tabletOnly) {
     width: 87.192%;
-    margin: 0 auto 4.6vw auto;
+    margin: 0 auto 3.2vw auto;
   }
 
   @include breakpoint(desktopOnly) {
     width: 93.8%;
-    margin: 0 0 6.5vw 6.2%;
+    margin: 0 0 6.4vw 6.2%;
   }
 
   &__main-title {
@@ -134,17 +134,18 @@
 
   & .c-test-start {
     margin: 0 0 2vw 0;
+    width: 115%;
+    position: relative;
+    left: -7.5%;
 
     @include breakpoint(desktopOnly) {
+      position: static;
       float: left;
       width: 34.5%;
       margin-top: 2vw;
     }
 
     & .container--full {
-      width: 115%;
-      left: -7.5%;
-
       @include breakpoint(desktopOnly) {
         background-size: auto 100%;
         background-position: 20% 0%;
@@ -155,25 +156,11 @@
 
     &__body {
       @include breakpoint(desktopOnly) {
-        width: 73%;
-        padding: 9.3vw 0 7.6vw 0;
+        width: 70%;
+        padding: 9vw 0 7.3vw 0;
         margin: 0 0 0 19%;
       }
-
-      & .c-section-title.heading--row {
-        @include breakpoint(desktopOnly) {
-          letter-spacing: 0.05vw;
-        }
-      }
     }
-
-    // &__item {
-    //   & img {
-    //     @include breakpoint(desktopOnly) {
-    //       width: 100%;
-    //     }
-    //   }
-    // }
 
     &__images {
       @include breakpoint(desktopOnly) {
@@ -191,12 +178,25 @@
           }
         }
 
-        & p {
+        & img {
           @include breakpoint(desktopOnly) {
-            font-size: $fontVerySmall;
+            margin-bottom: 0.5vw;
           }
         }
 
+        & .heading {
+          @include breakpoint(desktopOnly) {
+            font-size: calcRem(12);
+            letter-spacing: calcLS(-25);
+          }
+        }
+
+      }
+    }
+
+    & .desc {
+      @include breakpoint(desktopOnly) {
+        margin-bottom: 1.5vw;
       }
     }
 
