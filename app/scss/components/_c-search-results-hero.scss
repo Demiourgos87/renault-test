@@ -1,88 +1,75 @@
 .c-search-results-hero {
   width: 100%;
   position: relative;
-  margin-bottom: 10vw;
+  margin-bottom: 10.6vw;
 
   @include breakpoint(tabletOnly) {
-    margin-bottom: 7vw;
+    margin-bottom: 7.3vw;
   }
 
   @include breakpoint(desktopOnly) {
-    margin-bottom: 5vw;
+    margin-bottom: 4.6vw;
   }
 
   &__heading {
-
-    font-size: 1.935rem;
-    line-height: 1.786rem;
-    letter-spacing: 0;
     color: #000000;
+    @include fontSize(52,32,32);
+    @include lineHeight(48,32,32);
+    @include letterSpacing(0,0,0);
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
-    margin: 12vw 0 9.2vw 0;
+    margin: 11.5vw 0 9.4vw 0;
 
     @include breakpoint(tabletOnly) {
-      font-size: 2.315rem;
-      line-height: 3.473rem;
-      margin: 7vw 0 4.8vw 0;
+      margin: 8vw 0 6vw 0;
     }
 
     @include breakpoint(desktopOnly) {
-      font-size: 1.57rem;
-      line-height: 2.353rem;
-      margin: 2.1vw 0 2.2vw 0;
+      margin: 3.6vw 0 2.5vw 0;
     }
-
   }
 
   &__input {
-
     width: 100%;
     position: relative;
 
     & input {
+      @include fontSize(42,18,32);
+      @include letterSpacing(0,0,0);
       width: calc(100% - 8vw - 4px);
       padding: 8vw 4vw;
       color: $darkGray;
-      font-size: 1.563rem;
       outline: none;
       border: 2px solid $yellow;
 
       @include breakpoint(tabletOnly) {
         width: calc(100% - 10vw - 4px);
         padding: 3vw 5vw;
-        font-size: 1.3021rem;
       }
 
       @include breakpoint(desktopOnly) {
-        font-size: 1.57rem;
-        padding: 3vw 5vw;
+        width: calc(100% - 9.6vw - 4px);
+        padding: 3.35vw 4.8vw;
       }
-
     }
 
     & a {
-
       color: $darkGray;
-      font-size: $fontBig;
       position: absolute;
-      top: 7vw;
+      @include fontSize(43,20,40);
+      top: 8vw;
       right: 5vw;
 
       @include breakpoint(tabletOnly) {
-        top: 3vw;
+        top: 3.4vw;
         right: 4vw;
       }
 
       @include breakpoint(desktopOnly) {
-        font-size: 2rem;
-        top: 3vw;
+        top: 3.4vw;
         right: 7vw;
       }
-
     }
-
   }
-
 }
