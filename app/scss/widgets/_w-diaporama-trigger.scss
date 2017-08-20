@@ -63,16 +63,17 @@
     background: $yellow;
     color: $black;
     top: -2vw;
-    font-size: 0.7rem;
+    font-size: 1.5rem;
 
     @include breakpoint(tabletOnly) {
       @include circled-icon(4.5vw);
+      font-size: 1.3rem;
       top: -1.8vw;
     }
 
     @include breakpoint(desktopOnly) {
       @include circled-icon(2vw);
-      font-size: 0.6rem;
+      font-size: 1.1rem;
       top: 12.2vw;
     }
   }
@@ -106,10 +107,10 @@
     margin-left: -14.5vw;
     padding: 3.1vw 7vw;
     top: -2vw;
-    font-size: 0.5961rem;
+    @include fontSize(16,16,16);
+    @include letterSpacing(100,100,100);
 
     @include breakpoint(tabletOnly) {
-      font-size: 1.16rem;
       margin-left: -12.5vw;
       top: -3.6vw;
       padding: 2.8vw 6vw;
@@ -117,12 +118,9 @@
     }
 
     @include breakpoint(desktopOnly) {
-      font-size: 0.785rem;
       margin-left: -5.5vw;
       padding: 1.2vw 2.6vw;
       top: -3.3vw;
-      background: $yellow;
-      color: $black;
     }
 
   }
@@ -174,7 +172,6 @@
     }
 
     & .diaporama-trigger__thumb:hover, .diaporama-trigger__thumb.slick-current {
-
       & img {
         filter: grayscale(0);
       }
@@ -182,8 +179,6 @@
       & .overlay {
         opacity: 1;
       }
-
     }
-
   }
 }

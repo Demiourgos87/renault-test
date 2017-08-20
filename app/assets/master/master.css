@@ -6579,7 +6579,7 @@ a img {
     background: #ffcc33;
     color: #000000;
     top: -2vw;
-    font-size: 0.7rem; }
+    font-size: 1.5rem; }
     @media (min-width: 768px) {
       .w-diaporama-trigger .diaporama-trigger__prev, .w-diaporama-trigger .diaporama-trigger__next {
         width: 4.5vw;
@@ -6588,6 +6588,7 @@ a img {
         text-align: center;
         cursor: pointer;
         border-radius: 100%;
+        font-size: 1.3rem;
         top: -1.8vw; } }
     @media (min-width: 1024px) {
       .w-diaporama-trigger .diaporama-trigger__prev, .w-diaporama-trigger .diaporama-trigger__next {
@@ -6597,7 +6598,7 @@ a img {
         text-align: center;
         cursor: pointer;
         border-radius: 100%;
-        font-size: 0.6rem;
+        font-size: 1.1rem;
         top: 12.2vw; } }
   .w-diaporama-trigger .diaporama-trigger__prev {
     left: 1vw; }
@@ -6619,22 +6620,35 @@ a img {
     left: 50%;
     margin-left: -14.5vw;
     padding: 3.1vw 7vw;
-    top: -2vw;
-    font-size: 0.5961rem; }
+    top: -2vw; }
+    @media (max-width: 767px) {
+      .w-diaporama-trigger .diaporama-trigger__navigation .btn {
+        font-size: 1.6rem; } }
     @media (min-width: 768px) {
       .w-diaporama-trigger .diaporama-trigger__navigation .btn {
-        font-size: 1.16rem;
+        font-size: 1.6rem; } }
+    @media (min-width: 1024px) {
+      .w-diaporama-trigger .diaporama-trigger__navigation .btn {
+        font-size: 1.6rem; } }
+    @media (max-width: 767px) {
+      .w-diaporama-trigger .diaporama-trigger__navigation .btn {
+        letter-spacing: 0.1em; } }
+    @media (min-width: 768px) {
+      .w-diaporama-trigger .diaporama-trigger__navigation .btn {
+        letter-spacing: 0.1em; } }
+    @media (min-width: 1024px) {
+      .w-diaporama-trigger .diaporama-trigger__navigation .btn {
+        letter-spacing: 0.1em; } }
+    @media (min-width: 768px) {
+      .w-diaporama-trigger .diaporama-trigger__navigation .btn {
         margin-left: -12.5vw;
         top: -3.6vw;
         padding: 2.8vw 6vw; } }
     @media (min-width: 1024px) {
       .w-diaporama-trigger .diaporama-trigger__navigation .btn {
-        font-size: 0.785rem;
         margin-left: -5.5vw;
         padding: 1.2vw 2.6vw;
-        top: -3.3vw;
-        background: #ffcc33;
-        color: #000000; } }
+        top: -3.3vw; } }
   .w-diaporama-trigger .diaporama-trigger__thumbs {
     width: 34%;
     height: 4vw;
@@ -6698,15 +6712,16 @@ html.diaporamaOpened, body.diaporamaOpened {
   position: fixed;
   top: 2.6vw;
   right: 3.6vw;
-  font-size: 1.6rem;
   cursor: pointer;
-  z-index: 999999999; }
+  z-index: 999999999;
+  font-size: 4.5rem; }
   @media (min-width: 768px) {
     .diaporama__close {
-      font-size: 3rem;
+      font-size: 4rem;
       right: 4.6vw; } }
   @media (min-width: 1024px) {
     .diaporama__close {
+      font-size: 6rem;
       top: 0.8vw;
       right: 1.5vw; } }
 
@@ -6748,23 +6763,17 @@ html.diaporamaOpened, body.diaporamaOpened {
   filter: grayscale(0); }
 
 .diaporama__image {
-  height: 20.5rem;
   position: relative;
   width: 100%;
   overflow: hidden; }
-  @media (min-width: 768px) {
-    .diaporama__image {
-      height: 41.3rem; } }
   @media (min-width: 1024px) {
     .diaporama__image {
-      width: 55.7%;
-      height: 62.4%;
+      width: 55.706%;
       top: 13%;
       left: 10.2%;
       z-index: 100; } }
   .diaporama__image img {
-    width: auto;
-    height: 100%; }
+    width: 100%; }
 
 .diaporama__body {
   width: 87%;
@@ -6790,41 +6799,83 @@ html.diaporamaOpened, body.diaporamaOpened {
     width: 100%; }
     @media (min-width: 1024px) {
       .diaporama__body--wrap {
-        width: 47%;
+        width: 46%;
         position: relative;
-        top: 13%;
+        top: 12%;
         left: 29.5%; } }
 
 .diaporama__heading {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 1.4881rem;
-  line-height: 1.563rem;
   margin-bottom: 4vw; }
+  @media (max-width: 767px) {
+    .diaporama__heading {
+      font-size: 4rem; } }
   @media (min-width: 768px) {
     .diaporama__heading {
-      font-size: 2.24rem;
-      line-height: 2.2rem;
-      margin-bottom: 4.4vw; } }
+      font-size: 3.2rem; } }
   @media (min-width: 1024px) {
     .diaporama__heading {
-      font-size: 1.15rem;
-      line-height: 1.4rem;
-      margin-bottom: 1.5vw; } }
+      font-size: 2.4rem; } }
+  @media (max-width: 767px) {
+    .diaporama__heading {
+      line-height: 4.2rem; } }
+  @media (min-width: 768px) {
+    .diaporama__heading {
+      line-height: 3.2rem; } }
+  @media (min-width: 1024px) {
+    .diaporama__heading {
+      line-height: 2.8rem; } }
+  @media (max-width: 767px) {
+    .diaporama__heading {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 768px) {
+    .diaporama__heading {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 1024px) {
+    .diaporama__heading {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 768px) {
+    .diaporama__heading {
+      margin-bottom: 4vw; } }
+  @media (min-width: 1024px) {
+    .diaporama__heading {
+      margin-bottom: 1.8vw; } }
 
 .diaporama__text {
-  font-size: 1.042rem;
-  line-height: 1.563rem;
   margin-bottom: 8vw; }
+  @media (max-width: 767px) {
+    .diaporama__text {
+      font-size: 2.8rem; } }
   @media (min-width: 768px) {
     .diaporama__text {
-      font-size: 1.25rem;
-      line-height: 1.76rem;
+      font-size: 1.6rem; } }
+  @media (min-width: 1024px) {
+    .diaporama__text {
+      font-size: 1.6rem; } }
+  @media (max-width: 767px) {
+    .diaporama__text {
+      line-height: 4rem; } }
+  @media (min-width: 768px) {
+    .diaporama__text {
+      line-height: 2.4rem; } }
+  @media (min-width: 1024px) {
+    .diaporama__text {
+      line-height: 2.4rem; } }
+  @media (max-width: 767px) {
+    .diaporama__text {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 768px) {
+    .diaporama__text {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 1024px) {
+    .diaporama__text {
+      letter-spacing: 0.05em; } }
+  @media (min-width: 768px) {
+    .diaporama__text {
       margin-bottom: 6vw; } }
   @media (min-width: 1024px) {
     .diaporama__text {
-      font-size: 0.85rem;
-      line-height: 1.2rem;
       margin-bottom: 2vw; } }
 
 .diaporama__social i {
@@ -6870,7 +6921,7 @@ html.diaporamaOpened, body.diaporamaOpened {
   @media (min-width: 1024px) {
     .diaporama__arrows {
       width: 8.5%;
-      top: 79.5%;
+      top: 80vh;
       left: 54.5%; } }
 
 .diaporama__prev, .diaporama__next {
@@ -6882,7 +6933,7 @@ html.diaporamaOpened, body.diaporamaOpened {
   border-radius: 100%;
   color: #ffcc33;
   background: #000000;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   z-index: 20;
   position: relative; }
   @media (min-width: 768px) {
@@ -6892,7 +6943,8 @@ html.diaporamaOpened, body.diaporamaOpened {
       line-height: 6vw;
       text-align: center;
       cursor: pointer;
-      border-radius: 100%; } }
+      border-radius: 100%;
+      font-size: 1.2rem; } }
   @media (min-width: 1024px) {
     .diaporama__prev, .diaporama__next {
       width: 2.65vw;
@@ -6901,7 +6953,7 @@ html.diaporamaOpened, body.diaporamaOpened {
       text-align: center;
       cursor: pointer;
       border-radius: 100%;
-      font-size: 0.6rem; } }
+      font-size: 1.4rem; } }
 
 .diaporama__prev {
   float: left;
@@ -6924,17 +6976,23 @@ html.diaporamaOpened, body.diaporamaOpened {
       right: 0; } }
 
 .diaporama__counter {
-  font-size: 1.191rem;
   font-weight: 900;
   color: #ffffff;
   margin-bottom: 4.2vw; }
+  @media (max-width: 767px) {
+    .diaporama__counter {
+      font-size: 3.2rem; } }
   @media (min-width: 768px) {
     .diaporama__counter {
-      font-size: 1.6rem;
+      font-size: 2.4rem; } }
+  @media (min-width: 1024px) {
+    .diaporama__counter {
+      font-size: 2.4rem; } }
+  @media (min-width: 768px) {
+    .diaporama__counter {
       margin-bottom: 4vw; } }
   @media (min-width: 1024px) {
     .diaporama__counter {
-      font-size: 1.2rem;
       margin-bottom: 2vw; } }
   .diaporama__counter .diaporama__separator {
     margin: 0 -1.3vw; }
@@ -6951,20 +7009,18 @@ html.diaporamaOpened, body.diaporamaOpened {
 .diaporama__thumbs {
   width: 41.7%;
   position: absolute;
-  top: 77.5%;
+  top: 78vh;
   left: 10.2%;
   overflow: hidden;
   z-index: 30; }
   @media (max-width: 1023px) {
     .diaporama__thumbs {
       display: none; } }
-  .diaporama__thumbs.slick-slider {
-    height: 5vw; }
   .diaporama__thumbs .diaporama__thumb {
     position: relative;
     display: inline-block;
     height: 100%;
-    margin-right: 0.5%;
+    margin-right: 0.79%;
     cursor: pointer;
     outline: none; }
     .diaporama__thumbs .diaporama__thumb img {
