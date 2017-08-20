@@ -17,24 +17,20 @@
   }
 
   &__heading {
-    font-size: 1.861rem;
     letter-spacing: 0.05em;
     color: $yellow;
     font-weight: 700;
     text-align: center;
     margin-top: 12vw;
     margin-bottom: 1vw;
+    @include fontSize(50,43.91,44);
 
     @include breakpoint(tabletOnly) {
-      font-size: 3.177rem;
       margin-top: 10vw;
     }
 
     @include breakpoint(desktopOnly) {
-      font-size: 2.16rem;
-      letter-spacing: 0.05em;
       width: 37%;
-      font-weight: 700;
       position: absolute;
       top: 0;
       right: 0;
@@ -118,41 +114,36 @@
       }
 
       & i {
-        font-size: $fontNormal;
+        font-size: 4rem;
 
         @include breakpoint(tabletOnly) {
-          font-size: 1.7rem;
-          margin-top: 2.5vw;
+          font-size: 2.2rem;
+          margin-top: 0;
         }
 
         @include breakpoint(desktopOnly) {
-          font-size: 0.8rem;
+          font-size: 1.4rem;
           margin-top: 0;
           position: relative;
-          top: -0.2vw;
+          top: -0.1vw;
         }
       }
     }
   }
 
   &__text {
-    font-size: 1.042rem;
-    line-height: 6.57vw;
     letter-spacing: 0.05em;
     width: 88%;
     color: #7e7e7e;
     margin: 0 auto;
+    @include fontSize(28,16,16);
+    @include lineHeight(42,22,22);
 
     @include breakpoint(tabletOnly) {
-      font-size: 1.16rem;
-      line-height: 2.87vw;
       color: #7e7e7e;
     }
 
     @include breakpoint(desktopOnly) {
-      line-height: 1.295vw;
-      font-size: 0.785rem;
-      letter-spacing: 0.05em;
       width: 36.5%;
       position: absolute;
       color: #7e7e7e;
@@ -180,12 +171,13 @@
     text-align: center;
     padding: 4vw 4vw;
     margin-bottom: 4vw;
+    @include fontSize(21.12,14,14);
+    @include letterSpacing(50,50,50);
 
     @include breakpoint(tabletOnly) {
       width: 38%;
       display: inline-block;
       margin-left: 2.4vw;
-      font-size: 1.03rem;
       padding: 2.4vw 1vw;
     }
 
@@ -194,7 +186,6 @@
       width: 40%;
       display: inline-block;
       text-align: center;
-      font-size: 0.691rem;
       margin-left: 0;
       margin-bottom: 0;
 
@@ -215,32 +206,37 @@
   }
 
   @include breakpoint(desktopOnly) {
-    margin-top: 2vw;
+    width: 79.741%;
+    margin: 0 auto;
   }
 
   @include breakpoint(desktopLarge) {
     margin-top: 0;
   }
 
+  & .c-more-read__wrap {
+    @include breakpoint(desktopOnly) {
+      width: 86%;
+      height: 10vw;
+      margin-left: 9%;
+    }
+  }
+
   & .c-section-title.heading--row {
     margin: 0 0 5.4vw 0;
 
-    & .text--italic {
-      font-size: 1.861rem;
-      letter-spacing: 0;
+    @include breakpoint(desktopOnly) {
+      position: relative;
+      top: -2vw;
+      left: -3vw;
+    }
 
-      @include breakpoint(tabletOnly) {
-        font-size: 1.303rem;
-      }
+    & .text--italic {
+      letter-spacing: 0;
     }
 
     & .text--bold {
-      font-size: 1.675rem;
       letter-spacing: 0;
-
-      @include breakpoint(tabletOnly) {
-        font-size: 1.16rem;
-      }
     }
   }
 
