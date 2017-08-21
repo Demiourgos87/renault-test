@@ -6531,27 +6531,34 @@ a img {
   height: auto;
   position: relative;
   overflow: hidden; }
-  @media (min-width: 1024px) {
-    .w-diaporama-trigger {
-      height: 41vw; } }
   .w-diaporama-trigger .article-hero__footnote {
     z-index: 30; }
-  .w-diaporama-trigger__slide {
+  .w-diaporama-trigger .diaporama-trigger__slide {
     position: relative; }
     @media (max-width: 1023px) {
-      .w-diaporama-trigger__slide__overlay {
+      .w-diaporama-trigger .diaporama-trigger__slide__overlay {
         display: none; } }
     @media (min-width: 1024px) {
-      .w-diaporama-trigger__slide__overlay {
+      .w-diaporama-trigger .diaporama-trigger__slide__overlay {
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        background: rgba(0, 0, 0, 0.3);
-        z-index: 10; } }
-  .w-diaporama-trigger .slick-slider, .w-diaporama-trigger .slick-list, .w-diaporama-trigger .slick-track {
-    height: 100%; }
+        background: #000000;
+        z-index: 30;
+        opacity: 0;
+        transition: opacity .2s linear; } }
+  .w-diaporama-trigger:hover .diaporama-trigger__navigation > .btn {
+    background: #ffcc33; }
+  .w-diaporama-trigger:hover .diaporama-trigger__slide__overlay {
+    opacity: 0.3; }
+  .w-diaporama-trigger:hover .diaporama-trigger__thumb.slick-current img {
+    filter: grayscale(0); }
+  .w-diaporama-trigger:hover .diaporama-trigger__thumb.slick-current .overlay {
+    opacity: 1; }
+  .w-diaporama-trigger:hover .diaporama-trigger__thumb img {
+    filter: grayscale(100%); }
   .w-diaporama-trigger .diaporama-trigger__slide img {
     width: 100%;
     z-index: 20; }
@@ -6599,7 +6606,7 @@ a img {
         cursor: pointer;
         border-radius: 100%;
         font-size: 1.1rem;
-        top: 12.2vw; } }
+        top: 12vw; } }
   .w-diaporama-trigger .diaporama-trigger__prev {
     left: 1vw; }
     @media (min-width: 768px) {
@@ -6649,32 +6656,27 @@ a img {
         margin-left: -5.5vw;
         padding: 1.2vw 2.6vw;
         top: -3.3vw; } }
+    @media (min-width: 1024px) {
+      .w-diaporama-trigger .diaporama-trigger__navigation .btn:hover {
+        color: #000000; } }
   .w-diaporama-trigger .diaporama-trigger__thumbs {
     width: 34%;
-    height: 4vw;
     position: absolute;
-    bottom: 3.3vw;
+    bottom: 3.7vw;
     left: 52%;
     margin-left: -17%;
-    overflow: hidden;
     z-index: 1000; }
     @media (max-width: 1023px) {
       .w-diaporama-trigger .diaporama-trigger__thumbs {
         display: none; } }
-    .w-diaporama-trigger .diaporama-trigger__thumbs.slick-slider {
-      height: 5vw; }
     .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb {
       position: relative;
       display: inline-block;
       width: 18%;
       height: 100%;
-      margin-right: 2%;
+      margin-right: 2.75%;
       cursor: pointer;
       outline: none; }
-      .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb img {
-        width: 100%;
-        height: 100%;
-        filter: grayscale(100%); }
       .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb .overlay {
         opacity: 0;
         position: absolute;
@@ -6684,9 +6686,11 @@ a img {
         left: 0;
         box-shadow: inset 0 0 0 5px #ffcc33;
         transition: opacity .1s linear; }
-    .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb:hover img, .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb.slick-current img {
+      .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb img {
+        width: 100%; }
+    .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb:hover img {
       filter: grayscale(0); }
-    .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb:hover .overlay, .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb.slick-current .overlay {
+    .w-diaporama-trigger .diaporama-trigger__thumbs .diaporama-trigger__thumb:hover .overlay {
       opacity: 1; }
 
 .w-diaporama {
@@ -6801,7 +6805,7 @@ html.diaporamaOpened, body.diaporamaOpened {
       .diaporama__body--wrap {
         width: 46%;
         position: relative;
-        top: 12%;
+        top: 13%;
         left: 29.5%; } }
 
 .diaporama__heading {

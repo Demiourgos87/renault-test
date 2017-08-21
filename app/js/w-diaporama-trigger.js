@@ -18,6 +18,7 @@
   $openDiaporama.on('click', function(e) {
     e.stopPropagation();
     $diaporama.slideDown(200);
+    $diaporama.addClass('opened');
     $diaporamaSlider.slick('setPosition');
     $('.w-diaporama .diaporama__thumbs').slick('setPosition');
     $('body, html').addClass('diaporamaOpened');
