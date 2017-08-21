@@ -96,16 +96,28 @@
   margin-top: 0;
 }
 
-.teaser--s, .teaser--m, .teaser--l {
-  margin-right: 1%;
-}
-
 .teaser--s {
   width: 31.33332%;
 }
 
 .teaser--m {
-  width: 49%;
+  width: 48.572%;
+  margin-right: 2.856%;
+
+  @include breakpoint(tabletOnly) {
+    width: 48.43%;
+    margin-right: 3.14%;
+  }
+
+  @include breakpoint(desktopOnly) {
+    width: 48.266%;
+    margin-right: 3.468%;
+  }
+
+  &:last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .teaser--l {

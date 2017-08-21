@@ -24,16 +24,17 @@ html.diaporamaOpened, body.diaporamaOpened {
   position: fixed;
   top: 2.6vw;
   right: 3.6vw;
-  font-size: $fontBig;
   cursor: pointer;
   z-index: 999999999;
+  font-size: calcRem(45);
 
   @include breakpoint(tabletOnly) {
-    font-size: 3rem;
+    font-size: calcRem(40);
     right: 4.6vw;
   }
 
   @include breakpoint(desktopOnly) {
+    font-size: calcRem(60);
     top: 0.8vw;
     right: 1.5vw;
   }
@@ -81,26 +82,20 @@ html.diaporamaOpened, body.diaporamaOpened {
 }
 
 .diaporama__image {
-  height: 20.5rem;
   position: relative;
   width: 100%;
   overflow: hidden;
 
-  @include breakpoint(tabletOnly) {
-    height: 41.3rem;
-  }
-
   @include breakpoint(desktopOnly) {
-    width: 55.7%;
-    height: 62.4%;
+    width: 55.706%;
+    // width: 101vh;
     top: 13%;
     left: 10.2%;
     z-index: 100;
   }
 
   & img {
-    width: auto;
-    height: 100%;
+    width: 100%;
   }
 }
 
@@ -131,7 +126,7 @@ html.diaporamaOpened, body.diaporamaOpened {
     width: 100%;
 
     @include breakpoint(desktopOnly) {
-      width: 47%;
+      width: 46%;
       position: relative;
       top: 13%;
       left: 29.5%;
@@ -142,37 +137,31 @@ html.diaporamaOpened, body.diaporamaOpened {
 .diaporama__heading {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 1.4881rem;
-  line-height: 1.563rem;
   margin-bottom: 4vw;
+  @include fontSize(40,32,24);
+  @include lineHeight(42,32,28);
+  @include letterSpacing(50,50,50);
 
   @include breakpoint(tabletOnly) {
-    font-size: 2.24rem;
-    line-height: 2.2rem;
-    margin-bottom: 4.4vw;
+    margin-bottom: 4vw;
   }
 
   @include breakpoint(desktopOnly) {
-    font-size: 1.15rem;
-    line-height: 1.4rem;
-    margin-bottom: 1.5vw;
+    margin-bottom: 1.8vw;
   }
 }
 
 .diaporama__text {
-  font-size: 1.042rem;
-  line-height: 1.563rem;
   margin-bottom: 8vw;
+  @include fontSize(28,16,16);
+  @include lineHeight(40,24,24);
+  @include letterSpacing(50,50,50);
 
   @include breakpoint(tabletOnly) {
-    font-size: 1.25rem;
-    line-height: 1.76rem;
     margin-bottom: 6vw;
   }
 
   @include breakpoint(desktopOnly) {
-    font-size: 0.85rem;
-    line-height: 1.2rem;
     margin-bottom: 2vw;
   }
 }
@@ -209,7 +198,8 @@ html.diaporamaOpened, body.diaporamaOpened {
 
   @include breakpoint(desktopOnly) {
     width: 8.5%;
-    top: 79.5%;
+    // top: 79.5%;
+    top: 80vh;
     left: 54.5%;
   }
 }
@@ -218,17 +208,18 @@ html.diaporamaOpened, body.diaporamaOpened {
   @include circled-icon(9vw);
   color: $yellow;
   background: $black;
-  font-size: $fontSmall;
+  font-size: calcRem(14);
   z-index: 20;
   position: relative;
 
   @include breakpoint(tabletOnly) {
     @include circled-icon(6vw);
+    font-size: calcRem(12);
   }
 
   @include breakpoint(desktopOnly) {
     @include circled-icon(2.65vw);
-    font-size: 0.6rem;
+    font-size: calcRem(14);
   }
 }
 
@@ -259,18 +250,16 @@ html.diaporamaOpened, body.diaporamaOpened {
 }
 
 .diaporama__counter {
-  font-size: 1.191rem;
   font-weight: 900;
   color: $white;
   margin-bottom: 4.2vw;
+  @include fontSize(32,24,24);
 
   @include breakpoint(tabletOnly) {
-    font-size: 1.6rem;
     margin-bottom: 4vw;
   }
 
   @include breakpoint(desktopOnly) {
-    font-size: 1.2rem;
     margin-bottom: 2vw;
   }
 
@@ -298,21 +287,21 @@ html.diaporamaOpened, body.diaporamaOpened {
 
   width: 41.7%;
   position: absolute;
-  top: 77.5%;
+  // top: 77.5%;
+  top: 78vh;
   left: 10.2%;
   overflow: hidden;
   z-index: 30;
 
-  &.slick-slider {
-    height: 5vw;
-  }
+  // &.slick-slider {
+  //   height: 5vw;
+  // }
 
   & .diaporama__thumb {
-
     position: relative;
     display: inline-block;
     height: 100%;
-    margin-right: 0.5%;
+    margin-right: 0.79%;
     cursor: pointer;
     outline: none;
 

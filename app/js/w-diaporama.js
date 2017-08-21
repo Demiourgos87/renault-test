@@ -65,22 +65,9 @@
 
   if (windowWidth >= 1024) {
 
-    $.each($diaporamaSlides, function() {
-      $(this).width(windowWidth);
-    });
-
-    $.each($diaporamaSlides, function() {
-      var $image = $(this).find('.diaporama__image img');
-          thumb = document.createElement('div'),
-          overlay = document.createElement('div');
-
-      $(overlay).addClass('overlay');
-      $(thumb).addClass('diaporama__thumb');
-
-      $image.clone().appendTo(thumb);
-      $(overlay).appendTo(thumb);
-      $diaporamaThumbs.append(thumb);
-    });
+    // $.each($diaporamaSlides, function() {
+    //   $(this).width(windowWidth);
+    // });
 
     $('.w-diaporama .diaporama--wrap').slick({
       slidesToShow: 1,
@@ -91,10 +78,6 @@
       draggable: false,
       dots: false,
       pauseOnHover: true,
-      // customPaging: function(slider, i) {
-      //   var thumb = $(slider.$slides[i]).data('thumb');
-      //   return '<img src="' + thumb + '"><div class="shadow"></div>';
-      // },
       arrows: false,
       asNavFor: '.w-diaporama .diaporama__thumbs'
     });

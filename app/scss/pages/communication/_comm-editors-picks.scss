@@ -1,40 +1,54 @@
 .comm-editors-picks {
-  @include breakpoint(phoneOnly) {
-    padding-top: 2vw;
+  margin-bottom: 9.5vw;
+
+  @include breakpoint(tabletOnly) {
+    margin-bottom: 8.5vw;
+  }
+
+  @include breakpoint(desktopOnly) {
+    margin-bottom: 9.8vw;
   }
 
   & .c-section-title.heading--row {
     text-align: left;
     width: 100%;
-    margin: 2.3vw 0 7vw 0;
-    line-height: 7.2vw;
+    @include lineHeight(40,14,28);
+    margin-bottom: 6vw;
 
     @include breakpoint(tabletOnly) {
       width: 50%;
-      margin: 0 0 2vw 44.5%;
-      line-height: 2.2vw;
+      margin: 0 0 2% 44.5%;
     }
 
     @include breakpoint(desktopOnly) {
-      margin: 0 0 3vw 50.7%;
-      line-height: 1.9vw;
-      font-size: 1.6rem;
+      width: 48%;
+      margin: 0 0 3.75% 50.9%;
+    }
+
+    & .text--bold {
+      @include letterSpacing(0,0,0);
     }
 
     & .text--italic {
       position: relative;
-      left: 1.8vw;
-      top: -1.5vw;
+      left: 0.5vw;
+      top: -1.3vw;
+      @include fontSize(40,20,30);
 
       @include breakpoint(tabletOnly) {
-        left: 0.8vw;
-        top: -0.5vw;
+        left: 0.3vw;
+        top: -0.2vw;
       }
 
       @include breakpoint(desktopOnly) {
         left: 0.2vw;
         top: -0.4vw;
       }
+    }
+
+    & .text--regular {
+      @include fontSize(45,20,30);
+      @include letterSpacing(0,50,50);
     }
   }
 
@@ -44,33 +58,38 @@
     }
   }
 
+  & .row--mob {
+    margin-bottom: 0.5vw;
+  }
+
   & .row--mob.row--raised {
     @include breakpoint(tabletOnly) {
-      margin-top: -9vw;
-      width: 43%;
-      margin-right: 0.5%;
+      margin-top: -10.4%;
+      width: 42.593%;
+      margin-right: 1.851%;
     }
 
     @include breakpoint(desktopOnly) {
-      width: 42.8%;
-      margin-right: 0.7%;
-      margin-left: 6.3%;
-      margin-top: -9.5vw;
+      width: 42.784%;
+      margin-right: 1.941%;
+      margin-left: 6.2%;
+      margin-top: -12.1%;
     }
   }
 
   & .row--mob:last-child {
     @include breakpoint(tabletOnly) {
-      width: 55.5%;
+      width: 55.556%;
+      margin-left: 0;
     }
 
     @include breakpoint(desktopOnly) {
-      width: 49.1%;
+      width: 49.075%;
     }
   }
 
   & .teaser {
-    margin-bottom: 8vw;
+    margin-bottom: 7.8vw;
 
     @include breakpoint(tabletOnly) {
       margin-bottom: 6.4vw;
@@ -83,31 +102,72 @@
 
   & .teaser.teaser__img--right {
     margin-bottom: 6vw;
+
+    @include breakpoint(desktopOnly) {
+      margin-bottom: 2vw;
+    }
   }
 
   & .teaser--s {
-    width: 36%;
+    width: 35.715%;
+    margin-right: 2.856%;
 
     @include breakpoint(tabletOnly) {
-      width: 43%;
+      width: 42.5%;
+      margin-right: 3.33%;
     }
 
     @include breakpoint(desktopOnly) {
-      width: 35.5%;
+      width: 35.295%;
+      margin-right: 3.619%;
     }
   }
 
   & .teaser--l {
-    width: 61.5%;
-    margin-left: 1.5%;
+    width: 61.429%;
 
     @include breakpoint(tabletOnly) {
-      width: 54.5%;
+      width: 54.17%;
     }
 
     @include breakpoint(desktopOnly) {
-      width: 61.5%;
-      margin-left: 2%;
+      width: 61.086%;
+    }
+  }
+
+  & .teaser--xl {
+    @include breakpoint(desktopOnly) {
+      margin-bottom: 13%;
+    }
+  }
+
+  & .teaser--landscape.teaser__img--right .teaser__body {
+    width: 49%;
+    margin-right: 2.428%;
+    margin-top: 0%;
+
+    @include breakpoint(tabletOnly) {
+      width: 38%;
+      margin-right: 6.2%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 43%;
+      margin-right: 1.29%;
+    }
+  }
+
+  & .teaser--landscape.teaser__img--right .teaser__img {
+    width: 48.572%;
+    margin: 1.7% 0 0 0;
+
+    @include breakpoint(tabletOnly) {
+      width: 55.8%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 55.71%;
+      margin-top: 1%;
     }
   }
 

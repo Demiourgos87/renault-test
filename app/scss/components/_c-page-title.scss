@@ -1,16 +1,12 @@
 .c-page-title {
   width: 100%;
-  font-size: 2.605rem;
-  line-height: 1.786rem;
-  letter-spacing: 0;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
+  @include fontSize(70,36,70);
+  @include letterSpacing(0,0,-25);
 
   @include breakpoint(desktopOnly) {
     width: 48%;
-    font-size: 3.412rem;
-    line-height: 1.755rem;
-    letter-spacing: -0.025em;
   }
 }

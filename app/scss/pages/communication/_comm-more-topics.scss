@@ -1,12 +1,18 @@
 .comm-more-topics {
+  @include breakpoint(phoneOnly) {
+    margin-bottom: 15vw;
+  }
+
   @include breakpoint(tabletOnly) {
-    width: 30%;
+    width: 29.7%;
     float: left;
+    position: relative;
+    top: -3.5vw;
   }
 
   @include breakpoint(desktopOnly) {
     position: relative;
-    top: 11.8vw;
+    top: 4.8vw;
     width: 23.8%;
     margin-left: 10.2%;
   }
@@ -17,9 +23,9 @@
       content: "";
       position: absolute;
       left: -5vw;
-      top: -2.85vw;
-      width: 1px;
-      height: 38.8vw;
+      top: -4.3vw;
+      width: 2px;
+      height: 39.15vw;
       background: $lightGray;
     }
 
@@ -29,36 +35,41 @@
   }
 
   & .c-section-title.heading--row {
-    margin-bottom: 10vw;
+    margin-bottom: 9.8vw;
 
     @include breakpoint(tabletOnly) {
-      margin-bottom: 3.1vw;
+      margin-bottom: 1.7vw;
+      margin-top: 0;
       width: 9vw;
     }
 
     @include breakpoint(desktopOnly) {
-      margin-bottom: 1.1vw;
+      margin-bottom: 1.6vw;
+    }
+
+    & .text--bold {
+      @include fontSize(45,20,32);
+    }
+
+    & .text--italic {
+      @include fontSize(45,20,30);
     }
   }
 
   & .btn {
-    padding: 4.3vw 7vw 4.3vw 4.4vw;
-    font-size: 0.9rem;
-    font-weight: 400;
-    letter-spacing: 0.3vw;
-    margin-bottom: 6.6vw;
+    @include fontSize(24,11.2,12);
+    @include letterSpacing(50,50,10);
+    padding: 4.5vw 7vw 4.6vw 4.5vw;
+    margin-bottom: 6vw;
+    font-weight: 700;
 
     @include breakpoint(tabletOnly) {
-      padding: 1.2vw 2vw 1.2vw 2vw;
-      font-size: 0.84rem;
-      font-weight: 400;
-      letter-spacing: 0.02vw;
-      margin-bottom: 1.8vw;
+      padding: 1.45vw 1.4vw 1.1vw 1.4vw;
+      margin-bottom: 2vw;
     }
 
     @include breakpoint(desktopOnly) {
       padding: 1vw 1.2vw 1vw 1.5vw;
-      font-size: 0.6rem;
       margin-bottom: 1.1vw;
     }
 

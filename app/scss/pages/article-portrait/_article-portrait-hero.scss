@@ -1,21 +1,20 @@
 .block-article-portrait-hero {
   @include breakpoint(phoneOnly) {
-    @include article-hero(100%, 33.1rem);
+    @include article-hero(100%, auto);
   }
 
   @include breakpoint(tabletOnly) {
-    @include article-hero(74%, 56.5rem);
+    @include article-hero(73.698%, auto);
     margin: 0 auto;
   }
 
   @include breakpoint(desktopOnly) {
-    @include article-hero(40.5%, 46.6rem);
-    margin: 0 5.2% 0 0;
+    @include article-hero(40.706%, auto);
+    margin: 0 5% 0 0;
     float: left;
   }
 
   & img {
-    width: auto;
-    height: 100%;
+    width: 100%;
   }
 }

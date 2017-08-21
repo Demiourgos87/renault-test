@@ -1,136 +1,118 @@
 .article-body {
   width: 100%;
-  margin-bottom: 5vw;
+  margin-bottom: 5.5vw;
 
   @include breakpoint(tabletOnly) {
-    width: 87.2%;
-    margin: 0 auto 4.6vw auto;
+    width: 87.192%;
+    margin: 0 auto 3.2vw auto;
   }
 
   @include breakpoint(desktopOnly) {
     width: 93.8%;
-    margin: 0 0 6.5vw 6.2%;
+    margin: 0 0 6.4vw 6.2%;
   }
 
   &__main-title {
     text-transform: uppercase;
-    font-size: 1.458rem;
-    margin-top: 3.7vw;
+    margin-top: 3vw;
     margin-bottom: 6vw;
     font-weight: 900;
-    line-height: 6.5vw;
+    @include fontSize(40,32,54);
+    @include lineHeight(42,32,55);
+    @include letterSpacing(0,-25,0);
 
     @include breakpoint(tabletOnly) {
-      font-size: 2.18rem;
       margin-top: 1.9vw;
-      margin-bottom: 5vw;
-      line-height: 4.4vw;
+      margin-bottom: 6vw;
     }
 
     @include breakpoint(desktopOnly) {
       width: 76%;
-      font-size: 2.59rem;
       margin-top: 1.6vw;
       margin-bottom: 5.3vw;
-      line-height: 3.27vw;
     }
   }
 
   &__category {
     display: inline-block;
-    padding: 1.6vw 2.1vw;
-    font-size: 0.53rem;
-    font-weight: bold;
+    padding: 1.8vw 2.2vw;
+    @include fontSize(13.32,8,13);
+    @include letterSpacing(50,50,50);
+    font-weight: 700;
     text-transform: uppercase;
     background: #ffcc33;
     margin-top: 1vw;
 
     @include breakpoint(tabletOnly) {
-      padding: 1.2vw 1.5vw;
-      font-size: 0.6rem;
+      padding: 1.3vw;
       margin-top: 3vw;
     }
 
     @include breakpoint(desktopOnly) {
-      padding: 0.6vw 1.4vw;
-      font-size: 0.67rem;
-      margin-top: 0.7vw;
+      padding: 0.7vw 1.3vw;
+      margin-top: 0.5vw;
     }
   }
 
   &__date {
     color: $darkGray;
-    font-size: 0.88rem;
-    letter-spacing: 0.2vw;
-    margin: 1vw 0 4vw 0;
+    margin: 1vw 0 3vw 0;
+    @include fontSize(24,12,10);
+    @include letterSpacing(50,50,50);
 
     @include breakpoint(tabletOnly) {
-      font-size: 0.8rem;
-      letter-spacing: 0.13vw;
-      margin: 1vw 0 1.2vw 0;
+      margin: 0.5vw 0 1.5vw 0;
     }
 
     @include breakpoint(desktopOnly) {
-      font-size: 0.5rem;
-      letter-spacing: 0.023vw;
-      margin: 0.45vw 0 0.7vw 0;
+      margin: 0.3vw 0 0.6vw 0;
     }
   }
 
   &__article-text {
     & p {
-      font-size: 1.04rem;
-      line-height: 6.65vw;
-      letter-spacing: 0.215vw;
+      @include fontSize(28,16,16);
+      @include lineHeight(42,22,22);
+      @include letterSpacing(50,50,50);
       margin-bottom: 6.5vw;
 
       @include breakpoint(tabletOnly) {
-        font-size: 1.092rem;
-        line-height: 2.9vw;
-        letter-spacing: 0.147vw;
         margin-bottom: 2.9vw;
       }
 
       @include breakpoint(desktopOnly) {
-        font-size: 0.8rem;
-        line-height: 1.32vw;
-        letter-spacing: 0.023vw;
         margin-bottom: 1.3vw;
       }
     }
 
     & .article-body__text-intro {
-      font-weight: bold;
-      font-size: 1.08rem;
-      line-height: 6.6vw;
-      margin-bottom: 9vw;
-      letter-spacing: 0.2vw;
+      font-weight: 900;
+      margin-bottom: 9.5vw;
+      @include fontSize(28,18,18);
+      @include lineHeight(42,26,26);
+      @include letterSpacing(50,50,50);
 
       @include breakpoint(tabletOnly) {
-        font-size: 1.3rem;
-        line-height: 3.45vw;
-        margin-bottom: 5vw;
-        letter-spacing: 0.147vw;
+        margin-bottom: 4.8vw;
       }
 
       @include breakpoint(desktopOnly) {
-        font-size: 0.955rem;
-        line-height: 1.55vw;
-        margin-bottom: 1.4vw;
-        letter-spacing: 0.023vw;
+        margin-bottom: 1.5vw;
       }
     }
 
     & a {
       color: $yellow;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #ffcc33;
     }
   }
 
   &__tags {
     color: $yellow;
     margin: 8vw 0 16vw 0;
-    font-size: 1rem;
-    letter-spacing: 0.23vw;
+    @include fontSize(28,16,12);
+    @include letterSpacing(50,50,50);
 
     @include breakpoint(tabletOnly) {
       margin: 8vw 0 5vw 0;
@@ -138,8 +120,6 @@
 
     @include breakpoint(desktopOnly) {
       margin: 2vw 0;
-      font-size: 0.6rem;
-      letter-spacing: 0.023vw;
     }
   }
 
@@ -154,17 +134,18 @@
 
   & .c-test-start {
     margin: 0 0 2vw 0;
+    width: 115%;
+    position: relative;
+    left: -7.5%;
 
     @include breakpoint(desktopOnly) {
+      position: static;
       float: left;
       width: 34.5%;
       margin-top: 2vw;
     }
 
     & .container--full {
-      width: 115%;
-      left: -8%;
-
       @include breakpoint(desktopOnly) {
         background-size: auto 100%;
         background-position: 20% 0%;
@@ -175,25 +156,11 @@
 
     &__body {
       @include breakpoint(desktopOnly) {
-        width: 73%;
-        padding: 9.3vw 0 7.6vw 0;
+        width: 70%;
+        padding: 9vw 0 7.3vw 0;
         margin: 0 0 0 19%;
       }
-
-      & .c-section-title.heading--row {
-        @include breakpoint(desktopOnly) {
-          letter-spacing: 0.05vw;
-        }
-      }
     }
-
-    // &__item {
-    //   & img {
-    //     @include breakpoint(desktopOnly) {
-    //       width: 100%;
-    //     }
-    //   }
-    // }
 
     &__images {
       @include breakpoint(desktopOnly) {
@@ -211,12 +178,25 @@
           }
         }
 
-        & p {
+        & img {
           @include breakpoint(desktopOnly) {
-            font-size: $fontVerySmall;
+            margin-bottom: 0.5vw;
           }
         }
 
+        & .heading {
+          @include breakpoint(desktopOnly) {
+            font-size: calcRem(12);
+            letter-spacing: calcLS(-25);
+          }
+        }
+
+      }
+    }
+
+    & .desc {
+      @include breakpoint(desktopOnly) {
+        margin-bottom: 1.5vw;
       }
     }
 

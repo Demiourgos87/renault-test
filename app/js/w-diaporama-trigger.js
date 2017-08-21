@@ -18,6 +18,7 @@
   $openDiaporama.on('click', function(e) {
     e.stopPropagation();
     $diaporama.slideDown(200);
+    $diaporama.addClass('opened');
     $diaporamaSlider.slick('setPosition');
     $('.w-diaporama .diaporama__thumbs').slick('setPosition');
     $('body, html').addClass('diaporamaOpened');
@@ -51,18 +52,18 @@
 
   } else {
 
-    $.each($slides, function() {
-      var $image = $(this).find('img');
-          thumb = document.createElement('div'),
-          overlay = document.createElement('div');
-
-      $(overlay).addClass('overlay');
-      $(thumb).addClass('diaporama-trigger__thumb');
-
-      $image.clone().appendTo(thumb);
-      $(overlay).appendTo(thumb);
-      $diaporamaThumbs.append(thumb);
-    });
+    // $.each($slides, function() {
+    //   var $image = $(this).find('img');
+    //       thumb = document.createElement('div'),
+    //       overlay = document.createElement('div');
+    //
+    //   $(overlay).addClass('overlay');
+    //   $(thumb).addClass('diaporama-trigger__thumb');
+    //
+    //   $image.clone().appendTo(thumb);
+    //   $(overlay).appendTo(thumb);
+    //   $diaporamaThumbs.append(thumb);
+    // });
 
     $('.diaporama-trigger__slider').slick({
       slidesToShow: 1,

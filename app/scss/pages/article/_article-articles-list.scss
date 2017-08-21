@@ -1,14 +1,26 @@
 .article-articles-list {
-  @include breakpoint(phoneOnly) {
-    margin-top: 8vw;
-  }
 
   @include breakpoint(tabletOnly) {
-    margin-bottom: 6.4vw;
+    margin-bottom: 7.3vw;
   }
 
-  @include breakpoint(tabletOnly) {
-    margin-bottom: 7.2vw;
+  @include breakpoint(desktopOnly) {
+    position: relative;
+    margin-bottom: 6.8vw;
+  }
+
+  &::before {
+    @include breakpoint(desktopOnly) {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 1.75vw;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $lightGray;
+      z-index: -1;
+    }
   }
 
   & .c-section-title.heading--col {
@@ -16,23 +28,44 @@
     width: 33vw;
 
     @include breakpoint(tabletOnly) {
-      margin-top: 2.8%;
-      margin-left: 5%;
+      margin-top: 3.2%;
+      margin-left: 4%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin-top: 9.5%;
+      margin-left: 0;
     }
   }
 
   & .row--mob {
-    margin-bottom: 11vw;
+    margin-bottom: 10.9vw;
 
     @include breakpoint(tabletOnly) {
-      margin-bottom: 0;
+      width: 49.075%;
+      margin-right: 1.85%;
+      margin-bottom: 4.5vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin-bottom: 4.7vw;
+    }
+
+    &:nth-of-type(2n+0) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &:last-of-type {
+      @include breakpoint(phoneOnly) {
+        margin-bottom: 0;
+      }
     }
   }
 
   & .row--clipped--right {
     @include breakpoint(tabletOnly) {
-      width: 42.6%;
-      margin-bottom: 7.3vw;
+      width: 42.747%;
     }
 
     @include breakpoint(desktopOnly) {
@@ -40,38 +73,60 @@
     }
   }
 
+  & .teaser:last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   & .teaser--s {
-    width: 36%;
+    width: 35.715%;
+    margin-right: 2.855%;
     margin-top: 51.7%;
 
     @include breakpoint(tabletOnly) {
-      margin-top: 23.7%;
+      margin-top: 24.2%;
       margin-right: 3%;
     }
   }
 
   & .teaser--l {
-    width: 61.6%;
+    width: 61.43%;
   }
 
   & .teaser--s, & .teaser--l {
-    @include breakpoint(tabletAndDesktop) {
-      width: 48%;
-      margin-bottom: 10px;
+    @include breakpoint(tabletOnly) {
+      width: 48.43%;
+      margin-right: 3.14%;
+    }
+
+    @include breakpoint(desktopOnly) {
+      width: 48.266%;
+      margin-right: 3.468%;
     }
   }
 
   & .teaser--m {
-    @include breakpoint(tabletAndDesktop) {
-      width: 48%;
-      margin-right: 2%;
+    width: 48.572%;
+    margin-right: 2.856%;
+
+    @include breakpoint(tabletOnly) {
+      width: 48.43%;
+      margin-right: 3.14%;
     }
 
-    &:nth-child(2n+0) {
-      @include breakpoint(tabletAndDesktop) {
-        margin-right: 0;
-        margin-left: 2%;
-      }
+    @include breakpoint(desktopOnly) {
+      width: 48.266%;
+      margin-right: 3.468%;
+    }
+  }
+
+  & .teaser__img {
+    @include breakpoint(tabletOnly) {
+      margin-bottom: 1.4vw;
+    }
+
+    @include breakpoint(desktopOnly) {
+      margin-bottom: 1.2vw;
     }
   }
 }

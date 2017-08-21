@@ -1,16 +1,12 @@
 .comm-hero {
   position: relative;
-  margin-bottom: 1vw;
+  margin-bottom: 2.5vw;
 
   @include breakpoint(tabletOnly) {
-    margin-bottom: 13.2vw;
+    margin-bottom: 8.8vw;
   }
 
   @include breakpoint(desktopOnly) {
-    margin-bottom: 3vw;
-  }
-
-  @include breakpoint(desktopLarge) {
     margin-bottom: 3vw;
   }
 
@@ -79,7 +75,7 @@
 
   &__text {
     width: calc(100% - 12vw);
-    padding: 5.8vw 6vw;
+    padding: 5.8vw 6vw 6.5vw 6vw;
     font-weight: 400;
     @include fontSize(28,14,18);
     @include lineHeight(42,20,28);

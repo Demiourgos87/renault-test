@@ -1,15 +1,11 @@
 .w-diaporama-trigger {
   @include article-hero(100%, auto);
 
-  @include breakpoint(desktopOnly) {
-    height: 41vw;
-  }
-
   & .article-hero__footnote {
     z-index: 30;
   }
 
-  &__slide {
+  & .diaporama-trigger__slide {
     position: relative;
 
     &__overlay {
@@ -23,15 +19,41 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: rgba(0,0,0,0.3);
-        z-index: 10;
+        background: $black;
+        z-index: 30;
+        opacity: 0;
+        transition: opacity .2s linear;
       }
     }
   }
 
-  & .slick-slider, & .slick-list, & .slick-track {
-    height: 100%;
+  &:hover {
+    .diaporama-trigger__navigation > .btn {
+      background: $yellow;
+    }
+
+    .diaporama-trigger__slide__overlay {
+      opacity: 0.3;
+    }
+
+    .diaporama-trigger__thumb.slick-current {
+      & img {
+        filter: grayscale(0);
+      }
+
+      & .overlay {
+        opacity: 1;
+      }
+    }
+
+    .diaporama-trigger__thumb img {
+     filter: grayscale(100%);
+   }
   }
+
+  // & .slick-slider, & .slick-list, & .slick-track {
+  //   height: 100%;
+  // }
 
   & .diaporama-trigger__slide img {
     width: 100%;
@@ -63,17 +85,18 @@
     background: $yellow;
     color: $black;
     top: -2vw;
-    font-size: 0.7rem;
+    font-size: 1.5rem;
 
     @include breakpoint(tabletOnly) {
       @include circled-icon(4.5vw);
+      font-size: 1.3rem;
       top: -1.8vw;
     }
 
     @include breakpoint(desktopOnly) {
       @include circled-icon(2vw);
-      font-size: 0.6rem;
-      top: 12.2vw;
+      font-size: 1.1rem;
+      top: 12vw;
     }
   }
 
@@ -106,10 +129,10 @@
     margin-left: -14.5vw;
     padding: 3.1vw 7vw;
     top: -2vw;
-    font-size: 0.5961rem;
+    @include fontSize(16,16,16);
+    @include letterSpacing(100,100,100);
 
     @include breakpoint(tabletOnly) {
-      font-size: 1.16rem;
       margin-left: -12.5vw;
       top: -3.6vw;
       padding: 2.8vw 6vw;
@@ -117,32 +140,29 @@
     }
 
     @include breakpoint(desktopOnly) {
-      font-size: 0.785rem;
       margin-left: -5.5vw;
       padding: 1.2vw 2.6vw;
       top: -3.3vw;
-      background: $yellow;
-      color: $black;
+    }
+
+    &:hover {
+      @include breakpoint(desktopOnly) {
+        color: $black;
+      }
     }
 
   }
 
   & .diaporama-trigger__thumbs {
     width: 34%;
-    height: 4vw;
     position: absolute;
-    bottom: 3.3vw;
+    bottom: 3.7vw;
     left: 52%;
     margin-left: -17%;
-    overflow: hidden;
     z-index: 1000;
 
     @include breakpoint(phoneAndTablet) {
       display: none;
-    }
-
-    &.slick-slider {
-      height: 5vw;
     }
 
     & .diaporama-trigger__thumb {
@@ -150,15 +170,9 @@
       display: inline-block;
       width: 18%;
       height: 100%;
-      margin-right: 2%;
+      margin-right: 2.75%;
       cursor: pointer;
       outline: none;
-
-      & img {
-        width: 100%;
-        height: 100%;
-        filter: grayscale(100%);
-      }
 
       & .overlay {
         opacity: 0;
@@ -171,10 +185,13 @@
         transition: opacity .1s linear;
       }
 
+      & img {
+        width: 100%;
+      }
+
     }
 
-    & .diaporama-trigger__thumb:hover, .diaporama-trigger__thumb.slick-current {
-
+    & .diaporama-trigger__thumb:hover {
       & img {
         filter: grayscale(0);
       }
@@ -182,8 +199,6 @@
       & .overlay {
         opacity: 1;
       }
-
     }
-
   }
 }
