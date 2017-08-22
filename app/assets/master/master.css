@@ -740,7 +740,7 @@ a img {
       .c-main-navigation--wrap {
         height: auto;
         position: absolute;
-        width: 5%;
+        width: 92%;
         z-index: 110;
         background: transparent;
         padding: 0 0 0 0.3%;
@@ -2328,9 +2328,6 @@ a img {
       .vu-QA .c-faq-slider .container--full {
         height: 52rem;
         top: -2vw; } }
-    @media (min-width: 1900px) {
-      .vu-QA .c-faq-slider .container--full {
-        height: 30.7rem; } }
   @media (min-width: 768px) {
     .vu-QA .c-faq-slider .teaser__body {
       width: 75%; } }
@@ -3833,10 +3830,6 @@ a img {
     width: 2px;
     height: 39.15vw;
     background: #f6f6f6; } }
-
-@media (min-width: 1900px) {
-  .comm-more-topics::before {
-    height: 45vw; } }
 
 .comm-more-topics .c-section-title.heading--row {
   margin-bottom: 9.8vw; }
