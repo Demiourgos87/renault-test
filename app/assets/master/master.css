@@ -4955,7 +4955,7 @@ a img {
 @media (min-width: 1024px) {
   .article-portrait-body__wrap .w-diaporama-trigger {
     margin-top: 2.7vw;
-    margin-bottom: 8vw; } }
+    margin-bottom: 2vw; } }
 
 .article-portrait-body__wrap .w-diaporama-trigger .slick-list {
   overflow: visible; }
@@ -4975,25 +4975,34 @@ a img {
 @media (min-width: 768px) {
   .article-portrait-body__wrap .w-diaporama-trigger .diaporama-trigger__navigation .diaporama-trigger__prev {
     left: -5%;
-    top: 29.5vw; } }
+    top: 31vw; } }
 
 @media (min-width: 1024px) {
   .article-portrait-body__wrap .w-diaporama-trigger .diaporama-trigger__navigation .diaporama-trigger__prev {
-    top: 20vw; } }
+    top: 21vw; } }
 
 @media (min-width: 768px) {
   .article-portrait-body__wrap .w-diaporama-trigger .diaporama-trigger__navigation .diaporama-trigger__next {
     right: -5%;
-    top: 29.5vw; } }
+    top: 31vw; } }
 
 @media (min-width: 1024px) {
   .article-portrait-body__wrap .w-diaporama-trigger .diaporama-trigger__navigation .diaporama-trigger__next {
-    top: 20vw; } }
+    top: 21vw; } }
 
 @media (min-width: 768px) {
   .article-portrait-body__wrap .w-diaporama-trigger .diaporama-trigger__thumbs {
     display: block;
     overflow: visible; } }
+
+@media (min-width: 1024px) {
+  .article-portrait-body__wrap .w-diaporama-trigger .diaporama-trigger__thumbs {
+    position: relative;
+    top: 1.2vw;
+    height: auto;
+    width: 87%;
+    top: 1.2vw;
+    left: 6.5%; } }
 
 @media (min-width: 768px) {
   .article-portrait-body__wrap .w-diaporama-trigger .diaporama-trigger__thumbs.slick-slider {
