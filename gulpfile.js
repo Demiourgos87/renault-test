@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync').create(),
     reloadBrowser = browserSync.reload;
@@ -17,7 +18,9 @@ gulp.task('concatJS', function() {
 
 gulp.task('compileSASS', function() {
   return gulp.src('app/scss/master.scss')
-  .pipe(sass().on('error', sass.logError))
+  .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+  .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('app/assets/master/'))
   .pipe(browserSync.stream());
 });
