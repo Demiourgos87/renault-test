@@ -24,6 +24,9 @@
       nextArrow: $arrowNext
     });
 
+    $slider.slick('slickPause');
+    checkIfInView($slider);
+
   }
 
 })(jQuery);

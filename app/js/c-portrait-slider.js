@@ -33,6 +33,8 @@
     prevArrow: $arrowPrev,
     nextArrow: $arrowNext
   });
+  $slider.slick('slickPause');
+  checkIfInView($slider);
 
   $slider.on('afterChange', function(event, slick, currentSlide) {
 

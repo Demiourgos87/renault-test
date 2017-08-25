@@ -2891,6 +2891,29 @@
 
 }));
 
+function checkIfInView(slider) {
+  var $window = $(window);
+
+  if (slider.length > 0) {
+    $window.on('scroll', function() {
+      var windowHeight = $window.outerHeight(),
+          windowTopPosition = $window.scrollTop(),
+          windowBottomPosition = windowTopPosition + windowHeight,
+          sliderHeight = slider.outerHeight(),
+          sliderTopPosition = slider.offset().top,
+          sliderBottomPosition = sliderTopPosition + sliderHeight;
+
+      if (windowBottomPosition > sliderTopPosition || windowTopPosition < sliderBottomPosition) {
+        slider.slick('slickPlay');
+      }
+
+      if (windowTopPosition > sliderBottomPosition || windowBottomPosition < sliderTopPosition) {
+        slider.slick('slickPause');
+      }
+    });
+  }
+}
+
 (function($){
   var article = $('body').find('.article-body__body'),
       social = $('.c-social-share.article-default');
@@ -3041,6 +3064,10 @@
     nextArrow: $arrowNext
   });
 
+  $slider.slick('slickPause');
+
+  checkIfInView($slider);
+
   $slider.on('afterChange', function(event, slick, currentSlide) {
 
     updateNavigationCounter(currentSlide);
@@ -3185,6 +3212,9 @@
       nextArrow: $arrowNext
     });
 
+    $slider.slick('slickPause');
+    checkIfInView($slider);
+
   }
 
 })(jQuery);
@@ -3224,6 +3254,8 @@
     prevArrow: $arrowPrev,
     nextArrow: $arrowNext
   });
+  $slider.slick('slickPause');
+  checkIfInView($slider);
 
   $slider.on('afterChange', function(event, slick, currentSlide) {
 
