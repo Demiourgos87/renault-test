@@ -193,8 +193,8 @@
     }
 
     @include breakpoint(desktopOnly) {
-      // width: 79.5%;
       width: 143.571vh;
+      max-width: 87.5%;
     }
   }
 

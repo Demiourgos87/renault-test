@@ -11,9 +11,9 @@ var gulp = require('gulp'),
     reloadBrowser = browserSync.reload;
 
 gulp.task('concatJS', function() {
-  return gulp.src('app/js/**/*.js')
+  return gulp.src('app/js_dev/**/*.js')
   .pipe(concat('master.js'))
-  .pipe(gulp.dest('app/assets/master/'));
+  .pipe(gulp.dest('app/master/js/'));
 });
 
 gulp.task('compileSASS', function() {
@@ -21,23 +21,23 @@ gulp.task('compileSASS', function() {
   .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest('app/assets/master/'))
+  .pipe(gulp.dest('app/master/css/'))
   .pipe(browserSync.stream());
 });
 
 gulp.task('uglifyJS', function() {
-  return gulp.src('app/assets/master/master.js')
+  return gulp.src('app/master/js/master.js')
   .pipe(rename('master.min.js'))
   .pipe(uglify())
-  .pipe(gulp.dest('app/assets/dist/js/'))
+  .pipe(gulp.dest('app/js/'))
   .pipe(browserSync.stream());
 });
 
 gulp.task('uglifyCSS', function() {
-  return gulp.src('app/assets/master/master.css')
+  return gulp.src('app/master/css/master.css')
   .pipe(rename('master.min.css'))
   .pipe(cleanCSS())
-  .pipe(gulp.dest('app/assets/dist/css/'));
+  .pipe(gulp.dest('app/css/'));
 });
 
 gulp.task('buildCSS', function() {
@@ -56,7 +56,7 @@ gulp.task('watch', function() {
     }
   });
 
-  gulp.watch('app/js/**/*.js', ['buildJS']);
+  gulp.watch('app/js_dev/**/*.js', ['buildJS']);
   gulp.watch('app/scss/**/*.scss', ['buildCSS']);
   gulp.watch("app/*.html").on('change', reloadBrowser);
 
