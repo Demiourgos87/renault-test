@@ -198,8 +198,8 @@ html.diaporamaOpened, body.diaporamaOpened {
 
   @include breakpoint(desktopOnly) {
     width: 8.5%;
-    // top: 79.5%;
-    top: 80vh;
+    top: auto;
+    bottom: 6vh;
     left: 54.5%;
   }
 }
@@ -287,15 +287,10 @@ html.diaporamaOpened, body.diaporamaOpened {
 
   width: 41.7%;
   position: absolute;
-  // top: 77.5%;
-  top: 78vh;
+  bottom: 4vh;
   left: 10.2%;
   overflow: hidden;
   z-index: 30;
-
-  // &.slick-slider {
-  //   height: 5vw;
-  // }
 
   & .diaporama__thumb {
     position: relative;
