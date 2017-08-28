@@ -16,6 +16,7 @@ This website was developed as part of onboarding for a job. The website is stati
 ## Tools used:  
 * nodejs  [https://nodejs.org/en/](https://nodejs.org/en/)
 * Gulp  [https://gulpjs.com/](https://gulpjs.com/)  
+* Dummy image placeholder [https://dummyimage.com/](https://dummyimage.com/)
 
 ## Development instructions:  
 The development process includes Gulp task runner. In order to use Gulp, you must have nodejs and npm installed on yout computer. Upon cloning the repository, run the following commands:  
