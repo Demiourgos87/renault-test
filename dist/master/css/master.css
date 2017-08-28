@@ -745,7 +745,8 @@ a img {
         background: transparent;
         padding: 0 0 0 0.3%;
         left: 1.8vw;
-        top: 0; } }
+        top: 0;
+        overflow: visible; } }
     .c-main-navigation--wrap.inView {
       left: 0; }
   @media (max-width: 1023px) {
@@ -6971,7 +6972,8 @@ html.diaporamaOpened, body.diaporamaOpened {
   @media (min-width: 1024px) {
     .diaporama__arrows {
       width: 8.5%;
-      top: 80vh;
+      top: auto;
+      bottom: 6vh;
       left: 54.5%; } }
 
 .diaporama__prev, .diaporama__next {
@@ -7059,7 +7061,7 @@ html.diaporamaOpened, body.diaporamaOpened {
 .diaporama__thumbs {
   width: 41.7%;
   position: absolute;
-  top: 78vh;
+  bottom: 4vh;
   left: 10.2%;
   overflow: hidden;
   z-index: 30; }

@@ -745,7 +745,8 @@ a img {
         background: transparent;
         padding: 0 0 0 0.3%;
         left: 1.8vw;
-        top: 0; } }
+        top: 0;
+        overflow: visible; } }
     .c-main-navigation--wrap.inView {
       left: 0; }
   @media (max-width: 1023px) {
