@@ -8,6 +8,7 @@ This website was developed as part of onboarding for a job. The website is stati
 
 ## Plugins used:  
 * jQuery [https://jquery.com/](https://jquery.com/)
+* Slick Carousel [http://kenwheeler.github.io/slick/](http://kenwheeler.github.io/slick/)
 * Picturefill  [https://scottjehl.github.io/picturefill/](https://scottjehl.github.io/picturefill/)
 * Debounce  [http://benalman.com/projects/jquery-throttle-debounce-plugin/](http://benalman.com/projects/jquery-throttle-debounce-plugin/)
 * YouTube iframe API  [https://developers.google.com/youtube/iframe_api_reference](https://developers.google.com/youtube/iframe_api_reference)
