@@ -6,12 +6,20 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
+    order = require('gulp-order'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync').create(),
     reloadBrowser = browserSync.reload;
 
 gulp.task('concatJS', function() {
-  return gulp.src('app/js_dev/**/*.js')
+  gulp.src('app/js_dev/**/*.js')
+  .pipe(order([
+    "plugins/slick.js",
+    "plugins/picturefill.js",
+    "plugins/debounce.js",
+    "helpers/*.js",
+    "**/*.js"
+  ]))
   .pipe(concat('master.js'))
   .pipe(gulp.dest('app/master/js/'));
 });
