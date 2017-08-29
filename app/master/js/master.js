@@ -2891,925 +2891,6 @@
 
 }));
 
-function checkIfInView(slider) {
-  var $window = $(window);
-
-  if (slider.length > 0) {
-    $window.on('scroll', function() {
-      var windowHeight = $window.outerHeight(),
-          windowTopPosition = $window.scrollTop(),
-          windowBottomPosition = windowTopPosition + windowHeight,
-          sliderHeight = slider.outerHeight(),
-          sliderTopPosition = slider.offset().top,
-          sliderBottomPosition = sliderTopPosition + sliderHeight;
-
-      if (windowBottomPosition > sliderTopPosition || windowTopPosition < sliderBottomPosition) {
-        slider.slick('slickPlay');
-      }
-
-      if (windowTopPosition > sliderBottomPosition || windowBottomPosition < sliderTopPosition) {
-        slider.slick('slickPause');
-      }
-    });
-  }
-}
-
-/*!
- * jQuery throttle / debounce - v1.1 - 3/7/2010
- * http://benalman.com/projects/jquery-throttle-debounce-plugin/
- *
- * Copyright (c) 2010 "Cowboy" Ben Alman
- * Dual licensed under the MIT and GPL licenses.
- * http://benalman.com/about/license/
- */
-
-// Script: jQuery throttle / debounce: Sometimes, less is more!
-//
-// *Version: 1.1, Last updated: 3/7/2010*
-//
-// Project Home - http://benalman.com/projects/jquery-throttle-debounce-plugin/
-// GitHub       - http://github.com/cowboy/jquery-throttle-debounce/
-// Source       - http://github.com/cowboy/jquery-throttle-debounce/raw/master/jquery.ba-throttle-debounce.js
-// (Minified)   - http://github.com/cowboy/jquery-throttle-debounce/raw/master/jquery.ba-throttle-debounce.min.js (0.7kb)
-//
-// About: License
-//
-// Copyright (c) 2010 "Cowboy" Ben Alman,
-// Dual licensed under the MIT and GPL licenses.
-// http://benalman.com/about/license/
-//
-// About: Examples
-//
-// These working examples, complete with fully commented code, illustrate a few
-// ways in which this plugin can be used.
-//
-// Throttle - http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/
-// Debounce - http://benalman.com/code/projects/jquery-throttle-debounce/examples/debounce/
-//
-// About: Support and Testing
-//
-// Information about what version or versions of jQuery this plugin has been
-// tested with, what browsers it has been tested in, and where the unit tests
-// reside (so you can test it yourself).
-//
-// jQuery Versions - none, 1.3.2, 1.4.2
-// Browsers Tested - Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome 4-5, Opera 9.6-10.1.
-// Unit Tests      - http://benalman.com/code/projects/jquery-throttle-debounce/unit/
-//
-// About: Release History
-//
-// 1.1 - (3/7/2010) Fixed a bug in <jQuery.throttle> where trailing callbacks
-//       executed later than they should. Reworked a fair amount of internal
-//       logic as well.
-// 1.0 - (3/6/2010) Initial release as a stand-alone project. Migrated over
-//       from jquery-misc repo v0.4 to jquery-throttle repo v1.0, added the
-//       no_trailing throttle parameter and debounce functionality.
-//
-// Topic: Note for non-jQuery users
-//
-// jQuery isn't actually required for this plugin, because nothing internal
-// uses any jQuery methods or properties. jQuery is just used as a namespace
-// under which these methods can exist.
-//
-// Since jQuery isn't actually required for this plugin, if jQuery doesn't exist
-// when this plugin is loaded, the method described below will be created in
-// the `Cowboy` namespace. Usage will be exactly the same, but instead of
-// $.method() or jQuery.method(), you'll need to use Cowboy.method().
-
-(function(window,undefined){
-  '$:nomunge';
-
-  var $ = window.jQuery || window.Cowboy || ( window.Cowboy = {} ),
-    jq_throttle;
-
-  $.throttle = jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
-    var timeout_id,
-      last_exec = 0;
-
-    if ( typeof no_trailing !== 'boolean' ) {
-      debounce_mode = callback;
-      callback = no_trailing;
-      no_trailing = undefined;
-    }
-
-    function wrapper() {
-      var that = this,
-        elapsed = +new Date() - last_exec,
-        args = arguments;
-
-      function exec() {
-        last_exec = +new Date();
-        callback.apply( that, args );
-      };
-
-      function clear() {
-        timeout_id = undefined;
-      };
-
-      if ( debounce_mode && !timeout_id ) {
-        exec();
-      }
-
-      timeout_id && clearTimeout( timeout_id );
-
-      if ( debounce_mode === undefined && elapsed > delay ) {
-        exec();
-      } else if ( no_trailing !== true ) {
-        timeout_id = setTimeout( debounce_mode ? clear : exec, debounce_mode === undefined ? delay - elapsed : delay );
-      }
-    };
-
-    if ( $.guid ) {
-      wrapper.guid = callback.guid = callback.guid || $.guid++;
-    }
-
-    // Return the wrapper function.
-    return wrapper;
-  };
-
-  $.debounce = function( delay, at_begin, callback ) {
-    return callback === undefined
-      ? jq_throttle( delay, at_begin, false )
-      : jq_throttle( delay, callback, at_begin !== false );
-  };
-
-})(this);
-
-(function($){
-
-  var $video = $('.c-article-video--wrap'),
-      $overlay = $video.find('.c-article-video__overlay'),
-      $play = $overlay.find('.fa-play'),
-      $iframe = $video.find('iframe');
-
-  $video.css({height: ($video.outerWidth() / (16 / 9))});
-
-})(jQuery);
-
-// var player = new YT.Player($iframe.attr('id'), {
-//   events: {
-//     'onStateChange': onPlayerStateChange
-//   }
-// });
-
-(function($){
-
-  // ARTICLE FAQ ACCORDION \\
-
-  // Cache DOM \\
-
-  var $accordionWrap = $('.accordion-wrap'),
-      $accordion = $accordionWrap.find('.c-faq-accordion'),
-      $accordionElements = $accordion.find('.accordion__element');
-
-  function closeOpenedElement() {
-
-      var $opened = $accordion.find('.accordion__element.opened'),
-          $openedText = $opened.find('.accordion__element__text'),
-          $openedArrow = $opened.find('.accordion-heading__arrow i');
-
-      $opened.removeClass('opened');
-      $openedText.slideUp(200);
-      $openedArrow.removeClass('fa-caret-up').addClass('fa-caret-down');
-
-  }
-
-  $.each($accordionElements, function() {
-
-    var $current = $(this);
-        $heading = $current.find('.accordion__element__heading');
-
-    $heading.on('click', function() {
-
-      var $arrow = $(this).find('.accordion-heading__arrow i'),
-          $accordionText = $(this).next('.accordion__element__text');
-
-      if ($current.hasClass('opened')) {
-
-        $current.removeClass('opened');
-        $accordionText.slideUp(200);
-        $arrow.removeClass('fa-caret-up').addClass('fa-caret-down');
-
-      } else {
-
-        closeOpenedElement();
-        $current.addClass('opened');
-        $accordionText.slideDown(200);
-        $arrow.removeClass('fa-caret-down').addClass('fa-caret-up');
-
-      }
-
-    });
-
-  });
-
-})(jQuery);
-
-(function($){
-  // FAQ Slider \\
-  // Also used for the Renault Vu Q&A slider on communication page \\
-
-  // cache DOM \\
-  var $sliderWrap = $('.c-faq-slider'),
-      $slider = $sliderWrap.find('.slider'),
-      $articles = $slider.find('.teaser'),
-      $navigation = $sliderWrap.find('.slider__navigation'),
-      $arrowNext = $navigation.find('.fa-caret-right'),
-      $arrowPrev = $navigation.find('.fa-caret-left'),
-      $slidesTotal = $navigation.find('.slide__total'),
-      $currentSlide = $navigation.find('.slide__current'),
-      totalSlides = $articles.length,
-      windowWidth = $(window).outerWidth();
-
-  $slidesTotal.text('0' + totalSlides);
-
-  if (!$sliderWrap.hasClass('vu--slider')) {
-
-    if (windowWidth > 599) {
-
-      $.each($articles, function() {
-
-        $(this).removeClass('teaser--portrait').addClass('teaser--landscape');
-
-      });
-
-    }
-
-  }
-
-  function updateNavigationCounter(currentIndex) {
-
-    $currentSlide.text('0' + (currentIndex + 1));
-
-  }
-
-  $slider.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    speed: 400,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: true,
-    dots: false,
-    infinite: true,
-    prevArrow: $arrowPrev,
-    nextArrow: $arrowNext
-  });
-
-  $slider.slick('slickPause');
-
-  checkIfInView($slider);
-
-  $slider.on('afterChange', function(event, slick, currentSlide) {
-
-    updateNavigationCounter(currentSlide);
-
-  });
-
-})(jQuery);
-
-(function($){
-
-  // navigation \\
-
-  // cache DOM \\
-  var $headerNavWrap = $('.c-main-navigation--wrap'),
-      $headerNav = $('.c-main-navigation'),
-      $menuTrigger = $('.b-header__menu-trigger i'),
-      $subMenuTrigger = $('.sub__menu__trigger'),
-      $menuOpenedOverlay = $('.menu__opened__overlay'),
-      $mainContent = $('.page'),
-      $headerSearch = $('.w-search-trigger'),
-      $searchOverlay = $('.w-search-popup'),
-      $searchClose = $('.search__close'),
-      windowWidth = $(window).outerWidth();
-
-
-  // mobile main menu \\
-
-  if (windowWidth < 1025) {
-
-    $menuTrigger.on('click', function(e) {
-
-      e.stopPropagation();
-
-      $headerNavWrap.toggleClass('inView');
-      $headerSearch.fadeToggle(200);
-      $menuOpenedOverlay.fadeToggle(200);
-      $mainContent.toggleClass('menuOpened');
-      $('body, html').toggleClass('menuOpened');
-
-      if ($menuTrigger.hasClass('fa-bars')) {
-        $menuTrigger.removeClass('fa-bars').addClass('fa-times');
-      } else {
-        $menuTrigger.removeClass('fa-times').addClass('fa-bars');
-      }
-
-    });
-
-    $.each($subMenuTrigger, function() {
-
-      var $current = $(this);
-
-      $current.on('click', function(e) {
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        var $sub = $current.next('.sub__menu');
-        var $arrow = $current.prev('i.fa');
-
-        $headerNavWrap.css('overflow-y', 'scroll');
-        $sub.slideToggle(200);
-
-        if ($arrow.hasClass('fa-chevron-down')) {
-          $arrow.removeClass('fa-chevron-down').addClass('fa-chevron-up');
-        } else {
-          $arrow.removeClass('fa-chevron-up').addClass('fa-chevron-down');
-        }
-
-      });
-
-    });
-
-  }
-
-  // search overlay \\
-
-  $headerSearch.on('click', function() {
-
-    $searchOverlay.fadeIn(200);
-
-  });
-
-  $searchClose.on('click', function() {
-
-    $searchOverlay.fadeOut(200);
-
-  });
-
-  // desktop main menu \\
-
-  if (windowWidth > 1024) {
-
-    $.each($subMenuTrigger, function() {
-
-      var $current = $(this);
-      var $li = $(this).closest('li');
-      var $sub = $li.find('.sub__menu');
-
-      $li.on('mouseenter', function() {
-
-        $current.addClass('active');
-        $sub.fadeIn(200);
-
-      });
-
-      $sub.on('mouseleave', function() {
-
-        $sub.fadeOut(200);
-        $current.removeClass('active');
-
-      });
-
-    });
-
-  }
-
-})(jQuery);
-
-(function($){
-  // More Read Slider \\
-
-  // cache DOM \\
-  var $slider = $('.c-more-read .slider'),
-      $wrap = $slider.closest('.slider__wrap'),
-      $arrowNext = $wrap.find('.arrow-right'),
-      $arrowPrev = $wrap.find('.arrow-left'),
-      windowWidth = $(window).outerWidth();
-
-  if (windowWidth > 767) {
-
-    $slider.slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      speed: 400,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      pauseOnHover: true,
-      dots: false,
-      infinite: true,
-      arrows: true,
-      prevArrow: $arrowPrev,
-      nextArrow: $arrowNext
-    });
-
-    $slider.slick('slickPause');
-    checkIfInView($slider);
-
-  }
-
-})(jQuery);
-
-(function($){
-  // Portrait Slider \\
-
-  // cache DOM \\
-  var $sliderWrap = $('.portrait__slider'),
-      $slider = $sliderWrap.find('.slider'),
-      $slides = $slider.find('.portrait__slide'),
-      $navigation = $sliderWrap.find('.slider__navigation'),
-      $arrowNext = $navigation.find('.fa-caret-right'),
-      $arrowPrev = $navigation.find('.fa-caret-left'),
-      $slidesTotal = $navigation.find('.slide__total'),
-      $currentSlide = $navigation.find('.slide__current'),
-      totalSlides = $slides.length;
-
-  $slidesTotal.text('0' + totalSlides);
-
-  function updateNavigationCounter(currentIndex) {
-
-    $currentSlide.text('0' + (currentIndex + 1));
-
-  }
-
-  $slider.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    speed: 400,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: true,
-    dots: false,
-    infinite: true,
-    prevArrow: $arrowPrev,
-    nextArrow: $arrowNext
-  });
-  $slider.slick('slickPause');
-  checkIfInView($slider);
-
-  $slider.on('afterChange', function(event, slick, currentSlide) {
-
-    updateNavigationCounter(currentSlide);
-
-  });
-
-})(jQuery);
-
-function onYouTubeIframeAPIReady() {
-
-  // Cache DOM
-  var $sliderWrap = $('.hp-main-slider'),
-      $slider = $sliderWrap.find('.hp-main-slider--wrap'),
-      $allSlides = $slider.find('.hp-main-slider__slide:not(.slick-cloned)'),
-      $navigation = $sliderWrap.find('.hp-main-slider__navigation')
-      $arrowPrev = $navigation.find('.hp-main-slider__navigation__left'),
-      $arrowNext = $navigation.find('.hp-main-slider__navigation__right'),
-      $sliderCounter = $sliderWrap.find('.hp-main-slider__counter'),
-      $sliderCurrent = $sliderCounter.find('.slider__current'),
-      $sliderTotal = $sliderCounter.find('.slider__total'),
-      windowWidth = $(window).outerWidth();
-
-  var playersCreated = (function() {
-
-    var created = [];
-
-    function createYTPlayer(id) {
-
-      return new YT.Player(id, {
-        events: {
-          'onStateChange': onPlayerStateChange
-        }
-      });
-
-    }
-
-    function createVimeoPlayer(iframe) {
-
-      return new Vimeo.Player(iframe);
-
-    }
-
-    for (var i = 0; i < $allSlides.length; i++) {
-
-      var $current = $($allSlides[i]);
-
-      if ($current.hasClass('video')) {
-
-        var currentIframeID = $current.find('iframe').attr('id');
-
-        if (/(youtube)/.test(currentIframeID)) {
-
-          player = createYTPlayer(currentIframeID);
-          created.push(player);
-
-        } else if (/(vimeo)/.test(currentIframeID)) {
-
-          player = createVimeoPlayer($current);
-          created.push(player);
-
-        }
-
-      } else created.push($current.get(0));
-
-    }
-
-    return created;
-
-  })();
-
-  function onPlayerStateChange(event) {
-
-    if (event.data == YT.PlayerState.ENDED) {
-
-      event.target.pauseVideo();
-      event.target.seekTo(0, true);
-      $slider.slick('slickNext');
-
-    }
-
-  }
-
-  function setSlidesDimensions(slide) {
-
-    var slideWidth = slide.width();
-    var aspectRatio = 16 / 9;
-    var slideHeight = slideWidth / aspectRatio;
-
-    slide.css({width: slideWidth, height: slideHeight});
-
-  }
-
-  function updateNavigationCounter(currentIndex) {
-
-    $sliderCurrent.text('0' + (currentIndex + 1));
-
-  }
-
-  $sliderTotal.text('0' + $allSlides.length);
-
-  function checkSlideType(index) {
-
-    var slide = playersCreated[index];
-
-    if (slide.hasOwnProperty('element')) return 'vimeo';
-    else if (slide.hasOwnProperty('a')) return 'youtube';
-    else return 'image';
-
-  }
-
-  function onVimeoEnded(player) {
-
-    player.on('ended', function(data) {
-      player.pause();
-      player.setCurrentTime(0);
-      $slider.slick('slickNext');
-    });
-
-  }
-
-  $.each($allSlides, function(){
-
-    setSlidesDimensions($(this));
-
-  });
-
-  $slider.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // fade: true,
-    speed: 400,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    pauseOnHover: false,
-    dots: false,
-    arrows: false,
-    swipe: true
-  });
-
-  // $slider.slick('slickPause');
-
-  $arrowPrev.on('click', function() {
-    $slider.slick('slickPrev');
-  });
-
-  $arrowNext.on('click', function() {
-    $slider.slick('slickNext');
-  });
-
-  // function simulateClick(element) {
-  //   element.trigger('click');
-  // }
-  //
-  // if (windowWidth < 1025) {
-  //
-  //   $slider.on('afterChange', function(event, slick, currentSlide) {
-  //
-  //     var $currentSlide = $($allSlides[currentSlide]),
-  //         $videoOverlay = $currentSlide.find('.video__overlay'),
-  //         $iframe = $currentSlide.find('iframe'),
-  //         currentPlayer = playersCreated[currentSlide];
-  //
-  //     $slider.slick('slickPause');
-  //
-  //     $videoOverlay.on('click', function() {
-  //       currentPlayer.playVideo();
-  //     });
-  //
-  //     $iframe.on('click', function() {
-  //       currentPlayer.playVideo();
-  //     });
-  //
-  //     simulateClick($videoOverlay);
-  //     simulateClick($iframe);
-  //
-  //   });
-  //
-  // } else {
-
-  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-
-    updateNavigationCounter(nextSlide);
-
-    var currentSlideType = checkSlideType(currentSlide),
-        nextSlideType = checkSlideType(nextSlide),
-        currentPlayer = playersCreated[currentSlide],
-        nextPlayer = playersCreated[nextSlide];
-
-      if (windowWidth < 1025) {
-
-        var $currentSlide = $($allSlides[nextSlide]),
-            $videoOverlay = $currentSlide.find('.video__overlay');
-
-        $videoOverlay.on('click', function() {
-
-          if (nextSlideType == 'youtube') nextPlayer.playVideo();
-          else nextPlayer.play();
-
-          $(this).find('span').fadeOut(200);
-
-        });
-
-      }
-
-    if (currentSlideType == 'image') {
-
-      if (nextSlideType == 'youtube') {
-
-        $slider.slick('slickPause');
-        nextPlayer.playVideo();
-
-      } else if (nextSlideType == 'vimeo') {
-
-        $slider.slick('slickPause');
-        nextPlayer.play();
-        onVimeoEnded(nextPlayer);
-
-      } else $slider.slick('slickPlay');
-
-    } else if (currentSlideType == 'youtube') {
-
-      $slider.slick('slickPause');
-      currentPlayer.pauseVideo();
-      currentPlayer.seekTo(0, true);
-
-      if (nextSlideType == 'youtube') nextPlayer.playVideo();
-      else if (nextSlideType == 'vimeo') {
-
-        nextPlayer.play();
-        onVimeoEnded(nextPlayer);
-
-      }
-      else $slider.slick('slickPlay');
-
-    } else if (currentSlideType == 'vimeo') {
-
-      $slider.slick('slickPause');
-      currentPlayer.pause();
-      currentPlayer.setCurrentTime(0);
-      onVimeoEnded(currentPlayer);
-
-      if (nextSlideType == 'vimeo') {
-
-        nextPlayer.play();
-        onVimeoEnded(nextPlayer);
-
-      } else if (nextSlideType == 'youtube') { nextPlayer.playVideo(); }
-      else $slider.slick('slickPlay');
-
-    }
-
-  });
-
-  // }
-
-}
-
-(function($){
-
-  // Q&A Layout change on tab/desk \\
-
-  // Cache DOM \\
-  var $wrap = $('.block-comm-QA-list'),
-      $mainContainer = $wrap.find('.container.main-QA'),
-      $articlesToChange = $mainContainer.find('.teaser:nth-of-type(4n+0)'),
-      windowWidth = $(window).outerWidth();
-
-  if (windowWidth > 767) {
-
-    for (var i = 0; i < $articlesToChange.length; i++) {
-
-      if (i % 2 === 0) {
-
-        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l');
-
-      } else {
-
-        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l float--right');
-
-      }
-
-    }
-
-  }
-
-})(jQuery);
-
-(function($){
-  // Psychotest
-
-  // Cache DOM
-  var $pageWrap = $('.p-psychotest'),
-      $intro = $pageWrap.find('.psychotest-intro'),
-      $startButton = $intro.find('.psychotest-start'),
-      $allSlides = $pageWrap.find('.psychotest-slide'),
-      $questions = $pageWrap.find('.psychotest-question'),
-      $counters = $pageWrap.find('.psychotest-counter'),
-      $header = $('.b-header'),
-      headerHeight = $header.outerHeight(),
-      windowWidth = $(window).outerWidth(),
-      windowHeight = $(window).outerHeight();
-
-  // Update counter
-  $.each($counters, function() {
-    var counter = $(this),
-        currentQuestion = counter.closest('.psychotest-question').index(),
-        totals = counter.find('.psychotest-counter__total'),
-        current = counter.find('.psychotest-counter__current');
-
-    totals.text($questions.length);
-    current.text(currentQuestion);
-  });
-
-  $pageWrap.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    speed: 400,
-    autoplay: false,
-    dots: false,
-    arrows: false,
-    draggable: false,
-    swipe: false,
-    pauseOnHover: false
-  });
-
-  // Set slick height to intro height
-  var $slickList = $pageWrap.find('.slick-list');
-  $slickList.height($intro.outerHeight());
-
-  $startButton.on('click', function(){ $pageWrap.slick('slickNext'); });
-
-  if (windowWidth >= 1024) {
-
-    $intro.height(windowHeight - headerHeight);
-    $slickList.height(windowHeight - headerHeight);
-
-    $pageWrap.on('afterChange', function(event, slick, currentSlide) {
-
-      var $currentQuestion = $($questions[currentSlide - 1]),
-          $options = $currentQuestion.find('.question-option'),
-          $confirm = $currentQuestion.find('.btn-confirm'),
-          $endTest = $currentQuestion.find('.btn-confirm.end-test');
-
-      function activateOption(element) {
-
-        var $current = $(element).closest('.question-option'),
-            $circle = $current.find('.question-option-circle'),
-            $tick = $circle.find('.tick');
-
-        $.each($options, function() {
-
-          var elem = $(this);
-
-          if (elem.hasClass('active')) {
-            elem.removeClass('active');
-            elem.find('.question-option-circle').removeClass('active');
-            elem.find('.tick').fadeOut(200);
-          }
-          if (elem.hasClass('inactive')) elem.removeClass('inactive');
-        });
-
-        $current.addClass('active');
-        $confirm.addClass('btn--yellow');
-
-        $.each($options, function() {
-          if (!$(this).hasClass('active')) {
-            $(this).addClass('inactive');
-          }
-        });
-
-        $circle.addClass('active');
-        $tick.fadeIn(200);
-
-      }
-
-
-      $options.on('click', function(e) {
-        e.stopPropagation();
-        activateOption($(this));
-      });
-
-      $confirm.on('click', function(e) {
-        e.stopPropagation();
-        if ($(this).hasClass('btn--yellow') && !$(this).hasClass('end-test')) $pageWrap.slick('slickNext');
-      });
-
-      $endTest.on('click', function(e) {
-        if (!$(this).hasClass('btn--yellow')) e.preventDefault();
-      });
-
-    });
-
-  }
-
-  if (windowWidth < 1024) {
-
-    $pageWrap.on('afterChange', function(event, slick, currentSlide) {
-
-      $('html, body, window').animate({scrollTop: 0}, 400);
-
-      var $currentQuestion = $($questions[currentSlide - 1]),
-          $options = $currentQuestion.find('.question-option');
-
-      // Adjust slick height to current question height
-      $slickList.height($currentQuestion.outerHeight());
-
-      function activateOption(element) {
-
-        var $current = $(element).closest('.question-option'),
-            $overlay = $current.find('.question-option__overlay'),
-            $confirm = $overlay.find('.btn'),
-            $cancel = $overlay.find('.option-cancel'),
-            $circle = $current.find('.question-option-circle'),
-            $tick = $circle.find('.tick');
-
-        $current.addClass('active');
-
-        $.each($options, function() {
-          if (!$(this).hasClass('active')) {
-            $(this).addClass('inactive').off();
-          }
-        });
-
-        $overlay.fadeIn(200);
-        $circle.addClass('active');
-        $tick.fadeIn(200);
-
-        $cancel.on('click', function(e){
-          e.stopPropagation();
-          $overlay.fadeOut(200);
-          $circle.removeClass('active');
-          $tick.fadeOut(200);
-          $current.removeClass('active');
-
-          $.each($options, function() {
-            if ($(this).hasClass('inactive')) {
-              $(this).removeClass('inactive');
-            }
-            $options.on('click', function(e) {
-              activateOption(e.target);
-            });
-          });
-        });
-
-        $confirm.on('click', function() {
-          $pageWrap.slick('slickNext');
-        });
-
-      }
-
-      $options.on('click', function(e) {
-        activateOption(e.target);
-      });
-
-    });
-
-  }
-
-})(jQuery);
-
 /*! picturefill - v3.0.2 - 2016-02-12
  * https://scottjehl.github.io/picturefill/
  * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
@@ -5355,6 +4436,473 @@ function onYouTubeIframeAPIReady() {
 
 } )( window, document );
 
+/*!
+ * jQuery throttle / debounce - v1.1 - 3/7/2010
+ * http://benalman.com/projects/jquery-throttle-debounce-plugin/
+ *
+ * Copyright (c) 2010 "Cowboy" Ben Alman
+ * Dual licensed under the MIT and GPL licenses.
+ * http://benalman.com/about/license/
+ */
+
+// Script: jQuery throttle / debounce: Sometimes, less is more!
+//
+// *Version: 1.1, Last updated: 3/7/2010*
+//
+// Project Home - http://benalman.com/projects/jquery-throttle-debounce-plugin/
+// GitHub       - http://github.com/cowboy/jquery-throttle-debounce/
+// Source       - http://github.com/cowboy/jquery-throttle-debounce/raw/master/jquery.ba-throttle-debounce.js
+// (Minified)   - http://github.com/cowboy/jquery-throttle-debounce/raw/master/jquery.ba-throttle-debounce.min.js (0.7kb)
+//
+// About: License
+//
+// Copyright (c) 2010 "Cowboy" Ben Alman,
+// Dual licensed under the MIT and GPL licenses.
+// http://benalman.com/about/license/
+//
+// About: Examples
+//
+// These working examples, complete with fully commented code, illustrate a few
+// ways in which this plugin can be used.
+//
+// Throttle - http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/
+// Debounce - http://benalman.com/code/projects/jquery-throttle-debounce/examples/debounce/
+//
+// About: Support and Testing
+//
+// Information about what version or versions of jQuery this plugin has been
+// tested with, what browsers it has been tested in, and where the unit tests
+// reside (so you can test it yourself).
+//
+// jQuery Versions - none, 1.3.2, 1.4.2
+// Browsers Tested - Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome 4-5, Opera 9.6-10.1.
+// Unit Tests      - http://benalman.com/code/projects/jquery-throttle-debounce/unit/
+//
+// About: Release History
+//
+// 1.1 - (3/7/2010) Fixed a bug in <jQuery.throttle> where trailing callbacks
+//       executed later than they should. Reworked a fair amount of internal
+//       logic as well.
+// 1.0 - (3/6/2010) Initial release as a stand-alone project. Migrated over
+//       from jquery-misc repo v0.4 to jquery-throttle repo v1.0, added the
+//       no_trailing throttle parameter and debounce functionality.
+//
+// Topic: Note for non-jQuery users
+//
+// jQuery isn't actually required for this plugin, because nothing internal
+// uses any jQuery methods or properties. jQuery is just used as a namespace
+// under which these methods can exist.
+//
+// Since jQuery isn't actually required for this plugin, if jQuery doesn't exist
+// when this plugin is loaded, the method described below will be created in
+// the `Cowboy` namespace. Usage will be exactly the same, but instead of
+// $.method() or jQuery.method(), you'll need to use Cowboy.method().
+
+(function(window,undefined){
+  '$:nomunge';
+
+  var $ = window.jQuery || window.Cowboy || ( window.Cowboy = {} ),
+    jq_throttle;
+
+  $.throttle = jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
+    var timeout_id,
+      last_exec = 0;
+
+    if ( typeof no_trailing !== 'boolean' ) {
+      debounce_mode = callback;
+      callback = no_trailing;
+      no_trailing = undefined;
+    }
+
+    function wrapper() {
+      var that = this,
+        elapsed = +new Date() - last_exec,
+        args = arguments;
+
+      function exec() {
+        last_exec = +new Date();
+        callback.apply( that, args );
+      };
+
+      function clear() {
+        timeout_id = undefined;
+      };
+
+      if ( debounce_mode && !timeout_id ) {
+        exec();
+      }
+
+      timeout_id && clearTimeout( timeout_id );
+
+      if ( debounce_mode === undefined && elapsed > delay ) {
+        exec();
+      } else if ( no_trailing !== true ) {
+        timeout_id = setTimeout( debounce_mode ? clear : exec, debounce_mode === undefined ? delay - elapsed : delay );
+      }
+    };
+
+    if ( $.guid ) {
+      wrapper.guid = callback.guid = callback.guid || $.guid++;
+    }
+
+    // Return the wrapper function.
+    return wrapper;
+  };
+
+  $.debounce = function( delay, at_begin, callback ) {
+    return callback === undefined
+      ? jq_throttle( delay, at_begin, false )
+      : jq_throttle( delay, callback, at_begin !== false );
+  };
+
+})(this);
+
+function checkIfInView(slider) {
+  var $window = $(window);
+
+  if (slider.length > 0) {
+    $window.on('scroll', function() {
+      var windowHeight = $window.outerHeight(),
+          windowTopPosition = $window.scrollTop(),
+          windowBottomPosition = windowTopPosition + windowHeight,
+          sliderHeight = slider.outerHeight(),
+          sliderTopPosition = slider.offset().top,
+          sliderBottomPosition = sliderTopPosition + sliderHeight;
+
+      if (windowBottomPosition > sliderTopPosition || windowTopPosition < sliderBottomPosition) {
+        slider.slick('slickPlay');
+      }
+
+      if (windowTopPosition > sliderBottomPosition || windowBottomPosition < sliderTopPosition) {
+        slider.slick('slickPause');
+      }
+    });
+  }
+}
+
+(function($){
+
+  var $video = $('.c-article-video--wrap'),
+      $overlay = $video.find('.c-article-video__overlay'),
+      $play = $overlay.find('.fa-play'),
+      $iframe = $video.find('iframe');
+
+  $video.css({height: ($video.outerWidth() / (16 / 9))});
+
+})(jQuery);
+
+// var player = new YT.Player($iframe.attr('id'), {
+//   events: {
+//     'onStateChange': onPlayerStateChange
+//   }
+// });
+
+(function($){
+
+  // ARTICLE FAQ ACCORDION \\
+
+  // Cache DOM \\
+
+  var $accordionWrap = $('.accordion-wrap'),
+      $accordion = $accordionWrap.find('.c-faq-accordion'),
+      $accordionElements = $accordion.find('.accordion__element');
+
+  function closeOpenedElement() {
+
+      var $opened = $accordion.find('.accordion__element.opened'),
+          $openedText = $opened.find('.accordion__element__text'),
+          $openedArrow = $opened.find('.accordion-heading__arrow i');
+
+      $opened.removeClass('opened');
+      $openedText.slideUp(200);
+      $openedArrow.removeClass('fa-caret-up').addClass('fa-caret-down');
+
+  }
+
+  $.each($accordionElements, function() {
+
+    var $current = $(this);
+        $heading = $current.find('.accordion__element__heading');
+
+    $heading.on('click', function() {
+
+      var $arrow = $(this).find('.accordion-heading__arrow i'),
+          $accordionText = $(this).next('.accordion__element__text');
+
+      if ($current.hasClass('opened')) {
+
+        $current.removeClass('opened');
+        $accordionText.slideUp(200);
+        $arrow.removeClass('fa-caret-up').addClass('fa-caret-down');
+
+      } else {
+
+        closeOpenedElement();
+        $current.addClass('opened');
+        $accordionText.slideDown(200);
+        $arrow.removeClass('fa-caret-down').addClass('fa-caret-up');
+
+      }
+
+    });
+
+  });
+
+})(jQuery);
+
+(function($){
+
+  // navigation \\
+
+  // cache DOM \\
+  var $headerNavWrap = $('.c-main-navigation--wrap'),
+      $headerNav = $('.c-main-navigation'),
+      $menuTrigger = $('.b-header__menu-trigger i'),
+      $subMenuTrigger = $('.sub__menu__trigger'),
+      $menuOpenedOverlay = $('.menu__opened__overlay'),
+      $mainContent = $('.page'),
+      $headerSearch = $('.w-search-trigger'),
+      $searchOverlay = $('.w-search-popup'),
+      $searchClose = $('.search__close'),
+      windowWidth = $(window).outerWidth();
+
+
+  // mobile main menu \\
+
+  if (windowWidth < 1025) {
+
+    $menuTrigger.on('click', function(e) {
+
+      e.stopPropagation();
+
+      $headerNavWrap.toggleClass('inView');
+      $headerSearch.fadeToggle(200);
+      $menuOpenedOverlay.fadeToggle(200);
+      $mainContent.toggleClass('menuOpened');
+      $('body, html').toggleClass('menuOpened');
+
+      if ($menuTrigger.hasClass('fa-bars')) {
+        $menuTrigger.removeClass('fa-bars').addClass('fa-times');
+      } else {
+        $menuTrigger.removeClass('fa-times').addClass('fa-bars');
+      }
+
+    });
+
+    $.each($subMenuTrigger, function() {
+
+      var $current = $(this);
+
+      $current.on('click', function(e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        var $sub = $current.next('.sub__menu');
+        var $arrow = $current.prev('i.fa');
+
+        $headerNavWrap.css('overflow-y', 'scroll');
+        $sub.slideToggle(200);
+
+        if ($arrow.hasClass('fa-chevron-down')) {
+          $arrow.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        } else {
+          $arrow.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        }
+
+      });
+
+    });
+
+  }
+
+  // search overlay \\
+
+  $headerSearch.on('click', function() {
+
+    $searchOverlay.fadeIn(200);
+
+  });
+
+  $searchClose.on('click', function() {
+
+    $searchOverlay.fadeOut(200);
+
+  });
+
+  // desktop main menu \\
+
+  if (windowWidth > 1024) {
+
+    $.each($subMenuTrigger, function() {
+
+      var $current = $(this);
+      var $li = $(this).closest('li');
+      var $sub = $li.find('.sub__menu');
+
+      $li.on('mouseenter', function() {
+
+        $current.addClass('active');
+        $sub.fadeIn(200);
+
+      });
+
+      $sub.on('mouseleave', function() {
+
+        $sub.fadeOut(200);
+        $current.removeClass('active');
+
+      });
+
+    });
+
+  }
+
+})(jQuery);
+
+(function($){
+  // FAQ Slider \\
+  // Also used for the Renault Vu Q&A slider on communication page \\
+
+  // cache DOM \\
+  var $sliderWrap = $('.c-faq-slider'),
+      $slider = $sliderWrap.find('.slider'),
+      $articles = $slider.find('.teaser'),
+      $navigation = $sliderWrap.find('.slider__navigation'),
+      $arrowNext = $navigation.find('.fa-caret-right'),
+      $arrowPrev = $navigation.find('.fa-caret-left'),
+      $slidesTotal = $navigation.find('.slide__total'),
+      $currentSlide = $navigation.find('.slide__current'),
+      totalSlides = $articles.length,
+      windowWidth = $(window).outerWidth();
+
+  $slidesTotal.text('0' + totalSlides);
+
+  if (!$sliderWrap.hasClass('vu--slider')) {
+
+    if (windowWidth > 599) {
+
+      $.each($articles, function() {
+
+        $(this).removeClass('teaser--portrait').addClass('teaser--landscape');
+
+      });
+
+    }
+
+  }
+
+  function updateNavigationCounter(currentIndex) {
+
+    $currentSlide.text('0' + (currentIndex + 1));
+
+  }
+
+  $slider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    speed: 400,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    dots: false,
+    infinite: true,
+    prevArrow: $arrowPrev,
+    nextArrow: $arrowNext
+  });
+
+  $slider.slick('slickPause');
+
+  checkIfInView($slider);
+
+  $slider.on('afterChange', function(event, slick, currentSlide) {
+
+    updateNavigationCounter(currentSlide);
+
+  });
+
+})(jQuery);
+
+(function($){
+  // More Read Slider \\
+
+  // cache DOM \\
+  var $slider = $('.c-more-read .slider'),
+      $wrap = $slider.closest('.slider__wrap'),
+      $arrowNext = $wrap.find('.arrow-right'),
+      $arrowPrev = $wrap.find('.arrow-left'),
+      windowWidth = $(window).outerWidth();
+
+  if (windowWidth > 767) {
+
+    $slider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      speed: 400,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      pauseOnHover: true,
+      dots: false,
+      infinite: true,
+      arrows: true,
+      prevArrow: $arrowPrev,
+      nextArrow: $arrowNext
+    });
+
+    $slider.slick('slickPause');
+    checkIfInView($slider);
+
+  }
+
+})(jQuery);
+
+(function($){
+  // Portrait Slider \\
+
+  // cache DOM \\
+  var $sliderWrap = $('.portrait__slider'),
+      $slider = $sliderWrap.find('.slider'),
+      $slides = $slider.find('.portrait__slide'),
+      $navigation = $sliderWrap.find('.slider__navigation'),
+      $arrowNext = $navigation.find('.fa-caret-right'),
+      $arrowPrev = $navigation.find('.fa-caret-left'),
+      $slidesTotal = $navigation.find('.slide__total'),
+      $currentSlide = $navigation.find('.slide__current'),
+      totalSlides = $slides.length;
+
+  $slidesTotal.text('0' + totalSlides);
+
+  function updateNavigationCounter(currentIndex) {
+
+    $currentSlide.text('0' + (currentIndex + 1));
+
+  }
+
+  $slider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    speed: 400,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    dots: false,
+    infinite: true,
+    prevArrow: $arrowPrev,
+    nextArrow: $arrowNext
+  });
+  $slider.slick('slickPause');
+  checkIfInView($slider);
+
+  $slider.on('afterChange', function(event, slick, currentSlide) {
+
+    updateNavigationCounter(currentSlide);
+
+  });
+
+})(jQuery);
+
 (function($){
   $(window).on('load', function() {
     var article = $('body').find('.article-body__body'),
@@ -5396,6 +4944,458 @@ function onYouTubeIframeAPIReady() {
       }));
     }
   });
+})(jQuery);
+
+(function($){
+
+  // Q&A Layout change on tab/desk \\
+
+  // Cache DOM \\
+  var $wrap = $('.block-comm-QA-list'),
+      $mainContainer = $wrap.find('.container.main-QA'),
+      $articlesToChange = $mainContainer.find('.teaser:nth-of-type(4n+0)'),
+      windowWidth = $(window).outerWidth();
+
+  if (windowWidth > 767) {
+
+    for (var i = 0; i < $articlesToChange.length; i++) {
+
+      if (i % 2 === 0) {
+
+        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l');
+
+      } else {
+
+        $($articlesToChange[i]).removeClass('teaser--portrait teaser--m').addClass('teaser--landscape teaser--l float--right');
+
+      }
+
+    }
+
+  }
+
+})(jQuery);
+
+function onYouTubeIframeAPIReady() {
+
+  // Cache DOM
+  var $sliderWrap = $('.hp-main-slider'),
+      $slider = $sliderWrap.find('.hp-main-slider--wrap'),
+      $allSlides = $slider.find('.hp-main-slider__slide:not(.slick-cloned)'),
+      $navigation = $sliderWrap.find('.hp-main-slider__navigation')
+      $arrowPrev = $navigation.find('.hp-main-slider__navigation__left'),
+      $arrowNext = $navigation.find('.hp-main-slider__navigation__right'),
+      $sliderCounter = $sliderWrap.find('.hp-main-slider__counter'),
+      $sliderCurrent = $sliderCounter.find('.slider__current'),
+      $sliderTotal = $sliderCounter.find('.slider__total'),
+      windowWidth = $(window).outerWidth();
+
+  var playersCreated = (function() {
+
+    var created = [];
+
+    function createYTPlayer(id) {
+
+      return new YT.Player(id, {
+        events: {
+          'onStateChange': onPlayerStateChange
+        }
+      });
+
+    }
+
+    function createVimeoPlayer(iframe) {
+
+      return new Vimeo.Player(iframe);
+
+    }
+
+    for (var i = 0; i < $allSlides.length; i++) {
+
+      var $current = $($allSlides[i]);
+
+      if ($current.hasClass('video')) {
+
+        var currentIframeID = $current.find('iframe').attr('id');
+
+        if (/(youtube)/.test(currentIframeID)) {
+
+          player = createYTPlayer(currentIframeID);
+          created.push(player);
+
+        } else if (/(vimeo)/.test(currentIframeID)) {
+
+          player = createVimeoPlayer($current);
+          created.push(player);
+
+        }
+
+      } else created.push($current.get(0));
+
+    }
+
+    return created;
+
+  })();
+
+  function onPlayerStateChange(event) {
+
+    if (event.data == YT.PlayerState.ENDED) {
+
+      event.target.pauseVideo();
+      event.target.seekTo(0, true);
+      $slider.slick('slickNext');
+
+    }
+
+  }
+
+  function setSlidesDimensions(slide) {
+
+    var slideWidth = slide.width();
+    var aspectRatio = 16 / 9;
+    var slideHeight = slideWidth / aspectRatio;
+
+    slide.css({width: slideWidth, height: slideHeight});
+
+  }
+
+  function updateNavigationCounter(currentIndex) {
+
+    $sliderCurrent.text('0' + (currentIndex + 1));
+
+  }
+
+  $sliderTotal.text('0' + $allSlides.length);
+
+  function checkSlideType(index) {
+
+    var slide = playersCreated[index];
+
+    if (slide.hasOwnProperty('element')) return 'vimeo';
+    else if (slide.hasOwnProperty('a')) return 'youtube';
+    else return 'image';
+
+  }
+
+  function onVimeoEnded(player) {
+
+    player.on('ended', function(data) {
+      player.pause();
+      player.setCurrentTime(0);
+      $slider.slick('slickNext');
+    });
+
+  }
+
+  $.each($allSlides, function(){
+
+    setSlidesDimensions($(this));
+
+  });
+
+  $slider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // fade: true,
+    speed: 400,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    pauseOnHover: false,
+    dots: false,
+    arrows: false,
+    swipe: true
+  });
+
+  // $slider.slick('slickPause');
+
+  $arrowPrev.on('click', function() {
+    $slider.slick('slickPrev');
+  });
+
+  $arrowNext.on('click', function() {
+    $slider.slick('slickNext');
+  });
+
+  // function simulateClick(element) {
+  //   element.trigger('click');
+  // }
+  //
+  // if (windowWidth < 1025) {
+  //
+  //   $slider.on('afterChange', function(event, slick, currentSlide) {
+  //
+  //     var $currentSlide = $($allSlides[currentSlide]),
+  //         $videoOverlay = $currentSlide.find('.video__overlay'),
+  //         $iframe = $currentSlide.find('iframe'),
+  //         currentPlayer = playersCreated[currentSlide];
+  //
+  //     $slider.slick('slickPause');
+  //
+  //     $videoOverlay.on('click', function() {
+  //       currentPlayer.playVideo();
+  //     });
+  //
+  //     $iframe.on('click', function() {
+  //       currentPlayer.playVideo();
+  //     });
+  //
+  //     simulateClick($videoOverlay);
+  //     simulateClick($iframe);
+  //
+  //   });
+  //
+  // } else {
+
+  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+
+    updateNavigationCounter(nextSlide);
+
+    var currentSlideType = checkSlideType(currentSlide),
+        nextSlideType = checkSlideType(nextSlide),
+        currentPlayer = playersCreated[currentSlide],
+        nextPlayer = playersCreated[nextSlide];
+
+      if (windowWidth < 1025) {
+
+        var $currentSlide = $($allSlides[nextSlide]),
+            $videoOverlay = $currentSlide.find('.video__overlay');
+
+        $videoOverlay.on('click', function() {
+
+          if (nextSlideType == 'youtube') nextPlayer.playVideo();
+          else nextPlayer.play();
+
+          $(this).find('span').fadeOut(200);
+
+        });
+
+      }
+
+    if (currentSlideType == 'image') {
+
+      if (nextSlideType == 'youtube') {
+
+        $slider.slick('slickPause');
+        nextPlayer.playVideo();
+
+      } else if (nextSlideType == 'vimeo') {
+
+        $slider.slick('slickPause');
+        nextPlayer.play();
+        onVimeoEnded(nextPlayer);
+
+      } else $slider.slick('slickPlay');
+
+    } else if (currentSlideType == 'youtube') {
+
+      $slider.slick('slickPause');
+      currentPlayer.pauseVideo();
+      currentPlayer.seekTo(0, true);
+
+      if (nextSlideType == 'youtube') nextPlayer.playVideo();
+      else if (nextSlideType == 'vimeo') {
+
+        nextPlayer.play();
+        onVimeoEnded(nextPlayer);
+
+      }
+      else $slider.slick('slickPlay');
+
+    } else if (currentSlideType == 'vimeo') {
+
+      $slider.slick('slickPause');
+      currentPlayer.pause();
+      currentPlayer.setCurrentTime(0);
+      onVimeoEnded(currentPlayer);
+
+      if (nextSlideType == 'vimeo') {
+
+        nextPlayer.play();
+        onVimeoEnded(nextPlayer);
+
+      } else if (nextSlideType == 'youtube') { nextPlayer.playVideo(); }
+      else $slider.slick('slickPlay');
+
+    }
+
+  });
+
+  // }
+
+}
+
+(function($){
+  // Psychotest
+
+  // Cache DOM
+  var $pageWrap = $('.p-psychotest'),
+      $intro = $pageWrap.find('.psychotest-intro'),
+      $startButton = $intro.find('.psychotest-start'),
+      $allSlides = $pageWrap.find('.psychotest-slide'),
+      $questions = $pageWrap.find('.psychotest-question'),
+      $counters = $pageWrap.find('.psychotest-counter'),
+      $header = $('.b-header'),
+      headerHeight = $header.outerHeight(),
+      windowWidth = $(window).outerWidth(),
+      windowHeight = $(window).outerHeight();
+
+  // Update counter
+  $.each($counters, function() {
+    var counter = $(this),
+        currentQuestion = counter.closest('.psychotest-question').index(),
+        totals = counter.find('.psychotest-counter__total'),
+        current = counter.find('.psychotest-counter__current');
+
+    totals.text($questions.length);
+    current.text(currentQuestion);
+  });
+
+  $pageWrap.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 400,
+    autoplay: false,
+    dots: false,
+    arrows: false,
+    draggable: false,
+    swipe: false,
+    pauseOnHover: false
+  });
+
+  // Set slick height to intro height
+  var $slickList = $pageWrap.find('.slick-list');
+  $slickList.height($intro.outerHeight());
+
+  $startButton.on('click', function(){ $pageWrap.slick('slickNext'); });
+
+  if (windowWidth >= 1024) {
+
+    $intro.height(windowHeight - headerHeight);
+    $slickList.height(windowHeight - headerHeight);
+
+    $pageWrap.on('afterChange', function(event, slick, currentSlide) {
+
+      var $currentQuestion = $($questions[currentSlide - 1]),
+          $options = $currentQuestion.find('.question-option'),
+          $confirm = $currentQuestion.find('.btn-confirm'),
+          $endTest = $currentQuestion.find('.btn-confirm.end-test');
+
+      function activateOption(element) {
+
+        var $current = $(element).closest('.question-option'),
+            $circle = $current.find('.question-option-circle'),
+            $tick = $circle.find('.tick');
+
+        $.each($options, function() {
+
+          var elem = $(this);
+
+          if (elem.hasClass('active')) {
+            elem.removeClass('active');
+            elem.find('.question-option-circle').removeClass('active');
+            elem.find('.tick').fadeOut(200);
+          }
+          if (elem.hasClass('inactive')) elem.removeClass('inactive');
+        });
+
+        $current.addClass('active');
+        $confirm.addClass('btn--yellow');
+
+        $.each($options, function() {
+          if (!$(this).hasClass('active')) {
+            $(this).addClass('inactive');
+          }
+        });
+
+        $circle.addClass('active');
+        $tick.fadeIn(200);
+
+      }
+
+
+      $options.on('click', function(e) {
+        e.stopPropagation();
+        activateOption($(this));
+      });
+
+      $confirm.on('click', function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('btn--yellow') && !$(this).hasClass('end-test')) $pageWrap.slick('slickNext');
+      });
+
+      $endTest.on('click', function(e) {
+        if (!$(this).hasClass('btn--yellow')) e.preventDefault();
+      });
+
+    });
+
+  }
+
+  if (windowWidth < 1024) {
+
+    $pageWrap.on('afterChange', function(event, slick, currentSlide) {
+
+      $('html, body, window').animate({scrollTop: 0}, 400);
+
+      var $currentQuestion = $($questions[currentSlide - 1]),
+          $options = $currentQuestion.find('.question-option');
+
+      // Adjust slick height to current question height
+      $slickList.height($currentQuestion.outerHeight());
+
+      function activateOption(element) {
+
+        var $current = $(element).closest('.question-option'),
+            $overlay = $current.find('.question-option__overlay'),
+            $confirm = $overlay.find('.btn'),
+            $cancel = $overlay.find('.option-cancel'),
+            $circle = $current.find('.question-option-circle'),
+            $tick = $circle.find('.tick');
+
+        $current.addClass('active');
+
+        $.each($options, function() {
+          if (!$(this).hasClass('active')) {
+            $(this).addClass('inactive').off();
+          }
+        });
+
+        $overlay.fadeIn(200);
+        $circle.addClass('active');
+        $tick.fadeIn(200);
+
+        $cancel.on('click', function(e){
+          e.stopPropagation();
+          $overlay.fadeOut(200);
+          $circle.removeClass('active');
+          $tick.fadeOut(200);
+          $current.removeClass('active');
+
+          $.each($options, function() {
+            if ($(this).hasClass('inactive')) {
+              $(this).removeClass('inactive');
+            }
+            $options.on('click', function(e) {
+              activateOption(e.target);
+            });
+          });
+        });
+
+        $confirm.on('click', function() {
+          $pageWrap.slick('slickNext');
+        });
+
+      }
+
+      $options.on('click', function(e) {
+        activateOption(e.target);
+      });
+
+    });
+
+  }
+
 })(jQuery);
 
 (function($){
