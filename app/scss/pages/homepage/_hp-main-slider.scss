@@ -23,28 +23,41 @@
       position: absolute;
       top: 0;
       cursor: pointer;
+      transition: all .2s linear;
 
-      & img {
-        @include breakpoint(tabletOnly) {
-          width: 3.2vw;
-          height: 3.2vw;
-        }
+      @include breakpoint(tabletOnly) {
+        width: 3.2vw;
+        height: 3.2vw;
       }
     }
 
     &__left {
+      background: url("../../assets/image/arrow-left-yellow.png") no-repeat;
+      background-size: 100% 100%;
       left: 3vw;
 
       @include breakpoint(desktopOnly) {
         left: 2.8vw;
       }
+
+      &:hover {
+        background: url("../../assets/image/arrow-left-white.png") no-repeat;
+        background-size: 100% 100%;
+      }
     }
 
     &__right {
+      background: url("../../assets/image/arrow-right-yellow.png") no-repeat;
+      background-size: 100% 100%;
       right: 3vw;
 
       @include breakpoint(desktopOnly) {
         right: 3.3vw;
+      }
+
+      &:hover {
+        background: url("../../assets/image/arrow-right-white.png") no-repeat;
+        background-size: 100% 100%;
       }
     }
 
@@ -84,9 +97,18 @@
     }
   }
 
+  &--wrap.slick-initialized .hp-main-slider__slide {
+    display: block;
+  }
+
   &__slide {
+    display: none;
     width: 100%;
     position: relative;
+
+    &:first-child {
+      display: block;
+    }
 
     & img, & iframe {
       width: 100%;
