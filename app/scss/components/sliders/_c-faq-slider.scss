@@ -190,7 +190,19 @@
       }
 
       @include breakpoint(desktopOnly) {
-        padding: 0.6vw;
+        padding: 0;
+        display: inline-block;
+        @include circled-icon(1vw);
+        background: $lightGray;
+        color: #505050;
+        transition: all .2s linear;
+      }
+
+      &:hover {
+        @include breakpoint(desktopOnly) {
+          background: #b9b5b5;
+          color: $white;
+        }
       }
     }
   }

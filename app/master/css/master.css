@@ -868,7 +868,7 @@ a img {
             position: absolute;
             right: 0;
             top: 0;
-            width: 0.1rem;
+            width: 1px;
             height: 40rem;
             background: #ececec; } }
       .c-main-navigation .sub__menu > ul:last-of-type {
@@ -1906,7 +1906,21 @@ a img {
           padding: 1.6vw; } }
       @media (min-width: 1024px) {
         .c-faq-slider .slider__navigation i {
-          padding: 0.6vw; } }
+          padding: 0;
+          display: inline-block;
+          width: 1vw;
+          height: 1vw;
+          line-height: 1vw;
+          text-align: center;
+          cursor: pointer;
+          border-radius: 100%;
+          background: #f6f6f6;
+          color: #505050;
+          transition: all .2s linear; } }
+      @media (min-width: 1024px) {
+        .c-faq-slider .slider__navigation i:hover {
+          background: #b9b5b5;
+          color: #ffffff; } }
 
 .c-more-read {
   width: 100%;
@@ -1951,7 +1965,9 @@ a img {
         margin-left: 19.5%; } }
     .c-more-read .slider__wrap .arrow-left, .c-more-read .slider__wrap .arrow-right {
       position: absolute;
-      top: 39%; }
+      top: 39%;
+      cursor: pointer;
+      transition: all .2s linear; }
       @media (max-width: 767px) {
         .c-more-read .slider__wrap .arrow-left, .c-more-read .slider__wrap .arrow-right {
           display: none; } }
@@ -1965,15 +1981,25 @@ a img {
           width: 3.2vw;
           height: 3.2vw; } }
     .c-more-read .slider__wrap .arrow-left {
+      background: url("../../assets/image/arrow-left-gray.png") no-repeat;
+      background-size: 100% 100%;
       left: -5.5vw; }
       @media (min-width: 1024px) {
         .c-more-read .slider__wrap .arrow-left {
           left: -4.8vw; } }
+      .c-more-read .slider__wrap .arrow-left:hover {
+        background: url("../../assets/image/arrow-left-white.png") no-repeat;
+        background-size: 100% 100%; }
     .c-more-read .slider__wrap .arrow-right {
+      background: url("../../assets/image/arrow-right-gray.png") no-repeat;
+      background-size: 100% 100%;
       right: -3.8vw; }
       @media (min-width: 1024px) {
         .c-more-read .slider__wrap .arrow-right {
           right: -3.4vw; } }
+      .c-more-read .slider__wrap .arrow-right:hover {
+        background: url("../../assets/image/arrow-right-white.png") no-repeat;
+        background-size: 100% 100%; }
   .c-more-read .slider {
     overflow: hidden; }
     @media (min-width: 768px) {
@@ -3191,21 +3217,32 @@ a img {
     .hp-main-slider__navigation__left, .hp-main-slider__navigation__right {
       position: absolute;
       top: 0;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all .2s linear; }
       @media (min-width: 768px) {
-        .hp-main-slider__navigation__left img, .hp-main-slider__navigation__right img {
+        .hp-main-slider__navigation__left, .hp-main-slider__navigation__right {
           width: 3.2vw;
           height: 3.2vw; } }
     .hp-main-slider__navigation__left {
+      background: url("../../assets/image/arrow-left-yellow.png") no-repeat;
+      background-size: 100% 100%;
       left: 3vw; }
       @media (min-width: 1024px) {
         .hp-main-slider__navigation__left {
           left: 2.8vw; } }
+      .hp-main-slider__navigation__left:hover {
+        background: url("../../assets/image/arrow-left-white.png") no-repeat;
+        background-size: 100% 100%; }
     .hp-main-slider__navigation__right {
+      background: url("../../assets/image/arrow-right-yellow.png") no-repeat;
+      background-size: 100% 100%;
       right: 3vw; }
       @media (min-width: 1024px) {
         .hp-main-slider__navigation__right {
           right: 3.3vw; } }
+      .hp-main-slider__navigation__right:hover {
+        background: url("../../assets/image/arrow-right-white.png") no-repeat;
+        background-size: 100% 100%; }
     @media (max-width: 767px) {
       .hp-main-slider__navigation {
         display: none; } }
@@ -3238,9 +3275,14 @@ a img {
     @media (min-width: 768px) {
       .hp-main-slider__counter .separator {
         margin: 0 -0.1rem; } }
+  .hp-main-slider--wrap.slick-initialized .hp-main-slider__slide {
+    display: block; }
   .hp-main-slider__slide {
+    display: none;
     width: 100%;
     position: relative; }
+    .hp-main-slider__slide:first-child {
+      display: block; }
     .hp-main-slider__slide img, .hp-main-slider__slide iframe {
       width: 100%;
       height: 100%; }

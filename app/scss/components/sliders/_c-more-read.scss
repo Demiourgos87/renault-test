@@ -55,6 +55,8 @@
     & .arrow-left, & .arrow-right {
       position: absolute;
       top: 39%;
+      cursor: pointer;
+      transition: all .2s linear;
 
       @include breakpoint(phoneOnly) {
         display: none;
@@ -73,18 +75,32 @@
     }
 
     & .arrow-left {
+      background: url("../../assets/image/arrow-left-gray.png") no-repeat;
+      background-size: 100% 100%;
       left: -5.5vw;
 
       @include breakpoint(desktopOnly) {
         left: -4.8vw;
       }
+
+      &:hover {
+        background: url("../../assets/image/arrow-left-white.png") no-repeat;
+        background-size: 100% 100%;
+      }
     }
 
     & .arrow-right {
+      background: url("../../assets/image/arrow-right-gray.png") no-repeat;
+      background-size: 100% 100%;
       right: -3.8vw;
 
       @include breakpoint(desktopOnly) {
         right: -3.4vw;
+      }
+
+      &:hover {
+        background: url("../../assets/image/arrow-right-white.png") no-repeat;
+        background-size: 100% 100%;
       }
     }
   }
