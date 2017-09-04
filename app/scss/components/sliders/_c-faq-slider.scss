@@ -192,7 +192,7 @@
       @include breakpoint(desktopOnly) {
         padding: 0;
         display: inline-block;
-        @include circled-icon(15px);
+        @include circled-icon(1vw);
         background: $lightGray;
         color: #505050;
         transition: all .2s linear;

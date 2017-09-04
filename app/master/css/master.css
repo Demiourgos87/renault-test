@@ -1908,9 +1908,9 @@ a img {
         .c-faq-slider .slider__navigation i {
           padding: 0;
           display: inline-block;
-          width: 15px;
-          height: 15px;
-          line-height: 15px;
+          width: 1vw;
+          height: 1vw;
+          line-height: 1vw;
           text-align: center;
           cursor: pointer;
           border-radius: 100%;
